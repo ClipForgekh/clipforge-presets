@@ -1,0 +1,40 @@
+{
+    "ae_tool": "AmazingEditor",
+    "bALG_BACH_CONFIG": true,
+    "effect": {
+        "Link": [
+            {
+                "path": "AmazingFeature_A/",
+                "type": "AmazingFeature",
+                "zorder": 8011
+            },
+            {
+                "path": "AmazingFeature_B/",
+                "type": "AmazingFeature",
+                "zorder": 8012
+            },
+            {
+                "path": "AmazingFeature_C/",
+                "type": "AmazingFeature",
+                "zorder": 8013
+            },
+            {
+                "path": "AmazingFeature_D/",
+                "type": "AmazingFeature",
+                "zorder": 8014
+            },
+            {
+                "path": "AmazingFeature_E/",
+                "type": "AmazingFeature",
+                "zorder": 8015
+            },
+            {
+                "path": "AmazingFeature_F/",
+                "type": "AmazingFeature",
+                "zorder": 8016
+            }
+        ]
+    },
+    "name": "1ae3ea64257011ee94f9f02f744f36cc",
+    "version": "13.3.0"
+}

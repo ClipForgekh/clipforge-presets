@@ -1,0 +1,18 @@
+{
+  "id": "7298309792857345286",
+  "title": "Fade blur",
+  "category": "velocity",
+  "branch": "velocity-curves",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/75a836cd4c5c41348351872f98c6bbd0?lk3s=43402efa&x-expires=1823646347&x-signature=y122sZW9FZITGxPJPk%2Fl5vln01Y%3D",
+  "md5": "44cf77c9b1298af4725b2e5c560fc238",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/ac71db20a991443b870e667b9de6c3a3~tplv-fhsjxsyzit-resize:480:480.png?x-expires=1823646347&x-signature=TtYnSfUxarNXGYxnrexVBUxHOE0%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_intensity",
+      "default": 0.37,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

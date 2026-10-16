@@ -1,0 +1,18 @@
+{
+  "id": "7298309792857328902",
+  "title": "Flash",
+  "category": "velocity",
+  "branch": "velocity-curves",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/baee9d3a8b73458dac38eec56888c442?lk3s=43402efa&x-expires=1823646347&x-signature=UWtAj4XA8%2FGhnsx%2BQl0hCoxgDrM%3D",
+  "md5": "1dd64475a43da246291b4e6af1b86050",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/ce2b4b7e1ed14a699232efbbe8bfcd48~tplv-fhsjxsyzit-resize:480:480.png?x-expires=1823646347&x-signature=oVWqA0zvXJuR0mBzaeAyA%2FZ%2BSe4%3D",
+  "params": [
+    {
+      "default": 0.5,
+      "effect_key": "effects_adjust_intensity",
+      "max": 1,
+      "min": 0
+    }
+  ]
+}

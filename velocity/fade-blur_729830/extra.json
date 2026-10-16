@@ -1,0 +1,21 @@
+{
+    "setting": {
+        "algorithm": "velocity_edit@fade_blur",
+		"conf": "",
+		"is_local": true,
+		"is_async": false,
+		"ability_flag": 4,
+		"adjustable_config": {
+			"enable_preview": true
+		},
+        "effect_adjust_params": [
+            {
+                "effect_key": "effects_adjust_intensity",
+                "default": 0.37,
+                "min": 0.0,
+                "max": 1.0
+            }
+        ]
+    },
+    "External_Producer": true
+}

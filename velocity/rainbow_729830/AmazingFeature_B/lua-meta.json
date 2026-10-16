@@ -1,0 +1,66 @@
+[
+    {
+        "ClassName": "AEAdapter",
+        "Super": "",
+        "FilePath": "lua/src/AEAdapter.lua",
+        "FileAbsPath": "/Users/jorgen/EffectMacaron/scriptEffect/AmazingFeature_B/lua/src/AEAdapter.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "new ",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "add ",
+                "Params": [
+                    {
+                        "ParaName": "layerName",
+                        "ParaType": "String",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "layerData",
+                        "ParaType": "table<string,",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            },
+            {
+                "FuncName": "get ",
+                "Params": [
+                    {
+                        "ParaName": "path",
+                        "ParaType": "String",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "time",
+                        "ParaType": "Double",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": "",
+                "Return": {
+                    "Types": [
+                        "number|number[]"
+                    ],
+                    "Comment": ""
+                }
+            },
+            {
+                "FuncName": "_interpolateScalar ",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_interpolateVector ",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

@@ -1,0 +1,18 @@
+{
+  "id": "7298309792857361670",
+  "title": "Blur shake",
+  "category": "velocity",
+  "branch": "velocity-curves",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/74e5bb542b0547dd8ca9da64838a28d4?lk3s=43402efa&x-expires=1823646347&x-signature=gUbDf4ekdiXRQhS1FucVtv2HU2g%3D",
+  "md5": "438db0b9bf9364a49919f23b8755886d",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/aeaed0519e4549888c51a0c693c0488b~tplv-fhsjxsyzit-resize:480:480.png?x-expires=1823646347&x-signature=sHm1ZEcvZgAuLASUUOPq1AIytFE%3D",
+  "params": [
+    {
+      "default": 0.5,
+      "effect_key": "effects_adjust_intensity",
+      "max": 1,
+      "min": 0
+    }
+  ]
+}

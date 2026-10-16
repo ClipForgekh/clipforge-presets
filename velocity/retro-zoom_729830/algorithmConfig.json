@@ -1,0 +1,46 @@
+{
+	"version":	"1.0",
+	"mode":	2,
+	"name":	"2022_12_12_16_15_55_333d170779f511edb3a642383c80bd25",
+	"nodes":	[{
+			"name":	"blit_0",
+			"type":	"blit",
+			"config":	{
+				"size":	{
+					"width":	360,
+					"height":	640
+				},
+				"keyMaps":	{
+					"intParam":	{
+					},
+					"floatParam":	{
+					},
+					"stringParam":	{
+					},
+					"pathParam":	{
+					}
+				}
+			}
+		}, {
+			"name":	"matting_0",
+			"type":	"matting",
+			"config":	{
+				"keyMaps":	{
+					"intParam":	{
+					},
+					"floatParam":	{
+					},
+					"stringParam":	{
+					},
+					"pathParam":	{
+					}
+				}
+			}
+		}],
+	"links":	[{
+			"fromNode":	"blit_0",
+			"fromIndex":	0,
+			"toNode":	"matting_0",
+			"toIndex":	0
+		}]
+}

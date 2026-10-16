@@ -1,0 +1,18 @@
+{
+  "id": "7298309792857312518",
+  "title": "Retro zoom",
+  "category": "velocity",
+  "branch": "velocity-curves",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/079794e34bb0446682f598ae7091a304?lk3s=43402efa&x-expires=1823646347&x-signature=iFURkuM%2FQQt0wA%2FGsJo%2FBWBl3Y8%3D",
+  "md5": "1cd114ac0463776ba0fd243beb5e6e37",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/16a3dfccb551427d878d3d1cd99f2932~tplv-fhsjxsyzit-resize:480:480.png?x-expires=1823646347&x-signature=1%2FjRqsdlNomWLdZGdBfS6C8xXa4%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_intensity",
+      "default": 0.5,
+      "max": 1,
+      "min": 0
+    }
+  ]
+}

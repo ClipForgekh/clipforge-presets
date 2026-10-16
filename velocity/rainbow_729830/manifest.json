@@ -1,0 +1,18 @@
+{
+  "id": "7298309792857296134",
+  "title": "Rainbow",
+  "category": "velocity",
+  "branch": "velocity-curves",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/a777030be3a74ec1aedaf710eafe35fe?lk3s=43402efa&x-expires=1823646347&x-signature=H9WBL2v1DeLQNS03mQZb4kf5kQM%3D",
+  "md5": "8ea7c01715838c503f7c3c96df09c0f8",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b731eeb7d71d48aca5c3173146c6a0be~tplv-fhsjxsyzit-resize:480:480.png?x-expires=1823646347&x-signature=9ryn3D7BD3DOaOxQ2bZqLiboRCA%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_intensity",
+      "default": 0.5,
+      "max": 1,
+      "min": 0
+    }
+  ]
+}

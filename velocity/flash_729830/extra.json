@@ -1,0 +1,22 @@
+{
+	"setting": {
+		"algorithm": "velocity_edit@flash",
+		"conf": "",
+		"is_local": true,
+		"is_async": false,
+		"resource_id": "",
+		"ability_flag": 4,
+		"adjustable_config": {
+			"enable_preview": true
+		},
+		"effect_adjust_params": [
+			{
+				"default": 0.5,
+				"effect_key": "effects_adjust_intensity",
+				"max": 1,
+				"min": 0
+			}
+		]
+	},
+	"External_Producer": true
+}
