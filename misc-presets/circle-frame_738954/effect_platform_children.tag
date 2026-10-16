@@ -1,0 +1,1 @@
+/config.json,/amazingfeature/mesh/SP_Quad.mesh,/amazingfeature/content.json,/amazingfeature/scene.config,/amazingfeature/sticker.config,/amazingfeature/xshader/picture.xshader,/amazingfeature/xshader/picture.vert,/amazingfeature/xshader/picture.frag,/amazingfeature/rt/outputTex.rt,/amazingfeature/lua/Process.lua,/amazingfeature/main.scene,/amazingfeature/material/picture.material
