@@ -1,7 +1,2197 @@
 {
+  "schema": 1,
   "version": "1.0.0",
-  "total_presets": 2732,
+  "generated": "2026-10-16T15:53:27Z",
   "repository": "https://github.com/ClipForgekh/clipforge-presets",
+  "total_presets": 2732,
+  "total_items": 95,
+  "items": [
+    {
+      "id": "cf.lut-90s-glow-766710",
+      "kind": "lut",
+      "name": "90s Glow",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/90s-glow_766710/filter.png",
+          "sha256": "c516599e5864bd893fb794bd4484e58edb5a06de8813f2d0ac424749f692077d",
+          "bytes": 500302,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/522ee4245d364ff98afd4995f6368865~tplv-fhsjxsyzit-resize:89:89.jpeg?x-expires=1823646487&x-signature=1kkAnqOnZYf7K216zdLOxSRLApM%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-american-retro-758649",
+      "kind": "lut",
+      "name": "American Retro",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/american-retro_758649/AmazingFeature/image/filter_bg.png",
+          "sha256": "50dfbd7ecfcdfbc7fb1db23f410ba28dad527ec90ebe051b6eb7daa4824a5d8d",
+          "bytes": 236567,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/c66e81f5a9de43dfbf361b26afee30e4~tplv-fhsjxsyzit-resize:89:89.jpeg?x-expires=1823646487&x-signature=T72wD94WeGlrjKbA5lfMzsOCYKM%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-breezy-memory-767594",
+      "kind": "lut",
+      "name": "Breezy Memory",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/breezy-memory_767594/filter.png",
+          "sha256": "7610dee39d2e6436f51126dd7d0f0c045208ed4df3c4d406cfea83bdee66f69b",
+          "bytes": 286405,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/4bc7a3c3ae61462a9c899d60e467c044~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=o1DFSlmjs2BcZ3BfJTZh8XR0xcM%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-bright-clear-767251",
+      "kind": "lut",
+      "name": "Bright Clear",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/bright-clear_767251/AmazingFeature/effects/LumiSkinFilter/image/filter_bg.png",
+          "sha256": "acb8989f6c842fb6648ca3f52a7bc1b7c496ef14f93325bedeb97cb1c585a829",
+          "bytes": 269239,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b31c80ab58b64a28a81878b73f9e481b~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=FERtGtB3nskpb%2FVnKEwNaYXBqHI%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-carbon-summer-753327",
+      "kind": "lut",
+      "name": "Carbon Summer",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/carbon-summer_753327/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/9e8add038bdd4d94a5ab0180ceaeaede~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=DL8dZhprRv3xM3I2kAyi%2FE3Tp84%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-champagne-revel-737440",
+      "kind": "lut",
+      "name": "Champagne Revel",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/champagne-revel_737440/AmazingFeature/image/filter_bg.png",
+          "sha256": "fe36f0673147c3c7380ad9553836f03a366ba054bb02aa86495949758eb28710",
+          "bytes": 226711,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/54574c85eff646d0a473dc39677440f5~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=4OhLDLCivu8vL2WoPXqBpyUOwCU%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-cold-thriller-766710",
+      "kind": "lut",
+      "name": "Cold Thriller",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/cold-thriller_766710/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/265cd9ea6a614b7c9777d9d152c0473f~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=ODK5VXnQQ3tue0ApYnb6XZ2HdGk%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-cool-light-766491",
+      "kind": "lut",
+      "name": "Cool Light",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/cool-light_766491/filter.png",
+          "sha256": "7610dee39d2e6436f51126dd7d0f0c045208ed4df3c4d406cfea83bdee66f69b",
+          "bytes": 286405,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/5509662b877b47efac03e05d0a02b05d~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=5ia6X0J9udhLBojsjXoafOllQ9c%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-creamy-warm-767268",
+      "kind": "lut",
+      "name": "Creamy Warm",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/creamy-warm_767268/AmazingFeature_beijingzengse/image/filter_bg.png",
+          "sha256": "fc61b2b4f78214e2bde7f6d507d50738195cdeeeb0a17b58e720eb49f26368ce",
+          "bytes": 86080,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/06e38dc7d4a341db932640a5d4df82fa~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=8VXYeI51%2BDK5iH7LlNb7medce5g%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-dark-silver-718808",
+      "kind": "lut",
+      "name": "Dark silver",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/dark-silver_718808/filter.png",
+          "sha256": "b34790170e11796125c010e34326fca670af70e6a96da1a3803b7b72e3fa807e",
+          "bytes": 257908,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/838b8ae1bcb945599b0871aa6526d8e0~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=QqVyT%2FW7c8bWBMpCAt5nhFAfnk0%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-dreamy-night-763963",
+      "kind": "lut",
+      "name": "Dreamy Night",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/dreamy-night_763963/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/6be82435f8034fdd82e96fa1865e0102~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=sv1ybEEtgkenKuUuOd8BlbVIWNw%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-faded-mood-763706",
+      "kind": "lut",
+      "name": "Faded Mood",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/faded-mood_763706/filter.png",
+          "sha256": "a017ceee506962788297a46a287e22587342e256dfe53c079d14a9d751023c63",
+          "bytes": 212767,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/9a56dd2ee80f442e9d2b18e9d9271fb8~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=JSter1DtkLzPcD6fujew%2FmEkGd0%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-floral-haze-768779",
+      "kind": "lut",
+      "name": "Floral Haze",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/floral-haze_768779/filter.png",
+          "sha256": "a75bc8dcf70ec5977da2182c5176e0855e593247c0ff1beeeb33fe2caac7d890",
+          "bytes": 67251,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/f169aa41ea474f068e9736fcc760f2e1~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=z4LSsZrqXyHLI6msjyAAbT1ZbIE%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-golden-dusk-766492",
+      "kind": "lut",
+      "name": "Golden Dusk",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/golden-dusk_766492/filter.png",
+          "sha256": "7610dee39d2e6436f51126dd7d0f0c045208ed4df3c4d406cfea83bdee66f69b",
+          "bytes": 286405,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/c1e3899f934f48b2ba08214bdbcc2999~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=9cYyCrovvtQ8bFri9NKPhqRK3b4%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-gray-718767",
+      "kind": "lut",
+      "name": "Gray",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/gray_718767/SkinFilter/image/filter_bg.png",
+          "sha256": "4b3b40d8580da55316e28f0f8fb4ea5ff65dbb612fe116909215c5f69f3d2f53",
+          "bytes": 319330,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/0ffa1178833245ec80669970b3db94a6~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=mnU%2FyqekYEvh5VUClr2XtllNLck%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-greenery-glow-768786",
+      "kind": "lut",
+      "name": "Greenery Glow",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/greenery-glow_768786/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/d05084fd3063402685106fea928264c1~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=5N2FjZrqPhm1VGPq6OVEgGULCeI%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-iphone-5c-cam-766448",
+      "kind": "lut",
+      "name": "iPhone 5c Cam",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/iphone-5c-cam_766448/filter.png",
+          "sha256": "ef2b7d78ab8f01de5796bc420433234be20fc780a6b9872c245a15f10fe39a9d",
+          "bytes": 118396,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/7e1014fd995b4d44a4aad7100e55be46~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=PkP6Wx%2FQEI5623OV48KzKd0SonA%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-leaf-gaze-730345",
+      "kind": "lut",
+      "name": "Leaf Gaze",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/leaf-gaze_730345/AmazingFeature/image/filter_bg.png",
+          "sha256": "b4a4480ba3c8bb32aff96c5c9bf466bd8dca5dcffa38e9ef270508f20abbf295",
+          "bytes": 266715,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/e179d9028c1e4b95be6592ed34b6f164~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=Mq%2F01%2B5i9cu1GJphxi5h4B25Pr4%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-leisure-trip-752433",
+      "kind": "lut",
+      "name": "Leisure Trip",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/leisure-trip_752433/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/418e99e503aa43acb86695ef77716abd~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=48TsHf0ejcD9RQwMiaaCJe5axtw%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-light-beam-767597",
+      "kind": "lut",
+      "name": "Light Beam",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/light-beam_767597/filter.png",
+          "sha256": "7610dee39d2e6436f51126dd7d0f0c045208ed4df3c4d406cfea83bdee66f69b",
+          "bytes": 286405,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/e764026f9f894362a8fea0dc932f6ecf~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=uY7gjKWgB1LKQkVc%2B4wIhfIQ9QM%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-magical-night-766821",
+      "kind": "lut",
+      "name": "Magical Night",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/magical-night_766821/filter.png",
+          "sha256": "7610dee39d2e6436f51126dd7d0f0c045208ed4df3c4d406cfea83bdee66f69b",
+          "bytes": 286405,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/f0c07d19fba245f692c8124ce282d211~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=2EoJdVKSWm%2FZGa2BhPY%2FCeTnK4g%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-matte-noir-764960",
+      "kind": "lut",
+      "name": "Matte Noir",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/matte-noir_764960/filter.png",
+          "sha256": "720f611fc4cbc9cdd937ca7cd451fd8daa0f77165c6c9e9618fa4875ef89543e",
+          "bytes": 42237,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/51cb2cbb6feb48b6a0e097953720eeb0~tplv-fhsjxsyzit-resize:89:89.jpeg?x-expires=1823646487&x-signature=FoIgvSfIp%2FC53mEVzOCvvl5VXgw%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-matte-wheat-2-735807",
+      "kind": "lut",
+      "name": "Matte Wheat 2",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/matte-wheat-2_735807/skin/image/filter_bg.png",
+          "sha256": "8e16a2f3372776f5befe7da57736e0815119da04324060d26474fa6bf357c637",
+          "bytes": 330345,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/2ab489eb3f6a4366b69bb246ee908eae~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=6bMVyBD2Bxl7EuGA9XQb6a3vLe4%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-miami-717129",
+      "kind": "lut",
+      "name": "Miami",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/miami_717129/filter.png",
+          "sha256": "bba396f6ba60403d4768f31471c77bbbd544644a66752bcf4cfb15636119ee33",
+          "bytes": 834396,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/2d9d3ae6afa24e41819d127b60eedcee~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=bH7J9vujyxl6TgsQCiOuiIuTKnQ%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-milky-rays-768785",
+      "kind": "lut",
+      "name": "Milky Rays",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/milky-rays_768785/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/da609f59314e41708484f719cd2db182~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=UY%2FuDtorkUUmTiG4LppS4%2Blcl%2FE%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-mistletoe-717395",
+      "kind": "lut",
+      "name": "Mistletoe",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/mistletoe_717395/filter.png",
+          "sha256": "1680fd5f73cc1db1030491cc83582cb6c75da52f8e46016433ab6aaae6058549",
+          "bytes": 295738,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/0c0fcfa57583497db859bc38f5144036~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=9QDiMWBcMSX01ZaDEjJfwPtxn0U%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-newsprint-766569",
+      "kind": "lut",
+      "name": "Newsprint",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/newsprint_766569/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/3aa37b0a55254e48bf0161220f0f1916~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=qgOVlmw%2Fbamk12M9SWEKR4tIV0o%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-old-fireplace-757187",
+      "kind": "lut",
+      "name": "Old Fireplace",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/old-fireplace_757187/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/cd7ecd8cff7941a9b523e072ffecb134~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=Ol%2BBGWP016mWe2WIg%2F4wuoehrLo%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-red-tea-704711",
+      "kind": "lut",
+      "name": "Red Tea",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/red-tea_704711/filter.png",
+          "sha256": "ab39441887324bfaa9f648df6a47a1995245f87d678e2a124624116054a01b11",
+          "bytes": 206509,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/60fa1d2220284c4a9a520dffc9678fac~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=fqbPAWkKHO2Msfs47nRkJdMrpSE%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-retro-future-751679",
+      "kind": "lut",
+      "name": "Retro Future",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/retro-future_751679/AmazingFeature/image/filter_bg.png",
+          "sha256": "1e9054d327b5517d35d83f81cf1cd11d5f2905c885ad358a50cdd9665cc7291e",
+          "bytes": 326360,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/4a183243b8f647b1b1738296ca6763cf~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=Iup1CIb%2FI4KG5a1GSV2IfYTdDiE%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-retro-noir-765561",
+      "kind": "lut",
+      "name": "Retro Noir",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/retro-noir_765561/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/6a47df1b178e44239738a6a056e16740~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=wKjiNgRsrhGiZT7a6J9xlhPHfKw%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-retro-russet-758649",
+      "kind": "lut",
+      "name": "Retro Russet",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/retro-russet_758649/AmazingFeature/image/filter_bg.png",
+          "sha256": "a17089884347570d77466468f9f715d16454b19585a8fd966e4b81bbf4d1f387",
+          "bytes": 235921,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/902bdf11085e48c295ee4499f73bd739~tplv-fhsjxsyzit-resize:89:89.jpeg?x-expires=1823646487&x-signature=DxKNjRupie8Gu%2F2maUWAjbMk3u8%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-silky-complexion-754754",
+      "kind": "lut",
+      "name": "Silky Complexion",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/silky-complexion_754754/filter.png",
+          "sha256": "5f65dafab75103b6c0adbc1f433cacce0eb02915e779c5edb5278f4f2f479016",
+          "bytes": 27547,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/e5c0f9bdb0f14d39bb0cf6a23f958812~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=F8VEqVInc%2FuPU%2BEscb8Ke2oCpFk%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-silver-age-756885",
+      "kind": "lut",
+      "name": "Silver Age",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/silver-age_756885/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/1beec3ab0cf643e7914dbbc47dd31ffa~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=56kWZg8F06EQFU2mRoJY4AfOEgQ%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-silver-723442",
+      "kind": "lut",
+      "name": "Silver",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/silver_723442/SkinFilter/image/filter_bg.png",
+          "sha256": "647948292207fd50cb33e946b81d08f02844dd966d92dda794202f1eaa31ece0",
+          "bytes": 269021,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/12df60ba9b95483e810bd8c96e36f432~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=z5xHoCotI4SN5Xd98%2BuMIqywpiA%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-spring-spray-762412",
+      "kind": "lut",
+      "name": "Spring Spray",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/spring-spray_762412/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/3b61b1cc0fca499e959c5c0fa2f04d25~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=jCXOZTofx0ru%2BaLNkuTrHktorkc%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-summer-sun-766558",
+      "kind": "lut",
+      "name": "Summer Sun",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/summer-sun_766558/filter.png",
+          "sha256": "7610dee39d2e6436f51126dd7d0f0c045208ed4df3c4d406cfea83bdee66f69b",
+          "bytes": 286405,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/758ecd19282c4fffa2c883051b521401~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=jrnbfV1NzjnA7oWd6ogEMwPwSFM%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-tokyo-heat-763963",
+      "kind": "lut",
+      "name": "Tokyo Heat",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/tokyo-heat_763963/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/cd05bc9cb5224f059ee629439be2d852~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=K8h4cQkSjtRx97wilOeM28l%2BhOg%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-vintage-bronze-762890",
+      "kind": "lut",
+      "name": "Vintage Bronze",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/vintage-bronze_762890/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b1dbdcd1ae3a4bfb99e328f037368956~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=TR4YGxC1QQ7ibvZChCo5ngQp0P8%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-vintage-glow-766710",
+      "kind": "lut",
+      "name": "Vintage Glow",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/vintage-glow_766710/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/e1875b43264548cfa1003066e7c5692c~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=befin9W9p2lLQ%2BIkKIND%2BjcSrMs%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-vivid-glam-765737",
+      "kind": "lut",
+      "name": "Vivid Glam",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/vivid-glam_765737/AmazingFeature/image/filter_bg.png",
+          "sha256": "abdbf638cfe0e28bc64aa5dce35e8287addf120e830916790ae25f882d8148e1",
+          "bytes": 248818,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b6b1e01a3ca44230b30ef50369475f6a~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=ok3hJTcgc0Ax9Ha3N089%2Btb8Vz4%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-vivid-spring-762672",
+      "kind": "lut",
+      "name": "Vivid Spring",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/vivid-spring_762672/filter.png",
+          "sha256": "c7e00507981bc06c2dded864c622fbadaae8e189cb64055c08606f2ce0cc4771",
+          "bytes": 2095,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/3ebd33f706e14cd9b97ea43501a611a4~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=5A6VNT%2FEK6US3dchWg%2B3h6FjbOA%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.lut-warm-faded-740589",
+      "kind": "lut",
+      "name": "Warm Faded",
+      "category": "filter",
+      "version": "1.0.0",
+      "branch": "filters",
+      "files": [
+        {
+          "path": "filters/warm-faded_740589/filter.png",
+          "sha256": "fa9ac823c724244a8883524db0801e338f2829ad807b90c8b9c8e498e5039df7",
+          "bytes": 162275,
+          "branch": "filters"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/1535078f1d7c4a76ae9bb3aa3caee867~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=jJa0xp%2FJMADTZHLMMbABgerBTpg%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-1950s-announcer-743073",
+      "kind": "sound",
+      "name": "1950s Announcer",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/1950s-announcer_743073/noise.wav",
+          "sha256": "c410cc3277354b00170199ee578c71ce6835d519777b73ff28f624fce230a591",
+          "bytes": 1720616,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/d041e312266d481bbfcb6c8f66493013~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646355&x-signature=365YSCff63Zofne84RoK2OU%2FwQU%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-9d-soundscape-761812",
+      "kind": "sound",
+      "name": "9D Soundscape",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/9d-soundscape_761812/hrtf_irs.wav",
+          "sha256": "cfb88c861a980424c2c4f96b9117a4cd897ecda1603d2baf47382f97b12216cf",
+          "bytes": 958508,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/7741490db9c9419ebcb7b41b8cdd00b6~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=QLnEkkr9rS7jRMCAWKwjj084SP0%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-accordroid-747562",
+      "kind": "sound",
+      "name": "Accordroid",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/accordroid_747562/carrier_44.wav",
+          "sha256": "341b96fed9d2b316b051c6324c8bdf5ba9131a8df8acf6101e2e4c8cf5991f0b",
+          "bytes": 282326,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/e0ca1e66c6714c02b65964b76c93118d~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=b5qpiQBxl3KGzfuIWwSX0k3CtTY%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-aircraft-broadcast-732019",
+      "kind": "sound",
+      "name": "Aircraft broadcast",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/aircraft-broadcast_732019/noise_edit.wav",
+          "sha256": "23fe54147fbb3f206550e71dea525d0b4eb8d6eeb0ee49cc22b078735b302d4e",
+          "bytes": 2693264,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/eb473390ab1e4992b4f44cdc0be05db1~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646357&x-signature=cqMTlYmMsLWH5NAhO2JDiEOJkbA%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-android-og-763744",
+      "kind": "sound",
+      "name": "Android OG",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/android-og_763744/android_og_carrier_v7_texture.wav",
+          "sha256": "d0f6d959ce7f13ec73586a588f60bae3c9c4206f8c15add59fc3ff841d165c2c",
+          "bytes": 1920044,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/ecb4409d1aa249678251b3a328603133~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=Dbct6b8HVLaKH8EZruCUBvZgOH8%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-androidifier-759411",
+      "kind": "sound",
+      "name": "Androidifier",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/androidifier_759411/small_room.wav",
+          "sha256": "69e8b5de7e499541988b1880be85495565944a7e6e90822087dfecf24004e9ac",
+          "bytes": 234710,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/7bdef684405e45e9be1ae7275c19ce28~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=3lsiXUBmSx8bEumzyNbLNtQzH3w%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-backpack-radio-763152",
+      "kind": "sound",
+      "name": "Backpack Radio",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/backpack-radio_763152/white.wav",
+          "sha256": "4d6a0fda19eb8bd103442731bc7c2e4dc277485dac0f3741b37fffb712ac65ec",
+          "bytes": 1331438,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/c0c518d3b1bf4a7b9e9e1de3ce76ef9c~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=ZlibALS60Tgwo%2BGAL9vozelZbnw%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-bawk-talk-762111",
+      "kind": "sound",
+      "name": "Bawk Talk",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/bawk-talk_762111/chicken1.wav",
+          "sha256": "6cbb23a21fbfb6c4643032989a98e345d536e9b458f57ef88704baf9c1253720",
+          "bytes": 37486,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/ee8441d8c0d4408b9ee9e06872139405~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=xs7LuarcyPeGVq%2BE3XjEtWIX%2FBc%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-birthday-party-757397",
+      "kind": "sound",
+      "name": "Birthday Party",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/birthday-party_757397/birthday.mp3",
+          "sha256": "b4e5c356cf915f9e85794836ca1b34a016e621939a5393abab4abb63b4248412",
+          "bytes": 271359,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/579eeaa8ac7946d38d66e75aaa721656~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646354&x-signature=eFHgwfSiqsk68jiXh6mg4yy%2FB%2Bg%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-claps-746968",
+      "kind": "sound",
+      "name": "Claps",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/claps_746968/applause.wav",
+          "sha256": "1e93cfefb8831db1570395a694d7ca4a9b465f48fb777f6292cd2aae0ad54e36",
+          "bytes": 608258,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/21188b2de7ae41fba5acf3a7e834a2a1~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=zWDivkPh1ccOT14uVYC6ixas7Nk%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-classic-fm-radio-763152",
+      "kind": "sound",
+      "name": "Classic FM Radio",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/classic-fm-radio_763152/noise.wav",
+          "sha256": "82215bb1a9f903a3703ce991f199456cc83d85e3706b3d56419c3ed8fb527324",
+          "bytes": 1048934,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/14919e4bc0674276b07c8fdadb4bedbf~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=cSDQp8hgzcpLB744X%2B0q79UUdm0%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-commuting-751973",
+      "kind": "sound",
+      "name": "Commuting",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/commuting_751973/metro.wav",
+          "sha256": "9f0b0b1a15fab731fcf865e75161985511ef8e2737ba28bfcce71bf7b90d8099",
+          "bytes": 4338836,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/22bbbe7def16488bac9598d85a6f1a41~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=ydX5ybCJ%2FriFEMc3ksZlWz%2FHnxk%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-cosmic-bot-767785",
+      "kind": "sound",
+      "name": "Cosmic Bot",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/cosmic-bot_767785/carrier.wav",
+          "sha256": "a1c30d2738d16d0352b98e1e7d8f22c9b0feb64ce045ec4721b29f2ed8a4f22a",
+          "bytes": 1540096,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/cd7d008baa384c78a26783815c066297~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=IH%2F9jNA8C%2BxnYgwpZ%2BxM1f76HsU%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-cubicle-echo-754837",
+      "kind": "sound",
+      "name": "Cubicle Echo",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/cubicle-echo_754837/ir.wav",
+          "sha256": "267ad5d92f0ba6314b76d6273d98054cc92e5ceb541069a6ea564fa4e725071a",
+          "bytes": 722048,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/fce230e4a5f847e7a209a01ff0453364~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=z%2FDKzGVKPdZMiPl%2BmoQGBT8OTx0%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-cyber-singer-767785",
+      "kind": "sound",
+      "name": "Cyber Singer",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/cyber-singer_767785/carrier.wav",
+          "sha256": "013026756ab6be5b729eab95bd87ad6ae7fe1391ae175a4f52246fe0654a8875",
+          "bytes": 1540096,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/4060ba12ccbd444c9c04b96865790fb1~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=TbJx5gvFdajO%2F0do12NXf2XnJDQ%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-deafness-747081",
+      "kind": "sound",
+      "name": "Deafness",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/deafness_747081/noise.wav",
+          "sha256": "854619c71c945f41b522782e3a46684cd5598e189c20c0c6b1806199f8e59ed8",
+          "bytes": 1541034,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/781b55463b6c4fbe91abebd83c6a463d~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=kCFj8FOvioPKzt7e7%2FAPMxH24rI%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-desert-737506",
+      "kind": "sound",
+      "name": "Desert",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/desert_737506/noise_edit.wav",
+          "sha256": "c7a7cb9e417bfd8807517bfbf00944699a49d368d5d358f0290d711c5c68654a",
+          "bytes": 4126068,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/4c6e3df1420647179dffcf339132bfb6~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646357&x-signature=ilCDBblQU%2BUV2Q5jc3XpXz8iOoM%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-distorted-mic-736911",
+      "kind": "sound",
+      "name": "Distorted Mic",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/distorted-mic_736911/carrier_source.wav",
+          "sha256": "44adee5acc9056beb1d113965e7d2c93048a02eb25adfc34f53956151e254969",
+          "bytes": 708148,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b9943bc8f3664f8a882dcd533b3c3e82~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646357&x-signature=WS%2BYR9Nwys4lm6V2HuokuntbZ4s%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-distortion-757396",
+      "kind": "sound",
+      "name": "Distortion",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/distortion_757396/heartbeat.wav",
+          "sha256": "a8e70438e1a0e73703cb177f4a8d9c45f166927fadb59147c6509193e7e83954",
+          "bytes": 1373408,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/09f3c23081694fbdb88b9467381b254a~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646355&x-signature=2sCHP8NJeps%2B8yFAL9OUcXFWRHg%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-genius-bot-763744",
+      "kind": "sound",
+      "name": "Genius Bot",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/genius-bot_763744/square.wav",
+          "sha256": "8dcea756b9262369f774cf83c76a0d688334a5128e54110b712be3ce713e619e",
+          "bytes": 1925774,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/5c9762e2f6004417a4fd10dab1313e6c~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=HQcdAehtczSNL9KDST6ynrR45d0%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-ghost-story-747082",
+      "kind": "sound",
+      "name": "Ghost Story",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/ghost-story_747082/horror_forest.wav",
+          "sha256": "372cf4d449b19ba70128bc1959d7b61741a2b2847cba5584a44d90d955f64f4f",
+          "bytes": 4858868,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/bcc2e893f9ec452d8cd113c289e66889~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646355&x-signature=vgJUx98hALGliiWnOHfC1fsmpuY%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-ghost-voice-767781",
+      "kind": "sound",
+      "name": "Ghost Voice",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/ghost-voice_767781/ghost_carrier_v3_updown.wav",
+          "sha256": "e3367f9ffc910d3391ee21e1acfce644efa506f1ac77272207c5e407a475eea4",
+          "bytes": 2822458,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/99e570127589458da98a21bf5b5206a6~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=jVvMo2MRFk8519vXkJQrDwvdGGQ%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-gravelly-alien-743073",
+      "kind": "sound",
+      "name": "Gravelly Alien",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/gravelly-alien_743073/pink_noise_02.wav",
+          "sha256": "89d5aa0ea46d30fb1d19c63dd72c2d31f6de4b8a70045de59a9a81539bdf85e2",
+          "bytes": 94634,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/27349ebb2d6f4badb22d62b98e7c90ff~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646357&x-signature=j4wpNWb4sCSdt3FCeZVT%2FNSgmvo%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-hell-737506",
+      "kind": "sound",
+      "name": "Hell",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/hell_737506/noise_edit.wav",
+          "sha256": "bb56227138a13e12f7a3aa8240c5a82a7fb0dd2ad50fd3a2255e238c03faea08",
+          "bytes": 5434316,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/f324e49b5f1948d9916aaa3f7541dc18~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646356&x-signature=HzTd24i3mMJuMJOBq0GpxVgn80A%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-ice-cave-737506",
+      "kind": "sound",
+      "name": "Ice Cave",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/ice-cave_737506/noise_edit.wav",
+          "sha256": "3d75bf2b72754bf89cfd8e02a90cd50a1daaef29bdf19dfbaa112d8ef96666e8",
+          "bytes": 5194596,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/16a160e65f9242759e35c482576e942a~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646357&x-signature=7Uy2z9VZZnECAXJcbaIUum1pI9w%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-in-the-wind-737506",
+      "kind": "sound",
+      "name": "In The Wind",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/in-the-wind_737506/noise_edit.wav",
+          "sha256": "7303c4f3c3030602cba9e14187c04300838e10172914c3c8b2f789fbf6d21dc7",
+          "bytes": 4233644,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/de96d5eaa0c84ad28bbf25091245a10e~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646354&x-signature=3oUtnJTNZQsRHK9%2BqYRyzffB24U%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-in-womb-750859",
+      "kind": "sound",
+      "name": "In Womb",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/in-womb_750859/beat.wav",
+          "sha256": "318a2ad6098ef704fe2a82ce39e186ed15d2d3756ec9635398d7828e78555333",
+          "bytes": 1376048,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/ec75071e9735434e818479ac271eb9be~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=Qu2z7CK9V6l9%2FaLb%2BrLAaT7XS34%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-live-bounce-761812",
+      "kind": "sound",
+      "name": "Live Bounce",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/live-bounce_761812/hrtf_irs.wav",
+          "sha256": "cfb88c861a980424c2c4f96b9117a4cd897ecda1603d2baf47382f97b12216cf",
+          "bytes": 958508,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b01dfab7c2a548b5996e6848075fb1aa~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=9AgmGEyn3u2thvEmvuy%2BwYiKAd0%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-live-broadcast-732462",
+      "kind": "sound",
+      "name": "Live broadcast",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/live-broadcast_732462/noise_edit.wav",
+          "sha256": "dad415365001cfed4e55bf1d40e99c01b824c07a953bae2f548661f17c565356",
+          "bytes": 5789090,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/395001ee862e4b1f942999b02b7e6502~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646355&x-signature=MCaB%2B7m%2Be0%2BGK3LYmfBbH7eqE0I%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-low-battery-702105",
+      "kind": "sound",
+      "name": "Low Battery",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/low-battery_702105/15.wav",
+          "sha256": "ddd51e78cc5ff63c4d965663ae5b25f9d6e3f590595040288de5761ae94dde0a",
+          "bytes": 3304428,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/ac97c4d5c09047999be4771092994e0e~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646355&x-signature=pBFNNDi%2Bq8y%2FETolaZYF0c%2BME04%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-market-broadcast-743073",
+      "kind": "sound",
+      "name": "Market Broadcast",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/market-broadcast_743073/market.wav",
+          "sha256": "e682ab4ce96d40ab3c8041c69b72e66eb88af1dbdcef7c30e2d8a9809bdbab6a",
+          "bytes": 7291860,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/27bdc0f28d8d4e48a8ca14a1e634104a~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646357&x-signature=OORW3ZB%2FIydGp8ga2QIMAfHNrYU%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-meow-speaker-761812",
+      "kind": "sound",
+      "name": "Meow Speaker",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/meow-speaker_761812/cat1.wav",
+          "sha256": "5a4b26cd3b2ffb4b085f8b87729e50f5e8d58d25769e790f939229d1bc18c7f0",
+          "bytes": 66538,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/d20616fb0f274e5682418cb2edbce13d~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=a7IY5mfTbZKq%2FmHGh7E17kCHhlA%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-night-club-756470",
+      "kind": "sound",
+      "name": "Night Club",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/night-club_756470/909.wav",
+          "sha256": "1fd3dea1c50abaaec824df46940a5f59ffa4090ee293c947b958a0329e5622e8",
+          "bytes": 768044,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b5df54a4bd714c6fa444a6bd585eea0d~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=G45gnU6gIs4eBZs7gHvUZIwOeVg%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-office-750859",
+      "kind": "sound",
+      "name": "Office",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/office_750859/office.wav",
+          "sha256": "e2c212e23ee3068ea8368b60c133b8df9cdc72d16cb6b8d74a7a2d94083276bf",
+          "bytes": 3698822,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/c9bc70960a5248d0bf35998f61549460~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=2tiRgTa2ODaCwxGk19PIU%2BnSXIQ%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-old-hollywood-743072",
+      "kind": "sound",
+      "name": "Old Hollywood",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/old-hollywood_743072/noise.wav",
+          "sha256": "c410cc3277354b00170199ee578c71ce6835d519777b73ff28f624fce230a591",
+          "bytes": 1720616,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b66168eb7d1f496b857f0f9529ad2a6a~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646357&x-signature=GA7rtlHSFlSnMljA0FRepnUiI%2FI%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-out-of-signal-747082",
+      "kind": "sound",
+      "name": "Out of Signal",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/out-of-signal_747082/noise_1.wav",
+          "sha256": "41d112584541ad0fff8a6ccfb3252ab24beeaa576df378dbdd919a4f1d6b8731",
+          "bytes": 1605858,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/f5d3ffd9a8b74b03acd58fb7ca711909~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=EMGiqI%2BjofJUPCsUyGRHQ86%2FTCo%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-post-blast-756909",
+      "kind": "sound",
+      "name": "Post-Blast",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/post-blast_756909/528hz.wav",
+          "sha256": "59f475c5debb4dd17c8d544b54906b265de80274e5de8240aa27796825ecc84d",
+          "bytes": 966662,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/0723f4488d1445328d33872c9211d63e~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=qrHsEiyI3XMt8ipcSdT67ejcCeE%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-psyelectro-737506",
+      "kind": "sound",
+      "name": "PsyElectro",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/psyelectro_737506/noise_edit.wav",
+          "sha256": "54bfeb7a695a79649aa619e50128bab9c6bce3610d237c6dc23dd604d78a4d3a",
+          "bytes": 6356592,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/2b740f23163b451b914d23ab95e9f32f~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646354&x-signature=ffz%2BN8YPCXMYEoC%2F%2FNF7jJvYBGQ%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-robo-specter-759409",
+      "kind": "sound",
+      "name": "Robo Specter",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/robo-specter_759409/ghost.wav",
+          "sha256": "9728364045a2703ef4999471647619ba0b53e2c3ee3fe98f094dfca73caf3500",
+          "bytes": 711374,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/0d35e8c089c24921a27348aa32814d1c~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=gJ2dXFpymSDMLU%2BQd3wBIb%2BLisU%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-robo-763744",
+      "kind": "sound",
+      "name": "R.O.B.O.",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/robo_763744/swatooth.wav",
+          "sha256": "c99220d7a0c3b05e2152a68d61f463d9da97ff30d1b4ee9a8bdb8d42c08b7347",
+          "bytes": 1925774,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/234b603a07954b92a62e1d151670613f~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646355&x-signature=1oTOr5SUJ86YXlEzFEvp4t25evY%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-robot-702105",
+      "kind": "sound",
+      "name": "Robot",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/robot_702105/13.wav",
+          "sha256": "e870630783f4b2e0e5a421641ed53307c809ab238ba2a067e0397259daf2dbc7",
+          "bytes": 3304428,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/662d397aceec4b03bce0344e961e2ff3~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646354&x-signature=SKisyBb12DvD8jX0P11yZ1NZGi0%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-roboto-747562",
+      "kind": "sound",
+      "name": "Roboto",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/roboto_747562/noise.wav",
+          "sha256": "81d1d6a26e987a78830332363ed0760cdfeb4f756426ca0af6c23725be2f2c76",
+          "bytes": 1150,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/c7862b2a8af24662ac12aa5b4ca71249~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646356&x-signature=e5qpoardf1%2B4z1q0UKHcjU8nkgU%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-space-intercom-757507",
+      "kind": "sound",
+      "name": "Space Intercom",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/space-intercom_757507/noise.wav",
+          "sha256": "f441736db3f9ef09c308e305fe58c1b10b393a27957b3f9b377999f0660d6d37",
+          "bytes": 486662,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/60edd7e66d794887968abb34ee76bc61~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=bSGLU6YIFUMIqW1Y2OTNmvKZJAw%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-starship-intercom-757879",
+      "kind": "sound",
+      "name": "Starship Intercom",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/starship-intercom_757879/room.wav",
+          "sha256": "02e3281259b548c2dc50bd8ba06b1e198a82cfe842d06580da6048468b412850",
+          "bytes": 1390794,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/91566126369849bcbb972541f99509b8~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=H2Qn1L40gogbQbLr3C3oqg0Os38%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-synth-702105",
+      "kind": "sound",
+      "name": "Synth",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/synth_702105/12.wav",
+          "sha256": "5c3f3151d9b411069b0f9090486036c900c8e1e3fb211b62a2cdbfc28cd565e8",
+          "bytes": 3304428,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/4bda951ae82e490f9e4b128439543ca0~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646355&x-signature=7Gcj7f5VcsWW3I1tJCMhGTPd%2FfE%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-thunderstorm-754019",
+      "kind": "sound",
+      "name": "Thunderstorm",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/thunderstorm_754019/rain.wav",
+          "sha256": "7bc0462f36a53f548e34406dc4a53e2d6b93c8c261b058b4d171a54d2efab39f",
+          "bytes": 7360814,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/64543fa7d76a4c63bc13c3ebd02c5208~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=OPfpDYsc5rUSpdq2mswVxQNxvxc%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-tube-tv-743073",
+      "kind": "sound",
+      "name": "Tube TV",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/tube-tv_743073/noise.wav",
+          "sha256": "c410cc3277354b00170199ee578c71ce6835d519777b73ff28f624fce230a591",
+          "bytes": 1720616,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/33d839d80b3c454281ab22c4573e27d0~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646357&x-signature=lymXFxP4xrjfKmgcxgriZsUJ5uk%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-villager-sim-762111",
+      "kind": "sound",
+      "name": "Villager Sim",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/villager-sim_762111/village1.wav",
+          "sha256": "e89f05ebb65a41c37f3477da139895a6739094ece25c13cba6cdeaca2344620e",
+          "bytes": 50284,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/bac614d717c148c5b7c78d1b3b69f9f1~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=QMTW1ZY7NXggF3pN0JBKpx5fB8k%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-vintage-film-746967",
+      "kind": "sound",
+      "name": "Vintage Film",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/vintage-film_746967/noise.wav",
+          "sha256": "c410cc3277354b00170199ee578c71ce6835d519777b73ff28f624fce230a591",
+          "bytes": 1720616,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b8936a3f8d584133aa6355cd34ceb53b~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=F8LHfBrEOb%2FpoG1QFIplTdyxsL8%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-vintage-phone-764885",
+      "kind": "sound",
+      "name": "Vintage Phone",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/vintage-phone_764885/pink_noise.wav",
+          "sha256": "7c7da38e251778b8c79c58d81cf0f3949dad56f5e1a4507e1c852f2724468a03",
+          "bytes": 1926662,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/80d45dba5d674a599335bb121ebdd299~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=AX6aG2%2BRGc3Sf5hE2JEsLKz4Znw%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-vinyl-702548",
+      "kind": "sound",
+      "name": "Vinyl",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/vinyl_702548/vinyl_noise_edit.wav",
+          "sha256": "c410cc3277354b00170199ee578c71ce6835d519777b73ff28f624fce230a591",
+          "bytes": 1720616,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/1d786c90501c44f5ae11e9cb8da9ea1f~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646356&x-signature=BUCBPA5gvil%2FYJ4kUc0VuUDVXL8%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "cf.snd-vocoda-747562",
+      "kind": "sound",
+      "name": "Vocoda",
+      "category": "voice-change",
+      "version": "1.0.0",
+      "branch": "voice-effects",
+      "files": [
+        {
+          "path": "voice-effects/vocoda_747562/carrier_44.wav",
+          "sha256": "341b96fed9d2b316b051c6324c8bdf5ba9131a8df8acf6101e2e4c8cf5991f0b",
+          "bytes": 282326,
+          "branch": "voice-effects"
+        }
+      ],
+      "license": "LicenseRef-ClipForge",
+      "attribution": "ClipForge Community",
+      "preview": {
+        "path": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/1134455c6f8a4ff99adcf324f9c02588~tplv-fhsjxsyzit-resize:200:200.png?x-expires=1823646357&x-signature=7yH9OFix8Cv%2BhZ1FATXY%2BD0%2FQqY%3D",
+        "sha256": "",
+        "bytes": 0
+      }
+    }
+  ],
   "presets": [
     {
       "id": "7406275746551041286",
@@ -16,7 +2206,7 @@
     },
     {
       "id": "7406275882400189701",
-      "title": "\u4eba\u8138\u6846",
+      "title": "人脸框",
       "category": "auto-beauty",
       "branch": "beauty-retouch",
       "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/26cb8ddb50bf4119a0883539d375b676?lk3s=43402efa&x-expires=1823646278&x-signature=zafuJnX%2FHidgVMarGIHA5k9pCAI%3D",
@@ -21387,7 +23577,7 @@
     },
     {
       "id": "7498203137958841616",
-      "title": "\u81ea\u5b9a\u4e49\u5934\u53d1",
+      "title": "自定义头发",
       "category": "other",
       "branch": "misc-presets",
       "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/e5da8e0ef0d44d71a441a734322ae0f9?lk3s=43402efa&x-expires=1823646352&x-signature=QCt2cTygrD39kZmR0wH%2FzpijosI%3D",
@@ -25325,7 +27515,7 @@
     },
     {
       "id": "7338256913865380354",
-      "title": "E\u00b7T",
+      "title": "E·T",
       "category": "voice-change",
       "branch": "voice-effects",
       "url": "https://p19-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/4d5176bd12b94324afb6db05b086d272?lk3s=43402efa&x-expires=1823646357&x-signature=tfa9GoaVpeAJVqnLSeV1QmMdBMw%3D",
@@ -27037,7 +29227,7 @@
     },
     {
       "id": "7486006981489151249",
-      "title": "aigc-\u82f1\u8bed-Dailylife-TIME TO MUSIC-TIME TO MUSIC",
+      "title": "aigc-英语-Dailylife-TIME TO MUSIC-TIME TO MUSIC",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/7371cbc5539546dd902c15e77ee838a9?lk3s=43402efa&x-expires=1823646499&x-signature=xafzzqu8ymH4xD5R8ooqsy5b2Xc%3D",
@@ -27048,7 +29238,7 @@
     },
     {
       "id": "7485969228357602576",
-      "title": "aigc-\u82f1\u8bed-Anniversary-\u6210\u4e3a\u6211\u7684\u4eba\uff1b\u5c5e\u4e8e\u6211-Be mine",
+      "title": "aigc-英语-Anniversary-成为我的人；属于我-Be mine",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/86453978b9364e0f833b953c45c67243?lk3s=43402efa&x-expires=1823646499&x-signature=Z0K6N9lcJU6nPC%2BNTu9x4awEG5s%3D",
@@ -27059,7 +29249,7 @@
     },
     {
       "id": "7486275934924950785",
-      "title": "aigc-\u82f1\u8bed-Food-Coffee first-Coffee first",
+      "title": "aigc-英语-Food-Coffee first-Coffee first",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/b0e0f7047753488aae911d2ec0448007?lk3s=43402efa&x-expires=1823646499&x-signature=mewLRW7MpRmt8AQsuOTtuFef4cM%3D",
@@ -27070,7 +29260,7 @@
     },
     {
       "id": "7483787841701481729",
-      "title": "aigc-\u82f1\u8bed-Vlog-Chasing happiness-Chasing happiness",
+      "title": "aigc-英语-Vlog-Chasing happiness-Chasing happiness",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/ec4b26c66db2434da4147e20d7061df6?lk3s=43402efa&x-expires=1823646499&x-signature=E9Qx2w3iH0vy9Ygw8DKGAp95oUE%3D",
@@ -27081,7 +29271,7 @@
     },
     {
       "id": "7486005830496668929",
-      "title": "aigc-\u82f1\u8bed-Vlog-Daily Vlog-Daily Vlog",
+      "title": "aigc-英语-Vlog-Daily Vlog-Daily Vlog",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/3daedc0294974fee8cd71cce42509e9b?lk3s=43402efa&x-expires=1823646499&x-signature=0YU0axSJs6Cql8Tvl%2FHZgCOQ4Nk%3D",
@@ -27092,7 +29282,7 @@
     },
     {
       "id": "7485971017773468945",
-      "title": "aigc-\u82f1\u8bed-Anniversary-Lovely Days-Lovely Days",
+      "title": "aigc-英语-Anniversary-Lovely Days-Lovely Days",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/7394329835d14aef8d9d9b8ef627528e?lk3s=43402efa&x-expires=1823646499&x-signature=L%2FjOl7QEcmiGj%2FmFjQJcDntjb4Q%3D",
@@ -27103,7 +29293,7 @@
     },
     {
       "id": "7485970918263606529",
-      "title": "aigc-\u82f1\u8bed-Anniversary-Stay happy-Stay happy",
+      "title": "aigc-英语-Anniversary-Stay happy-Stay happy",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/c933f9997d264f2997fbf59f51f13ec4?lk3s=43402efa&x-expires=1823646499&x-signature=W2RLffYRSUuqltZjHTDnh6WUb00%3D",
@@ -27114,7 +29304,7 @@
     },
     {
       "id": "7485960008941800720",
-      "title": "aigc-\u82f1\u8bed-Anniversary-Best wishes!-Best wishes!",
+      "title": "aigc-英语-Anniversary-Best wishes!-Best wishes!",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/d88f6ea0d2264912b76553a7b0d3e2c8?lk3s=43402efa&x-expires=1823646499&x-signature=kG6JG2Rxqh0nFRHM%2FlYW7h7sHxY%3D",
@@ -27125,7 +29315,7 @@
     },
     {
       "id": "7485959234136345857",
-      "title": "aigc-\u82f1\u8bed-Anniversary-Time flies with you-Time flies with you",
+      "title": "aigc-英语-Anniversary-Time flies with you-Time flies with you",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/a58ba32471114a5b895c46be14636745?lk3s=43402efa&x-expires=1823646499&x-signature=SAsQGwtl086J%2BPFhFS1LqBDriek%3D",
@@ -27136,7 +29326,7 @@
     },
     {
       "id": "7485896022267383057",
-      "title": "aigc-\u82f1\u8bed-Dailylife-HAPPY SHOPPING-HAPPY SHOPPING",
+      "title": "aigc-英语-Dailylife-HAPPY SHOPPING-HAPPY SHOPPING",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/cce5a3190784498d99c95a0f3c6d6a9d?lk3s=43402efa&x-expires=1823646499&x-signature=j%2F%2FerT9ANBZKGUrBuFwE1VVY2yw%3D",
@@ -27147,7 +29337,7 @@
     },
     {
       "id": "7486302459598490897",
-      "title": "aigc-\u82f1\u8bed-Food-Sharing is caring-Sharing is caring",
+      "title": "aigc-英语-Food-Sharing is caring-Sharing is caring",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/92556783841340c18f5a2f73e1b1bd3a?lk3s=43402efa&x-expires=1823646499&x-signature=HekWRhxhrL%2BCQZKHMq3EJdXgIzw%3D",
@@ -27158,7 +29348,7 @@
     },
     {
       "id": "7486297666033306896",
-      "title": "aigc-\u82f1\u8bed-Food-Life needs dessert-Life needs dessert",
+      "title": "aigc-英语-Food-Life needs dessert-Life needs dessert",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/cf2fa7a3de7444ab92d9dfc77edd955c?lk3s=43402efa&x-expires=1823646499&x-signature=AtVUaitJ9v%2FwofPgCB8b%2BgIYnOo%3D",
@@ -27169,7 +29359,7 @@
     },
     {
       "id": "7486282356555386113",
-      "title": "aigc-\u82f1\u8bed-Food-Coffee first-Coffee first",
+      "title": "aigc-英语-Food-Coffee first-Coffee first",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/c2c3d7dd997a4441a4b9a8cf35f310c6?lk3s=43402efa&x-expires=1823646499&x-signature=xqsachKPo3TUyDO0U%2B%2FYaMgs8b4%3D",
@@ -27180,7 +29370,7 @@
     },
     {
       "id": "7484087715886009616",
-      "title": "aigc-\u82f1\u8bed-Travel-All aboard!-All aboard!",
+      "title": "aigc-英语-Travel-All aboard!-All aboard!",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/54706d7dda544bfcb5d45d3fee9e7f92?lk3s=43402efa&x-expires=1823646500&x-signature=HrC6HRgWREwUASsm%2BcMVVp4ONEI%3D",
@@ -27191,7 +29381,7 @@
     },
     {
       "id": "7484081467908279553",
-      "title": "aigc-\u82f1\u8bed-Travel-Beach Time-Beach Time",
+      "title": "aigc-英语-Travel-Beach Time-Beach Time",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/b23bac9434bb41fbaf484fcfb92d7c1d?lk3s=43402efa&x-expires=1823646500&x-signature=hIN%2FokzQOrjitOzGfWAL%2F8eO1zY%3D",
@@ -27202,7 +29392,7 @@
     },
     {
       "id": "7484081467908263169",
-      "title": "aigc-\u82f1\u8bed-Travel-Holiday Time-Holiday Time",
+      "title": "aigc-英语-Travel-Holiday Time-Holiday Time",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/ac1be66b76a5443ab46425041c19ee56?lk3s=43402efa&x-expires=1823646500&x-signature=4s08QdR56rP6Rm683IRUwF6pYk0%3D",
@@ -27213,7 +29403,7 @@
     },
     {
       "id": "7484080356396698881",
-      "title": "aigc-\u82f1\u8bed-Travel-WINTER-WINTER",
+      "title": "aigc-英语-Travel-WINTER-WINTER",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/b83e84a4cfb34bba9519eb4665763802?lk3s=43402efa&x-expires=1823646500&x-signature=rmP8K%2B%2FNlHhShcJ%2BNQu4nzlHXUo%3D",
@@ -27224,7 +29414,7 @@
     },
     {
       "id": "7484079113779694849",
-      "title": "aigc-\u82f1\u8bed-Travel-\u57ce\u5e02\u6d77\u6ee9-Urban Beaches",
+      "title": "aigc-英语-Travel-城市海滩-Urban Beaches",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/f6c31d9d033344e5b9b8b3d725cd756a?lk3s=43402efa&x-expires=1823646500&x-signature=GW%2FpbeP%2FbPpx%2B4rtXtCntnMw47E%3D",
@@ -27235,7 +29425,7 @@
     },
     {
       "id": "7482610013731573009",
-      "title": "aigc-\u82f1\u8bed-Dailylife-Unboxing Time-Unboxing Time",
+      "title": "aigc-英语-Dailylife-Unboxing Time-Unboxing Time",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/2c9bca6c84eb40e38f783781bc54f03b?lk3s=43402efa&x-expires=1823646500&x-signature=F8wcr1SgZWT8DzT%2FUfuI%2BHtTsRU%3D",
@@ -27246,7 +29436,7 @@
     },
     {
       "id": "7482605846661205264",
-      "title": "aigc-\u82f1\u8bed-Dailylife-New Episode-New Episode",
+      "title": "aigc-英语-Dailylife-New Episode-New Episode",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/4801545b8bbb4ec99c5348f771550c9d?lk3s=43402efa&x-expires=1823646500&x-signature=0xq3LZn1Lh6yiB48s%2Ba1hskLXMk%3D",
@@ -27257,7 +29447,7 @@
     },
     {
       "id": "7482574169218092304",
-      "title": "aigc-\u82f1\u8bed-Dailylife-Happy Women's Day-Happy Women's Day",
+      "title": "aigc-英语-Dailylife-Happy Women's Day-Happy Women's Day",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/9d2ce10158c34dc795d70a07350409f0?lk3s=43402efa&x-expires=1823646500&x-signature=MorZe6K1UUApx5iXcK8rhJ%2BOrOk%3D",
@@ -27268,7 +29458,7 @@
     },
     {
       "id": "7482599205295459585",
-      "title": "aigc-\u82f1\u8bed-Dailylife-SKATES TIME-SKATES TIME",
+      "title": "aigc-英语-Dailylife-SKATES TIME-SKATES TIME",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/1c4c75fa6dbf44b1b310d9086e39150f?lk3s=43402efa&x-expires=1823646500&x-signature=%2FbE%2BAPDcWssS0hFDC7GJYVzr4Nk%3D",
@@ -27279,7 +29469,7 @@
     },
     {
       "id": "7483788276252380433",
-      "title": "aigc-\u82f1\u8bed-Vlog-Grateful today-Grateful today",
+      "title": "aigc-英语-Vlog-Grateful today-Grateful today",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/1762dc0347db4b0ebfbc822060a317a4?lk3s=43402efa&x-expires=1823646500&x-signature=8GjrqxXxxjOpHqA9YN4uHxZ0JC8%3D",
@@ -27290,7 +29480,7 @@
     },
     {
       "id": "7483772732677573904",
-      "title": "aigc-\u82f1\u8bed-Vlog-Vlogger-Vlogger",
+      "title": "aigc-英语-Vlog-Vlogger-Vlogger",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/b69a9748f5514e8aaa3532232979f2de?lk3s=43402efa&x-expires=1823646500&x-signature=GHS6WLSgR5cbIqg%2Bp1ByeiWcHHw%3D",
@@ -27301,7 +29491,7 @@
     },
     {
       "id": "7483769491046829329",
-      "title": "aigc-\u82f1\u8bed-Vlog-So delicious!-So delicious!",
+      "title": "aigc-英语-Vlog-So delicious!-So delicious!",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/2c01847caad046618de06ae6b704121b?lk3s=43402efa&x-expires=1823646500&x-signature=R7ApSY5%2Fu32%2FSBwQKALccukuXSA%3D",
@@ -27312,7 +29502,7 @@
     },
     {
       "id": "7483753750797077761",
-      "title": "aigc-\u82f1\u8bed-Vlog-Add to cart-Add to cart",
+      "title": "aigc-英语-Vlog-Add to cart-Add to cart",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/3cd5d98a96e84e96a079bbd61dbcdd12?lk3s=43402efa&x-expires=1823646500&x-signature=NlLNdHjTmFwsaNRJjjQLLESiBLc%3D",
@@ -27323,7 +29513,7 @@
     },
     {
       "id": "7483729603136163073",
-      "title": "aigc-\u82f1\u8bed-Anniversary-Make a wish!-Make a wish!",
+      "title": "aigc-英语-Anniversary-Make a wish!-Make a wish!",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/ba638ace7c0a439787e5c7d9d3b80c98?lk3s=43402efa&x-expires=1823646500&x-signature=oKQFORC5pET2oqrr23XerY%2BNcsY%3D",
@@ -27334,7 +29524,7 @@
     },
     {
       "id": "7481172383970217232",
-      "title": "aigc-\u82f1\u8bed-Anniversary-You complete me-You complete me",
+      "title": "aigc-英语-Anniversary-You complete me-You complete me",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/0f40b311b9684930839fd017de9736d3?lk3s=43402efa&x-expires=1823646500&x-signature=Jd01ASOJ2Um5YsRCXPXuLujH4f0%3D",
@@ -27345,7 +29535,7 @@
     },
     {
       "id": "7481524731020201232",
-      "title": "aigc-\u82f1\u8bed-Travel-\u548c\u6211\u4e00\u8d77\u65c5\u884c-Travel with Me",
+      "title": "aigc-英语-Travel-和我一起旅行-Travel with Me",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/3767eb51073e43688ba13608e68976b4?lk3s=43402efa&x-expires=1823646500&x-signature=NkKaderoiyLrgd7Rp%2BMuabZri6M%3D",
@@ -27356,7 +29546,7 @@
     },
     {
       "id": "7481521945238867201",
-      "title": "aigc-\u82f1\u8bed-Travel-A Traveler's\nJourney-A Traveler's  Journey",
+      "title": "aigc-英语-Travel-A Traveler's\nJourney-A Traveler's  Journey",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/44bed63cabaa4d7fba3a8604696c7c8d?lk3s=43402efa&x-expires=1823646500&x-signature=FpG1DmIIKAH%2FILeHa%2B0liYIHfHI%3D",
@@ -27367,7 +29557,7 @@
     },
     {
       "id": "7481503909610065168",
-      "title": "aigc-\u82f1\u8bed-Travel-\u57ce\u5e02\u6d77\u6ee9-Urban Beaches",
+      "title": "aigc-英语-Travel-城市海滩-Urban Beaches",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/9f65d999708f4bdda54add990812cc3e?lk3s=43402efa&x-expires=1823646500&x-signature=%2FFwFBk9CUvmDtB9mzyxFMHB9ikU%3D",
@@ -27378,7 +29568,7 @@
     },
     {
       "id": "7480754889807777041",
-      "title": "aigc-\u82f1\u8bed-Dailylife- Reading time-Reading time",
+      "title": "aigc-英语-Dailylife- Reading time-Reading time",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/b1451eeeeac94a31ab6af70232079a16?lk3s=43402efa&x-expires=1823646500&x-signature=XfRvVSBeIAcvZcdsjipfxvm5xpo%3D",
@@ -27389,7 +29579,7 @@
     },
     {
       "id": "7480751270450580753",
-      "title": "aigc-\u82f1\u8bed-Travel-Safe flight!-Safe flight!",
+      "title": "aigc-英语-Travel-Safe flight!-Safe flight!",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-artist-brand-file-sign.capcutcdn-us.com/tos-useast8-i-vhca9ebo5x-tx2/399ad659795641c09e60049484d3bf70?lk3s=43402efa&x-expires=1823646500&x-signature=UsD5kDSc5tS7XpE5nuHcnc9tqes%3D",
@@ -27829,7 +30019,7 @@
     },
     {
       "id": "7695038360691182869",
-      "title": "\u0634\u0643\u0631\u0627 \u0639\u0644\u0649 \u0627\u0644\u0645\u0634\u0627\u0647\u062f\u0629 ",
+      "title": "شكرا على المشاهدة ",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/0790e3cb5c51444d99a84a7e52d18859?lk3s=43402efa&x-expires=1823646504&x-signature=4FAFdQzQd7WzQKLDQ9rg6UDb2wg%3D",
@@ -29116,7 +31306,7 @@
     },
     {
       "id": "7553841870724402493",
-      "title": "Sale JP - 10% \u30aa\u30d5\uff01Scrolling Japan",
+      "title": "Sale JP - 10% オフ！Scrolling Japan",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/51a960426493427a912b34bd688d31d8?lk3s=43402efa&x-expires=1823646509&x-signature=ifHpAA4GqooI2EYnwS7MbZsSFls%3D",
@@ -30040,7 +32230,7 @@
     },
     {
       "id": "7330995887432404225",
-      "title": "\u767d\u8272\u6253\u5b57\u673ai love you",
+      "title": "白色打字机i love you",
       "category": "text-template",
       "branch": "text-templates",
       "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/2b4905cb29db45a4bf43718888b7762c?lk3s=43402efa&x-expires=1823646663&x-signature=dwMOATfXy28UjpcbSngss%2BZpoH4%3D",
