@@ -1,0 +1,18 @@
+{
+  "id": "7408430512072609029",
+  "title": "Even",
+  "category": "auto-beauty",
+  "branch": "beauty-retouch",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/8de6bd3578b548e38b1a717e86769a70?lk3s=43402efa&x-expires=1823646278&x-signature=pG52HBvVAg9P6gId5BZgoPa9ApE%3D",
+  "md5": "c0e797ea4acc2e5ade18fa78d2bc7d43",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/13d1d19a09dd40439eca76227d044cfc~tplv-fhsjxsyzit-resize:0:0.png?x-expires=1823646278&x-signature=JMnTpUt01tQ14B2tpYyC0%2BGuJ%2B0%3D",
+  "params": [
+    {
+      "default": 1,
+      "effect_key": "effects_adjust_intensity",
+      "max": 1,
+      "min": 0
+    }
+  ]
+}
