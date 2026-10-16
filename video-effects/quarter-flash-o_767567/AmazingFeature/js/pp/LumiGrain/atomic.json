@@ -1,0 +1,155 @@
+{
+  "key": "LumiGrain",
+  "category": "Others",
+  "desc": "胶片颗粒/噪点 - 生成可控的胶片颗粒与彩色噪点，并支持亮度/对比度/饱和度微调。可用于复古胶片质感、弱光噪点模拟、画面统一与细节遮罩。",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果 - 颗粒强度为0"
+    },
+    {
+      "name": "subtle_mono",
+      "desc": "轻微黑白颗粒 - 自然、克制的胶片颗粒"
+    },
+    {
+      "name": "subtle_color",
+      "desc": "轻微彩色颗粒 - 略带彩噪的复古感"
+    },
+    {
+      "name": "film_35mm",
+      "desc": "35mm 胶片感 - 更明显的颗粒与轻微色彩漂移"
+    },
+    {
+      "name": "heavy_grain",
+      "desc": "重颗粒 - 强烈颗粒覆盖，适合风格化/遮罩细节"
+    },
+    {
+      "name": "only_noise_debug",
+      "desc": "仅噪点调试 - 只输出噪点（用于调试质量/缩放/种子）"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "grainIntensity",
+      "desc": "颗粒强度 - 总体颗粒强度（建议 0~8，10+ 更风格化）",
+      "type": "number",
+      "value": 3.0,
+      "min": 0.0,
+      "max": 20.0
+    },
+    {
+      "name": "monochrome",
+      "desc": "黑白颗粒 - 开启后使用单通道颗粒（更像胶片）",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "intensityR",
+      "desc": "红通道强度 - 彩色颗粒时的 R 通道强度",
+      "type": "number",
+      "value": 10.0,
+      "min": 0.0,
+      "max": 20.0,
+      "visibleIf": {
+        "param": "monochrome",
+        "truthy": false
+      }
+    },
+    {
+      "name": "intensityG",
+      "desc": "绿通道强度 - 彩色颗粒时的 G 通道强度",
+      "type": "number",
+      "value": 10.0,
+      "min": 0.0,
+      "max": 20.0,
+      "visibleIf": {
+        "param": "monochrome",
+        "truthy": false
+      }
+    },
+    {
+      "name": "intensityB",
+      "desc": "蓝通道强度 - 彩色颗粒时的 B 通道强度",
+      "type": "number",
+      "value": 10.0,
+      "min": 0.0,
+      "max": 20.0,
+      "visibleIf": {
+        "param": "monochrome",
+        "truthy": false
+      }
+    },
+    {
+      "name": "scale",
+      "desc": "颗粒尺度 - 颗粒大小/密度（越大颗粒越粗）",
+      "type": "number",
+      "value": 0.3,
+      "min": 0.05,
+      "max": 2.0
+    },
+    {
+      "name": "brightness",
+      "desc": "亮度偏移 - 仅影响噪点混合后的整体亮度",
+      "type": "number",
+      "value": 0.0,
+      "min": -1.0,
+      "max": 1.0
+    },
+    {
+      "name": "contrast",
+      "desc": "对比度 - 仅影响噪点混合后的整体对比度",
+      "type": "number",
+      "value": 1.0,
+      "min": 0.0,
+      "max": 3.0
+    },
+    {
+      "name": "saturation",
+      "desc": "饱和度 - 仅影响噪点混合后的整体饱和度",
+      "type": "number",
+      "value": 0.5,
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "name": "combine",
+      "desc": "混合模式/强度 - 控制噪点与原图的混合效果（整数更稳定）",
+      "type": "number",
+      "value": 4.0,
+      "min": 0.0,
+      "max": 10.0
+    },
+    {
+      "name": "quality",
+      "desc": "质量/性能 - <1 时可能启用降采样以提升性能（画面更粗糙）",
+      "type": "number",
+      "value": 1.0,
+      "min": 0.2,
+      "max": 1.0
+    },
+    {
+      "name": "speed",
+      "desc": "噪点滚动速度 - 控制噪点随时间变化速度（0 为静止）",
+      "type": "number",
+      "value": 0.1,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "name": "interval",
+      "desc": "更新间隔（秒）- 控制 seed 更新频率，0 表示每帧更新",
+      "type": "number",
+      "value": 0.0,
+      "min": 0.0,
+      "max": 0.2
+    },
+    {
+      "name": "seed",
+      "desc": "随机种子 - 手动指定 seed（通常由 speed/interval 自动驱动）",
+      "type": "number",
+      "value": 0.0,
+      "min": 0.0,
+      "max": 10000.0
+    }
+  ]
+}

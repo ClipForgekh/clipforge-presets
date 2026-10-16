@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "bandCount",
+                "effect_key_cn": "bandCount",
+                "type": "float",
+                "default": 56,
+                "min": 8,
+                "max": 180
+            },
+            {
+                "effect_key": "maxShift",
+                "effect_key_cn": "maxShift",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.35
+            },
+            {
+                "effect_key": "snapStrength",
+                "effect_key_cn": "snapStrength",
+                "type": "float",
+                "default": 0.03,
+                "min": 0,
+                "max": 0.12
+            },
+            {
+                "effect_key": "chromaShift",
+                "effect_key_cn": "chromaShift",
+                "type": "float",
+                "default": 0.01,
+                "min": 0,
+                "max": 0.05
+            }
+        ]
+    }
+}

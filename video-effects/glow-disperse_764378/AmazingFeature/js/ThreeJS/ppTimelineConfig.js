@@ -1,0 +1,1 @@
+const ppTimelineConfig={durationMs:3e3,effects:[]};exports.ppTimelineConfig=ppTimelineConfig;

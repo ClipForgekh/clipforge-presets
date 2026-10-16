@@ -1,0 +1,64 @@
+%YAML 1.1
+--- !XShader &1
+name: ""
+guid: {a: 17099829534233824815, b: 15823509244160178062}
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: ""
+    guid: {a: 9678218196625514150, b: 16664496578976059276}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 2}
+        - {localId: 3}
+    angleBinaryPrograms:
+      __class: Map
+    semantics:
+      __class: Map
+      attPosition:
+        __class: VertexAttribType
+        value: POSITION
+      attUV:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: ""
+      guid: {a: 15944205804317539192, b: 7076959275814631571}
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    enableFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+    lightMode:
+      __class: LightMode
+      value: NONE
+    clearMoment:
+      __class: PassClearMoment
+      value: CLEAR_BEFORE_RENDERING
+--- !Shader &2
+name: ""
+guid: {a: 1533443593090503572, b: 6908257731272499840}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: effects/basemove/basemove.vert
+--- !Shader &3
+name: ""
+guid: {a: 3333327255939806708, b: 382389762304982150}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: effects/basemove/basemove.frag

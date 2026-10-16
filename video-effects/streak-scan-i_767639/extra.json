@@ -1,0 +1,33 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "particleColor",
+                "effect_key_cn": "颗粒颜色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.78,
+                    0.32
+                ]
+            },
+            {
+                "effect_key": "glowIntensity",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "flowTurbulence",
+                "effect_key_cn": "流动湍流",
+                "type": "float",
+                "default": 0.06,
+                "min": 0,
+                "max": 0.2
+            }
+        ]
+    }
+}

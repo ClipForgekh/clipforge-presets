@@ -1,0 +1,63 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "flashStrength",
+                "effect_key_cn": "flashStrength",
+                "type": "float",
+                "default": 0.85,
+                "min": 0,
+                "max": 1.5
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "glowStrength",
+                "type": "float",
+                "default": 0.18,
+                "min": 0,
+                "max": 0.6
+            },
+            {
+                "effect_key": "bwContrast",
+                "effect_key_cn": "bwContrast",
+                "type": "float",
+                "default": 1.75,
+                "min": 1,
+                "max": 3
+            },
+            {
+                "effect_key": "zoomOut",
+                "effect_key_cn": "zoomOut",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.4
+            },
+            {
+                "effect_key": "sinkOffset",
+                "effect_key_cn": "sinkOffset",
+                "type": "float",
+                "default": 0.04,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "darkStart",
+                "effect_key_cn": "darkStart",
+                "type": "float",
+                "default": 0.38,
+                "min": 0.1,
+                "max": 0.9
+            }
+        ]
+    }
+}

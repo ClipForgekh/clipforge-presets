@@ -1,0 +1,56 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "revealCenter",
+                "effect_key_cn": "revealCenter",
+                "type": "vec2",
+                "default": [
+                    0.5,
+                    0.5
+                ]
+            },
+            {
+                "effect_key": "sliceMinWidth",
+                "effect_key_cn": "sliceMinWidth",
+                "type": "float",
+                "default": 0.04,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "sliceMinHeight",
+                "effect_key_cn": "sliceMinHeight",
+                "type": "float",
+                "default": 0.2,
+                "min": 0.05,
+                "max": 1
+            },
+            {
+                "effect_key": "edgeSoftness",
+                "effect_key_cn": "edgeSoftness",
+                "type": "float",
+                "default": 0.0005,
+                "min": 0,
+                "max": 0.01
+            },
+            {
+                "effect_key": "settleOvershoot",
+                "effect_key_cn": "settleOvershoot",
+                "type": "float",
+                "default": 0.03,
+                "min": 0,
+                "max": 0.1
+            }
+        ]
+    }
+}

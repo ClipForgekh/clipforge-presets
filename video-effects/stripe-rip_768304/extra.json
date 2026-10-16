@@ -1,0 +1,71 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "stripCount",
+                "effect_key_cn": "strip ",
+                "type": "float",
+                "default": 12,
+                "min": 6,
+                "max": 24
+            },
+            {
+                "effect_key": "maxStretch",
+                "effect_key_cn": "max St",
+                "type": "float",
+                "default": 2.2,
+                "min": 1,
+                "max": 4
+            },
+            {
+                "effect_key": "maxShift",
+                "effect_key_cn": "max Sh",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "delayStep",
+                "effect_key_cn": "delay ",
+                "type": "float",
+                "default": 0.03,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "burnIntensity",
+                "effect_key_cn": "burn I",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "blur S",
+                "type": "float",
+                "default": 0.012,
+                "min": 0,
+                "max": 0.05
+            },
+            {
+                "effect_key": "alphaStagger",
+                "effect_key_cn": "alpha ",
+                "type": "float",
+                "default": 0.015,
+                "min": 0,
+                "max": 0.05
+            }
+        ]
+    }
+}

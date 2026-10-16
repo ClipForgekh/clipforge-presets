@@ -1,0 +1,49 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "beamDensity",
+                "effect_key_cn": "光束密度",
+                "type": "float",
+                "default": 80,
+                "min": 40,
+                "max": 120
+            },
+            {
+                "effect_key": "beamColor",
+                "effect_key_cn": "光束颜色",
+                "type": "color",
+                "default": [
+                    0.7,
+                    0.8,
+                    1
+                ]
+            },
+            {
+                "effect_key": "grainIntensity",
+                "effect_key_cn": "颗粒强度",
+                "type": "float",
+                "default": 0.3,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "maxBeamBlur",
+                "effect_key_cn": "最大光束模糊",
+                "type": "float",
+                "default": 0.05,
+                "min": 0.01,
+                "max": 0.1
+            }
+        ]
+    }
+}

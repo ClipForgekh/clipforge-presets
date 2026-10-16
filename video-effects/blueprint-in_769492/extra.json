@@ -1,0 +1,57 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "zoomStart",
+                "effect_key_cn": "zoomStart",
+                "type": "float",
+                "default": 1.5,
+                "min": 1,
+                "max": 2
+            },
+            {
+                "effect_key": "lineThickness",
+                "effect_key_cn": "lineThickness",
+                "type": "float",
+                "default": 1,
+                "min": 0.5,
+                "max": 3
+            },
+            {
+                "effect_key": "edgeThreshold",
+                "effect_key_cn": "edgeThreshold",
+                "type": "float",
+                "default": 0.2,
+                "min": 0.05,
+                "max": 0.6
+            },
+            {
+                "effect_key": "blueprintBgColor",
+                "effect_key_cn": "blueprintBgColor",
+                "type": "color",
+                "default": [
+                    0,
+                    0.55,
+                    1
+                ]
+            },
+            {
+                "effect_key": "completeAt",
+                "effect_key_cn": "completeAt",
+                "type": "float",
+                "default": 0.973,
+                "min": 0.5,
+                "max": 1
+            }
+        ]
+    }
+}

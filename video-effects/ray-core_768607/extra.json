@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "sproutCount",
+                "effect_key_cn": "sprout",
+                "type": "int",
+                "default": 12,
+                "min": 4,
+                "max": 16
+            },
+            {
+                "effect_key": "outerRotateMax",
+                "effect_key_cn": "outer ",
+                "type": "float",
+                "default": 48,
+                "min": 10,
+                "max": 90
+            },
+            {
+                "effect_key": "innerRotateMax",
+                "effect_key_cn": "inner ",
+                "type": "float",
+                "default": 36,
+                "min": 10,
+                "max": 90
+            },
+            {
+                "effect_key": "dispStrengthMax",
+                "effect_key_cn": "disp S",
+                "type": "float",
+                "default": 0.14,
+                "min": 0,
+                "max": 0.5
+            },
+            {
+                "effect_key": "saturationBoost",
+                "effect_key_cn": "satura",
+                "type": "float",
+                "default": 0.08,
+                "min": 0,
+                "max": 0.5
+            }
+        ]
+    }
+}

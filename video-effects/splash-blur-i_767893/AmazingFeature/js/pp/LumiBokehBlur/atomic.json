@@ -1,0 +1,169 @@
+{
+  "key": "LumiBokehBlur",
+  "category": "Blur & Sharpen",
+  "desc": "散景模糊（多 Pass）- 通过多级模糊与形状散景合成模拟镜头焦外光斑，支持圆形/多边形/星形/爱心/自定义贴图形状。",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果 - 关闭散景（sample=0 / size=0）"
+    },
+    {
+      "name": "soft_circle",
+      "desc": "柔和圆形 - 通用柔光散景，适合人像/氛围增强"
+    },
+    {
+      "name": "hex_polygon",
+      "desc": "六边形光圈 - 多边形光斑，带轻微旋转角"
+    },
+    {
+      "name": "dreamy_star",
+      "desc": "梦幻星形 - 星芒散景，适合梦幻/闪耀场景"
+    },
+    {
+      "name": "sweet_heart",
+      "desc": "甜心爱心 - 心形散景，适合可爱/恋爱氛围"
+    },
+    {
+      "name": "custom_shape",
+      "desc": "自定义形状 - 使用 customTex 贴图作为散景形状"
+    },
+    {
+      "name": "low",
+      "desc": "低强度 - 低采样/轻量散景（更省性能）"
+    },
+    {
+      "name": "medium",
+      "desc": "中强度 - 适中采样与质量（默认推荐）"
+    },
+    {
+      "name": "high",
+      "desc": "高强度 - 高采样/强散景（更耗性能）"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "bokehMode",
+      "desc": "散景形状模式 - Circle/Polygon/Star/Heart/Custom",
+      "type": "select",
+      "value": "Circle",
+      "options": [
+        "Circle",
+        "Polygon",
+        "Star",
+        "Heart",
+        "Custom"
+      ]
+    },
+    {
+      "name": "bokehSize",
+      "desc": "散景尺寸 - 散景光斑大小（映射到内部 size）",
+      "type": "number",
+      "value": 0.6,
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "scaleX",
+      "desc": "横向缩放 - 控制散景形状在 X 方向拉伸",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 2,
+      "visibleIf": {
+        "param": "bokehMode",
+        "notEquals": "Circle"
+      }
+    },
+    {
+      "name": "scaleY",
+      "desc": "纵向缩放 - 控制散景形状在 Y 方向拉伸",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 2,
+      "visibleIf": {
+        "param": "bokehMode",
+        "notEquals": "Circle"
+      }
+    },
+    {
+      "name": "regionIns",
+      "desc": "区域强度 - 控制散景覆盖范围/权重",
+      "type": "number",
+      "value": 0.6,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "name": "lightIns",
+      "desc": "高光强度 - 高光区域的散景增强",
+      "type": "number",
+      "value": 1.0,
+      "min": 0.0,
+      "max": 2.0
+    },
+    {
+      "name": "darkIns",
+      "desc": "暗部强度 - 暗部参与散景的程度（更高会更“灰雾”）",
+      "type": "number",
+      "value": 0.1,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "name": "quality",
+      "desc": "质量 - 影响内部降采样比例与平滑程度（更高更慢）",
+      "type": "number",
+      "value": 0.8,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "name": "sample",
+      "desc": "采样数 - 采样越多越平滑但更耗性能",
+      "type": "number",
+      "value": 45,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "lineNum",
+      "desc": "边数/线数 - Polygon/Star 模式下的形状边数",
+      "type": "number",
+      "value": 5,
+      "min": 3,
+      "max": 10,
+      "visibleIf": {
+        "param": "bokehMode",
+        "in": [
+          "Polygon",
+          "Star"
+        ]
+      }
+    },
+    {
+      "name": "starShapeIns",
+      "desc": "星芒强度 - Star 模式下星形尖角的锐利程度",
+      "type": "number",
+      "value": 1.0,
+      "min": 0.0,
+      "max": 3.0,
+      "visibleIf": {
+        "param": "bokehMode",
+        "equals": "Star"
+      }
+    },
+    {
+      "name": "angle",
+      "desc": "角度 - 形状旋转角（度）",
+      "type": "number",
+      "value": 0,
+      "min": -180,
+      "max": 180,
+      "visibleIf": {
+        "param": "bokehMode",
+        "notEquals": "Circle"
+      }
+    }
+  ]
+}

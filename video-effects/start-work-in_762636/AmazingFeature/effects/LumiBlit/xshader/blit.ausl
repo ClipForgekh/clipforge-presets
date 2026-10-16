@@ -1,0 +1,81 @@
+#version 300 es
+
+#pragma exclude_renderers hlsl50 vulkan
+
+#pragma precision highp float
+
+#pragma global
+#pragma end
+
+#pragma input attributes
+in vec2 a_position;
+in vec2 a_texcoord0;
+#pragma end
+
+#pragma varying varyings
+highp vec2 v_uv;
+#pragma end
+
+#pragma output targets
+out vec4 o_fragColor;
+#pragma end
+
+#pragma vs attributes varyings
+#pragma end
+
+#pragma fs varyings targets
+uniform sampler2D _MaskMp4;
+uniform sampler2D u_inputTexture2;
+uniform vec4 u_ScreenParams;
+uniform vec2 u_scale;
+uniform vec2 u_scale2;
+uniform float u_offsety;
+#pragma end
+
+void vertex()
+{
+    gl_Position = sign(vec4(a_position, 0.0, 1.0));
+    v_uv = a_texcoord0;
+}
+
+void fragment()
+{
+    vec2 baseuv = vec2(v_uv.x, 1.0 - v_uv.y);
+
+
+    vec2 newuv = baseuv + vec2(0.0, u_offsety);
+
+    vec2 newuv2 = baseuv - vec2(0.0, u_offsety);
+    
+    float useUpper = step(0.5, newuv.y);
+    float useLower = 1.0 - step(0.5, newuv2.y);
+    
+    vec2 sampleUV = mix(newuv2, newuv, useUpper);
+    vec2 sampleUV2 = sampleUV;
+
+    sampleUV -= 0.5;
+    sampleUV /= u_scale;
+    sampleUV += 0.5;
+
+    vec4 col = texture(_MaskMp4, sampleUV);
+
+    sampleUV2 -= 0.5;
+    sampleUV2 /= u_scale2;
+    sampleUV2 += 0.5;
+
+    vec4 maskColor = texture(u_inputTexture2, sampleUV2);
+    vec4 maskColor1 = maskColor * useUpper;
+    vec4 maskColor2 = maskColor * useLower;
+
+
+    float alpha1 = 1.0-smoothstep(0.5, 0.9, maskColor1.r);
+    float alpha2 = 1.0-smoothstep(0.5, 0.9, maskColor2.r);
+    
+    vec4 col1 = col * useUpper *alpha1;
+    vec4 col2 = col * useLower *alpha2;
+    vec4 finalcol = clamp(col1 + col2, vec4(0.0), vec4(1.0)) ;
+
+    o_fragColor = finalcol;
+    // o_fragColor = vec4( col1 );
+
+}

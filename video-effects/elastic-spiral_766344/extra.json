@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "helixStrength",
+                "effect_key_cn": "螺旋强度",
+                "type": "float",
+                "default": 0.75,
+                "min": 0,
+                "max": 1.5
+            },
+            {
+                "effect_key": "spinTurns",
+                "effect_key_cn": "旋转 转弯",
+                "type": "float",
+                "default": 2,
+                "min": 0,
+                "max": 6
+            },
+            {
+                "effect_key": "tunnelFocus",
+                "effect_key_cn": "隧道焦点",
+                "type": "float",
+                "default": 0.65,
+                "min": 0.1,
+                "max": 2
+            },
+            {
+                "effect_key": "shuttleAmount",
+                "effect_key_cn": "班车数量",
+                "type": "float",
+                "default": 0.35,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "brightnessBoost",
+                "effect_key_cn": "亮度提升",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.5
+            }
+        ]
+    }
+}

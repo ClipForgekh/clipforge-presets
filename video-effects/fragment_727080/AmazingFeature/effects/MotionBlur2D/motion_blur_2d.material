@@ -1,0 +1,42 @@
+%YAML 1.1
+--- !Material &1
+name: enity_material
+guid: {a: 6144590447777757829, b: 10337530139636851383}
+xshader: {localId: 1, path: effects/MotionBlur2D/motion_blur_2d.xshader}
+properties:
+  __class: PropertySheet
+  name: enity_propertySheet
+  guid: {a: 18177711727433763599, b: 17369589096262613384}
+  floatmap:
+    __class: Map
+    CurrRotate: 0
+    PrevRotate: 0
+    curveOffset: 0
+    final_alpha: 1
+    maxSamples: 52.28900146484375
+    minSamples: 35.94900131225586
+    u_Intensity: 1
+    vCenter: 0.004000000189989805
+    vIntensity: 0.08900000154972076
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+    CurrOffset: {x: 0, y: 0}
+    CurrScale: {x: 1, y: 1}
+    PrevOffset: {x: 0, y: 0}
+    PrevScale: {x: 1, y: 1}
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    inputImageTexture: {localId: 1, path: share://input.texture}
+  intmap:
+    __class: Map
+renderQueue: 1
+enabledMacros:
+  __class: Map
+mshaderPath: ""
+instanceCount: 0

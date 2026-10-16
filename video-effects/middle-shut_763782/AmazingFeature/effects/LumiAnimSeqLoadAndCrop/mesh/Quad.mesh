@@ -1,0 +1,87 @@
+%YAML 1.1
+--- !Mesh &1
+name: !<str> quad
+guid: {a: 16234615835139288182, b: 15349577702422858422}
+boundingBox: {min: {x: -1, y: -1, z: 0}, max: {x: 1, y: 1, z: 0}}
+dontRecalculateBounds: false
+vertices:
+  - -1
+  - -1
+  - 0
+  - 1
+  - 0
+  - 0
+  - 1
+  - 0
+  - 0
+  - 1
+  - -1
+  - 0
+  - 1
+  - 0
+  - 0
+  - 1
+  - 1
+  - 0
+  - 1
+  - 1
+  - 0
+  - 1
+  - 0
+  - 0
+  - 1
+  - 1
+  - 1
+  - -1
+  - 1
+  - 0
+  - 1
+  - 0
+  - 0
+  - 1
+  - 0
+  - 1
+instanceDataStride: 0
+materialIndex: 4294967295
+vertexAttribs:
+  - __class: VertexAttribDesc
+    name: !<str> ""
+    guid: {a: 16162264844175134809, b: 10503680565895910032}
+    semantic:
+      __class: VertexAttribType
+      value: POSITION
+    bindingIndex: 0
+    offset: 0
+    componentCount: 3
+  - __class: VertexAttribDesc
+    name: !<str> ""
+    guid: {a: 13493420079195126381, b: 5534504009484573586}
+    semantic:
+      __class: VertexAttribType
+      value: COLOR
+    bindingIndex: 0
+    offset: 12
+    componentCount: 4
+  - __class: VertexAttribDesc
+    name: !<str> ""
+    guid: {a: 12197976889580269386, b: 17881872615248820099}
+    semantic:
+      __class: VertexAttribType
+      value: TEXCOORD0
+    bindingIndex: 0
+    offset: 28
+    componentCount: 2
+submeshes:
+  - __class: SubMesh
+    name: !<str> ""
+    guid: {a: 12268324711376134925, b: 4797311887318873487}
+    useIndices32: false
+    boundingBox: {min: {x: -1, y: -1, z: 0}, max: {x: 1, y: 1, z: 0}}
+    indices16: [0, 1, 2, 3]
+    indicesCount: 4
+    instanceCount: 0
+    primitive:
+      __class: Primitive
+      value: TRIANGLE_FAN
+    baseVertex: 0
+clearAfterUpload: false

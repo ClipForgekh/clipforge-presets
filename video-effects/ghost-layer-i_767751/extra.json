@@ -1,0 +1,40 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "layerDelay",
+                "effect_key_cn": "层延迟",
+                "type": "float",
+                "default": 0.18,
+                "min": 0,
+                "max": 0.4
+            },
+            {
+                "effect_key": "depthScale",
+                "effect_key_cn": "深度尺度",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.3
+            },
+            {
+                "effect_key": "driftDirection",
+                "effect_key_cn": "漂移方向",
+                "type": "vec2",
+                "default": [
+                    0.25,
+                    -0.18
+                ]
+            }
+        ]
+    }
+}

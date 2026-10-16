@@ -1,0 +1,390 @@
+local data = {}
+
+local ae_compDurations = {0, 1.98333333333333}
+data.ae_compDurations = ae_compDurations
+
+local ae_effectType = 'videoAnimation'
+data.ae_effectType = ae_effectType
+
+local ae_transitionInputIndex = {
+}
+data.ae_transitionInputIndex = ae_transitionInputIndex
+
+local ae_durations = {
+    ['LumiMotionBlur2D_59-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiGaussianBlur_59-effect1'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_59-trs'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiAnimSeqLoadAndCrop_63-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['seqTex_1_1'] = {{0, 2}, },
+            ['seqTex_9_16'] = {{0, 2}, },
+            ['seqTex_16_9'] = {{0, 2}, },
+            ['seqTex_5.8'] = {{0, 2}, },
+            ['seqTex_2_1'] = {{0, 2}, },
+            ['seqTex_3_4'] = {{0, 2}, },
+            ['seqTex_4_3'] = {{0, 2}, },
+            ['seqTex_1.85_1'] = {{0, 2}, },
+            ['seqTex_2.35_1'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_63-trs-blend'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['baseTex'] = {{0, 2}, },
+        },
+    },
+}
+data.ae_durations = ae_durations
+
+local ae_attribute = {
+    ['LumiMotionBlur2D_59-effect0'] = {
+        ['rotate'] = 0,
+        ['ae_pre_rotate'] = 0,
+        ['anchor'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_anchor'] = Amaz.Vector2f(0.5, 0.5),
+        ['position'] = Amaz.Vector2f(0.5, 0.8037037037037),
+        ['ae_pre_position'] = Amaz.Vector2f(0.5, 0.8037037037037),
+        ['unifiedScale'] = true,
+        ['scale_x'] = 0.225,
+        ['ae_pre_scale_x'] = 0.225,
+        ['scale_y'] = 1,
+        ['ae_pre_scale_y'] = 1,
+        ['vIntensity'] = 0.2,
+        ['vCenter'] = -0.25,
+        ['minSamples'] = 0.12,
+        ['maxSamples'] = 0.24,
+        ['mirrorEdge'] = true,
+        ['dither'] = 1,
+        ['AEDesignSize'] = Amaz.Vector2f(1080, 1080),
+    },
+    ['LumiGaussianBlur_59-effect1'] = {
+        ['blurIntensity'] = 25,
+        ['quality'] = 0.1,
+        ['spaceDither'] = 0,
+        ['horizontalStrength'] = 1,
+        ['verticalStrength'] = 1,
+        ['blurDirection'] = 0,
+        ['borderType'] = 0,
+        ['blurAlpha'] = true,
+        ['inverseGammaCorrection'] = true,
+        ['AEDesignSize'] = Amaz.Vector2f(1080, 1080),
+    },
+    ['LumiLayer_59-trs'] = {
+        ['hasBlend'] = false,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Precomp',
+        ['anchorPoint'] = Amaz.Vector3f(540, 540, 0),
+        ['position'] = Amaz.Vector3f(540, 540, 0),
+        ['scale'] = Amaz.Vector3f(100, 100, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 80,
+        ['active_cam_fovx'] = 39.6,
+        ['compositeSize'] = Amaz.Vector2f(1080, 1080),
+        ['layerSize'] = Amaz.Vector2f(1080, 1080),
+        ['mirrorEdge'] = false,
+    },
+    ['LumiAnimSeqLoadAndCrop_63-effect0'] = {
+        ['specify_1_1'] = true,
+        ['animSeqType_1_1'] = 0,
+        ['cropType_1_1'] = 1,
+        ['edgeType_1_1'] = 0,
+        ['enableVideoAlphaBlend_1_1'] = true,
+        ['pivot_1_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_1_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_1_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_1_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_1_1'] = 0,
+        ['scale_1_1'] = 1,
+        ['opacity_1_1'] = 1,
+        ['speed_1_1'] = 1,
+        ['playMode_1_1'] = 0,
+        ['specify_9_16'] = true,
+        ['animSeqType_9_16'] = 0,
+        ['cropType_9_16'] = 1,
+        ['edgeType_9_16'] = 0,
+        ['enableVideoAlphaBlend_9_16'] = true,
+        ['pivot_9_16'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_9_16'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_9_16'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_9_16'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_9_16'] = 0,
+        ['scale_9_16'] = 1,
+        ['opacity_9_16'] = 1,
+        ['speed_9_16'] = 1,
+        ['playMode_9_16'] = 0,
+        ['specify_16_9'] = true,
+        ['animSeqType_16_9'] = 0,
+        ['cropType_16_9'] = 1,
+        ['edgeType_16_9'] = 0,
+        ['enableVideoAlphaBlend_16_9'] = true,
+        ['pivot_16_9'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_16_9'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_16_9'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_16_9'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_16_9'] = 0,
+        ['scale_16_9'] = 1,
+        ['opacity_16_9'] = 1,
+        ['speed_16_9'] = 1,
+        ['playMode_16_9'] = 0,
+        ['specify_5.8'] = true,
+        ['animSeqType_5.8'] = 0,
+        ['cropType_5.8'] = 1,
+        ['edgeType_5.8'] = 0,
+        ['enableVideoAlphaBlend_5.8'] = true,
+        ['pivot_5.8'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_5.8'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_5.8'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_5.8'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_5.8'] = 0,
+        ['scale_5.8'] = 1,
+        ['opacity_5.8'] = 1,
+        ['speed_5.8'] = 1,
+        ['playMode_5.8'] = 0,
+        ['specify_2_1'] = true,
+        ['animSeqType_2_1'] = 0,
+        ['cropType_2_1'] = 1,
+        ['edgeType_2_1'] = 0,
+        ['enableVideoAlphaBlend_2_1'] = true,
+        ['pivot_2_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_2_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_2_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_2_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_2_1'] = 0,
+        ['scale_2_1'] = 1,
+        ['opacity_2_1'] = 1,
+        ['speed_2_1'] = 1,
+        ['playMode_2_1'] = 0,
+        ['specify_3_4'] = true,
+        ['animSeqType_3_4'] = 0,
+        ['cropType_3_4'] = 1,
+        ['edgeType_3_4'] = 0,
+        ['enableVideoAlphaBlend_3_4'] = true,
+        ['pivot_3_4'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_3_4'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_3_4'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_3_4'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_3_4'] = 0,
+        ['scale_3_4'] = 1,
+        ['opacity_3_4'] = 1,
+        ['speed_3_4'] = 1,
+        ['playMode_3_4'] = 0,
+        ['specify_4_3'] = true,
+        ['animSeqType_4_3'] = 0,
+        ['cropType_4_3'] = 1,
+        ['edgeType_4_3'] = 0,
+        ['enableVideoAlphaBlend_4_3'] = true,
+        ['pivot_4_3'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_4_3'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_4_3'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_4_3'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_4_3'] = 0,
+        ['scale_4_3'] = 1,
+        ['opacity_4_3'] = 1,
+        ['speed_4_3'] = 1,
+        ['playMode_4_3'] = 0,
+        ['specify_1.85_1'] = true,
+        ['animSeqType_1.85_1'] = 0,
+        ['cropType_1.85_1'] = 1,
+        ['edgeType_1.85_1'] = 0,
+        ['enableVideoAlphaBlend_1.85_1'] = true,
+        ['pivot_1.85_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_1.85_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_1.85_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_1.85_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_1.85_1'] = 0,
+        ['scale_1.85_1'] = 1,
+        ['opacity_1.85_1'] = 1,
+        ['speed_1.85_1'] = 1,
+        ['playMode_1.85_1'] = 0,
+        ['specify_2.35_1'] = true,
+        ['animSeqType_2.35_1'] = 0,
+        ['cropType_2.35_1'] = 1,
+        ['edgeType_2.35_1'] = 0,
+        ['enableVideoAlphaBlend_2.35_1'] = true,
+        ['pivot_2.35_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_2.35_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_2.35_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_2.35_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_2.35_1'] = 0,
+        ['scale_2.35_1'] = 1,
+        ['opacity_2.35_1'] = 1,
+        ['speed_2.35_1'] = 1,
+        ['playMode_2.35_1'] = 0,
+        ['globalRotation'] = 0,
+        ['globalScale'] = 1,
+        ['globalOpacity'] = 1,
+        ['globalSpeed'] = 1,
+        ['lite_mode'] = false,
+        ['AEDesignSize'] = Amaz.Vector2f(1080, 1080),
+    },
+    ['LumiLayer_63-trs-blend'] = {
+        ['hasBlend'] = true,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Solid',
+        ['anchorPoint'] = Amaz.Vector3f(540, 540, 0),
+        ['position'] = Amaz.Vector3f(540, 540, 0),
+        ['scale'] = Amaz.Vector3f(102.222222222222, 102.222222222222, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 100,
+        ['active_cam_fovx'] = 39.6,
+        ['compositeSize'] = Amaz.Vector2f(1080, 1080),
+        ['layerSize'] = Amaz.Vector2f(1080, 1080),
+        ['mirrorEdge'] = false,
+        ['blendMode'] = 0,
+    },
+}
+data.ae_attribute = ae_attribute
+
+local ae_keyframes = {
+    ['LumiMotionBlur2D_59-effect0#ae_pre_position#vector'] =
+{
+	{
+		{0.333333, 0, 0.666667, 1, }, 
+		{0.01666666666667, 1.34999966666667, }, 
+		{{0.5, 0.5, }, {0.5, 0.8037037037037, }, {0.5, 0.5, }, {0.5, 0.8037037037037, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiMotionBlur2D_59-effect0#position#vector'] =
+{
+	{
+		{0.333333, 0, 0.666667, 1, }, 
+		{0, 1.333333, }, 
+		{{0.5, 0.5, }, {0.5, 0.8037037037037, }, {0.5, 0.5, }, {0.5, 0.8037037037037, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiMotionBlur2D_59-effect0#ae_pre_scale_x#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.903125, }, 
+		{0.01666666666667, 0.51666666666667, }, 
+		{{1, }, {0.5, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.293560606, 0.833333333, 0.833333333, }, 
+		{0.51666666666667, 1.34999966666667, }, 
+		{{0.5, }, {0.225, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiMotionBlur2D_59-effect0#scale_x#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.903125, }, 
+		{0, 0.5, }, 
+		{{1, }, {0.5, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.293560606, 0.833333333, 0.833333333, }, 
+		{0.5, 1.333333, }, 
+		{{0.5, }, {0.225, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiGaussianBlur_59-effect1#blurIntensity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.833333, 1.333333, }, 
+		{{0, }, {25, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiLayer_59-trs#opacity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.666667, 1.833333, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiAnimSeqLoadAndCrop_63-effect0#seqTime#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0, 2, }, 
+		{{0, }, {2, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiLayer_63-trs-blend#opacity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0, 0.066667, }, 
+		{{0, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+}
+data.ae_keyframes = ae_keyframes
+
+local ae_reverseKeyframes = false
+data.ae_reverseKeyframes = ae_reverseKeyframes
+
+local ae_sliderInfos = {
+}
+data.ae_sliderInfos = ae_sliderInfos
+
+local ae_fadeinInfos = {
+    time = 0,
+    infos = {
+    }
+}
+data.ae_fadeinInfos = ae_fadeinInfos
+
+local ae_fadeoutInfos = {
+    time = 0,
+    infos = {
+    }
+}
+data.ae_fadeoutInfos = ae_fadeoutInfos
+
+local ae_animationInfos = {
+    animationMode = 0,
+    loopStart = 0,
+    speedInfo = {1, 0, 1, },
+}
+data.ae_animationInfos = ae_animationInfos
+
+return data

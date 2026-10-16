@@ -1,0 +1,110 @@
+%YAML 1.1
+--- !XShader &1
+name: !<str> lumi_layer_xshader
+guid: {a: 15224692212659768268, b: 10621587456725388699}
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: !<str> ""
+    guid: {a: 17675182799660808553, b: 4710023368422676878}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 24}
+        - {localId: 25}
+    angleBinaryPrograms:
+      __class: Map
+    semantics:
+      __class: Map
+      a_position:
+        __class: VertexAttribType
+        value: POSITION
+      a_texcoord0:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: !<str> ""
+      guid: {a: 18248960287798763146, b: 16490823334622529950}
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    enableFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+    keywordProgram: {localId: 23}
+    lightMode:
+      __class: LightMode
+      value: NONE
+    clearMoment:
+      __class: PassClearMoment
+      value: CLEAR_BEFORE_RENDERING
+    instanceCount: 0
+    useGrabTexture: false
+    useGrabTextureMipmap: false
+    grabTextureName: !<str> ""
+    auslSourcePath: !<str> effects/LumiLayer/xshader/layer.ausl
+--- !KeywordProgramProfile &23
+name: !<str> ""
+guid: {a: 6937156202996073557, b: 9542604954018614408}
+keywordSets:
+  -
+    - !<str> ""
+targetApis:
+  -
+    - !<str> glsl20
+    - !<str> glsl30
+    - !<str> glsl31
+    - !<str> glsl32
+  -
+    - !<str> metal
+stagets:
+  - __class: ShaderType
+    value: FRAGMENT
+  - __class: ShaderType
+    value: VERTEX
+shaderSnippets:
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 7586886057309444284, b: 2787080970286526643}
+    source: !<str> ""
+    location: !<str> effects/LumiLayer/xshader/shaderLib/shaderGLES/311011f458f3dd960d75dc31e1ae2f74.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 3188904596142502649, b: 14637037111492594860}
+    source: !<str> ""
+    location: !<str> effects/LumiLayer/xshader/shaderLib/shaderGLES/311011f458f3dd960d75dc31e1ae2f74.vert
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 9818322025765712684, b: 14587417354058222009}
+    source: !<str> ""
+    location: !<str> effects/LumiLayer/xshader/shaderLib/shaderMetal/311011f458f3dd960d75dc31e1ae2f74.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 8306333243077747967, b: 11163526979601885114}
+    source: !<str> ""
+    location: !<str> effects/LumiLayer/xshader/shaderLib/shaderMetal/311011f458f3dd960d75dc31e1ae2f74.vert
+--- !Shader &24
+name: !<str> ""
+guid: {a: 18396595453749272001, b: 16070928606981707429}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: !<str> effects/LumiLayer/xshader/shaderLib/shaderGLES/311011f458f3dd960d75dc31e1ae2f74.frag
+--- !Shader &25
+name: !<str> ""
+guid: {a: 12199856868398744807, b: 3828995045535903910}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: !<str> effects/LumiLayer/xshader/shaderLib/shaderGLES/311011f458f3dd960d75dc31e1ae2f74.vert

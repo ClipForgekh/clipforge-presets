@@ -1,0 +1,172 @@
+#version 300 es
+
+#pragma exclude_renderers hlsl50 vulkan
+
+#pragma precision highp float
+
+#pragma global
+#pragma end
+
+#pragma input attributes
+in vec2 a_position;
+in vec2 a_texcoord0;
+#pragma end
+
+#pragma varying varyings
+highp vec2 uv0;
+#pragma end
+
+#pragma output targets
+out vec4 o_fragColor;
+#pragma end
+
+#pragma vs attributes varyings
+#pragma end
+
+#pragma fs varyings targets
+uniform sampler2D u_seqTexture;
+uniform vec2 u_seqTexSize;
+uniform vec4 u_ScreenParams;
+uniform int u_convertAlpha;
+uniform int u_cropType;
+uniform int u_edgeType;
+uniform int u_yFlip;
+uniform float u_opacity;
+uniform vec2 u_scale;
+uniform vec2 u_pivot;
+uniform vec2 u_position;
+uniform float u_rotation;
+
+#define FALSE 0
+#define TRUE 1
+
+#define CROP_TYPE_STRETCH 0
+#define CROP_TYPE_FILL 1
+#define CROP_TYPE_FIT 2
+#define CROP_TYPE_TEXTURE_SIZE 3
+
+#define EDGE_TYPE_TILE 0
+#define EDGE_TYPE_MIRROR 1
+#define EDGE_TYPE_CLAMP 2
+#define EDGE_TYPE_EMPTY 3
+
+const float Eps = 0.0001;
+
+vec4 getSeqColor(vec2 uv)
+{
+    if (u_yFlip == TRUE) {
+        uv = vec2(uv.x, 1.0 - uv.y);
+    }
+    if (u_convertAlpha == FALSE) {
+        return texture(u_seqTexture, uv);
+    }
+    vec4 color;
+    vec2 alphaUV = vec2(uv.x * 0.5, uv.y);
+    vec2 colorUV = vec2(uv.x * 0.5 + 0.5, uv.y);
+    color.a = texture(u_seqTexture, alphaUV).r;
+    color.rgb = texture(u_seqTexture, colorUV).rgb;
+    return color;
+}
+
+vec2 mirrorTexCoord(vec2 x)
+{
+    return abs(mod(x - 1., 2.) - 1.);
+}
+
+vec2 repeatTexCoord(vec2 coord)
+{
+    vec2 t = mod(coord, 1.0);
+    t += (1.0 - step(0., t));
+    return t;
+}
+
+float uvProtect(vec2 uv)
+{
+    vec2 uvp = step(vec2(0.0), uv) * step(uv, vec2(1.0));
+    return uvp.x * uvp.y;
+}
+
+vec2 affine(vec2 uv, float theta, vec2 offset, vec2 anchor, vec2 scale)
+{
+    // offset
+    uv -= offset;
+    // rotate
+    uv -= 0.5;
+    uv.y *= u_ScreenParams.y / u_ScreenParams.x;
+    float sint = sin(theta);
+    float cost = cos(theta);
+    mat2 rot = mat2(
+        cost, sint,
+        -sint, cost
+    );
+    uv = rot * uv;
+    uv.y *= u_ScreenParams.x / u_ScreenParams.y;
+    // scale
+    uv /= scale;
+    uv += 0.5;
+    uv += anchor;
+    return uv;
+}
+#pragma end
+
+void vertex()
+{
+    gl_Position = sign(vec4(a_position.xy, 0.0, 1.0));
+    uv0 = a_texcoord0;
+}
+
+void fragment()
+{
+    if (abs(u_scale.x) < Eps || abs(u_scale.y) < Eps) {
+        o_fragColor = vec4(0.0);
+        return;
+    };
+
+    vec2 uv1 = affine(uv0, u_rotation, u_position, u_pivot, u_scale);
+
+    float aspectRatioSeqTex = u_seqTexSize.x / u_seqTexSize.y;
+    float aspectRatioScreen = u_ScreenParams.x / u_ScreenParams.y;
+
+    vec2 uv = uv1;
+    if (u_cropType == CROP_TYPE_FILL) {
+        if (aspectRatioSeqTex > aspectRatioScreen) {
+            float scale = aspectRatioScreen / aspectRatioSeqTex;
+            uv.y = uv1.y;
+            uv.x = (uv1.x - 0.5) * scale + 0.5;
+        } else {
+            float scale = aspectRatioSeqTex / aspectRatioScreen;
+            uv.x = uv1.x;
+            uv.y = (uv1.y - 0.5) * scale + 0.5;
+        }
+    } else if (u_cropType == CROP_TYPE_FIT) {
+        if (aspectRatioSeqTex < aspectRatioScreen) {
+            float scale = aspectRatioScreen / aspectRatioSeqTex;
+            uv.y = uv1.y;
+            uv.x = (uv1.x - 0.5) * scale + 0.5;
+        } else {
+            float scale = aspectRatioSeqTex / aspectRatioScreen;
+            uv.x = uv1.x;
+            uv.y = (uv1.y - 0.5) * scale + 0.5;
+        }
+    } else if (u_cropType == CROP_TYPE_TEXTURE_SIZE) {
+        uv -= 0.5;
+        uv.x *= u_ScreenParams.x / u_seqTexSize.x;
+        uv.y *= u_ScreenParams.y / u_seqTexSize.y;
+        uv += 0.5;
+    }
+
+    if (u_edgeType == EDGE_TYPE_TILE) {
+        uv = repeatTexCoord(uv);
+    } else if (u_edgeType == EDGE_TYPE_MIRROR) {
+        uv = mirrorTexCoord(uv);
+    }
+
+    vec4 result = getSeqColor(uv);
+    if (u_edgeType == EDGE_TYPE_EMPTY) {
+        result *= uvProtect(uv);
+    }
+
+    result *= u_opacity;
+
+    o_fragColor = result;
+}

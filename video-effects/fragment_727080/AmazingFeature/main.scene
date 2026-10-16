@@ -1,0 +1,1474 @@
+%YAML 1.1
+--- !Scene &1
+name: Sticker_empty
+guid: {a: 1748173772196442050, b: 202480242915167657}
+editSceneGuid: {a: 0, b: 0}
+calibrateVer: V4
+entities:
+  - __class: Entity
+    name: model
+    guid: {a: 6288556895951335200, b: 4069631542580284343}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 5}
+      - __class: ScriptComponent
+        name: ""
+        guid: {a: 3766791542365719031, b: 4236328898973843387}
+        enabled: true
+        path: lua/SeekModeScript.lua
+        properties:
+          __class: Map
+          __scriptfile: lua/SeekModeScript.lua
+          __scriptname: lua::SeekModeScript
+          _duration: 1
+          autoplay: false
+          circle: {x: 0.01, y: 0.2}
+          d_power: 1.549999952316284
+          input_fov: 2
+          noise_value: 1.509999990463257
+          progress: 0
+          radial_blur_intensity: 3
+          u_Size: 60.29999923706055
+          utime: 0
+          z_power: 0.07999999821186066
+        className: SeekModeScript
+    layer: 0
+  - __class: Entity
+    name: base
+    guid: {a: 12989539209502242016, b: 7678400040229015170}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 14}
+    layer: 0
+  - __class: Entity
+    name: videoCamera
+    guid: {a: 9963965787415089155, b: 9938227403912047035}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 15}
+      - __class: Camera
+        name: ""
+        guid: {a: 16305406858746672208, b: 5641242417961951163}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 63, values: [0, 262144]}
+        renderOrder: 50
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 1e-06, g: 9.9999e-07, b: 9.9999e-07, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/modelTex.rt}
+        isRootCamera: false
+    layer: 0
+  - __class: Entity
+    name: video
+    guid: {a: 7372201865041099289, b: 15935628169397634192}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 16}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 11191408313316776383, b: 11389752895178886077}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: material/Video.material}
+        sortingOrder: 0
+        autoSortingOrder: true
+        useFrustumCulling: false
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: false
+    layer: 50
+  - __class: Entity
+    name: modelCamera
+    guid: {a: 9529993151383973555, b: 868516590078055334}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 17}
+      - __class: Camera
+        name: Camera_camera
+        guid: {a: 17819513486267501079, b: 8741898649039202946}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 63, values: [0, 524288]}
+        renderOrder: 51
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.001000000047497451
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/bgTex.rt}
+        isRootCamera: true
+    layer: 0
+  - __class: Entity
+    name: quad
+    guid: {a: 6288029823405969883, b: 11877604255895785900}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 19}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16090380100160985063, b: 1964243833935984051}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: material/Model.material}
+        sortingOrder: 1
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: false
+    layer: 51
+  - __class: Entity
+    name: fxaaCamera
+    guid: {a: 2613018679497973054, b: 263380868584032188}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 20}
+      - __class: Camera
+        name: ""
+        guid: {a: 8737558736241683580, b: 3421321592666563733}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 63, values: [0, 1048576]}
+        renderOrder: 52
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 1e-06, g: 9.9999e-07, b: 9.9999e-07, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/modelTex.rt}
+        isRootCamera: false
+    layer: 0
+  - __class: Entity
+    name: fxaa
+    guid: {a: 7946929720832137473, b: 1502959194050017667}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 21}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 2180966883649633209, b: 7762512614540834983}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: material/Fxaa.material}
+        sortingOrder: 2
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: false
+    layer: 52
+  - __class: Entity
+    name: bgCamera
+    guid: {a: 4633427458634973646, b: 6084989629864816574}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 22}
+      - __class: Camera
+        name: ""
+        guid: {a: 12630710236728851463, b: 13096728865802781602}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 63, values: [0, 2097152]}
+        renderOrder: 53
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/bgTex.rt}
+        isRootCamera: false
+    layer: 0
+  - __class: Entity
+    name: bg
+    guid: {a: 11478709823774923000, b: 8505978139116324269}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 23}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 15801613516660366825, b: 18326721153707279791}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: material/Bg.material}
+        sortingOrder: 3
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: false
+    layer: 53
+  - __class: Entity
+    name: blendCamera
+    guid: {a: 9457706472622010543, b: 13810681979771721150}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 24}
+      - __class: Camera
+        name: ""
+        guid: {a: 9675262853569085558, b: 18088409407689929371}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 63, values: [0, 4194304]}
+        renderOrder: 54
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 1e-06, g: 9.9999e-07, b: 9.9999e-07, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: DONT
+        alwaysClear: false
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/outputTex.rt}
+        isRootCamera: false
+    layer: 0
+  - __class: Entity
+    name: blend
+    guid: {a: 16664156611122146367, b: 15370926745346466187}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 25}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 10106103053772475159, b: 13094085322174431361}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: material/Blend.material}
+        sortingOrder: 4
+        autoSortingOrder: true
+        useFrustumCulling: false
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: false
+    layer: 54
+  - __class: Entity
+    name: res
+    guid: {a: 8524013848727926484, b: 14227530535140870323}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 31}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 9532018886061495463, b: 4043626687988399261}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/res/res.material}
+        sortingOrder: 14
+        autoSortingOrder: true
+        useFrustumCulling: false
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: false
+    layer: 12
+  - __class: Entity
+    name: cam_res
+    guid: {a: 523400528250671250, b: 71391707793972635}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 30}
+      - __class: Camera
+        name: ""
+        guid: {a: 11693262280318579478, b: 17249506644653333671}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 13, values: [4096]}
+        renderOrder: 12
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/blend.rt}
+        isRootCamera: false
+    layer: 0
+  - __class: Entity
+    name: effects
+    guid: {a: 2327897901300349428, b: 3474193861740657311}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 71}
+      - __class: ScriptComponent
+        name: ""
+        guid: {a: 12414574303027681577, b: 16971449221600996762}
+        enabled: true
+        path: lua/CameraLayerController.lua
+        properties:
+          __class: Map
+          __scriptfile: lua/CameraLayerController.lua
+          __scriptname: lua::CameraLayerController
+          addNum: 2
+        className: CameraLayerController
+    layer: 0
+  - __class: Entity
+    name: MotionBlur2D_left
+    guid: {a: 11476921624210999085, b: 2340298239494133123}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 92}
+      - __class: ScriptComponent
+        name: ""
+        guid: {a: 15514615593167255242, b: 541719396632764568}
+        enabled: true
+        path: effects/MotionBlur2D/MotionBlur2D.lua
+        properties:
+          __class: Map
+          CurrOffset: {x: 1.08, y: 0}
+          CurrRotate: 0
+          CurrScale: {x: 0, y: 0}
+          InputTex: {localId: 1, path: rt/gb_left.rt}
+          OutputTex: {localId: 1, path: rt/mb_left.rt}
+          __scriptfile: effects/MotionBlur2D/MotionBlur2D.lua
+          __scriptname: lua::MotionBlur2D
+          maxSamples: 30.9109992980957
+          minSamples: 0
+          u_Intensity: 0.6000000238418579
+          vCenter: 0.004000000189989805
+          vIntensity: 0.7570000290870667
+        className: MotionBlur2D
+    layer: 0
+  - __class: Entity
+    name: cam
+    guid: {a: 15222944501215965023, b: 7425970489847643055}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 93}
+      - __class: Camera
+        name: Camera_camera
+        guid: {a: 7083141833447833709, b: 753543304163545012}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 7, values: [64]}
+        renderOrder: 6
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        inputTexture: {localId: 1, path: share://input.texture}
+        renderTexture: {localId: 1, path: rt/mb_left.rt}
+        isRootCamera: true
+    layer: 1
+  - __class: Entity
+    name: motion_blur_2d
+    guid: {a: 4920304617064385822, b: 11810486722450290819}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 94}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 8884784454138605742, b: 14658221878975412613}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/MotionBlur2D/motion_blur_2d.material}
+        sortingOrder: 8
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: true
+    layer: 6
+  - __class: Entity
+    name: cam_mask_left
+    guid: {a: 1676189379490074675, b: 6014863311148166316}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 95}
+      - __class: Camera
+        name: ""
+        guid: {a: 10251081204342990362, b: 2380103257094914744}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 4, values: [8]}
+        renderOrder: 3
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 1e-06, g: 9.9999e-07, b: 9.9999e-07, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/mask_left.rt}
+        isRootCamera: false
+    layer: 0
+  - __class: Entity
+    name: mask_left
+    guid: {a: 17388228192903436158, b: 17334106989556320178}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 96}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 15872124678322541294, b: 7357255811325168279}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/mask/mask_l.material}
+        sortingOrder: 5
+        autoSortingOrder: true
+        useFrustumCulling: false
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: false
+    layer: 3
+  - __class: Entity
+    name: cam_mask_right
+    guid: {a: 4489351221711628876, b: 17210744313396416896}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 97}
+      - __class: Camera
+        name: ""
+        guid: {a: 6361536924200147651, b: 4130346064646232242}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 8, values: [128]}
+        renderOrder: 7
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/mask_right.rt}
+        isRootCamera: false
+    layer: 0
+  - __class: Entity
+    name: mask_right
+    guid: {a: 18036615607275216699, b: 11648330155240707714}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 98}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 3044721736480405736, b: 17169476540741544340}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/mask/mask_r.material}
+        sortingOrder: 9
+        autoSortingOrder: true
+        useFrustumCulling: false
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: false
+    layer: 7
+  - __class: Entity
+    name: MotionBlur2D_right
+    guid: {a: 6432905500058757757, b: 13472932202951627399}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 99}
+      - __class: ScriptComponent
+        name: ""
+        guid: {a: 13781434713723003608, b: 4230607609089677455}
+        enabled: true
+        path: effects/MotionBlur2D/MotionBlur2D.lua
+        properties:
+          __class: Map
+          CurrOffset: {x: 0.19, y: 0}
+          CurrRotate: 0
+          CurrScale: {x: 0, y: 0}
+          InputTex: {localId: 1, path: rt/gb_right.rt}
+          OutputTex: {localId: 1, path: rt/mb_right.rt}
+          __scriptfile: effects/MotionBlur2D/MotionBlur2D.lua
+          __scriptname: lua::MotionBlur2D
+          maxSamples: 34.18999862670898
+          minSamples: 0
+          u_Intensity: 0.8020902872085571
+          vCenter: 0.004000000189989805
+          vIntensity: 0.7009999752044678
+        className: MotionBlur2D
+    layer: 0
+  - __class: Entity
+    name: cam
+    guid: {a: 9531450444125860394, b: 11706092113603496621}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 100}
+      - __class: Camera
+        name: Camera_camera
+        guid: {a: 10468316663889540143, b: 8355493817778353544}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 11, values: [1024]}
+        renderOrder: 10
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        inputTexture: {localId: 1, path: share://input.texture}
+        renderTexture: {localId: 1, path: rt/mb_right.rt}
+        isRootCamera: true
+    layer: 1
+  - __class: Entity
+    name: motion_blur_2d
+    guid: {a: 9747187560812339868, b: 832298866228138652}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 101}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 14576132690472533537, b: 11403033686593514880}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/MotionBlur2D/motion_blur_2d.material}
+        sortingOrder: 12
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: true
+    layer: 10
+  - __class: Entity
+    name: MotionBlur2D_bg
+    guid: {a: 4126084175448391041, b: 7124368767167120787}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 102}
+      - __class: ScriptComponent
+        name: ""
+        guid: {a: 2612848657867413004, b: 4644409035730546340}
+        enabled: true
+        path: effects/MotionBlur2D/MotionBlur2D.lua
+        properties:
+          __class: Map
+          CurrOffset: {x: -0.33, y: 0}
+          CurrRotate: 0
+          CurrScale: {x: 0, y: 0}
+          InputTex: {localId: 1, path: share://input.texture}
+          OutputTex: {localId: 1, path: rt/mbg.rt}
+          __scriptfile: effects/MotionBlur2D/MotionBlur2D.lua
+          __scriptname: lua::MotionBlur2D
+          maxSamples: 30.15299987792969
+          minSamples: 0
+          vCenter: 0.004000000189989805
+          vIntensity: 0.2669999897480011
+        className: MotionBlur2D
+    layer: 0
+  - __class: Entity
+    name: cam
+    guid: {a: 7225690763313841835, b: 8783011913863018653}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 103}
+      - __class: Camera
+        name: Camera_camera
+        guid: {a: 2541233896998777538, b: 7682914896919192195}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 12, values: [2048]}
+        renderOrder: 11
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        inputTexture: {localId: 1, path: share://input.texture}
+        renderTexture: {localId: 1, path: rt/mbg.rt}
+        isRootCamera: true
+    layer: 1
+  - __class: Entity
+    name: motion_blur_2d
+    guid: {a: 13997573642507297230, b: 5323113023061745066}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 104}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 4776112952863485749, b: 3845936207357608847}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/MotionBlur2D/motion_blur_2d.material}
+        sortingOrder: 13
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: mesh/Quad.mesh}
+        castShadow: true
+    layer: 11
+  - __class: Entity
+    name: Gaussian_Blur_Root_left
+    guid: {a: 596501188037340216, b: 6523535160563310726}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 105}
+      - __class: ScriptComponent
+        name: ""
+        guid: {a: 4414314770493564733, b: 16753698567493649817}
+        enabled: true
+        path: effects/GaussianBlur/lua/GaussianBlurLayerScript.lua
+        properties:
+          __class: Map
+          Blurred_Direction: Horizontal and Vertical
+          InputTex: {localId: 1, path: rt/mask_left.rt}
+          Intensity: 7.031030178070068
+          MidTex: {localId: 1, path: effects/GaussianBlur/rt/gaussianBlurMidRT.rt}
+          OutputTex: {localId: 1, path: rt/gb_left.rt}
+          __scriptfile: effects/GaussianBlur/lua/GaussianBlurLayerScript.lua
+          __scriptname: lua::GaussianBlurLayerScript
+          steps: 1
+        className: GaussianBlurLayerScript
+    layer: 0
+  - __class: Entity
+    name: Camera_Horizontal_Blur
+    guid: {a: 5352743624033891089, b: 11232340140002821034}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 106}
+      - __class: Camera
+        name: Camera_camera
+        guid: {a: 15081593255456131407, b: 7502284431963876776}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 5, values: [16]}
+        renderOrder: 4
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: effects/GaussianBlur/rt/gaussianBlurMidRT.rt}
+        isRootCamera: true
+    layer: 0
+  - __class: Entity
+    name: Horizontal_Blur
+    guid: {a: 3983773986219191643, b: 4765441294753278136}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 107}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 6578748367350054976, b: 9169181608832108989}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/GaussianBlur/MatAndShader/GaussianBlurX.material}
+        sortingOrder: 6
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: effects/GaussianBlur/mesh/Quad.mesh}
+        castShadow: false
+    layer: 4
+  - __class: Entity
+    name: Camera_Vertical_Blur
+    guid: {a: 15222190788744659531, b: 13408300923687606438}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 108}
+      - __class: Camera
+        name: Camera_camera
+        guid: {a: 4199917190710869486, b: 11710268654565794998}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 6, values: [32]}
+        renderOrder: 5
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/gb_left.rt}
+        isRootCamera: true
+    layer: 0
+  - __class: Entity
+    name: Vertical_Blur
+    guid: {a: 16953768862107567636, b: 1193886367805850275}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 109}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 16231471398602571500, b: 17713144020853553817}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/GaussianBlur/MatAndShader/GaussianBlurY.material}
+        sortingOrder: 7
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: effects/GaussianBlur/mesh/Quad.mesh}
+        castShadow: false
+    layer: 5
+  - __class: Entity
+    name: Gaussian_Blur_Root_right
+    guid: {a: 18178507055857671914, b: 10461955709508563591}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 110}
+      - __class: ScriptComponent
+        name: ""
+        guid: {a: 3624944261613422142, b: 12484835941258773434}
+        enabled: true
+        path: effects/GaussianBlur/lua/GaussianBlurLayerScript.lua
+        properties:
+          __class: Map
+          Blurred_Direction: Horizontal and Vertical
+          InputTex: {localId: 1, path: rt/mask_right.rt}
+          Intensity: 0.1298691630363464
+          MidTex: {localId: 1, path: effects/GaussianBlur/rt/gaussianBlurMidRT.rt}
+          OutputTex: {localId: 1, path: rt/gb_right.rt}
+          __scriptfile: effects/GaussianBlur/lua/GaussianBlurLayerScript.lua
+          __scriptname: lua::GaussianBlurLayerScript
+          steps: 1
+        className: GaussianBlurLayerScript
+    layer: 0
+  - __class: Entity
+    name: Camera_Horizontal_Blur
+    guid: {a: 16954544412365455573, b: 296961000760855982}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 111}
+      - __class: Camera
+        name: Camera_camera
+        guid: {a: 11259668386926677270, b: 4203648951335676827}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 9, values: [256]}
+        renderOrder: 8
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: effects/GaussianBlur/rt/gaussianBlurMidRT.rt}
+        isRootCamera: true
+    layer: 0
+  - __class: Entity
+    name: Horizontal_Blur
+    guid: {a: 16161120876087829576, b: 1343596753384066185}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 112}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 13135553284498749162, b: 14353461655028364449}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/GaussianBlur/MatAndShader/GaussianBlurX.material}
+        sortingOrder: 10
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: effects/GaussianBlur/mesh/Quad.mesh}
+        castShadow: false
+    layer: 8
+  - __class: Entity
+    name: Camera_Vertical_Blur
+    guid: {a: 7010039196861436823, b: 3769909958987944602}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 113}
+      - __class: Camera
+        name: Camera_camera
+        guid: {a: 1965183823226456813, b: 10660357635028119738}
+        enabled: true
+        layerVisibleMask: {__class: DynamicBitset, numBits: 10, values: [512]}
+        renderOrder: 9
+        type:
+          __class: CameraType
+          value: ORTHO
+        clearColor: {r: 0, g: 0, b: 0, a: 0}
+        clearType:
+          __class: CameraClearType
+          value: COLOR
+        alwaysClear: true
+        viewport: {x: 0, y: 0, w: 1, h: 1}
+        fovy: 60
+        orthoScale: 1
+        zNear: 0.1000000014901161
+        zFar: 1000
+        renderTexture: {localId: 1, path: rt/gb_right.rt}
+        isRootCamera: true
+    layer: 0
+  - __class: Entity
+    name: Vertical_Blur
+    guid: {a: 11477039643621902808, b: 173428785427120015}
+    scene: {localId: 1}
+    selfvisible: true
+    components:
+      - {localId: 114}
+      - __class: MeshRenderer
+        name: ""
+        guid: {a: 5567386167602523642, b: 5331854455868130237}
+        enabled: true
+        sharedMaterials:
+          - {localId: 1, path: effects/GaussianBlur/MatAndShader/GaussianBlurY.material}
+        sortingOrder: 11
+        autoSortingOrder: true
+        useFrustumCulling: true
+        receiveShadow: true
+        lightProbeBlendMode:
+          __class: LightProbeBlendMode
+          value: OFF
+        entirePingPong: false
+        mesh: {localId: 1, path: effects/GaussianBlur/mesh/Quad.mesh}
+        castShadow: false
+    layer: 9
+visible: true
+config:
+  __class: Map
+msaa:
+  __class: MSAAMode
+  value: NONE
+enableMultiTouch: false
+enableLightMultiPass: false
+pixelLightCount: 4
+resourceRendererType:
+  __class: RendererType
+  value: OpenGLES30
+--- !Transform &5
+name: ""
+guid: {a: 16231985339769232878, b: 13127782532922031512}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 14}
+children:
+  - {localId: 19}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &14
+name: ""
+guid: {a: 10541124098004153979, b: 1861302566062440093}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+children:
+  - {localId: 15}
+  - {localId: 16}
+  - {localId: 17}
+  - {localId: 5}
+  - {localId: 20}
+  - {localId: 21}
+  - {localId: 22}
+  - {localId: 23}
+  - {localId: 24}
+  - {localId: 25}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &15
+name: ""
+guid: {a: 2469045016400897859, b: 151885828596970152}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 14}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &16
+name: ""
+guid: {a: 12344100486434341810, b: 10221953122935947673}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 14}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &17
+name: Camera_transform
+guid: {a: 7946861685554053369, b: 13514754762144394156}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 1.657892e-08}
+parent: {localId: 14}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &19
+name: ""
+guid: {a: 14432414736388990766, b: 1629266023497276837}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 5}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &20
+name: ""
+guid: {a: 13640652679362719611, b: 8958107443900012438}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 14}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &21
+name: ""
+guid: {a: 12488417917670985899, b: 17898380208873576378}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 14}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &22
+name: ""
+guid: {a: 7297361855630052826, b: 7023247609116427164}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 14}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &23
+name: ""
+guid: {a: 10252581910485293335, b: 13540394606423798204}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 14}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &24
+name: ""
+guid: {a: 236606007528607266, b: 15527638589540299416}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 14}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &25
+name: ""
+guid: {a: 10902726991839312357, b: 11922207356361759163}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 14}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &30
+name: ""
+guid: {a: 10540159867674088140, b: 1211966166190685845}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 71}
+children:
+  - {localId: 31}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &31
+name: ""
+guid: {a: 11259516839240163485, b: 15422557896686987416}
+enabled: true
+localPosition: {x: 0, y: 0, z: -10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 30}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &71
+name: ""
+guid: {a: 1892416618372600959, b: 10586398046489656223}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+children:
+  - {localId: 95}
+  - {localId: 105}
+  - {localId: 92}
+  - {localId: 97}
+  - {localId: 110}
+  - {localId: 99}
+  - {localId: 102}
+  - {localId: 30}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &92
+name: ""
+guid: {a: 16739644663938817536, b: 12744961614821611410}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 71}
+children:
+  - {localId: 93}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &93
+name: Camera_transform
+guid: {a: 13352171408453293762, b: 11297388004433567164}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 92}
+children:
+  - {localId: 94}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &94
+name: ""
+guid: {a: 11475288154772225932, b: 13730658132523073977}
+enabled: true
+localPosition: {x: 0, y: 0, z: -10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 93}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &95
+name: ""
+guid: {a: 7155552643074839950, b: 3600796260345792142}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 71}
+children:
+  - {localId: 96}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &96
+name: ""
+guid: {a: 18032922440864320201, b: 4622241729958807484}
+enabled: true
+localPosition: {x: 0, y: 0, z: -10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 95}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &97
+name: ""
+guid: {a: 3119100221212762602, b: 8681925326627378306}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 71}
+children:
+  - {localId: 98}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &98
+name: ""
+guid: {a: 10829509269918418875, b: 17957654999880358810}
+enabled: true
+localPosition: {x: 0, y: 0, z: -10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 97}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &99
+name: ""
+guid: {a: 10826892482064524779, b: 15516626016037628605}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 71}
+children:
+  - {localId: 100}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &100
+name: Camera_transform
+guid: {a: 1677512840701228129, b: 10924517869579644300}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 99}
+children:
+  - {localId: 101}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &101
+name: ""
+guid: {a: 8377564606249358526, b: 4324942296367188628}
+enabled: true
+localPosition: {x: 0, y: 0, z: -10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 100}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &102
+name: ""
+guid: {a: 9530411741068809100, b: 6471801285568110720}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 71}
+children:
+  - {localId: 103}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &103
+name: Camera_transform
+guid: {a: 17889707705374837005, b: 8517466395574026390}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 102}
+children:
+  - {localId: 104}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &104
+name: ""
+guid: {a: 1243579807234712260, b: 8031610708765843620}
+enabled: true
+localPosition: {x: 0, y: 0, z: -10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 103}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &105
+name: ""
+guid: {a: 5711794684477715008, b: 7943395350280071338}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 71}
+children:
+  - {localId: 106}
+  - {localId: 108}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &106
+name: Camera_transform
+guid: {a: 17747986115186213209, b: 18222997865273084831}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 105}
+children:
+  - {localId: 107}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &107
+name: ""
+guid: {a: 15153268351075990285, b: 9873558707219888799}
+enabled: true
+localPosition: {x: 0, y: 0, z: -20}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 106}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &108
+name: Camera_transform
+guid: {a: 15729220450055491337, b: 14142796528147377572}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 105}
+children:
+  - {localId: 109}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &109
+name: ""
+guid: {a: 17097231832901997686, b: 2688548634054947992}
+enabled: true
+localPosition: {x: 0, y: 0, z: -20}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 108}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &110
+name: ""
+guid: {a: 3333353637649683500, b: 4235888999053482157}
+enabled: true
+localPosition: {x: 0, y: 0, z: 0}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 71}
+children:
+  - {localId: 111}
+  - {localId: 113}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &111
+name: Camera_transform
+guid: {a: 6649093809067205436, b: 13439624897632281257}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 110}
+children:
+  - {localId: 112}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &112
+name: ""
+guid: {a: 3765380556494054793, b: 14788141495487491499}
+enabled: true
+localPosition: {x: 0, y: 0, z: -20}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 111}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &113
+name: Camera_transform
+guid: {a: 8304765918312124197, b: 873008155221813937}
+enabled: true
+localPosition: {x: 0, y: 0, z: 10}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 110}
+children:
+  - {localId: 114}
+mobility:
+  __class: Mobility
+  value: Dynamic
+--- !Transform &114
+name: ""
+guid: {a: 10827991111907934714, b: 1304582377937758859}
+enabled: true
+localPosition: {x: 0, y: 0, z: -20}
+localScale: {x: 1, y: 1, z: 1}
+localOrientation: {w: 1, x: 0, y: 0, z: 0}
+parent: {localId: 113}
+mobility:
+  __class: Mobility
+  value: Dynamic

@@ -1,0 +1,195 @@
+[
+    {
+        "ClassName": "Util",
+        "Super": "",
+        "FilePath": "lua/Util.lua",
+        "FileAbsPath": "/Users/bytedance/Downloads/6a8f6bf3e1c17de20769c20ca26004a0 (2)/AmazingFeature/lua/Util.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "registerParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "getRegistedParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setRegistedVal",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "getRootDir",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "registerRootDir",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "bezier",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "remap01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "mix",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "CreateJsonFile",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "ReadFromJson",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "bezierWithParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "test",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "SeekModeScript",
+        "Super": "ScriptComponent",
+        "FilePath": "lua/SeekModeScript.lua",
+        "FileAbsPath": "/Users/bytedance/Downloads/6a8f6bf3e1c17de20769c20ca26004a0 (2)/AmazingFeature/lua/SeekModeScript.lua",
+        "Properties": [
+            {
+                "VarName": "_duration",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "progress",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    1.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Slider",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "autoplay",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "noise_value",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "input_fov",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "d_power",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "z_power",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "radial_blur_intensity",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "circle",
+                "VarType": "Vector2f",
+                "Comment": ""
+            }
+        ],
+        "Methods": [],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "AETools",
+        "Super": "",
+        "FilePath": "lua/AETools.lua",
+        "FileAbsPath": "/Users/bytedance/Downloads/6a8f6bf3e1c17de20769c20ca26004a0 (2)/AmazingFeature/lua/AETools.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "addKeyFrameInfo",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_updateKeyFrameInfo",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "getCurPartVal",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_getCurPart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "clear",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "test",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

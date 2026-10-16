@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "noiseAmount",
+                "effect_key_cn": "noiseAmount",
+                "type": "float",
+                "default": 0.55,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "displacementStrength",
+                "effect_key_cn": "displacementStrength",
+                "type": "float",
+                "default": 0.006,
+                "min": 0,
+                "max": 0.03
+            },
+            {
+                "effect_key": "sweepSoftness",
+                "effect_key_cn": "sweepSoftness",
+                "type": "float",
+                "default": 0.12,
+                "min": 0.02,
+                "max": 0.3
+            }
+        ]
+    }
+}

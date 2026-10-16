@@ -1,0 +1,77 @@
+%YAML 1.1
+--- !XShader &1
+name: noface/xshader
+guid: {a: 3333192047059379340, b: 15132606983198566547}
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: ""
+    guid: {a: 15153477890287179275, b: 17370396652116863914}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 2}
+        - {localId: 3}
+    angleBinaryPrograms:
+      __class: Map
+    semantics:
+      __class: Map
+      position:
+        __class: VertexAttribType
+        value: POSITION
+      texcoord0:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: ""
+      guid: {a: 17602392379514712776, b: 1301115457137976719}
+      depthstencil:
+        __class: DepthStencilState
+        name: ""
+        guid: {a: 17242888658901701023, b: 17804113741016544907}
+        depthTestEnable: false
+        depthTestEnableName: ""
+        depthCompareOp:
+          __class: CompareOp
+          value: LESS
+        depthCompareOpName: ""
+        depthWriteEnable: false
+        stencilTestEnable: false
+        stencilTestEnableName: ""
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    enableFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+    lightMode:
+      __class: LightMode
+      value: NONE
+    clearMoment:
+      __class: PassClearMoment
+      value: CLEAR_BEFORE_RENDERING
+--- !Shader &2
+name: ""
+guid: {a: 6000837668238544083, b: 11825603833211937155}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: xshader/quad.vert
+--- !Shader &3
+name: ""
+guid: {a: 11622493530788944156, b: 12006753613392600748}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: xshader/quad.frag

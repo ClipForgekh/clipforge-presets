@@ -1,0 +1,123 @@
+%YAML 1.1
+--- !XShader &1
+name: !<str> blit/xshader
+guid: {a: 2612494684953510099, b: 11652698190009009302}
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: !<str> ""
+    guid: {a: 5064907350029944583, b: 5107332780752578440}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 373}
+        - {localId: 374}
+    angleBinaryPrograms:
+      __class: Map
+    semantics:
+      __class: Map
+      a_position:
+        __class: VertexAttribType
+        value: POSITION
+      a_texcoord0:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: !<str> ""
+      guid: {a: 6431946792052404493, b: 4607138507232650400}
+      depthstencil:
+        __class: DepthStencilState
+        name: !<str> ""
+        guid: {a: 10178279175493096647, b: 13719239694930772875}
+        depthTestEnable: false
+        depthTestEnableName: !<str> ""
+        depthCompareOp:
+          __class: CompareOp
+          value: LESS
+        depthCompareOpName: !<str> ""
+        depthWriteEnable: false
+        stencilTestEnable: false
+        stencilTestEnableName: !<str> ""
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    enableFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+    keywordProgram: {localId: 372}
+    lightMode:
+      __class: LightMode
+      value: NONE
+    clearMoment:
+      __class: PassClearMoment
+      value: CLEAR_BEFORE_RENDERING
+    instanceCount: 0
+    useGrabTexture: false
+    useGrabTextureMipmap: false
+    grabTextureName: !<str> ""
+    auslSourcePath: !<str> effects/LumiBlit/xshader/blit.ausl
+--- !KeywordProgramProfile &372
+name: !<str> ""
+guid: {a: 1679835863177478338, b: 11480541382854354830}
+keywordSets:
+  -
+    - !<str> ""
+targetApis:
+  -
+    - !<str> glsl20
+    - !<str> glsl30
+    - !<str> glsl31
+    - !<str> glsl32
+  -
+    - !<str> metal
+stagets:
+  - __class: ShaderType
+    value: FRAGMENT
+  - __class: ShaderType
+    value: VERTEX
+shaderSnippets:
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 3480553177686107146, b: 15371733272479940741}
+    source: !<str> ""
+    location: !<str> effects/LumiBlit/xshader/shaderLib/shaderGLES/4655be94f167949b3426f1f4e7ae5bb5.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 5351364917235747140, b: 16434379443348885672}
+    source: !<str> ""
+    location: !<str> effects/LumiBlit/xshader/shaderLib/shaderGLES/4655be94f167949b3426f1f4e7ae5bb5.vert
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 4706244435985507452, b: 12084559667243017354}
+    source: !<str> ""
+    location: !<str> effects/LumiBlit/xshader/shaderLib/shaderMetal/4655be94f167949b3426f1f4e7ae5bb5.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 16451566490084475378, b: 14029403830002907298}
+    source: !<str> ""
+    location: !<str> effects/LumiBlit/xshader/shaderLib/shaderMetal/4655be94f167949b3426f1f4e7ae5bb5.vert
+--- !Shader &373
+name: !<str> ""
+guid: {a: 15514669456394760829, b: 12452473630335112341}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: !<str> effects/LumiBlit/xshader/shaderLib/shaderGLES/4655be94f167949b3426f1f4e7ae5bb5.frag
+--- !Shader &374
+name: !<str> ""
+guid: {a: 15369403732217428475, b: 2768939168221940126}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: !<str> effects/LumiBlit/xshader/shaderLib/shaderGLES/4655be94f167949b3426f1f4e7ae5bb5.vert

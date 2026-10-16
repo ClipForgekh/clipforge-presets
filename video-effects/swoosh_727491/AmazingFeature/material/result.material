@@ -1,0 +1,34 @@
+%YAML 1.1
+--- !Material &1
+name: enity_material
+guid: {a: 11983929228350053709, b: 11883404115112537267}
+xshader: {localId: 1, path: xshader/result.xshader}
+properties:
+  __class: PropertySheet
+  name: enity_propertySheet
+  guid: {a: 15514384855120019907, b: 5523084812458682531}
+  floatmap:
+    __class: Map
+    ins: 2
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    inputImageTexture: {localId: 1, path: share://input.texture}
+  intmap:
+    __class: Map
+renderQueue: 1
+enabledMacros:
+  __class: Map
+  AE_AreaLightNum: !<str> 0
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+mshaderPath: ""
+instanceCount: 0

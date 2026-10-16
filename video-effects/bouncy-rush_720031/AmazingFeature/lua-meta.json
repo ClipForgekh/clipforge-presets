@@ -1,0 +1,346 @@
+[
+    {
+        "ClassName": "Util",
+        "Super": "",
+        "FilePath": "lua/Util.lua",
+        "FileAbsPath": "/Users/o/EffectMacaron/scriptEffect/AmazingFeature/lua/Util.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "registerParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "getRegistedParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setRegistedVal",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "getRootDir",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "registerRootDir",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "bezier",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "remap01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "mix",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "CreateJsonFile",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "ReadFromJson",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "bezierWithParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "test",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "AETools",
+        "Super": "",
+        "FilePath": "lua/AETools.lua",
+        "FileAbsPath": "/Users/o/EffectMacaron/scriptEffect/AmazingFeature/lua/AETools.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "addKeyFrameInfo",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_remap01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_cubicBezier",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_cubicBezier01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_getBezier01X",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_mix",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_updateKeyFrameInfo",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_getDiff",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_getSingleCurPartVal",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "getCurPartVal",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_getCurPart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "clear",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "test",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "SeekModeScript",
+        "Super": "ScriptComponent",
+        "FilePath": "lua/src/AnimEntry.lua",
+        "FileAbsPath": "/Users/o/EffectMacaron/scriptEffect/AmazingFeature/lua/src/AnimEntry.lua",
+        "Properties": [
+            {
+                "VarName": "_duration",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "progress",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    1.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Slider",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "autoplay",
+                "VarType": "Bool",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "autoPlay",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "autoPlay",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setDuration",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onEvent ",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "AEAdapter",
+        "Super": "",
+        "FilePath": "lua/src/AEAdapter.lua",
+        "FileAbsPath": "/Users/o/EffectMacaron/scriptEffect/AmazingFeature/lua/src/AEAdapter.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "new ",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "addKeyframes ",
+                "Params": [
+                    {
+                        "ParaName": "layerName",
+                        "ParaType": "String",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "layerData",
+                        "ParaType": "table<string,",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            },
+            {
+                "FuncName": "addFrames ",
+                "Params": [
+                    {
+                        "ParaName": "layerName",
+                        "ParaType": "String",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "layerData",
+                        "ParaType": "table",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            },
+            {
+                "FuncName": "get ",
+                "Params": [
+                    {
+                        "ParaName": "track",
+                        "ParaType": "String",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "frame",
+                        "ParaType": "Double",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": "",
+                "Return": {
+                    "Types": [
+                        "number|number[]"
+                    ],
+                    "Comment": ""
+                }
+            },
+            {
+                "FuncName": "_addFramesVec2 ",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_interpolateKeyframe ",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_interpolateFrame ",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

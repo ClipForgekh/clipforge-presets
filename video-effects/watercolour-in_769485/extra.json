@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "bleedStrength",
+                "effect_key_cn": "bleedStrength",
+                "type": "float",
+                "default": 1.1,
+                "min": 0.5,
+                "max": 1.5
+            },
+            {
+                "effect_key": "paperIntensity",
+                "effect_key_cn": "paperIntensity",
+                "type": "float",
+                "default": 0.15,
+                "min": 0,
+                "max": 0.3
+            },
+            {
+                "effect_key": "edgeSoftness",
+                "effect_key_cn": "edgeSoftness",
+                "type": "float",
+                "default": 1.2,
+                "min": 0.5,
+                "max": 2
+            }
+        ]
+    }
+}

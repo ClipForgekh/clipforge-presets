@@ -1,0 +1,33 @@
+%YAML 1.1
+--- !Material &1
+name: bg
+guid: {a: 7155401801155168106, b: 17916030098099369890}
+xshader: {localId: 1, path: xshader/Bg.xshader}
+properties:
+  __class: PropertySheet
+  name: template0_propertySheet
+  guid: {a: 7369795273149874120, b: 12734112402926707856}
+  floatmap:
+    __class: Map
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    u_bgTex: {localId: 1, path: rt/outputTex.rt}
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+  AE_AreaLightNum: !<str> 0
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+mshaderPath: ""
+instanceCount: 0

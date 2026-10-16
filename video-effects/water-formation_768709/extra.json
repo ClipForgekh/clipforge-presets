@@ -1,0 +1,31 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "turbulenceAmount",
+                "effect_key_cn": "turbulenceAmount",
+                "type": "float",
+                "default": 0.06,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "blobScale",
+                "effect_key_cn": "blobScale",
+                "type": "float",
+                "default": 20,
+                "min": 5,
+                "max": 40
+            }
+        ]
+    }
+}

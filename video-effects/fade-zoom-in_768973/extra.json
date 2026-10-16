@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "startScale",
+                "effect_key_cn": "startScale",
+                "type": "float",
+                "default": 0.7,
+                "min": 0.5,
+                "max": 0.9
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "blurStrength",
+                "type": "float",
+                "default": 6,
+                "min": 0,
+                "max": 20
+            },
+            {
+                "effect_key": "overshootAmount",
+                "effect_key_cn": "overshootAmount",
+                "type": "float",
+                "default": 0.02,
+                "min": 0,
+                "max": 0.1
+            }
+        ]
+    }
+}

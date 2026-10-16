@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "gridSize",
+                "effect_key_cn": "gridSize",
+                "type": "float",
+                "default": 50,
+                "min": 10,
+                "max": 120
+            },
+            {
+                "effect_key": "gridOpacity",
+                "effect_key_cn": "gridOpacity",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "roughenStrength",
+                "effect_key_cn": "roughenStrength",
+                "type": "float",
+                "default": 0.85,
+                "min": 0,
+                "max": 1.5
+            },
+            {
+                "effect_key": "edgeWidth",
+                "effect_key_cn": "edgeWidth",
+                "type": "float",
+                "default": 0.0012,
+                "min": 0.0003,
+                "max": 0.005
+            }
+        ]
+    }
+}

@@ -1,0 +1,65 @@
+{
+  "key": "LumiGlow",
+  "category": "Glow",
+  "desc": "发光效果 - 为图像中的高亮区域添加发光效果，支持阈值控制和颜色设置。适用于光效制作、高光增强、梦幻效果、发光物体",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无发光 - 关闭发光效果，不应用任何发光处理"
+    },
+    {
+      "name": "high",
+      "desc": "高发光 - 应用较高的发光强度和半径，适用于突出显示高亮区域"
+    },
+    {
+      "name": "cool",
+      "desc": "冷光发光 - 应用冷光颜色的发光效果，适用于蓝色或紫色等冷色"
+    },
+    {
+      "name": "warm",
+      "desc": "暖光发光 - 应用暖光颜色的发光效果，适用于黄色或橙色等暖色"
+    },
+    {
+      "name": "low",
+      "desc": "A lighter glow preset with softer bloom and less spread."
+    },
+    {
+      "name": "medium",
+      "desc": "A balanced glow preset with moderate bloom strength."
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "glowThreshold",
+      "desc": "发光阈值 - 设定触发发光效果的最低亮度值，高于此值的区域产生发光",
+      "type": "number",
+      "value": 0.5
+    },
+    {
+      "name": "glowRadius",
+      "desc": "发光半径 - 控制发光效果的扩散半径，值越大发光范围越广",
+      "type": "number",
+      "value": 10,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "intensity",
+      "desc": "发光强度 - 控制发光效果的亮度强度，影响发光的明显程度",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 4
+    },
+    {
+      "name": "glowColor",
+      "desc": "发光颜色 - 设定发光效果的颜色，影响发光的色调",
+      "type": "color",
+      "value": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

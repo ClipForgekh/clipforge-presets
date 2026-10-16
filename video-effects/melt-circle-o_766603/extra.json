@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "overExposureStrength",
+                "effect_key_cn": "过度曝光强度",
+                "type": "float",
+                "default": 2,
+                "min": 0.5,
+                "max": 5
+            },
+            {
+                "effect_key": "fragmentCount",
+                "effect_key_cn": "碎片计数",
+                "type": "float",
+                "default": 60,
+                "min": 20,
+                "max": 100
+            },
+            {
+                "effect_key": "flySpeed",
+                "effect_key_cn": "飞行速度",
+                "type": "float",
+                "default": 2,
+                "min": 0.5,
+                "max": 5
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "模糊强度",
+                "type": "float",
+                "default": 0.05,
+                "min": 0.01,
+                "max": 0.2
+            }
+        ]
+    }
+}

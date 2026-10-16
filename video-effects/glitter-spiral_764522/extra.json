@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "spiralDensity",
+                "effect_key_cn": "螺旋密度",
+                "type": "float",
+                "default": 1,
+                "min": 0.5,
+                "max": 2
+            },
+            {
+                "effect_key": "particleAmount",
+                "effect_key_cn": "颗粒量",
+                "type": "float",
+                "default": 1,
+                "min": 0.2,
+                "max": 2
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "模糊强度",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            }
+        ]
+    }
+}

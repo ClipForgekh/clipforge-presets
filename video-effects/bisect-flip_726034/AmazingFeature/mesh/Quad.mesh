@@ -1,0 +1,61 @@
+%YAML 1.1
+--- !Mesh &1
+name: quad
+guid: {a: 6216409316580048103, b: 16514194039617513866}
+boundingBox: {min: {x: -1, y: -1, z: 0}, max: {x: 1, y: 1, z: 0}}
+dontRecalculateBounds: false
+vertices:
+  - -1
+  - 1
+  - 0
+  - 0
+  - 1
+  - 1
+  - 1
+  - 0
+  - 1
+  - 1
+  - -1
+  - -1
+  - 0
+  - 0
+  - 0
+  - 1
+  - -1
+  - 0
+  - 1
+  - 0
+instanceDataStride: 0
+materialIndex: 4294967295
+vertexAttribs:
+  - __class: VertexAttribDesc
+    name: ""
+    guid: {a: 3838508563561266829, b: 10251988970607369121}
+    semantic:
+      __class: VertexAttribType
+      value: POSITION
+    bindingIndex: 0
+    offset: 0
+    componentCount: 3
+  - __class: VertexAttribDesc
+    name: ""
+    guid: {a: 12700284896609096610, b: 13811928319560404919}
+    semantic:
+      __class: VertexAttribType
+      value: TEXCOORD0
+    bindingIndex: 0
+    offset: 12
+    componentCount: 2
+submeshes:
+  - __class: SubMesh
+    name: ""
+    guid: {a: 4920263992427029994, b: 2710024925476730769}
+    useIndices32: false
+    boundingBox: {min: {x: -1, y: -1, z: 0}, max: {x: 1, y: 1, z: 0}}
+    indices16: [0, 2, 1, 2, 3, 1]
+    indicesCount: 6
+    instanceCount: 0
+    primitive:
+      __class: Primitive
+      value: TRIANGLES
+clearAfterUpload: true

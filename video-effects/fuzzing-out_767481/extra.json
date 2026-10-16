@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "particleDensity",
+                "effect_key_cn": "颗粒密度",
+                "type": "float",
+                "default": 120,
+                "min": 40,
+                "max": 260
+            },
+            {
+                "effect_key": "particleSize",
+                "effect_key_cn": "粒径",
+                "type": "float",
+                "default": 0.26,
+                "min": 0.08,
+                "max": 0.48
+            },
+            {
+                "effect_key": "spread",
+                "effect_key_cn": "传播",
+                "type": "float",
+                "default": 1.4,
+                "min": 0.2,
+                "max": 3
+            },
+            {
+                "effect_key": "accel",
+                "effect_key_cn": "加速",
+                "type": "float",
+                "default": 2.2,
+                "min": 0,
+                "max": 5
+            }
+        ]
+    }
+}

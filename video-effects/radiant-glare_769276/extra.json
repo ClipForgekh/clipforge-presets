@@ -1,0 +1,76 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "flareIntensity",
+                "effect_key_cn": "flareIntensity",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 2.5
+            },
+            {
+                "effect_key": "overexposure",
+                "effect_key_cn": "overexposure",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "residualStrength",
+                "effect_key_cn": "residualStrength",
+                "type": "float",
+                "default": 0.6,
+                "min": 0,
+                "max": 1.5
+            },
+            {
+                "effect_key": "ghostStrength",
+                "effect_key_cn": "ghostStrength",
+                "type": "float",
+                "default": 0.35,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "flareCenter",
+                "effect_key_cn": "flareCenter",
+                "type": "vec2",
+                "default": [
+                    0.52,
+                    0.46
+                ]
+            },
+            {
+                "effect_key": "coreColor",
+                "effect_key_cn": "coreColor",
+                "type": "color",
+                "default": [
+                    1,
+                    0.98,
+                    0.93
+                ]
+            },
+            {
+                "effect_key": "glowColor",
+                "effect_key_cn": "glowColor",
+                "type": "color",
+                "default": [
+                    1,
+                    0.8,
+                    0.52
+                ]
+            }
+        ]
+    }
+}

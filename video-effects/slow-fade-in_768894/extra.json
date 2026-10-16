@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "rgbOffset",
+                "effect_key_cn": "rgbOffset",
+                "type": "float",
+                "default": 0.032,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "curveStrength",
+                "effect_key_cn": "curveStrength",
+                "type": "float",
+                "default": 0.018,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "blurAmount",
+                "effect_key_cn": "blurAmount",
+                "type": "float",
+                "default": 0.006,
+                "min": 0,
+                "max": 0.03
+            },
+            {
+                "effect_key": "overshootAmount",
+                "effect_key_cn": "overshootAmount",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.35
+            }
+        ]
+    }
+}

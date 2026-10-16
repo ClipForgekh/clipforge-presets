@@ -1,0 +1,33 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "maxGlowRadius",
+                "effect_key_cn": "maxGlowRadius",
+                "type": "float",
+                "default": 0.045,
+                "min": 0,
+                "max": 0.1
+            },
+            {
+                "effect_key": "pulseStrength",
+                "effect_key_cn": "pulseStrength",
+                "type": "float",
+                "default": 1.25,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "glowColor",
+                "effect_key_cn": "glowColor",
+                "type": "color",
+                "default": [
+                    1,
+                    0.92,
+                    0.75
+                ]
+            }
+        ]
+    }
+}

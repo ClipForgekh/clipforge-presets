@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "warpIntensity",
+                "effect_key_cn": "翘曲强度",
+                "type": "float",
+                "default": 0.18,
+                "min": 0,
+                "max": 0.5
+            },
+            {
+                "effect_key": "swirlTurns",
+                "effect_key_cn": "漩涡转弯",
+                "type": "float",
+                "default": 2.5,
+                "min": 0,
+                "max": 6
+            },
+            {
+                "effect_key": "desaturateAmount",
+                "effect_key_cn": "去饱和量",
+                "type": "float",
+                "default": 0.65,
+                "min": 0,
+                "max": 1
+            }
+        ]
+    }
+}

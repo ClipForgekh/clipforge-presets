@@ -1,0 +1,41 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "flareColor",
+                "effect_key_cn": "flareColor",
+                "type": "color",
+                "default": [
+                    1,
+                    0.92,
+                    0.75
+                ]
+            },
+            {
+                "effect_key": "flareBrightness",
+                "effect_key_cn": "flareBrightness",
+                "type": "float",
+                "default": 2.2,
+                "min": 0.5,
+                "max": 4
+            },
+            {
+                "effect_key": "streakSharpness",
+                "effect_key_cn": "streakSharpness",
+                "type": "float",
+                "default": 3.5,
+                "min": 1,
+                "max": 8
+            },
+            {
+                "effect_key": "ringIntensity",
+                "effect_key_cn": "ringIntensity",
+                "type": "float",
+                "default": 1.1,
+                "min": 0,
+                "max": 3
+            }
+        ]
+    }
+}

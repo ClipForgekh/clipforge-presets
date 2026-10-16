@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "stripDensity",
+                "effect_key_cn": "条带密度",
+                "type": "float",
+                "default": 160,
+                "min": 40,
+                "max": 420
+            },
+            {
+                "effect_key": "aberrationStrength",
+                "effect_key_cn": "像差强度",
+                "type": "float",
+                "default": 0.01,
+                "min": 0,
+                "max": 0.05
+            },
+            {
+                "effect_key": "sprintStretch",
+                "effect_key_cn": "冲刺 伸展运",
+                "type": "float",
+                "default": 0.14,
+                "min": 0,
+                "max": 0.4
+            },
+            {
+                "effect_key": "motionBlurStrength",
+                "effect_key_cn": "运动模糊强度",
+                "type": "float",
+                "default": 0.6,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "flickerContrast",
+                "effect_key_cn": "闪烁对比度",
+                "type": "float",
+                "default": 0.45,
+                "min": 0,
+                "max": 1
+            }
+        ]
+    }
+}

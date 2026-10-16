@@ -1,0 +1,64 @@
+%YAML 1.1
+--- !XShader &1
+name: Exposure
+guid: {a: 17241480515355302435, b: 15947257627919242908}
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: ""
+    guid: {a: 9963731266802318774, b: 9406498243575673472}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 2}
+        - {localId: 3}
+    angleBinaryPrograms:
+      __class: Map
+    semantics:
+      __class: Map
+      position:
+        __class: VertexAttribType
+        value: POSITION
+      texcoord0:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0, g: 0, b: 0, a: 1}
+    clearDepth: 0
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: ""
+      guid: {a: 15366508120722156419, b: 13618105722382778294}
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    enableFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+    lightMode:
+      __class: LightMode
+      value: NONE
+    clearMoment:
+      __class: PassClearMoment
+      value: CLEAR_BEFORE_RENDERING
+--- !Shader &2
+name: ""
+guid: {a: 13280247743393101213, b: 10832118390973706130}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: effects/Exposure/mat&shader/Exposure.vert
+--- !Shader &3
+name: ""
+guid: {a: 4847951417464902706, b: 509308941251443585}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: effects/Exposure/mat&shader/Exposure.frag

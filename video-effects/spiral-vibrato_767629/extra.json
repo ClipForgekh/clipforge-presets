@@ -1,0 +1,63 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "uBrightness",
+                "effect_key_cn": "u 亮度",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "uTwirlMax",
+                "effect_key_cn": "u 最大旋转",
+                "type": "float",
+                "default": 0.16,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "uBokehMax",
+                "effect_key_cn": "u 最大散景",
+                "type": "float",
+                "default": 0.18,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "uSpiralTightness",
+                "effect_key_cn": "u 螺旋松紧",
+                "type": "float",
+                "default": 2.4,
+                "min": 0.5,
+                "max": 6
+            },
+            {
+                "effect_key": "uRingStart",
+                "effect_key_cn": "u 响铃启动",
+                "type": "float",
+                "default": 0.38,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "uSectionCount",
+                "effect_key_cn": "u 节数",
+                "type": "int",
+                "default": 12,
+                "min": 1,
+                "max": 24
+            }
+        ]
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurMax",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 0.035,
+                "min": 0.005,
+                "max": 0.08
+            },
+            {
+                "effect_key": "grainStart",
+                "effect_key_cn": "谷物开始",
+                "type": "float",
+                "default": 0.15,
+                "min": 0,
+                "max": 0.4
+            },
+            {
+                "effect_key": "warmStrength",
+                "effect_key_cn": "温暖的力量",
+                "type": "float",
+                "default": 0.22,
+                "min": 0,
+                "max": 0.5
+            },
+            {
+                "effect_key": "pullStrength",
+                "effect_key_cn": "拉力",
+                "type": "float",
+                "default": 0.08,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "slideUp",
+                "effect_key_cn": "向上滑动",
+                "type": "float",
+                "default": 0.015,
+                "min": 0,
+                "max": 0.05
+            }
+        ]
+    }
+}

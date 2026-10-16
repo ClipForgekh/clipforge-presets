@@ -1,0 +1,93 @@
+{
+  "key": "LumiPageTurn",
+  "category": "Distort",
+  "desc": "翻页效果 - 模拟书页翻转的3D效果，支持前后页面和折叠控制。适用于翻页动画、书本效果、3D转场、页面过渡",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果 - 关闭翻页效果，不应用任何翻页效果，保持图像原始状态"
+    },
+    {
+      "name": "topLeft",
+      "desc": "左上角翻页 - 从左上角掀起页面"
+    },
+    {
+      "name": "topRight",
+      "desc": "右上角翻页 - 从右上角掀起页面"
+    },
+    {
+      "name": "bottomLeft",
+      "desc": "左下角翻页 - 从左下角掀起页面"
+    },
+    {
+      "name": "bottomRight",
+      "desc": "右下角翻页 - 从右下角掀起页面"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "强度 - 控制翻页效果的强度，0为完全保持原图，1为纯翻页效果",
+      "type": "number",
+      "value": 1.0
+    },
+    {
+      "name": "controlMode",
+      "desc": "控制模式 - 仅保留 manualGeometry，直接用锚点与目标点描述翻页几何",
+      "type": "enum",
+      "value": "manualGeometry",
+      "options": [
+        "manualGeometry"
+      ]
+    },
+    {
+      "name": "anchorPoint",
+      "desc": "锚点 - 翻页固定角点/起始点，通常位于页面四角之一",
+      "type": "array",
+      "value": [
+        1.0,
+        0.0
+      ],
+      "min": -1.0,
+      "max": 2.0,
+      "visibleIf": {
+        "param": "controlMode",
+        "equals": "manualGeometry"
+      }
+    },
+    {
+      "name": "foldTarget",
+      "desc": "折叠目标点 - 翻页强度为 1 时折叠线控制点的位置",
+      "type": "array",
+      "value": [
+        0.5,
+        0.5
+      ],
+      "min": -1.0,
+      "max": 2.0,
+      "visibleIf": {
+        "param": "controlMode",
+        "equals": "manualGeometry"
+      }
+    },
+    {
+      "name": "foldRadius",
+      "desc": "折叠半径 - 控制页面折叠的弯曲半径",
+      "type": "number",
+      "value": 0.3,
+      "min": 0.0,
+      "max": 5.0
+    },
+    {
+      "name": "visibleFace",
+      "desc": "可见面 - 选择显示双面、正面或背面",
+      "type": "enum",
+      "value": "both",
+      "options": [
+        "both",
+        "front",
+        "back"
+      ]
+    }
+  ]
+}

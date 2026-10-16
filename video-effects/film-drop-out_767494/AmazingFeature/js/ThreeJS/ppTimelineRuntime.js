@@ -1,0 +1,857 @@
+const TWEEN = require('./tween');
+function safeRequire(fn) {
+  try {
+    return fn();
+  } catch (e) {
+    return null;
+  }
+}
+
+const customEasings =
+  safeRequire(() => require('../core/customEasings').customEasings) ||
+  safeRequire(() => require('./customEasings').customEasings);
+const effect_api = typeof effect !== 'undefined'
+  ? effect
+  : (typeof tt !== 'undefined' ? tt : (typeof lynx !== 'undefined' ? lynx : {}));
+const Amaz = effect_api.getAmaz ? effect_api.getAmaz() : null;
+
+class PPTimelineRuntime {
+  constructor(owner) {
+    this.owner = owner;
+  }
+
+  getDefaultConfig() {
+    return {
+      durationMs: this.owner.Duration,
+      effects: [],
+    };
+  }
+
+  loadConfig() {
+    try {
+      const configModule = require('./ppTimelineConfig.js');
+      const importedPPTimelineConfig = configModule && configModule.ppTimelineConfig;
+      if (importedPPTimelineConfig && typeof importedPPTimelineConfig === 'object') {
+        return this.cloneValue(importedPPTimelineConfig);
+      }
+      this.logWarning('ppTimelineConfig.js did not export a valid ppTimelineConfig object, using fallback config');
+    } catch (error) {
+      this.logWarning('Failed to load ppTimelineConfig.js, using fallback config', error);
+    }
+    return this.getDefaultConfig();
+  }
+
+  normalizeConfig(config) {
+    const safeConfig = config && typeof config === 'object'
+      ? config
+      : this.getDefaultConfig();
+    const rawEffects = Array.isArray(safeConfig.effects)
+      ? safeConfig.effects
+      : (safeConfig.postProcessing && Array.isArray(safeConfig.postProcessing.effects)
+        ? safeConfig.postProcessing.effects
+        : []);
+    const effects = rawEffects
+      .filter((item) => item && typeof item.name === 'string' && item.name)
+      .map((item) => this.cloneValue(item));
+    return {
+      durationMs: Math.max(1, Number(safeConfig.durationMs) || this.owner.Duration),
+      effects,
+    };
+  }
+
+  resolvePresetConfig(shaderPass, presetName) {
+    if (
+      !shaderPass ||
+      typeof presetName !== 'string' ||
+      !presetName.trim() ||
+      typeof shaderPass.getPresetConfig !== 'function'
+    ) {
+      return null;
+    }
+    try {
+      const presetConfig = shaderPass.getPresetConfig(presetName.trim());
+      return presetConfig && typeof presetConfig === 'object'
+        ? this.cloneValue(presetConfig)
+        : null;
+    } catch (error) {
+      this.logError(`Failed to resolve preset "${presetName}"`, error);
+      return null;
+    }
+  }
+
+  resolveStaticParams(effectConfig, controller, options = {}) {
+    const ignorePreset = !!(options && options.ignorePreset);
+    const effectName = effectConfig && effectConfig.name ? effectConfig.name : 'unknown';
+    const presetName = effectConfig && typeof effectConfig.preset === 'string'
+      ? effectConfig.preset.trim()
+      : '';
+    const shaderPass = controller && controller.shaderPass;
+    const presetParams = ignorePreset ? null : this.resolvePresetConfig(
+      shaderPass,
+      presetName
+    );
+    const explicitParams = effectConfig && effectConfig.params && typeof effectConfig.params === 'object'
+      ? effectConfig.params
+      : {};
+    if (presetName) {
+      if (!shaderPass || typeof shaderPass.getPresetConfig !== 'function') {
+        this.logWarning(
+          `Effect "${effectName}" does not support preset resolution; preset "${presetName}" will be ignored`
+        );
+      } else if (!presetParams) {
+        this.logWarning(
+          `Preset "${presetName}" was not found for effect "${effectName}", using explicit params or none baseline`
+        );
+      }
+    }
+    if (!presetParams) {
+      return this.cloneValue(explicitParams);
+    }
+    return Object.assign({}, presetParams, this.cloneValue(explicitParams));
+  }
+
+  normalizePresetTimelineSegment(segment = {}, validPresets) {
+    if (!segment || typeof segment !== 'object') return null;
+    const fromPreset = typeof segment.fromPreset === 'string'
+      ? segment.fromPreset.trim()
+      : '';
+    const toPreset = typeof segment.toPreset === 'string'
+      ? segment.toPreset.trim()
+      : '';
+    if (!fromPreset || !toPreset) return null;
+    if (validPresets && validPresets.size) {
+      if (!validPresets.has(fromPreset) || !validPresets.has(toPreset)) {
+        return null;
+      }
+    }
+    return {
+      start: Math.max(0, Number(segment.start) || 0),
+      end: Math.max(0, Number(segment.end) || 0),
+      fromPreset,
+      toPreset,
+      easing: typeof segment.easing === 'string' ? segment.easing : 'linear',
+    };
+  }
+
+  resolvePresetTimeline(effectConfig, controller) {
+    const rawTimeline = effectConfig && effectConfig.presetTimeline && typeof effectConfig.presetTimeline === 'object'
+      ? effectConfig.presetTimeline
+      : null;
+    const shaderPass = controller && controller.shaderPass;
+    if (!rawTimeline || !shaderPass || typeof shaderPass.getPresetConfig !== 'function') {
+      return null;
+    }
+
+    const presetNames = typeof shaderPass.getPresetNames === 'function'
+      ? shaderPass.getPresetNames()
+      : [];
+    const validPresets = new Set(Array.isArray(presetNames) ? presetNames : []);
+    const defaultPreset = typeof rawTimeline.defaultPreset === 'string' && rawTimeline.defaultPreset.trim()
+      ? rawTimeline.defaultPreset.trim()
+      : 'none';
+    if (validPresets.size && !validPresets.has(defaultPreset)) {
+      return null;
+    }
+
+    const defaultParams = this.resolvePresetConfig(shaderPass, defaultPreset) || {};
+    const rawSegments = Array.isArray(rawTimeline.segments) ? rawTimeline.segments : [];
+    const segments = rawSegments
+      .map((segment) => this.normalizePresetTimelineSegment(segment, validPresets))
+      .filter(Boolean)
+      .map((segment) => ({
+        start: segment.start,
+        end: segment.end,
+        easing: segment.easing,
+        fromPreset: segment.fromPreset,
+        toPreset: segment.toPreset,
+        fromParams: this.resolvePresetConfig(shaderPass, segment.fromPreset) || {},
+        toParams: this.resolvePresetConfig(shaderPass, segment.toPreset) || {},
+      }))
+      .sort((a, b) => a.start - b.start);
+
+    if (!segments.length) {
+      return null;
+    }
+
+    return {
+      defaultPreset,
+      defaultParams,
+      segments,
+    };
+  }
+
+  resolveMixTimeline(effectConfig) {
+    if (!effectConfig || typeof effectConfig !== 'object') return null;
+    if (effectConfig.timeline) {
+      return this.normalizeMixTimelineConfig(effectConfig.timeline);
+    }
+    if (effectConfig.mixTimeline) {
+      return this.normalizeMixTimelineConfig(effectConfig.mixTimeline);
+    }
+    return null;
+  }
+
+  resolveInitialMix(effectConfig) {
+    const timeline = this.resolveMixTimeline(effectConfig);
+    if (timeline) {
+      return timeline.defaultMix;
+    }
+    if (typeof effectConfig.mix !== 'undefined') {
+      return effectConfig.mix;
+    }
+    if (effectConfig && typeof effectConfig.preset === 'string' && effectConfig.preset.trim()) {
+      return 1.0;
+    }
+    return this.owner.ppMixDefault;
+  }
+
+  resolveParameterTimelines(effectConfig, staticParams = {}) {
+    const parameterTimelines = effectConfig && effectConfig.parameterTimelines && typeof effectConfig.parameterTimelines === 'object'
+      ? effectConfig.parameterTimelines
+      : {};
+    const out = {};
+    Object.keys(parameterTimelines).forEach((key) => {
+      const track = this.normalizeNumericTrackConfig(parameterTimelines[key], {
+        defaultValue: Object.prototype.hasOwnProperty.call(staticParams, key)
+          ? staticParams[key]
+          : 0,
+      });
+      if (track) {
+        out[key] = track;
+      }
+    });
+    return out;
+  }
+
+  applyResolvedEffectConfig(controller, staticParams, mixTimeline, mix, parameterTimelines, presetTimeline = null) {
+    controller.staticParams = this.cloneValue(staticParams || {});
+    controller.presetTimeline = presetTimeline;
+    controller.paramTimelines = {};
+
+    if (mixTimeline) {
+      controller.timeline = mixTimeline;
+      controller.setMix(mixTimeline.defaultMix);
+    } else if (typeof mix !== 'undefined') {
+      controller.timeline = null;
+      controller.setMix(mix);
+    }
+
+    Object.keys(parameterTimelines).forEach((key) => {
+      controller.paramTimelines[key] = parameterTimelines[key];
+    });
+
+    this.refreshControllerParams(controller, 0);
+  }
+
+  normalizeNumericTrackConfig(track = {}, options = {}) {
+    if (!track || typeof track !== 'object') return null;
+    const transform = typeof options.transform === 'function' ? options.transform : (value) => value;
+    const defaultValue = transform(
+      typeof track.defaultValue !== 'undefined'
+        ? track.defaultValue
+        : (typeof options.defaultValue !== 'undefined' ? options.defaultValue : 0)
+    );
+    const rawSegments = Array.isArray(track.segments) ? track.segments : [track];
+    const segments = rawSegments
+      .map((segment) => {
+        const normalized = {
+          start: Math.max(0, Number(segment.start) || 0),
+          end: Math.max(0, Number(segment.end) || 0),
+          from: transform(typeof segment.from !== 'undefined' ? segment.from : defaultValue),
+          to: transform(typeof segment.to !== 'undefined' ? segment.to : defaultValue),
+          easing: typeof segment.easing === 'string' ? segment.easing : 'linear',
+        };
+        if (normalized.end < normalized.start) {
+          const temp = normalized.start;
+          normalized.start = normalized.end;
+          normalized.end = temp;
+        }
+        return normalized;
+      })
+      .sort((a, b) => a.start - b.start);
+    return {
+      defaultValue,
+      segments,
+    };
+  }
+
+  evaluateNumericTrack(track, time) {
+    if (!track) return undefined;
+    const segments = Array.isArray(track.segments) ? track.segments : [];
+    if (!segments.length) {
+      return track.defaultValue;
+    }
+    if (time <= segments[0].start) {
+      return segments[0].from;
+    }
+    for (let i = 0; i < segments.length; i += 1) {
+      const segment = segments[i];
+      if (segment.end <= segment.start) {
+        if (time <= segment.end) {
+          return segment.to;
+        }
+        continue;
+      }
+      if (time >= segment.start && time <= segment.end) {
+        const rawProgress = (time - segment.start) / (segment.end - segment.start);
+        const easing = this.resolveEasing(segment.easing);
+        const progress = easing(Math.max(0, Math.min(1, rawProgress)));
+        return segment.from + ((segment.to - segment.from) * progress);
+      }
+      if (i < segments.length - 1 && time > segment.end && time < segments[i + 1].start) {
+        return segment.to;
+      }
+    }
+    return segments[segments.length - 1].to;
+  }
+
+  applyEffectConfig(effectConfig) {
+    if (!effectConfig || !effectConfig.name) return;
+    const effectId = this.normalizeIdentifier(
+      effectConfig.id || effectConfig.instanceId || effectConfig.instance_id || ''
+    );
+    const controllers = this.getControllers(effectConfig.name, effectId);
+    if (!controllers.length) return;
+
+    controllers.forEach((controller) => {
+      const presetTimeline = this.resolvePresetTimeline(effectConfig, controller);
+      const staticParams = this.resolveStaticParams(effectConfig, controller, {
+        ignorePreset: !!presetTimeline,
+      });
+      const mixTimeline = this.resolveMixTimeline(effectConfig);
+      const parameterTimelines = this.resolveParameterTimelines(effectConfig, staticParams);
+      this.applyResolvedEffectConfig(
+        controller,
+        staticParams,
+        mixTimeline,
+        effectConfig.mix,
+        parameterTimelines,
+        presetTimeline
+      );
+    });
+  }
+
+  applyConfiguredPostProcessing(configInput) {
+    const config = this.normalizeConfig(
+      typeof configInput === 'undefined' ? this.owner.ppTimelineConfig : configInput
+    );
+    this.owner.Duration = config.durationMs;
+    const effects = config.effects;
+    if (!effects.length) {
+      return;
+    }
+
+    const shaderPassConfigs = effects.map((effect) => ({
+      name: effect.name,
+      instanceId: effect.id || effect.instanceId || effect.instance_id || '',
+      mix: this.resolveInitialMix(effect),
+    }));
+
+    this.owner.setupPostProcessing(shaderPassConfigs);
+    effects.forEach((effect) => this.applyEffectConfig(effect));
+  }
+
+  clampMix(value) {
+    const number = Number(value);
+    if (!Number.isFinite(number)) return 1;
+    return Math.max(0, Math.min(1, number));
+  }
+
+  cloneValue(value) {
+    if (Array.isArray(value)) {
+      return value.map(item => this.cloneValue(item));
+    }
+    if (value && typeof value === 'object') {
+      try {
+        return JSON.parse(JSON.stringify(value));
+      } catch (e) {
+        return value;
+      }
+    }
+    return value;
+  }
+
+  blendValue(baseValue, targetValue, mix) {
+    const safeMix = this.clampMix(mix);
+    if (safeMix >= 1) return this.cloneValue(targetValue);
+    if (safeMix <= 0) {
+      return typeof baseValue === 'undefined'
+        ? this.cloneValue(targetValue)
+        : this.cloneValue(baseValue);
+    }
+
+    if (typeof targetValue === 'number') {
+      const baseNumber = typeof baseValue === 'number' ? baseValue : 0;
+      return baseNumber + (targetValue - baseNumber) * safeMix;
+    }
+
+    if (Array.isArray(targetValue)) {
+      const baseArray = Array.isArray(baseValue) ? baseValue : [];
+      return targetValue.map((item, index) => {
+        const baseItem = index < baseArray.length ? baseArray[index] : undefined;
+        return this.blendValue(baseItem, item, safeMix);
+      });
+    }
+
+    if (
+      targetValue &&
+      typeof targetValue === 'object' &&
+      !Array.isArray(targetValue) &&
+      baseValue &&
+      typeof baseValue === 'object' &&
+      !Array.isArray(baseValue)
+    ) {
+      const out = {};
+      const keys = Array.from(new Set([...Object.keys(baseValue), ...Object.keys(targetValue)]));
+      keys.forEach((key) => {
+        if (Object.prototype.hasOwnProperty.call(targetValue, key)) {
+          out[key] = this.blendValue(baseValue[key], targetValue[key], safeMix);
+        } else {
+          out[key] = this.cloneValue(baseValue[key]);
+        }
+      });
+      return out;
+    }
+
+    if (typeof baseValue === 'undefined') {
+      return this.cloneValue(targetValue);
+    }
+    return safeMix >= 0.5
+      ? this.cloneValue(targetValue)
+      : this.cloneValue(baseValue);
+  }
+
+  findBaselineValue(shaderPass, key) {
+    if (!shaderPass || typeof shaderPass.getPresetConfig !== 'function') return undefined;
+    const nonePreset = shaderPass.getPresetConfig('none');
+    if (!nonePreset || typeof nonePreset !== 'object') return undefined;
+    return nonePreset[key];
+  }
+
+  captureBaselineValue(shaderPass, key) {
+    if (!shaderPass || !key) return undefined;
+
+    const presetValue = this.findBaselineValue(shaderPass, key);
+    if (typeof presetValue !== 'undefined') {
+      return this.cloneValue(presetValue);
+    }
+
+    if (typeof shaderPass[key] !== 'undefined') {
+      return this.cloneValue(shaderPass[key]);
+    }
+
+    const material = shaderPass.material;
+    if (material && material.uniforms && Object.prototype.hasOwnProperty.call(material.uniforms, key)) {
+      const uniform = material.uniforms[key];
+      if (uniform && typeof uniform === 'object' && Object.prototype.hasOwnProperty.call(uniform, 'value')) {
+        return this.cloneValue(uniform.value);
+      }
+      return this.cloneValue(uniform);
+    }
+
+    return undefined;
+  }
+
+  logError(message, error) {
+    const detail = error && error.message ? error.message : error;
+    const text = detail ? `${message}: ${detail}` : message;
+    if (typeof Amaz !== 'undefined' && Amaz && typeof Amaz.LOGE === 'function') {
+      Amaz.LOGE('PPTimeline', String(text));
+      return;
+    }
+    if (typeof console !== 'undefined' && typeof console.error === 'function') {
+      console.error(text);
+    }
+  }
+
+  logWarning(message, error) {
+    const detail = error && error.message ? error.message : error;
+    const text = detail ? `${message}: ${detail}` : message;
+    if (typeof Amaz !== 'undefined' && Amaz) {
+      if (typeof Amaz.LOGW === 'function') {
+        Amaz.LOGW('PPTimeline', String(text));
+        return;
+      }
+      if (typeof Amaz.LOGE === 'function') {
+        Amaz.LOGE('PPTimeline', String(text));
+        return;
+      }
+    }
+    if (typeof console !== 'undefined' && typeof console.warn === 'function') {
+      console.warn(text);
+    }
+  }
+
+  applyParameter(shaderPass, key, value) {
+    if (!shaderPass || !key) return;
+
+    if (typeof shaderPass.setParameter === 'function') {
+      shaderPass.setParameter(key, value);
+      return;
+    }
+
+    const material = shaderPass.material;
+    if (material && material.uniforms && Object.prototype.hasOwnProperty.call(material.uniforms, key)) {
+      const uniform = material.uniforms[key];
+      if (uniform && typeof uniform === 'object' && Object.prototype.hasOwnProperty.call(uniform, 'value')) {
+        uniform.value = value;
+      } else {
+        material.uniforms[key] = value;
+      }
+      return;
+    }
+
+    if (material && typeof value === 'number' && typeof material.setFloat === 'function') {
+      material.setFloat(key, value);
+      return;
+    }
+
+    shaderPass[key] = value;
+  }
+
+  createMixController(shaderPass, options = {}) {
+    const effectKey = options.effectKey || shaderPass.constructor.name;
+    const instanceId = this.normalizeIdentifier(
+      options.instanceId || options.id || options.instance_id || ''
+    );
+    const controller = {
+      shaderPass,
+      effectKey,
+      instanceId,
+      className: shaderPass.constructor.name,
+      mix: this.clampMix(
+        typeof options.mix !== 'undefined' ? options.mix : this.owner.ppMixDefault
+      ),
+      baseParams: {},
+      params: {},
+      staticParams: {},
+      timeline: null,
+      presetTimeline: null,
+      paramTimelines: {},
+    };
+
+    controller.applyParam = (key) => {
+      if (!shaderPass || !key) return;
+      const rawValue = controller.params[key];
+      const baseValue = Object.prototype.hasOwnProperty.call(controller.baseParams, key)
+        ? controller.baseParams[key]
+        : undefined;
+      const mixedValue = this.blendValue(baseValue, rawValue, controller.mix);
+      try {
+        this.applyParameter(shaderPass, key, mixedValue);
+      } catch (error) {
+        this.logError(`Failed to apply "${key}" for ${effectKey}`, error);
+      }
+    };
+
+    controller.applyAll = () => {
+      Object.keys(controller.params).forEach((key) => controller.applyParam(key));
+    };
+
+    controller.setParameter = (key, value) => {
+      if (!Object.prototype.hasOwnProperty.call(controller.baseParams, key)) {
+        controller.baseParams[key] = this.captureBaselineValue(shaderPass, key);
+      }
+      controller.params[key] = this.cloneValue(value);
+      controller.applyParam(key);
+    };
+
+    controller.setMix = (mix) => {
+      controller.mix = this.clampMix(mix);
+      controller.applyAll();
+    };
+
+    controller.getMix = () => controller.mix;
+
+    return controller;
+  }
+
+  normalizeIdentifier(effectName) {
+    if (typeof effectName !== 'string' || !effectName.trim()) return '';
+    return effectName.trim();
+  }
+
+  resolvePath(root, path) {
+    if (!root || typeof path !== 'string' || !path) return null;
+    const parts = path.split('.');
+    let value = root;
+    for (let i = 0; i < parts.length; i += 1) {
+      if (!value || (typeof value !== 'object' && typeof value !== 'function') || !(parts[i] in value)) {
+        return null;
+      }
+      value = value[parts[i]];
+    }
+    return value;
+  }
+
+  parseCustomEasing(rawName) {
+    if (typeof rawName !== 'string' || !rawName.startsWith('customEasings.')) {
+      return null;
+    }
+
+    const cubicBezierMatch = rawName.match(/^customEasings\.cubicBezier\((.*)\)$/);
+    if (cubicBezierMatch) {
+      const argsText = cubicBezierMatch[1].trim();
+      if (!argsText) return null;
+      const cubicBezier = customEasings && typeof customEasings.cubicBezier === 'function'
+        ? customEasings.cubicBezier
+        : null;
+
+      const stringPresetMatch = argsText.match(/^['"]([^'"]+)['"]$/);
+      if (stringPresetMatch) {
+        return cubicBezier
+          ? cubicBezier(stringPresetMatch[1])
+          : null;
+      }
+
+      const numericArgs = argsText
+        .split(',')
+        .map((part) => Number(part.trim()));
+      if (
+        numericArgs.length === 4 &&
+        numericArgs.every((value) => Number.isFinite(value)) &&
+          cubicBezier
+      ) {
+        return cubicBezier(...numericArgs);
+      }
+      return null;
+    }
+
+    return this.resolvePath(customEasings, rawName.replace(/^customEasings\./, ''));
+  }
+
+  resolveEasing(easingName) {
+    const rawName = typeof easingName === 'string' ? easingName.trim() : 'linear';
+    if (customEasings && typeof customEasings.resolveEasing === 'function') {
+      const resolved = customEasings.resolveEasing(rawName);
+      if (typeof resolved === 'function') {
+        return resolved;
+      }
+    }
+    const customEasing = this.parseCustomEasing(rawName);
+    if (typeof customEasing === 'function') {
+      return customEasing;
+    }
+    const alias = rawName.toLowerCase();
+    const pathMap = {
+      linear: 'Linear.None',
+      'linear.none': 'Linear.None',
+      easein: 'Quadratic.In',
+      ease_in: 'Quadratic.In',
+      'quadratic.in': 'Quadratic.In',
+      easeout: 'Quadratic.Out',
+      ease_out: 'Quadratic.Out',
+      'quadratic.out': 'Quadratic.Out',
+      easeinout: 'Quadratic.InOut',
+      ease_in_out: 'Quadratic.InOut',
+      'quadratic.inout': 'Quadratic.InOut',
+      'sinusoidal.in': 'Sinusoidal.In',
+      'sine.in': 'Sinusoidal.In',
+      'sinusoidal.out': 'Sinusoidal.Out',
+      'sine.out': 'Sinusoidal.Out',
+      'sinusoidal.inout': 'Sinusoidal.InOut',
+      'sine.inout': 'Sinusoidal.InOut',
+    };
+    const path = pathMap[alias] || rawName || 'Linear.None';
+    const fn = this.resolvePath(TWEEN && TWEEN.Easing ? TWEEN.Easing : null, path);
+    return typeof fn === 'function' ? fn : TWEEN.Easing.Linear.None;
+  }
+
+  normalizeMixSegment(segment = {}) {
+    const normalized = {
+      start: Math.max(0, Number(segment.start) || 0),
+      end: Math.max(0, Number(segment.end) || 0),
+      from: this.clampMix(typeof segment.from !== 'undefined' ? segment.from : 0),
+      to: this.clampMix(typeof segment.to !== 'undefined' ? segment.to : 1),
+      easing: typeof segment.easing === 'string' ? segment.easing : 'linear',
+    };
+    if (normalized.end < normalized.start) {
+      const temp = normalized.start;
+      normalized.start = normalized.end;
+      normalized.end = temp;
+    }
+    return normalized;
+  }
+
+  normalizeMixTimelineConfig(timeline = {}) {
+    if (Array.isArray(timeline)) {
+      timeline = { segments: timeline };
+    }
+    if (!timeline || typeof timeline !== 'object') return null;
+    const rawSegments = Array.isArray(timeline.segments) ? timeline.segments : null;
+    const segments = rawSegments && rawSegments.length > 0
+      ? rawSegments.map((segment) => this.normalizeMixSegment(segment))
+      : [this.normalizeMixSegment(timeline)];
+    segments.sort((a, b) => a.start - b.start);
+    return {
+      defaultMix: this.clampMix(
+        typeof timeline.defaultMix !== 'undefined'
+          ? timeline.defaultMix
+          : (segments[0] ? segments[0].from : this.owner.ppMixDefault)
+      ),
+      segments,
+    };
+  }
+
+  matchController(controller, effectName) {
+    if (!controller) return false;
+    const normalized = this.normalizeIdentifier(effectName);
+    if (!normalized) return true;
+    if (arguments.length > 2) {
+      const normalizedInstanceId = this.normalizeIdentifier(arguments[2]);
+      if (normalizedInstanceId) {
+        return controller.instanceId === normalizedInstanceId;
+      }
+    }
+    const className = normalized.endsWith('ShaderPass')
+      ? normalized
+      : (normalized.startsWith('Lumi') ? normalized.slice(4) : normalized) + 'ShaderPass';
+    return (
+      controller.effectKey === normalized ||
+      controller.className === normalized ||
+      controller.className === className
+    );
+  }
+
+  getControllers(effectName = '', instanceId = '') {
+    return this.owner.ppMixControllers.filter(
+      (controller) => this.matchController(controller, effectName, instanceId)
+    );
+  }
+
+  setMix(mix, effectName = '', instanceId = '') {
+    this.getControllers(effectName, instanceId).forEach((controller) => {
+      controller.setMix(mix);
+    });
+  }
+
+  setMixTimeline(timeline = {}, effectName = '', instanceId = '') {
+    const normalized = this.normalizeMixTimelineConfig(timeline);
+    if (!normalized) return;
+    this.getControllers(effectName, instanceId).forEach((controller) => {
+      controller.timeline = normalized;
+      controller.setMix(normalized.defaultMix);
+    });
+  }
+
+  clearMixTimeline(effectName = '', instanceId = '') {
+    this.getControllers(effectName, instanceId).forEach((controller) => {
+      controller.timeline = null;
+    });
+  }
+
+  evaluatePresetTimeline(timeline, time) {
+    if (!timeline) return {};
+    const segments = Array.isArray(timeline.segments) ? timeline.segments : [];
+    if (!segments.length) {
+      return this.cloneValue(timeline.defaultParams || {});
+    }
+
+    if (time <= segments[0].start) {
+      return this.cloneValue(segments[0].fromParams || timeline.defaultParams || {});
+    }
+
+    for (let i = 0; i < segments.length; i += 1) {
+      const segment = segments[i];
+      if (segment.end <= segment.start) {
+        if (time <= segment.end) {
+          return this.cloneValue(segment.toParams || {});
+        }
+        continue;
+      }
+      if (time >= segment.start && time <= segment.end) {
+        const rawProgress = (time - segment.start) / (segment.end - segment.start);
+        const easing = this.resolveEasing(segment.easing);
+        const progress = easing(Math.max(0, Math.min(1, rawProgress)));
+        return this.blendValue(segment.fromParams || {}, segment.toParams || {}, progress);
+      }
+      if (i < segments.length - 1 && time > segment.end && time < segments[i + 1].start) {
+        return this.cloneValue(segment.toParams || {});
+      }
+    }
+
+    return this.cloneValue(segments[segments.length - 1].toParams || {});
+  }
+
+  refreshControllerParams(controller, time) {
+    if (!controller) return;
+    const computedParams = {};
+    if (controller.presetTimeline) {
+      Object.assign(computedParams, this.evaluatePresetTimeline(controller.presetTimeline, time));
+    }
+    if (controller.staticParams && typeof controller.staticParams === 'object') {
+      Object.assign(computedParams, this.cloneValue(controller.staticParams));
+    }
+    if (controller.paramTimelines && typeof controller.paramTimelines === 'object') {
+      Object.keys(controller.paramTimelines).forEach((key) => {
+        const value = this.evaluateNumericTrack(controller.paramTimelines[key], time);
+        if (typeof value !== 'undefined') {
+          computedParams[key] = value;
+        }
+      });
+    }
+    Object.keys(controller.params || {}).forEach((key) => {
+      if (Object.prototype.hasOwnProperty.call(computedParams, key)) {
+        return;
+      }
+      delete controller.params[key];
+      if (Object.prototype.hasOwnProperty.call(controller.baseParams || {}, key)) {
+        this.applyParameter(controller.shaderPass, key, this.cloneValue(controller.baseParams[key]));
+      }
+    });
+    Object.keys(computedParams).forEach((key) => {
+      controller.setParameter(key, computedParams[key]);
+    });
+  }
+
+  evaluateMixTimeline(controller, time) {
+    if (!controller || !controller.timeline) return;
+    const timeline = controller.timeline;
+    const segments = Array.isArray(timeline.segments) ? timeline.segments : [];
+    if (!segments.length) {
+      controller.setMix(typeof timeline.defaultMix !== 'undefined' ? timeline.defaultMix : this.owner.ppMixDefault);
+      return;
+    }
+
+    if (time <= segments[0].start) {
+      controller.setMix(segments[0].from);
+      return;
+    }
+
+    for (let i = 0; i < segments.length; i += 1) {
+      const segment = segments[i];
+      const start = segment.start;
+      const end = segment.end;
+      if (end <= start) {
+        if (time <= end) {
+          controller.setMix(segment.to);
+          return;
+        }
+        continue;
+      }
+      if (time >= start && time <= end) {
+        const rawProgress = (time - start) / (end - start);
+        const easing = this.resolveEasing(segment.easing);
+        const progress = easing(Math.max(0, Math.min(1, rawProgress)));
+        controller.setMix(segment.from + (segment.to - segment.from) * progress);
+        return;
+      }
+      if (i < segments.length - 1 && time > end && time < segments[i + 1].start) {
+        controller.setMix(segment.to);
+        return;
+      }
+    }
+
+    controller.setMix(segments[segments.length - 1].to);
+  }
+
+  updateControllers(time) {
+    const safeTime = Math.max(0, Number(time) || 0);
+    this.owner.ppMixControllers.forEach((controller) => {
+      this.evaluateMixTimeline(controller, safeTime);
+      this.refreshControllerParams(controller, safeTime);
+    });
+  }
+}
+
+exports.PPTimelineRuntime = PPTimelineRuntime;

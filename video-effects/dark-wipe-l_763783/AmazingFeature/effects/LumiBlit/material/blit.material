@@ -1,0 +1,31 @@
+%YAML 1.1
+--- !Material &1
+name: !<str> blit_material
+guid: {a: 10971104979453966611, b: 12093579175116577170}
+xshader: {localId: 1, path: effects/LumiBlit/xshader/blit.xshader}
+properties:
+  __class: PropertySheet
+  name: !<str> blit_propertySheet
+  guid: {a: 4341656002043218630, b: 15272055842606850970}
+  floatmap:
+    __class: Map
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+  intmap:
+    __class: Map
+renderQueue: 1
+enabledMacros:
+  __class: Map
+  AE_AreaLightNum: !<str> 0
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+mshaderPath: !<str> ""

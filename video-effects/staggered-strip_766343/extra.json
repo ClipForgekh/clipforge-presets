@@ -1,0 +1,85 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "sliceCount",
+                "effect_key_cn": "片数",
+                "type": "int",
+                "default": 12,
+                "min": 4,
+                "max": 24
+            },
+            {
+                "effect_key": "delayPerSlice",
+                "effect_key_cn": "每切片延迟",
+                "type": "float",
+                "default": 0.05,
+                "min": 0.01,
+                "max": 0.1
+            },
+            {
+                "effect_key": "maxStretch",
+                "effect_key_cn": "最大拉伸",
+                "type": "float",
+                "default": 2,
+                "min": 0.5,
+                "max": 5
+            },
+            {
+                "effect_key": "maxBlur",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 0.1,
+                "min": 0.01,
+                "max": 0.3
+            },
+            {
+                "effect_key": "neonColor1",
+                "effect_key_cn": "霓虹灯颜色1",
+                "type": "color",
+                "default": [
+                    1,
+                    0.2,
+                    0.8,
+                    1
+                ]
+            },
+            {
+                "effect_key": "neonColor2",
+                "effect_key_cn": "霓虹灯颜色2",
+                "type": "color",
+                "default": [
+                    0.6,
+                    0.2,
+                    1,
+                    1
+                ]
+            },
+            {
+                "effect_key": "maxGlitch",
+                "effect_key_cn": "最大故障",
+                "type": "float",
+                "default": 0.02,
+                "min": 0.001,
+                "max": 0.05
+            },
+            {
+                "effect_key": "neonStrength",
+                "effect_key_cn": "霓虹灯强度",
+                "type": "float",
+                "default": 0.8,
+                "min": 0.1,
+                "max": 2
+            }
+        ]
+    }
+}

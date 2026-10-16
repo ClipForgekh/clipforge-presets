@@ -1,0 +1,187 @@
+{
+  "key": "LumiDeepGlow",
+  "category": "Glow",
+  "desc": "深度发光效果(JS版) - 高级辉光效果，通过多重迭代模糊和混合创建深邃、自然的辉光。支持色差、阈值控制和伽马校正。适用于高级光效、梦幻场景、高光增强",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无发光 - 关闭阈值提亮与辉光叠加，输出与原图一致（opacity=0，radius=0）"
+    },
+    {
+      "name": "soft",
+      "desc": "柔和发光 - 较高阈值+中小半径+少量迭代，营造细腻柔光与轻微边缘扩散，适合肤感/梦幻氛围"
+    },
+    {
+      "name": "medium",
+      "desc": "中等发光 - 更低阈值+更大半径+更多迭代，增强高光覆盖范围与层次，适合通用的高光增强"
+    },
+    {
+      "name": "highlight",
+      "desc": "高光发光 - 低阈值+高曝光+高不透明度，突出亮部并形成明显的溢光/过曝感，适合强烈梦幻与闪耀高光"
+    },
+    {
+      "name": "neon",
+      "desc": "霓虹发光 - 启用色差与染色，配合高迭代与大半径形成“霓虹灯条/赛博光晕”。可通过ratio拉伸出条纹光，angle控制方向，tintColor/tintMix控制霓虹色与混合强度"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "radius",
+      "desc": "发光半径 - 控制辉光的扩散范围",
+      "type": "number",
+      "value": 500,
+      "min": 0,
+      "max": 2000
+    },
+    {
+      "name": "stepsMult",
+      "desc": "采样步长倍数 - 控制每次迭代模糊的采样密度，值越大越平滑但性能开销越高；通常与glowIter配合调节层次",
+      "type": "number",
+      "value": 2,
+      "min": 0.1,
+      "max": 10
+    },
+    {
+      "name": "downSample",
+      "desc": "降采样率 - 控制辉光内部RT的分辨率比例，值越小越省性能但细节更少、更糊；建议0.5~1.0范围内调节",
+      "type": "number",
+      "value": 1,
+      "min": 0.5,
+      "max": 1
+    },
+    {
+      "name": "glowIter",
+      "desc": "迭代次数 - 控制辉光的层次数量，次数越多辉光越深邃",
+      "type": "number",
+      "value": 4,
+      "min": 1,
+      "max": 8
+    },
+    {
+      "name": "threshold",
+      "desc": "亮度阈值 - 设定触发辉光的最低亮度值",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "thresholdSmooth",
+      "desc": "阈值平滑 - 控制阈值边缘的平滑过渡",
+      "type": "number",
+      "value": 0.1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "greyScale",
+      "desc": "灰度处理 - 控制是否将输入转换为灰度后再计算辉光",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "gammaCorrect",
+      "desc": "伽马校正 - 是否启用伽马校正；关闭时gammaValue会被视作1.0，辉光更“直白”，开启更接近感知亮度曲线",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "gammaValue",
+      "desc": "伽马值 - 设定伽马校正的数值，影响辉光的亮度曲线",
+      "type": "number",
+      "value": 2.2,
+      "min": 0.1,
+      "max": 5
+    },
+    {
+      "name": "blendMode",
+      "desc": "混合模式 - 选择辉光与原图的混合方式 (0: Screen, 1: Add)",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "chromaticAberration",
+      "desc": "色差开关 - 是否启用色差（RGB通道分离）以形成霓虹边缘；预设里也可能以chroma字段表达同义开关",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "redOffset",
+      "desc": "红色通道偏移 - 色差效果中红色通道的偏移量",
+      "type": "number",
+      "value": 0,
+      "min": -0.1,
+      "max": 0.1
+    },
+    {
+      "name": "greenOffset",
+      "desc": "绿色通道偏移 - 色差效果中绿色通道的偏移量",
+      "type": "number",
+      "value": 0,
+      "min": -0.1,
+      "max": 0.1
+    },
+    {
+      "name": "blueOffset",
+      "desc": "蓝色通道偏移 - 色差效果中蓝色通道的偏移量",
+      "type": "number",
+      "value": 0,
+      "min": -0.1,
+      "max": 0.1
+    },
+    {
+      "name": "angle",
+      "desc": "模糊角度 - 控制辉光的旋转/方向参数（常用于定向条纹光），与ratio配合可以形成横向/纵向/斜向光晕",
+      "type": "angle",
+      "value": 0,
+      "min": -180,
+      "max": 180
+    },
+    {
+      "name": "ratio",
+      "desc": "纵横比 - 控制辉光的X/Y采样比例，1为均匀；>1偏横向拉伸，<1偏纵向拉伸，可制作条纹霓虹光效",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "tintColor",
+      "desc": "着色颜色 - 辉光的染色颜色",
+      "type": "color",
+      "value": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "tintMix",
+      "desc": "着色强度 - 控制辉光染色的混合程度，0为不染色，1为完全使用tintColor染色辉光",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "opacity",
+      "desc": "辉光不透明度 - 控制最终辉光叠加强度，0为无辉光输出，1为最大辉光叠加",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "exposure",
+      "desc": "辉光曝光/增益 - 控制辉光整体亮度增益，值越大越“爆”；部分调用链/预设中可能以mult字段作为同义参数",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 4
+    }
+  ]
+}

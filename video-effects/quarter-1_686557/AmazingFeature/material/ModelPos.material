@@ -1,0 +1,27 @@
+%YAML 1.1
+--- !Material &1
+name: ""
+guid: {a: 3478379931997992991, b: 6345485828569687962}
+xshader: {localId: 1, path: xshader/ModelPos.xshader}
+properties:
+  __class: PropertySheet
+  name: ""
+  guid: {a: 0, b: 0}
+  floatmap:
+    __class: Map
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+mshaderPath: ""

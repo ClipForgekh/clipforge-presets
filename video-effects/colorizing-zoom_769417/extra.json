@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "startZoom",
+                "effect_key_cn": "startZoom",
+                "type": "float",
+                "default": 1.5,
+                "min": 1,
+                "max": 2
+            },
+            {
+                "effect_key": "reliefStrength",
+                "effect_key_cn": "reliefStrength",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "edgeSharpness",
+                "effect_key_cn": "edgeSharpness",
+                "type": "float",
+                "default": 2.2,
+                "min": 0.5,
+                "max": 4
+            },
+            {
+                "effect_key": "sampleStep",
+                "effect_key_cn": "sampleStep",
+                "type": "float",
+                "default": 0.0025,
+                "min": 0.0005,
+                "max": 0.01
+            }
+        ]
+    }
+}

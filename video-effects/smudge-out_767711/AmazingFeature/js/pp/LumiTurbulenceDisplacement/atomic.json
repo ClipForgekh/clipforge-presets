@@ -1,0 +1,193 @@
+{
+  "key": "LumiTurbulenceDisplacement",
+  "category": "Distort",
+  "desc": "基于分形噪声驱动的多通道位移效果，可做热浪、液体折射、碎裂扭曲和风暴波纹等风格化形变。",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "关闭湍流位移，仅保留原图，方便与其他风格做 A/B 对比。"
+    },
+    {
+      "name": "default",
+      "desc": "基础湍流扭曲，轻度分形噪声位移，适合直接预览效果结构。"
+    },
+    {
+      "name": "heatHaze",
+      "desc": "偏热浪空气折射感，形变柔和、流动缓慢，适合背景扰动。"
+    },
+    {
+      "name": "liquidWarp",
+      "desc": "偏液体折射和流体拉扯，扭曲幅度更大，画面有轻微收缩感。"
+    },
+    {
+      "name": "fracturedGlass",
+      "desc": "偏碎裂玻璃/棱镜扭曲，细节更密、更硬，分块感更明显。"
+    },
+    {
+      "name": "stormRipple",
+      "desc": "偏风暴波纹和电流扰动，演化更快，方向性和脉冲感更强。"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "size",
+      "desc": "位移强度",
+      "type": "number",
+      "value": 0.075,
+      "min": 0,
+      "max": 0.5
+    },
+    {
+      "name": "quantity",
+      "desc": "噪声缩放/频率",
+      "type": "number",
+      "value": 2,
+      "min": 0.5,
+      "max": 8
+    },
+    {
+      "name": "complexity",
+      "desc": "分形复杂度",
+      "type": "number",
+      "value": 1,
+      "min": 1,
+      "max": 6
+    },
+    {
+      "name": "evolution",
+      "desc": "演化速度",
+      "type": "number",
+      "value": 0,
+      "min": -90,
+      "max": 90
+    },
+    {
+      "name": "cycle",
+      "desc": "循环周期",
+      "type": "number",
+      "value": 100,
+      "min": 2,
+      "max": 120
+    },
+    {
+      "name": "offsetX",
+      "desc": "主噪声横向偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "offsetY",
+      "desc": "主噪声纵向偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "type",
+      "desc": "噪声类型索引",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "fixType",
+      "desc": "边界修正模式",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "qualityType",
+      "desc": "噪声贴图质量等级",
+      "type": "number",
+      "value": 3,
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "motionTileType",
+      "desc": "运动平铺模式",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "pictureScale",
+      "desc": "原图缩放",
+      "type": "number",
+      "value": 1,
+      "min": 0.8,
+      "max": 1.1
+    },
+    {
+      "name": "subImpact",
+      "desc": "次级噪声影响",
+      "type": "number",
+      "value": 0.6,
+      "min": 0,
+      "max": 1.2
+    },
+    {
+      "name": "subScale",
+      "desc": "次级噪声缩放",
+      "type": "number",
+      "value": 56,
+      "min": 8,
+      "max": 120
+    },
+    {
+      "name": "subRotate",
+      "desc": "次级噪声旋转",
+      "type": "number",
+      "value": 0,
+      "min": -180,
+      "max": 180
+    },
+    {
+      "name": "subOffsetX",
+      "desc": "次级噪声横向偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "subOffsetY",
+      "desc": "次级噪声纵向偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "brightness",
+      "desc": "亮度补偿",
+      "type": "number",
+      "value": 0,
+      "min": -0.25,
+      "max": 0.25
+    },
+    {
+      "name": "range",
+      "desc": "位移作用范围",
+      "type": "number",
+      "value": 0.3,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "rotate",
+      "desc": "主噪声旋转",
+      "type": "number",
+      "value": 0,
+      "min": -180,
+      "max": 180
+    }
+  ]
+}

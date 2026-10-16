@@ -1,0 +1,49 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "twirlStrength",
+                "effect_key_cn": "twirlStrength",
+                "type": "float",
+                "default": 8,
+                "min": 0,
+                "max": 20
+            },
+            {
+                "effect_key": "liquidStrength",
+                "effect_key_cn": "liquidStrength",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "blurStrength",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "metalColor",
+                "effect_key_cn": "metalColor",
+                "type": "color",
+                "default": [
+                    0.82,
+                    0.86,
+                    0.92
+                ]
+            }
+        ]
+    }
+}

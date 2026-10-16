@@ -1,0 +1,34 @@
+%YAML 1.1
+--- !Material &1
+name: ae_transform
+guid: {a: 14936866425142086333, b: 3885317245484130214}
+xshader: {localId: 1, path: effects/ae_transform/xshader/ae_transform1.xshader}
+properties:
+  __class: PropertySheet
+  name: ae_transform
+  guid: {a: 15873544689663398944, b: 4874007640406709946}
+  floatmap:
+    __class: Map
+    alpha: 1
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    inputTex: {localId: 1, path: share://input.texture}
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+  AE_AreaLightNum: !<str> 0
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+mshaderPath: ""
+instanceCount: 0

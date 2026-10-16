@@ -1,0 +1,127 @@
+const { ShaderPass } = require('./ShaderPass.js');
+
+const getCurrentScene = require('./three-amg-wrapper.js').getCurrentScene;
+const RenderPass = require('./RenderPass.js').RenderPass;
+const Texture = require('./wrapper/Texture').Texture;
+const effect_api = "undefined" != typeof effect ? effect : "undefined" != typeof tt ? tt : "undefined" != typeof lynx ? lynx : {};
+const Amaz = effect_api.getAmaz ? effect_api.getAmaz() : null;
+
+class EffectComposer {
+    constructor(renderer) {
+        this.renderer = renderer;
+        this.passes = [];
+        this.scene = getCurrentScene();
+        this.rt_0 = this.scene._amgScene.assetMgr.SyncLoad('rt/RT_0.rt');
+
+        this.finalCamera = this.scene._amgScene.findEntityBy("Camera").getComponent("Camera");
+        this.finalPlaceHolder = this.scene._amgScene.findEntityBy("PlaceHolder");
+        this.finalEntity = this.scene._amgScene.findEntityBy('Camera');
+    }
+
+    addPass(pass) {
+        if ( !(pass instanceof ShaderPass))
+        {
+            console.log("pass is not a ShaderPass", pass);
+            return;
+        }
+
+        if (pass.cameraWarpEntity == null) {
+            console.log("pass.cameraWarpEntity is null", pass.name);
+            return;
+        }
+
+        this.passes.push(pass);
+        this.scene.add(pass);
+
+        let length = this.passes.length;
+        if (length > 5) {
+            return;
+        }
+
+        let rt_next_index_1 = 0;
+        let rt_next_index = 1;
+
+        if (length > 1) 
+        {
+            rt_next_index_1 = ((length-2) % 10) + 1;
+            rt_next_index = ((length-1) % 10) + 1;
+        }
+
+        var rt_prev = this.scene._amgScene.assetMgr.SyncLoad('rt/RT_' + rt_next_index_1 + '.rt');
+        var rt_next = this.scene._amgScene.assetMgr.SyncLoad('rt/RT_' + rt_next_index + '.rt');
+
+        var rt_prev_Texture = new Texture();
+        rt_prev_Texture.setImage(rt_prev);
+        var rt_next_Texture = new Texture();
+        rt_next_Texture.setImage(rt_next);
+
+        // set render input texture.
+        pass._amgMaterialObject.setTex('tDiffuse', rt_prev);
+        pass.prevTexture = rt_prev_Texture;
+        pass.nextTexture = rt_next_Texture;
+
+        // set render output texture 、order and layerVisibleMask.
+        // console.log("pass.cameraWarpEntity", pass.name, pass.cameraWarpEntity);
+        pass.cameraWarpEntity.getComponent("Camera").renderTexture = rt_next;
+        pass.cameraWarpEntity.getComponent("Camera").renderOrder = length;
+        pass.cameraWarpEntity.getComponent("Camera").layerVisibleMask = new Amaz.DynamicBitset(length+1, Math.pow(2,length));
+
+        pass.passWarpEntity.layer = length;
+        
+        var videoEntity = this.scene._amgScene.findEntityBy('video');
+        var mat = videoEntity.getComponent('MeshRenderer').material;
+        mat.setTex('u_videoTex', rt_next);
+
+        // set final camera and placeHolder.
+        this.finalCamera.inputTexture = rt_next;
+        this.finalCamera.renderOrder = length+1;
+        this.finalCamera.layerVisibleMask = new Amaz.DynamicBitset(length+2, Math.pow(2,length+1));
+        this.finalPlaceHolder.layer = length+1;
+        this.finalEntity.visible = false;
+        this.finalPlaceHolder.visible = false;
+
+    }
+
+    setSize(width, height) {
+        const w = Math.max(1, Math.floor(width));
+        const h = Math.max(1, Math.floor(height));
+
+        for (let i = 0; i < this.passes.length; i++) {
+            const pass = this.passes[i];
+            if (typeof pass.setSize === 'function') pass.setSize(w, h);
+        }
+    }
+
+    dispose() {
+        for (let i = 0; i < this.passes.length; i++) {
+            const pass = this.passes[i];
+            if (typeof pass.dispose === 'function') pass.dispose();
+        }
+        this.passes.length = 0;
+        this.finalCamera = null;
+        this.finalPlaceHolder = null;
+    }
+
+    render(deltaTime) {
+        // todo
+        for (let i = 0; i < this.passes.length; i++) {
+            const pass = this.passes[i];
+            if (typeof pass.render === 'function') 
+            {
+                let readbuffer = {};
+                readbuffer.width = pass.prevTexture.image.width;
+                readbuffer.height = pass.prevTexture.image.height;
+                readbuffer.texture = pass.prevTexture;
+
+                let writebuffer = {};
+                writebuffer.width = pass.nextTexture.image.width;
+                writebuffer.height = pass.nextTexture.image.height;
+                writebuffer.texture = pass.nextTexture;
+
+                pass.render(this.renderer, writebuffer, readbuffer, 0, true);
+            }
+        }
+    }
+}
+
+exports.EffectComposer = EffectComposer;        

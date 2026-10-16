@@ -1,0 +1,57 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "glowColor",
+                "effect_key_cn": "glow C",
+                "type": "color",
+                "default": [
+                    0.2,
+                    0.5,
+                    1
+                ]
+            },
+            {
+                "effect_key": "maxBlurStrength",
+                "effect_key_cn": "max Bl",
+                "type": "float",
+                "default": 10,
+                "min": 1,
+                "max": 20
+            },
+            {
+                "effect_key": "maxGlowIntensity",
+                "effect_key_cn": "max Gl",
+                "type": "float",
+                "default": 3,
+                "min": 0.5,
+                "max": 5
+            },
+            {
+                "effect_key": "edgeSoftness",
+                "effect_key_cn": "edge S",
+                "type": "float",
+                "default": 0.1,
+                "min": 0.01,
+                "max": 0.3
+            },
+            {
+                "effect_key": "noiseStrength",
+                "effect_key_cn": "noise ",
+                "type": "float",
+                "default": 0.1,
+                "min": 0,
+                "max": 0.3
+            }
+        ]
+    }
+}

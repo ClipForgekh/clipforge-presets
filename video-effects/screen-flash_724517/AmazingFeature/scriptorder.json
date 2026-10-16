@@ -1,0 +1,7 @@
+{
+    "lua/SeekModeScript.lua": "4",
+    "effects/CC_Radial_Blur/lua/RadialBlurLayerScript.lua": "0",
+    "effects/GaussianBlur/lua/GaussianBlurLayerScript.lua": "1",
+    "effects/retouch_adjust/LumiScript.lua": "2",
+    "effects/starglow/Starglow.lua": "3"
+}

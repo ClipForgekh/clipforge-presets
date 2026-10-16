@@ -1,0 +1,149 @@
+{
+  "key": "LumiFlicker",
+  "category": "Color Correction",
+  "desc": "闪烁效果 - 创建随机或周期性的亮度和颜色闪烁，模拟电视信号干扰或复古效果。适用于故障美学、复古效果、信号干扰、动态闪烁",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无强度 - 关闭闪烁效果，不应用任何闪烁"
+    },
+    {
+      "name": "low",
+      "desc": "轻微闪烁 - 基本的闪烁效果，透明度为0.2"
+    },
+    {
+      "name": "medium",
+      "desc": "中等闪烁 - 基本的闪烁效果，透明度为0.5"
+    },
+    {
+      "name": "high",
+      "desc": "强烈闪烁 - 基本的闪烁效果，透明度为1.0"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "强度 - 控制闪烁效果的强度，0.0为原图（无效果），1.0为最大闪烁",
+      "type": "number",
+      "value": 1.0
+    },
+    {
+      "name": "progress",
+      "desc": "闪烁进度 - 控制闪烁效果的时间进度，影响闪烁的时序",
+      "type": "number",
+      "value": 0.1
+    },
+    {
+      "name": "globalAmp",
+      "desc": "全局振幅 - 控制整体闪烁效果的强度",
+      "type": "number",
+      "value": 0.2,
+      "min": 0.0,
+      "max": 10.0
+    },
+    {
+      "name": "randLumaAmp",
+      "desc": "随机亮度振幅 - 控制随机亮度闪烁的强度范围",
+      "type": "number",
+      "value": 1.0,
+      "min": 0.0,
+      "max": 200.0
+    },
+    {
+      "name": "randColorAmp",
+      "desc": "随机色彩振幅 - 控制随机色彩闪烁的强度范围",
+      "type": "number",
+      "value": 0.0,
+      "min": 0.0,
+      "max": 200.0
+    },
+    {
+      "name": "randFreq",
+      "desc": "随机频率 - 设定随机闪烁的频率，值越大闪烁越频繁",
+      "type": "number",
+      "value": 30.0,
+      "min": 0.0,
+      "max": 60.0
+    },
+    {
+      "name": "waveAmp",
+      "desc": "波形振幅 - 控制周期性波形闪烁的强度",
+      "type": "number",
+      "value": 0.0,
+      "min": 0.0,
+      "max": 200.0
+    },
+    {
+      "name": "waveFreq",
+      "desc": "波形频率 - 设定周期性闪烁的频率",
+      "type": "number",
+      "value": 5.0,
+      "min": 0.0,
+      "max": 60.0
+    },
+    {
+      "name": "phaseR",
+      "desc": "红色通道相位 - 控制红色通道闪烁的相位偏移",
+      "type": "number",
+      "value": 0.0,
+      "min": -1.0,
+      "max": 1.0
+    },
+    {
+      "name": "phaseG",
+      "desc": "绿色通道相位 - 控制绿色通道闪烁的相位偏移",
+      "type": "number",
+      "value": 0.0,
+      "min": -1.0,
+      "max": 1.0
+    },
+    {
+      "name": "phaseB",
+      "desc": "蓝色通道相位 - 控制蓝色通道闪烁的相位偏移",
+      "type": "number",
+      "value": 0.0,
+      "min": -1.0,
+      "max": 1.0
+    },
+    {
+      "name": "ampR",
+      "desc": "红色通道振幅 - 控制红色通道闪烁的强度",
+      "type": "number",
+      "value": 1.0,
+      "min": -1.0,
+      "max": 1.0
+    },
+    {
+      "name": "ampG",
+      "desc": "绿色通道振幅 - 控制绿色通道闪烁的强度",
+      "type": "number",
+      "value": 1.0,
+      "min": -1.0,
+      "max": 1.0
+    },
+    {
+      "name": "ampB",
+      "desc": "蓝色通道振幅 - 控制蓝色通道闪烁的强度",
+      "type": "number",
+      "value": 1.0,
+      "min": -1.0,
+      "max": 1.0
+    },
+    {
+      "name": "brightness",
+      "desc": "基础亮度 - 设定闪烁效果的基础亮度水平",
+      "type": "number",
+      "value": 1.0,
+      "min": 0.0,
+      "max": 200.0
+    },
+    {
+      "name": "seed",
+      "desc": "随机种子 - 控制随机闪烁的种子值，相同种子产生相同的随机序列",
+      "type": "number",
+      "value": 0.123,
+      "min": 0.0,
+      "max": 5.0
+    }
+  ]
+}

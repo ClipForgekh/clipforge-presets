@@ -1,0 +1,567 @@
+[
+    {
+        "ClassName": "AETools",
+        "Super": "",
+        "FilePath": "lua/SeekModeScript.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/92d22247facd2cd3bc53029074f76b0b/\u5165\u573a/AmazingFeature/lua/SeekModeScript.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_remap01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_cubicBezier",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_cubicBezier01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_getBezier01X",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_mix",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "SetAllFrame",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "GetVal",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "test",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setDuration",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "AETransform",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/ae_transform/AETransform.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/92d22247facd2cd3bc53029074f76b0b/\u5165\u573a/AmazingFeature/effects/ae_transform/AETransform.lua",
+        "Properties": [
+            {
+                "VarName": "active_cam_fovx",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "composite_size",
+                "VarType": "Vector2f",
+                "Comment": ""
+            },
+            {
+                "VarName": "is3DLayer",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "pivot",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "position",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "scale",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "direction",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "rotation",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "alpha",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    1.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Slider",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "inputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "outputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "paramListener",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_rotateByAEAxis",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "GaussianBlurLayerScrip_2",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/GaussianBlur/lua/GaussianBlurLayerScrip_2.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/92d22247facd2cd3bc53029074f76b0b/\u5165\u573a/AmazingFeature/effects/GaussianBlur/lua/GaussianBlurLayerScrip_2.lua",
+        "Properties": [
+            {
+                "VarName": "intensity",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "steps",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "Blurred_Direction",
+                "VarType": "string[UI(Option={\"Horizontal",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Option",
+                                "RawValue": "",
+                                "Values": [
+                                    "Horizontal and Vertical",
+                                    "Horizontal",
+                                    "Vertical"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "MidTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [
+                    {
+                        "ParaName": "comp",
+                        "ParaType": "Component",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [
+                    {
+                        "ParaName": "comp",
+                        "ParaType": "Component",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "deltaTime",
+                        "ParaType": "Double",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "GaussianBlurLayerScrip_3",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/GaussianBlur/lua/GaussianBlurLayerScrip_3.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/92d22247facd2cd3bc53029074f76b0b/\u5165\u573a/AmazingFeature/effects/GaussianBlur/lua/GaussianBlurLayerScrip_3.lua",
+        "Properties": [
+            {
+                "VarName": "intensity",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "steps",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "Blurred_Direction",
+                "VarType": "string[UI(Option={\"Horizontal",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Option",
+                                "RawValue": "",
+                                "Values": [
+                                    "Horizontal and Vertical",
+                                    "Horizontal",
+                                    "Vertical"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "MidTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [
+                    {
+                        "ParaName": "comp",
+                        "ParaType": "Component",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [
+                    {
+                        "ParaName": "comp",
+                        "ParaType": "Component",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "deltaTime",
+                        "ParaType": "Double",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "GaussianBlurLayerScript",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/GaussianBlur/lua/GaussianBlurLayerScript.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/92d22247facd2cd3bc53029074f76b0b/\u5165\u573a/AmazingFeature/effects/GaussianBlur/lua/GaussianBlurLayerScript.lua",
+        "Properties": [
+            {
+                "VarName": "intensity",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "stepsX",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "stepsY",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "Blurred_Direction",
+                "VarType": "string[UI(Option={\"Horizontal",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Option",
+                                "RawValue": "",
+                                "Values": [
+                                    "Horizontal and Vertical",
+                                    "Horizontal",
+                                    "Vertical"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "MidTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [
+                    {
+                        "ParaName": "comp",
+                        "ParaType": "Component",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [
+                    {
+                        "ParaName": "comp",
+                        "ParaType": "Component",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "deltaTime",
+                        "ParaType": "Double",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "MotionTile",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/motion_tile/MotionTile.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/92d22247facd2cd3bc53029074f76b0b/\u5165\u573a/AmazingFeature/effects/motion_tile/MotionTile.lua",
+        "Properties": [
+            {
+                "VarName": "tile_centr",
+                "VarType": "Vector2f",
+                "Comment": ""
+            },
+            {
+                "VarName": "tile_size",
+                "VarType": "Vector2f",
+                "Comment": ""
+            },
+            {
+                "VarName": "output_size",
+                "VarType": "Vector2f",
+                "Comment": ""
+            },
+            {
+                "VarName": "mirror_edges",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "phase",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "horizontal_phase_shift",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "inputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "outputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

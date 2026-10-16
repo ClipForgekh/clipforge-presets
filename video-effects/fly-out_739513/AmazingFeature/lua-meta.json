@@ -1,0 +1,816 @@
+[
+    {
+        "ClassName": "LumiManager",
+        "Super": "ScriptComponent",
+        "FilePath": "lua/LumiFamily/LumiManager.lua",
+        "FileAbsPath": "/Volumes/hotumn/Downloads/\u98de\u8fdc/AmazingFeature/lua/LumiFamily/LumiManager.lua",
+        "Properties": [
+            {
+                "VarName": "debugTime",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    6.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Drag",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "autoPlay",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "lumiEffectRoot",
+                "VarType": "Transform",
+                "Comment": ""
+            },
+            {
+                "VarName": "start_render_layer",
+                "VarType": "Int64",
+                "Comment": ""
+            },
+            {
+                "VarName": "start_render_order",
+                "VarType": "Int64",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onDestroy",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "getCameraCount",
+                "Params": [],
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Button",
+                                "RawValue": "",
+                                "Values": [
+                                    "ReRender"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "FuncName": "ReRender",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "registerLumiObj",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "updateCameraLayerAndOrder",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "updateRtPingpong",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "updateOutputRtSize",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "initVideoAnimationLua",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onEvent",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "LumiEffect",
+        "Super": "ScriptComponent",
+        "FilePath": "lua/LumiFamily/LumiEffect.lua",
+        "FileAbsPath": "/Volumes/hotumn/Downloads/\u98de\u8fdc/AmazingFeature/lua/LumiFamily/LumiEffect.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onDestroy",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "updateMaterials",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "LumiLayer",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/LumiLayer/lua/LumiLayer.lua",
+        "FileAbsPath": "/Volumes/hotumn/Downloads/\u98de\u8fdc/AmazingFeature/effects/LumiLayer/lua/LumiLayer.lua",
+        "Properties": [
+            {
+                "VarName": "hasTransform",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "active_cam_fovx",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "compositeSize",
+                "VarType": "Vector2f",
+                "Comment": ""
+            },
+            {
+                "VarName": "layerSize",
+                "VarType": "Vector2f",
+                "Comment": ""
+            },
+            {
+                "VarName": "anchorPoint",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "orientation",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "position",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "scale",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "xRotation",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    -360.0,
+                                    360.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Drag",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "yRotation",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    -360.0,
+                                    360.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Drag",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "rotation",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    -360.0,
+                                    360.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Drag",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "opacity",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    100.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Drag",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "mirrorEdge",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "hasMatte",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "matteMode",
+                "VarType": "String",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Option",
+                                "RawValue": "",
+                                "Values": [
+                                    "Alpha",
+                                    "Luma",
+                                    "AlphaInverted",
+                                    "LumaInverted"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "maskTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "hasBlend",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "blendMode",
+                "VarType": "String",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Option",
+                                "RawValue": "",
+                                "Values": [
+                                    "Normal",
+                                    "Add",
+                                    "Multiply",
+                                    "Difference",
+                                    "Overlay",
+                                    "Darken",
+                                    "Lighten",
+                                    "SoftLight",
+                                    "HardLight",
+                                    "Hue",
+                                    "Saturation",
+                                    "Color",
+                                    "Screen",
+                                    "ColorBurn",
+                                    "LinearBurn",
+                                    "ColorDodge",
+                                    "LinearDodge",
+                                    "VividLight",
+                                    "LinearLight",
+                                    "PinLight",
+                                    "HardMix",
+                                    "Exclusion",
+                                    "Subtract",
+                                    "Divide",
+                                    "Luminosity",
+                                    "LighterColor",
+                                    "DarkerColor",
+                                    "Dissolve"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "layerType",
+                "VarType": "String",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Option",
+                                "RawValue": "",
+                                "Values": [
+                                    "Adjustment",
+                                    "Precomp",
+                                    "Solid",
+                                    "Image",
+                                    "Video",
+                                    "Sequence"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "baseTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setVisible",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setEntityVisible",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setEffectAttr",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_rotateByAEAxis",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "updateTRS",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "videoAnimationBaseScript",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/videoAnimationBase/lua/videoAnimationBaseScript.lua",
+        "FileAbsPath": "/Volumes/hotumn/Downloads/\u98de\u8fdc/AmazingFeature/effects/videoAnimationBase/lua/videoAnimationBaseScript.lua",
+        "Properties": [
+            {
+                "VarName": "progress",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    1.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Slider",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setDuration",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "MotionBlur3D",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/LumiMotionBlur3dDeprecated/MotionBlur3D.lua",
+        "FileAbsPath": "/Volumes/hotumn/Downloads/\u98de\u8fdc/AmazingFeature/effects/LumiMotionBlur3dDeprecated/MotionBlur3D.lua",
+        "Properties": [
+            {
+                "VarName": "active_cam_fovx",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "vIntensity",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "vCenter",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "samples",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "dither",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    1.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Slider",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "composite_size",
+                "VarType": "Vector2f",
+                "Comment": ""
+            },
+            {
+                "VarName": "pivot",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "position",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "unifiedScale",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "scale",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "direction",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "rotation",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "alpha",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    1.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Slider",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "mirrorEdge",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_rotateByAEAxis",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "cauleMVP",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setEffectAttr",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "MeshWarp",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/LumiMeshWarp/lua/MeshWarp.lua",
+        "FileAbsPath": "/Volumes/hotumn/Downloads/\u98de\u8fdc/AmazingFeature/effects/LumiMeshWarp/lua/MeshWarp.lua",
+        "Properties": [
+            {
+                "VarName": "mesh_size",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "meshMode",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "transpose",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setEffectAttr",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [
+                    {
+                        "ParaName": "comp",
+                        "ParaType": "Component",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            },
+            {
+                "FuncName": "updatecontrolPoints",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [
+                    {
+                        "ParaName": "comp",
+                        "ParaType": "Component",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "deltaTime",
+                        "ParaType": "Double",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

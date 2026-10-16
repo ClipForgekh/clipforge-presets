@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "travelDistance",
+                "effect_key_cn": "行驶距离",
+                "type": "float",
+                "default": 0.85,
+                "min": 0.2,
+                "max": 1.5
+            },
+            {
+                "effect_key": "blurMax",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 0.045,
+                "min": 0,
+                "max": 0.12
+            },
+            {
+                "effect_key": "zoomBoost",
+                "effect_key_cn": "变焦增强",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.35
+            }
+        ]
+    }
+}

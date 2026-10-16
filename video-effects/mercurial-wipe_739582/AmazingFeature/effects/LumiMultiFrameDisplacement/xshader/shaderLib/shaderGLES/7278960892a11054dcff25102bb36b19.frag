@@ -1,0 +1,148 @@
+precision highp float;
+precision highp int;
+
+uniform mediump sampler2D maskTexture;
+uniform float maskTexFlag;
+uniform mediump sampler2D inputImageTexture1;
+uniform mediump sampler2D inputImageTexture2;
+uniform mediump sampler2D inputImageTexture3;
+uniform mediump sampler2D inputImageTexture4;
+uniform mediump sampler2D inputImageTexture5;
+uniform mediump sampler2D inputImageTexture6;
+uniform mediump sampler2D inputImageTexture7;
+uniform mediump sampler2D inputImageTexture8;
+uniform mediump sampler2D inputImageTexture9;
+uniform mediump sampler2D inputImageTexture10;
+uniform mediump sampler2D inputImageTexture11;
+uniform mediump sampler2D inputImageTexture12;
+uniform mediump sampler2D inputImageTexture13;
+uniform mediump sampler2D inputImageTexture14;
+uniform mediump sampler2D inputImageTexture15;
+uniform float frameNums;
+uniform float softEdge;
+
+varying vec2 v_uv;
+
+float _f0(float _p0, float _p1, float _p2)
+{
+    return step(_p0, _p2) * step(_p1, _p0);
+}
+
+void main()
+{
+    mediump vec4 _35 = texture2D(maskTexture, v_uv);
+    mediump vec4 _63 = texture2D(inputImageTexture1, v_uv);
+    mediump vec4 _68 = texture2D(inputImageTexture2, v_uv);
+    mediump vec4 _73 = texture2D(inputImageTexture3, v_uv);
+    mediump vec4 _78 = texture2D(inputImageTexture4, v_uv);
+    mediump vec4 _83 = texture2D(inputImageTexture5, v_uv);
+    mediump vec4 _88 = texture2D(inputImageTexture6, v_uv);
+    mediump vec4 _93 = texture2D(inputImageTexture7, v_uv);
+    mediump vec4 _98 = texture2D(inputImageTexture8, v_uv);
+    mediump vec4 _103 = texture2D(inputImageTexture9, v_uv);
+    mediump vec4 _108 = texture2D(inputImageTexture10, v_uv);
+    mediump vec4 _113 = texture2D(inputImageTexture11, v_uv);
+    mediump vec4 _118 = texture2D(inputImageTexture12, v_uv);
+    mediump vec4 _123 = texture2D(inputImageTexture13, v_uv);
+    mediump vec4 _128 = texture2D(inputImageTexture14, v_uv);
+    mediump vec4 _133 = texture2D(inputImageTexture15, v_uv);
+    float _138 = (1.0 - ((dot(_35.xyz, vec3(0.2989999949932098388671875, 0.58700001239776611328125, 0.114000000059604644775390625)) * step(0.5, maskTexFlag)) + (step(maskTexFlag, 0.5) * 1.0))) * frameNums;
+    float _141 = step(_138, 1.0);
+    float _t18 = _141;
+    float _145 = step(_138, 2.0);
+    float _t19 = _145 * (1.0 - _141);
+    float _153 = step(_138, 3.0);
+    float _t20 = _153 * (1.0 - _145);
+    float _161 = step(_138, 4.0);
+    float _t21 = _161 * (1.0 - _153);
+    float _169 = step(_138, 5.0);
+    float _t22 = _169 * (1.0 - _161);
+    float _177 = step(_138, 6.0);
+    float _t23 = _177 * (1.0 - _169);
+    float _185 = step(_138, 7.0);
+    float _t24 = _185 * (1.0 - _177);
+    float _193 = step(_138, 8.0);
+    float _t25 = _193 * (1.0 - _185);
+    float _201 = step(_138, 9.0);
+    float _t26 = _201 * (1.0 - _193);
+    float _209 = step(_138, 10.0);
+    float _t27 = _209 * (1.0 - _201);
+    float _217 = step(_138, 11.0);
+    float _t28 = _217 * (1.0 - _209);
+    float _225 = step(_138, 12.0);
+    float _t29 = _225 * (1.0 - _217);
+    float _233 = step(_138, 13.0);
+    float _t30 = _233 * (1.0 - _225);
+    float _241 = step(_138, 14.0);
+    float _t31 = _241 * (1.0 - _233);
+    float _t32 = 1.0 - _241;
+    if (softEdge > 0.5)
+    {
+        float param = _138;
+        float param_1 = 0.0;
+        float param_2 = 1.0;
+        float _264 = abs(_138 - 1.0);
+        float param_3 = _138;
+        float param_4 = 0.0;
+        float param_5 = 2.0;
+        _t18 = (_f0(param, param_1, param_2) * _264) + (_f0(param_3, param_4, param_5) * (1.0 - _264));
+        float param_6 = _138;
+        float param_7 = 1.0;
+        float param_8 = 3.0;
+        _t19 = _f0(param_6, param_7, param_8) * (1.0 - abs(_138 - 2.0));
+        float param_9 = _138;
+        float param_10 = 2.0;
+        float param_11 = 4.0;
+        _t20 = _f0(param_9, param_10, param_11) * (1.0 - abs(_138 - 3.0));
+        float param_12 = _138;
+        float param_13 = 3.0;
+        float param_14 = 5.0;
+        _t21 = _f0(param_12, param_13, param_14) * (1.0 - abs(_138 - 4.0));
+        float param_15 = _138;
+        float param_16 = 4.0;
+        float param_17 = 6.0;
+        _t22 = _f0(param_15, param_16, param_17) * (1.0 - abs(_138 - 5.0));
+        float param_18 = _138;
+        float param_19 = 5.0;
+        float param_20 = 7.0;
+        _t23 = _f0(param_18, param_19, param_20) * (1.0 - abs(_138 - 6.0));
+        float param_21 = _138;
+        float param_22 = 6.0;
+        float param_23 = 8.0;
+        _t24 = _f0(param_21, param_22, param_23) * (1.0 - abs(_138 - 7.0));
+        float param_24 = _138;
+        float param_25 = 7.0;
+        float param_26 = 9.0;
+        _t25 = _f0(param_24, param_25, param_26) * (1.0 - abs(_138 - 8.0));
+        float param_27 = _138;
+        float param_28 = 8.0;
+        float param_29 = 10.0;
+        _t26 = _f0(param_27, param_28, param_29) * (1.0 - abs(_138 - 9.0));
+        float param_30 = _138;
+        float param_31 = 9.0;
+        float param_32 = 11.0;
+        _t27 = _f0(param_30, param_31, param_32) * (1.0 - abs(_138 - 10.0));
+        float param_33 = _138;
+        float param_34 = 10.0;
+        float param_35 = 12.0;
+        _t28 = _f0(param_33, param_34, param_35) * (1.0 - abs(_138 - 11.0));
+        float param_36 = _138;
+        float param_37 = 11.0;
+        float param_38 = 13.0;
+        _t29 = _f0(param_36, param_37, param_38) * (1.0 - abs(_138 - 12.0));
+        float param_39 = _138;
+        float param_40 = 12.0;
+        float param_41 = 14.0;
+        _t30 = _f0(param_39, param_40, param_41) * (1.0 - abs(_138 - 13.0));
+        float param_42 = _138;
+        float param_43 = 13.0;
+        float param_44 = 15.0;
+        _t31 = _f0(param_42, param_43, param_44) * (1.0 - abs(_138 - 14.0));
+        float param_45 = _138;
+        float param_46 = 14.0;
+        float param_47 = 15.0;
+        _t32 = (_f0(param_45, param_46, param_47) * (1.0 - abs(_138 - 15.0))) + ((1.0 - step(_138, 15.0)) * 1.0);
+    }
+    gl_FragData[0] = ((((((((((((((_63 * _t18) + (_68 * _t19)) + (_73 * _t20)) + (_78 * _t21)) + (_83 * _t22)) + (_88 * _t23)) + (_93 * _t24)) + (_98 * _t25)) + (_103 * _t26)) + (_108 * _t27)) + (_113 * _t28)) + (_118 * _t29)) + (_123 * _t30)) + (_128 * _t31)) + (_133 * _t32);
+}
+

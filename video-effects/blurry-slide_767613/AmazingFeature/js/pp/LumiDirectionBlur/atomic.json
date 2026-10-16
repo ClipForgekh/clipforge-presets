@@ -1,0 +1,69 @@
+{
+  "key": "LumiDirectionBlur",
+  "category": "Blur & Sharpen",
+  "desc": "方向模糊 - 沿指定角度方向进行多采样模糊，适合表现镜头横扫、速度拖影和斜向 streak 质感。",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果 - 强度为 0，仅保留原始画面。"
+    },
+    {
+      "name": "soft_sweep",
+      "desc": "柔和横扫 - 轻量级方向拖影，适合镜头轻扫和过渡衔接。"
+    },
+    {
+      "name": "hard_pan",
+      "desc": "硬切横摇 - 更强的水平拖影，适合强调镜头平移和快速扫动。"
+    },
+    {
+      "name": "speed_lines",
+      "desc": "速度线 - 高采样高强度拖影，适合冲刺、能量爆发和强动作瞬间。"
+    },
+    {
+      "name": "mirror_edges",
+      "desc": "镜像边缘 - 开启镜像采样以减轻边缘黑边，适合安全预览和边缘敏感素材。"
+    },
+    {
+      "name": "tilted_streak",
+      "desc": "斜向拖影 - 带角度的 streak 模式，适合斜切转场和方向性强调。"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "强度 - 控制方向模糊的拉伸幅度，0 为无效果，1 为最大拖影。",
+      "type": "number",
+      "value": 0.5,
+      "min": 0.0,
+      "max": 1.0
+    },
+    {
+      "name": "angle",
+      "desc": "方向角度 - 单位为度",
+      "type": "angle",
+      "value": 0.0,
+      "min": -180.0,
+      "max": 180.0
+    },
+    {
+      "name": "steps",
+      "desc": "采样步数 - 值越大越平滑但越慢，适合在细腻拖影和性能之间取舍。",
+      "type": "number",
+      "value": 16.0,
+      "min": 0.0,
+      "max": 100.0
+    },
+    {
+      "name": "expandFlag",
+      "desc": "扩展边界 - 开启后扩大采样范围，减轻强拖影时的边缘裁切感。",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "mirrorEdge",
+      "desc": "镜像边缘 - 开启后使用镜像采样减轻边缘黑边，适合镜头扫动类预设。",
+      "type": "boolean",
+      "value": false
+    }
+  ]
+}

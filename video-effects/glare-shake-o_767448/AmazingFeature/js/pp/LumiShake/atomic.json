@@ -1,0 +1,60 @@
+{
+  "key": "LumiShake",
+  "category": "Distort",
+  "desc": "抖动效果 - 创建随机或周期性的位置抖动，模拟摄像机抖动或地震效果。适用于动态抖动、摄像机效果、不稳定感、动感表现",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果 - 关闭抖动效果，不应用任何抖动，保持图像原始状态"
+    },
+    {
+      "name": "low",
+      "desc": "轻度抖动 - 为图像添加轻微的位置抖动"
+    },
+    {
+      "name": "medium",
+      "desc": "中等抖动 - 为图像添加中等的位置抖动"
+    },
+    {
+      "name": "high",
+      "desc": "重度抖动 - 为图像添加严重的位置抖动"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "progress",
+      "desc": "抖动进度 - 控制抖动效果的时间进度，影响抖动的时序",
+      "type": "number",
+      "value": 0.1
+    },
+    {
+      "name": "intensity",
+      "desc": "抖动强度 - 控制抖动的幅度大小，值越大抖动越剧烈",
+      "type": "number",
+      "value": 0.02
+    },
+    {
+      "name": "shakeFrequency",
+      "desc": "抖动频率 - 设定抖动的频率，值越大抖动越频繁",
+      "type": "number",
+      "value": 10.0,
+      "min": 0.0,
+      "max": 15.0
+    },
+    {
+      "name": "shakeDirection",
+      "desc": "抖动方向 - 控制抖动在X和Y方向的分量比例",
+      "type": "array",
+      "value": [
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "shakeSpeed",
+      "desc": "抖动速度 - 控制抖动的整体速度倍数",
+      "type": "number",
+      "value": 1.0
+    }
+  ]
+}

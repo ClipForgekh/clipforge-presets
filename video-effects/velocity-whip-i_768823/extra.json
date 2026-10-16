@@ -1,0 +1,31 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "streakLength",
+                "effect_key_cn": "streakLength",
+                "type": "float",
+                "default": 0.22,
+                "min": 0.05,
+                "max": 0.6
+            },
+            {
+                "effect_key": "trailSharpness",
+                "effect_key_cn": "trailSharpness",
+                "type": "float",
+                "default": 6,
+                "min": 2,
+                "max": 12
+            },
+            {
+                "effect_key": "luminanceLead",
+                "effect_key_cn": "luminanceLead",
+                "type": "float",
+                "default": 0.25,
+                "min": 0,
+                "max": 0.6
+            }
+        ]
+    }
+}

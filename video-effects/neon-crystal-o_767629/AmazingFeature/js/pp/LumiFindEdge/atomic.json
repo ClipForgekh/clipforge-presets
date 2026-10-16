@@ -1,0 +1,51 @@
+{
+  "key": "LumiFindEdge",
+  "category": "Stylize",
+  "desc": "边缘检测效果 - 检测并突出显示图像中的边缘轮廓，支持亮度和阈值调节。适用于轮廓提取、线稿生成、边缘增强、艺术效果",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无强度 - 关闭边缘检测效果，不应用任何检测"
+    },
+    {
+      "name": "color",
+      "desc": "颜色边缘检测 - 检测并突出显示图像中的颜色边缘轮廓"
+    },
+    {
+      "name": "gray",
+      "desc": "灰度边缘检测 - 检测并突出显示图像中的灰度边缘轮廓"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "强度 - 控制边缘检测的敏感度，0.0为原图（无效果），1.0为最大检测",
+      "type": "number",
+      "value": 1.0
+    },
+    {
+      "name": "brightness",
+      "desc": "边缘亮度 - 控制检测到的边缘线条的亮度强度",
+      "type": "number",
+      "value": 1.0
+    },
+    {
+      "name": "grayColor",
+      "desc": "灰度系数 - 控制边缘检测的灰度处理程度",
+      "type": "number",
+      "value": 0.0
+    },
+    {
+      "name": "upperLimit",
+      "desc": "上限阈值 - 设定边缘检测的最高敏感度阈值",
+      "type": "number",
+      "value": 1.0
+    },
+    {
+      "name": "lowerLimit",
+      "desc": "下限阈值 - 设定边缘检测的最低敏感度阈值",
+      "type": "number",
+      "value": 0.0
+    }
+  ]
+}

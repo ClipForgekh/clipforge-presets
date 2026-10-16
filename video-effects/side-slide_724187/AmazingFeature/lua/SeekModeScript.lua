@@ -1,0 +1,3025 @@
+
+
+
+
+
+---------- common/Utils.lua ----------
+local Utils = {}
+
+
+
+-- System
+---@param fmt string
+---@vararg any
+function Utils.log (fmt, ...)
+    ---#ifdef DEV
+--//    local args = { ... }
+--//    for i, v in ipairs(args) do
+--//        local type = type(v)
+--//        if type == "table" then
+--//            args[i] = cjson.encode(v)
+--//        elseif type == "number" then
+--//            args[i] = v
+--//        else
+--//            args[i] = tostring(v)
+--//        end
+--//    end
+--//    if Editor then
+--//        Amaz.LOGW("MoreFive", string.format(fmt, unpack(args)))
+--//    elseif EffectSdk then
+--//        EffectSdk.LOG_LEVEL(8, string.format(fmt, unpack(args)))
+--//    end
+    ---#endif
+end
+
+
+
+-- Container
+---@param src table
+---@return table
+function Utils.table_clone (src)
+    if not src then
+        return src
+    end
+    local dst = {}
+    for k, v in pairs(src) do
+        dst[k] = type(v) == "table" and Utils.clone(v) or v
+    end
+    return dst
+end
+---@param src any[]
+---@param si number|nil
+---@param ei number|nil
+---@return any[]
+function Utils.table_slice (src, si, ei)
+    si = si or 1
+    ei = ei or #src
+    local dst = {}
+    for i = si, ei do
+        table.insert(dst, src[i])
+    end
+    return dst
+end
+---@vararg any[]
+---@return any[]
+function Utils.array_concat(...)
+    local dst = {}
+    for _, src in ipairs({...}) do
+        for _, ele in ipairs(src) do
+            table.insert(dst, ele)
+        end
+    end
+    return dst
+end
+---@param src any[]
+---@return any[]
+function Utils.array_shuffle (src)
+    local dst = {}
+    if type(src) == "number" then
+        for i = 1, src do
+            dst[i] = i
+        end
+    else
+        for i, v in ipairs(src) do
+            dst[i] = v
+        end
+    end
+    for n = #dst, 1, -1 do
+        local i = math.floor(math.random(n))
+        local v = dst[i]
+        dst[i] = dst[n]
+        dst[n] = v
+    end
+    return dst
+end
+
+
+
+-- Math
+function Utils.clamp (value, min, max)
+    return math.min(math.max(min, value), max)
+end
+function Utils.mix (x, y, a)
+    return x + (y - x) * a
+end
+function Utils.step (edge0, edge1, value)
+    return math.min(math.max(0, (value - edge0) / (edge1 - edge0)), 1)
+end
+function Utils.smoothstep (edge0, edge1, value)
+    local t = math.min(math.max(0, (value - edge0) / (edge1 - edge0)), 1)
+    return t * t * (3 - t - t)
+end
+function Utils.mirror (range, value)
+    local round = value / range
+    local roundF = 1 - math.abs(round % 2 - 1)
+    local roundI = math.floor(round)
+    return roundF, roundI
+end
+function Utils.bezier4 (q, x1, x2, x3, x4, y1, y2, y3, y4)
+    local p = 1 - q
+    local p2 = p * p
+    local p3 = p2 * p
+    local q2 = q * q
+    local q3 = q2 * q
+    local x = x1*p3 + 3*x2*p2*q + 3*x3*p*q2 + x4*q3
+    local y = y4 and y1*p3 + 3*y2*p2*q + 3*y3*p*q2 + y4*q3
+    return x, y
+end
+function Utils.bezier4x2y (x1, x2, x3, x4, y1, y2, y3, y4, x)
+    local t_ = 0
+    local _t = 1
+    local bezier4 = Utils.bezier4
+    repeat
+        local _t_ = (t_ + _t) * 0.5
+        local _x_ = bezier4(_t_, x1, x2, x3, x4)
+        if _x_ > x then
+            _t = _t_
+        else
+            t_ = _t_
+        end
+    until _t - t_ < 0.00001
+
+    local t = (t_ + _t) * 0.5
+    return bezier4(t, y1, y2, y3, y4)
+end
+
+
+
+-- Easing
+function Utils.sineIn (t)
+    return 1 - math.cos(math.pi * t * .5)
+end
+function Utils.sineOut (t)
+    return math.sin(math.pi * t * .5)
+end
+function Utils.sineInOut (t)
+    return -(math.cos(math.pi * t) - 1) * .5
+end
+function Utils.quadIn (t)
+    return t * t
+end
+function Utils.quadOut (t)
+    return (2 - t) * t
+end
+function Utils.quadInOut (t)
+    return t < .5 and 2 * t * t or t * (4 - t - t) - 1
+end
+function Utils.cubicIn (t)
+    return t * t * t
+end
+function Utils.cubicOut (t)
+    t = 1 - t
+    return 1 - t * t * t
+end
+function Utils.cubicInOut (t)
+    if t < .5 then
+        return 4 * t * t * t
+    else
+        t = 2 - t - t
+        return 1 - t * t * t * .5
+    end
+end
+function Utils.quartIn (t)
+    t = t * t
+    return t * t
+end
+function Utils.quartOut (t)
+    t = 1 - t
+    t = t * t
+    return 1 - t * t
+end
+function Utils.quartInOut (t)
+    if t < .5 then
+        t = t * t
+        return 8 * t * t
+    else
+        t = 2 - t - t
+        t = t * t
+        return 1 - t * t * .5
+    end
+end
+function Utils.expoIn (t)
+    return t ~= 0 and math.pow(2, 10 - t - 10) or 0
+end
+function Utils.expoOut (t)
+    return t ~= 1 and 1 - math.pow(2, -10 * t) or 1
+end
+function Utils.expoInOut (t)
+    if t == 0 then
+        return 0
+    elseif t == 1 then
+        return 1
+    elseif t < .5 then
+        return math.pow(2, 20 * t - 10) * .5
+    else
+        return 1 - math.pow(2, -20 * t + 10) * .5
+    end
+end
+function Utils.circIn (t) return 1 - math.sqrt(1 - t * t) end
+function Utils.circOut (t)
+    t = t - 1
+    return math.sqrt(1 - t * t)
+end
+function Utils.circInOut (t)
+    if t < .5 then
+        return .5 - math.sqrt(1 - 4 * t * t) * .5
+    else
+        t = 2 - t - t
+        return .5 + math.sqrt(1 - t * t) * 0.5
+    end
+end
+function Utils.backIn (t)
+    local tt = t * t
+    return 2.70158 * tt * t - 1.70158 * tt
+end
+function Utils.backOut (t)
+    t = t - 1
+    local tt = t * t
+    return 1 + 2.70158 * tt * t + 1.70158 * tt
+end
+function Utils.backInOut (t)
+    if t < .5 then
+        t = t + t
+        return (t * t * (3.5949095 * t - 2.5949095)) * .5
+    else
+        t = t + t - 2
+        return (t * t * (3.5949095 * t + 2.5949095) + 2) * .5
+    end
+end
+function Utils.elasticIn (t)
+    if t == 0 then
+        return 0
+    elseif t == 1 then
+        return 1
+    else
+        return -math.pow(2, 10 * t - 10) * math.sin((t * 10 - 10.75) * math.pi * 2 / 3)
+    end
+end
+function Utils.elasticOut (t)
+    if t == 0 then
+        return 0
+    elseif t == 1 then
+        return 1
+    else
+        return math.pow(2, -10 * t) * math.sin((t * 10 - .75) * math.pi * 2 / 3) + 1
+    end
+end
+function Utils.elasticInOut (t)
+    if t == 0 then
+        return 0
+    elseif t == 1 then
+        return 1
+    elseif t < 0.5 then
+        return -(math.pow(2, 20 * t - 10) * math.sin((t * 20 - 11.125) * math.pi * 2 / 4.5)) * .5
+    else
+        return (math.pow(2, -20 * t + 10) * math.sin((t * 20 - 11.125) * math.pi * 2 / 4.5)) * .5 + 1
+    end
+end
+function Utils.bounceIn (t)
+    return 1 - Utils.bounceOut(1 - t)
+end
+function Utils.bounceOut (t)
+    local n1 = 7.5625;
+    local d1 = 2.75;
+    if t < 1 / d1 then
+        return n1 * t * t;
+    elseif t < 2 / d1 then
+        t = t - 1.5 / d1
+        return n1 * t * t + .75;
+    elseif t < 2.5 / d1 then
+        t = t - 2.25 / d1
+        return n1 * t * t + .9375;
+    else
+        t = t - 2.625 / d1
+        return n1 * t * t + .984375;
+    end
+end
+function Utils.bounceInOut (t)
+    if t < .5 then
+        return (1 - Utils.bounceOut(1 - t + t)) * .5
+    else
+        return (1 + Utils.bounceOut(t + t - 1)) * .5
+    end
+end
+
+
+
+-- Convert
+---@param arr number[]
+---@param si number
+---@param ei number
+---@return number|Vector2f|Vector3f|Vector4f
+function Utils.arr2vec (arr, si, ei)
+    si = si or 1
+    ei = ei or #arr
+    if si == ei then
+        return arr[si]
+    end
+    local n = ei - si + 1
+    if n == 3 then
+        return Amaz.Vector3f(arr[si], arr[si + 1], arr[si + 2])
+    elseif n == 2 then
+        return Amaz.Vector2f(arr[si], arr[si + 1])
+    elseif n == 4 then
+        return Amaz.Vector4f(arr[si], arr[si + 1], arr[si + 2], arr[si + 3])
+    end
+end
+function Utils.rgb2hsl (R, G, B)
+    B = B or R[3]
+    G = G or R[2]
+    R = B and R or R[1]
+    local H, S, L;
+    local max = math.max(R, G, B);
+    local min = math.min(R, G, B);
+    local delta = max - min
+
+    L = (max + min) * 0.5
+    S = delta == 0 and 0 or 1 - math.abs(L + L - 1)
+
+    if delta == 0 then
+        H = 0
+    elseif max == R then
+        H = (G - B) / delta % 6
+    elseif max == G then
+        H = (B - R) / delta + 2
+    else
+        H = (R - G) / delta + 4
+    end
+    H = H / 6
+
+    return {H, S, L}
+end
+function Utils.hsl2rgb (H, S, L)
+    L = L or H[3]
+    S = S or H[2]
+    H = L and H or H[1]
+    H = H * 360
+    local R, G, B
+    local C = (1 - math.abs(L + L - 1)) * S
+    local X = C * (1 - math.abs((H / 60) % 2 - 1))
+    local m = L - C * 0.5
+
+    if H < 60 then
+        R, G, B = C, X, 0
+    elseif H < 120 then
+        R, G, B = X, C, 0
+    elseif H < 180 then
+        R, G, B = 0, C, X
+    elseif H < 240 then
+        R, G, B = 0, X, C
+    elseif H < 300 then
+        R, G, B = X, 0, C
+    else
+        R, G, B = C, 0, X
+    end
+
+    R = R + m
+    G = G + m
+    B = B + m
+    return {R, G, B}
+end
+
+
+
+-- UTF-8
+---@param lead number
+---@return number
+function Utils.ucs4_size (lead)
+    if lead < 128 then
+        return 1
+    elseif lead < 192 then
+        return 0
+    elseif lead < 224 then
+        return 2
+    elseif lead < 240 then
+        return 3
+    elseif lead < 248 then
+        return 4
+    elseif lead < 252 then
+        return 5
+    else
+        return 6
+    end
+end
+---@param str string
+---@return number
+function Utils.utf8_len (str)
+    local n = #str
+    local i = 1
+    local l = 0
+    while i <= n do
+        local bytes = Utils.ucs4_size(string.byte(str, i))
+        if bytes > 0 then
+            i = i + bytes
+            l = l + 1
+        else
+            i = i + 1
+        end
+    end
+    return l
+end
+---@param str string
+---@param si number|nil
+---@param ei number|nil
+---@return string
+function Utils.utf8_sub (str, si, ei)
+    local n = #str
+    si = si or 1
+    ei = ei or n
+    ei = ei - si
+    local i = 1
+    while i <= n and si > 1 do
+        local bytes = Utils.ucs4_size(string.byte(str, i))
+        i = i + (bytes > 0 and bytes or 1)
+        si = si - 1
+    end
+    local j = i
+    while j <= n and ei > 0 do
+        local bytes = Utils.ucs4_size(string.byte(str, j))
+        j = j + (bytes > 0 and bytes or 1)
+        ei = ei - 1
+    end
+    return string.sub(str, i, j)
+end
+---@param str string
+---@param cb fun(str: string, index: number, size: number): boolean
+function Utils.utf8_for (str, cb)
+    local n = #str
+    local i = 1
+    while i <= n do
+        local bytes = Utils.ucs4_size(string.byte(str, i))
+        if bytes > 0 then
+            if cb(str, i, bytes) then
+                return
+            end
+            i = i + bytes
+        else
+            i = i + 1
+        end
+    end
+end
+
+
+
+
+
+
+
+
+---------- common/AEAdapter.lua ----------
+
+
+---@class AEAdapter
+local AEAdapter = {}
+AEAdapter.__index = AEAdapter
+
+
+function AEAdapter:new ()
+    local self = setmetatable({}, AEAdapter)
+    self._tracks = {}
+    return self
+end
+
+
+---@param layerName string
+---@param layerData table<string, table>
+function AEAdapter:addKeyframes (layerName, layerData)
+    for trackName, trackData in pairs(layerData) do
+        local trackPath = layerName.."/"..trackName
+        trackData.from_ae = true
+        self._tracks[trackPath] = trackData
+    end
+end
+
+
+---@param layerName string
+---@param layerData table
+function AEAdapter:addFrames (layerName, layerData)
+    local fps = layerData.frameRate
+    layerData = layerData.layer0
+    for attrName, attrData in pairs(layerData) do
+        if type(attrData) == "table" then
+            local trackPath = layerName.."."..attrName
+            attrData.fps = fps
+            self._tracks[trackPath] = attrData
+        end
+    end
+end
+
+
+---@param layerName string
+---@param layerData table
+function AEAdapter:addAnimations (layerName, layerData)
+    for attrName, attrData in pairs(layerData) do
+        local trackPath = layerName..":"..attrName
+        self._tracks[trackPath] = attrData
+    end
+end
+
+
+---@param path string
+---@param time number
+---@return number|number[]
+function AEAdapter:get (path, time)
+    local track = self._tracks[path]
+    if not track then
+        return
+    end
+
+    if track.fps then
+        return self:_solveFrame(track, time * track.fps)
+    elseif track.from_ae then
+        return self:_solveKeyframe(track, time)
+    else
+        return self:_solveAnimation(track, time)
+    end
+end
+---@param path string
+---@param time number
+---@param delta number|nil
+---@return number|number[]
+function AEAdapter:getVelocity (path, time, delta)
+    delta = delta or 0.001
+    local v0 = self:get(path, time - delta)
+    local v1 = self:get(path, time + delta)
+    delta = delta + delta
+    local v = {}
+    for i = 1, #v0 do
+        v[i] = (v1[i] - v0[i]) / delta
+    end
+    return v
+end
+
+
+function AEAdapter:_solveFrame (track, frame)
+    if #track > 0 then
+        local v = self._interpolateFrame(track, frame)
+        return type(v) == "number" and {v} or v
+    else
+        local x = self._interpolateFrame(track.x, frame)
+        local y = self._interpolateFrame(track.y, frame)
+        return {x, y}
+    end
+end
+function AEAdapter._interpolateFrame (array, frame)
+    local n = #array
+    local t, k0, k1
+
+    if frame <= 0 then
+        k0 = array[1]
+        k1 = array[1]
+        t = 0
+    elseif frame >= n - 1 then
+        k0 = array[n]
+        k1 = array[n]
+        t = 0
+    else
+        local i = math.floor(frame)
+        k0 = array[i + 1]
+        k1 = array[i + 2]
+        t = frame - i
+    end
+
+    if type(k0) == "table" then
+        local x = k0.x + (k1.x - k0.x) * t
+        local y = k0.y + (k1.y - k0.y) * t
+        return {x, y}
+    else
+        return k0 + (k1 - k0) * t
+    end
+end
+
+
+function AEAdapter:_solveKeyframe (track, time)
+    local K = track.k
+    local N = #K
+    if time <= K[1][1] then
+        return Utils.table_slice(K[1], 2)
+    elseif time >= K[N][1] then
+        return Utils.table_slice(K[N], 2)
+    end
+
+    local interpolator = track.spatial and self._interpolateVector or self._interpolateScalar
+    for i = 2, N do
+        if time < K[i][1] then
+            return interpolator(K[i - 1], K[i], track.s[i - 1], time)
+        end
+    end
+    return Utils.table_slice(K[N], 2)
+end
+function AEAdapter._interpolateScalar (K0, K1, S, T)
+    if S.hold then
+        return Utils.table_slice(K0, 2)
+    end
+    local O = S.o
+    local I = S.i
+    local y = {}
+    for i = 1, #K0 - 1 do
+        local x1 = K0[1]
+        local x2 = O[i][1]
+        local x3 = I[i][1]
+        local x4 = K1[1]
+        local y1 = K0[i + 1]
+        local y2 = O[i][2]
+        local y3 = I[i][2]
+        local y4 = K1[i + 1]
+        y[i] = Utils.bezier4x2y(x1, x2, x3, x4, y1, y2, y3, y4, T)
+    end
+    return y
+end
+function AEAdapter._interpolateVector (K0, K1, S, T)
+    if S.hold then
+        return Utils.table_slice(K0, 2)
+    end
+    local O = S.o
+    local I = S.i
+    local P = S.p
+    local L = P[1]
+
+    local x1 = K0[1]
+    local x2 = O[1]
+    local x3 = I[1]
+    local x4 = K1[1]
+    local y1 = 0
+    local y2 = O[2]
+    local y3 = I[2]
+    local y4 = L[#L]
+    local l = Utils.bezier4x2y(x1, x2, x3, x4, y1, y2, y3, y4, T)
+
+    local si = 1
+    local ei = #L - 1
+    local i = si
+    while si < ei do
+        i = math.floor((si + ei) * 0.5)
+        if l < L[i] then
+            ei = i
+        elseif l > L[i + 1] then
+            si = i + 1
+        else
+            break
+        end
+    end
+
+    local t = Utils.step(L[i], L[i + 1], l)
+    local v = {}
+    for j = 2, #K0 do
+        local v0 = P[j][i]
+        local v1 = P[j][i + 1]
+        v[j - 1] = v0 + (v1 - v0) * t
+    end
+    return v
+end
+
+
+function AEAdapter:_solveAnimation (track, time)
+    local N = #track
+    if time <= track[1][1] then
+        return track[1][3]
+    elseif time >= track[N][2] then
+        return track[N][4]
+    end
+
+    for i = 1, N do
+        local frag = track[i]
+        if time <= frag[2] then
+            local x = Utils.step(frag[1], frag[2], time)
+            local m = frag[5]
+            local y = type(m) == "function" and m(x) or Utils.bezier4x2y(0, m[1], m[3], 1, 0, m[2], m[4], 1, x)
+            local v0 = frag[3]
+            local v1 = frag[4]
+            local v = {}
+            for j = 1, #v0 do
+                v[j] = Utils.mix(v0[j], v1[j], y)
+            end
+            return v
+        end
+    end
+    return track[N][4]
+end
+
+
+
+
+
+
+
+---------- cc/Helper.lua ----------
+local Helper = {}
+
+---@param scene Scene
+---@param rootName string
+---@param layer number|nil
+---@param order number|nil
+---@return number, number
+function Helper.initPipeline (scene, rootName, layer, order)
+    layer = layer or 1
+    order = order or 0
+    local function setLayerRecursion (node)
+        node.entity.layer = order
+        for i = 0, node.children:size() - 1 do
+            setLayerRecursion(node.children:get(i))
+        end
+    end
+    local root = scene:findEntityBy(rootName)
+    if not root then
+        return
+    end
+    local nodes = root:getComponent("Transform").children
+    for i = 0, nodes:size() - 1 do
+        local node = nodes:get(i)
+        local entity = node.entity
+        local camera = entity:getComponent("Camera")
+        if camera then
+            order = order + 1
+            layer = layer * 2
+            entity.layer = 0
+            camera.renderOrder = order
+            camera.layerVisibleMask = Amaz.DynamicBitset.new(64, string.format("%#x", layer))
+            setLayerRecursion(node)
+        else
+            setLayerRecursion(node)
+        end
+    end
+    return layer, order
+end
+
+
+
+
+
+
+
+
+---------- AE.lua ----------
+
+local AE = {
+    ["ADBE Gaussian Blur 2-0001_12"] = {
+        ["d"] = 1,
+        ["k"] = {
+            {
+                0,
+                200
+            },
+            {
+                0.13333333333333,
+                45
+            },
+            {
+                0.6,
+                0
+            }
+        },
+        ["s"] = {
+            {
+                ["o"] = {
+                    {
+                        0.00013333333333,
+                        200
+                    }
+                },
+                ["i"] = {
+                    {
+                        0.05466403683027,
+                        68.0486474719596
+                    }
+                }
+            },
+            {
+                ["o"] = {
+                    {
+                        0.24103628098965,
+                        17.5702779683981
+                    }
+                },
+                ["i"] = {
+                    {
+                        0.39,
+                        0
+                    }
+                }
+            }
+        }
+    },
+    ["ADBE Gaussian Blur 2-0001_17"] = {
+        ["d"] = 1,
+        ["k"] = {
+            {
+                0.13333333333333,
+                30
+            },
+            {
+                0.6,
+                0
+            }
+        },
+        ["s"] = {
+            {
+                ["o"] = {
+                    {
+                        0.24065183838209,
+                        30
+                    }
+                },
+                ["i"] = {
+                    {
+                        0.36666666666667,
+                        0
+                    }
+                }
+            }
+        }
+    },
+    ["ADBE Position_23"] = {
+        ["spatial"] = true,
+        ["d"] = 3,
+        ["k"] = {
+            {
+                0,
+                240,
+                626,
+                -204
+            },
+            {
+                0.13333333333333,
+                618,
+                555,
+                -10
+            },
+            {
+                0.6,
+                540,
+                540,
+                0
+            }
+        },
+        ["s"] = {
+            {
+                ["o"] = {
+                    0.00013333333333,
+                    0
+                },
+                ["i"] = {
+                    0.06666666666667,
+                    430.767918954047
+                },
+                ["p"] = {
+                    {
+                        0,
+                        0.03219990194181,
+                        0.12836883984832,
+                        0.28786066184107,
+                        0.51002921604159,
+                        0.79422835057153,
+                        1.13981191355242,
+                        1.54613375310584,
+                        2.01254771735331,
+                        2.53840765441644,
+                        3.12306741241685,
+                        3.76588083947604,
+                        4.46620178371556,
+                        5.22338409325702,
+                        6.03678161622201,
+                        6.90574820073205,
+                        7.82963769490873,
+                        8.80780394687367,
+                        9.83960080474835,
+                        10.9243821166544,
+                        12.0615017307133,
+                        13.2503134950467,
+                        14.4901712577762,
+                        15.7804288670233,
+                        17.1204401709096,
+                        18.5095590175567,
+                        19.9471392550861,
+                        21.4325347316194,
+                        22.9650992952782,
+                        24.5441867941839,
+                        26.1691510764583,
+                        27.8393459902229,
+                        29.5541253835992,
+                        31.3128431047089,
+                        33.1148530016734,
+                        34.9595089226143,
+                        36.8461647156533,
+                        38.7741742289119,
+                        40.7428913105117,
+                        42.7516698085741,
+                        44.7998635712209,
+                        46.8868264465734,
+                        49.0119122827535,
+                        51.1744749278825,
+                        53.3738682300822,
+                        55.6094460374739,
+                        57.8805621981794,
+                        60.1865705603202,
+                        62.5268249720178,
+                        64.9006792813938,
+                        67.3074873365698,
+                        69.7466029856673,
+                        72.217380076808,
+                        74.7191724581134,
+                        77.251333977705,
+                        79.8132184837044,
+                        82.4041798242333,
+                        85.0235718474131,
+                        87.6707484013655,
+                        90.3450633342119,
+                        93.045870494074,
+                        95.7725237290734,
+                        98.5243768873316,
+                        101.30078381697,
+                        104.101098366111,
+                        106.924674382875,
+                        109.770865715384,
+                        112.63902621176,
+                        115.528509720124,
+                        118.438670088597,
+                        121.368861165303,
+                        124.318436798361,
+                        127.286750835893,
+                        130.273157126022,
+                        133.277009516868,
+                        136.297661856554,
+                        139.3344679932,
+                        142.386781774929,
+                        145.453957049861,
+                        148.535347666119,
+                        151.630307471824,
+                        154.738190315098,
+                        157.858350044062,
+                        160.990140506838,
+                        164.132915551547,
+                        167.286029026311,
+                        170.448834779251,
+                        173.620686658489,
+                        176.800938512147,
+                        179.988944188346,
+                        183.184057535208,
+                        186.385632400855,
+                        189.593022633407,
+                        192.805582080986,
+                        196.022664591715,
+                        199.243624013714,
+                        202.467814195105,
+                        205.69458898401,
+                        208.92330222855,
+                        212.153307776848,
+                        215.383959477023,
+                        218.614611177199,
+                        221.844616725496,
+                        225.073329970036,
+                        228.300104758941,
+                        231.524294940333,
+                        234.745254362332,
+                        237.96233687306,
+                        241.17489632064,
+                        244.382286553192,
+                        247.583861418838,
+                        250.7789747657,
+                        253.966980441899,
+                        257.147232295557,
+                        260.319084174796,
+                        263.481889927736,
+                        266.6350034025,
+                        269.777778447209,
+                        272.909568909985,
+                        276.029728638948,
+                        279.137611482222,
+                        282.232571287927,
+                        285.313961904185,
+                        288.381137179118,
+                        291.433450960847,
+                        294.470257097493,
+                        297.490909437178,
+                        300.494761828025,
+                        303.481168118153,
+                        306.449482155686,
+                        309.399057788744,
+                        312.329248865449,
+                        315.239409233923,
+                        318.128892742287,
+                        320.997053238663,
+                        323.843244571172,
+                        326.666820587936,
+                        329.467135137076,
+                        332.243542066715,
+                        334.995395224973,
+                        337.722048459973,
+                        340.422855619835,
+                        343.097170552681,
+                        345.744347106634,
+                        348.363739129813,
+                        350.954700470342,
+                        353.516584976342,
+                        356.048746495933,
+                        358.550538877239,
+                        361.021315968379,
+                        363.460431617477,
+                        365.867239672653,
+                        368.241093982029,
+                        370.581348393726,
+                        372.887356755867,
+                        375.158472916573,
+                        377.394050723964,
+                        379.593444026164,
+                        381.756006671293,
+                        383.881092507473,
+                        385.968055382826,
+                        388.016249145473,
+                        390.025027643535,
+                        391.993744725135,
+                        393.921754238393,
+                        395.808410031432,
+                        397.653065952373,
+                        399.455075849338,
+                        401.213793570447,
+                        402.928572963824,
+                        404.598767877588,
+                        406.223732159863,
+                        407.802819658769,
+                        409.335384222427,
+                        410.820779698961,
+                        412.25835993649,
+                        413.647478783137,
+                        414.987490087023,
+                        416.277747696271,
+                        417.517605459,
+                        418.706417223333,
+                        419.843536837392,
+                        420.928318149298,
+                        421.960115007173,
+                        422.938281259138,
+                        423.862170753315,
+                        424.731137337825,
+                        425.54453486079,
+                        426.301717170331,
+                        427.002038114571,
+                        427.64485154163,
+                        428.22951129963,
+                        428.755371236693,
+                        429.221785200941,
+                        429.628107040494,
+                        429.973690603475,
+                        430.257889738005,
+                        430.480058292206,
+                        430.639550114199,
+                        430.735719052105,
+                        430.767918954047
+                    },
+                    {
+                        240,
+                        240.0282555,
+                        240.112644,
+                        240.2525985,
+                        240.447552,
+                        240.6969375,
+                        241.000188,
+                        241.3567365,
+                        241.766016,
+                        242.2274595,
+                        242.7405,
+                        243.3045705,
+                        243.919104,
+                        244.5835335,
+                        245.297292,
+                        246.0598125,
+                        246.870528,
+                        247.7288715,
+                        248.634276,
+                        249.5861745,
+                        250.584,
+                        251.6271855,
+                        252.715164,
+                        253.8473685,
+                        255.023232,
+                        256.2421875,
+                        257.503668,
+                        258.8071065,
+                        260.151936,
+                        261.5375895,
+                        262.9635,
+                        264.4291005,
+                        265.933824,
+                        267.4771035,
+                        269.058372,
+                        270.6770625,
+                        272.332608,
+                        274.0244415,
+                        275.751996,
+                        277.5147045,
+                        279.312,
+                        281.1433155,
+                        283.008084,
+                        284.9057385,
+                        286.835712,
+                        288.7974375,
+                        290.790348,
+                        292.8138765,
+                        294.867456,
+                        296.9505195,
+                        299.0625,
+                        301.2028305,
+                        303.370944,
+                        305.5662735,
+                        307.788252,
+                        310.0363125,
+                        312.309888,
+                        314.6084115,
+                        316.931316,
+                        319.2780345,
+                        321.648,
+                        324.0406455,
+                        326.455404,
+                        328.8917085,
+                        331.348992,
+                        333.8266875,
+                        336.324228,
+                        338.8410465,
+                        341.376576,
+                        343.9302495,
+                        346.5015,
+                        349.0897605,
+                        351.694464,
+                        354.3150435,
+                        356.950932,
+                        359.6015625,
+                        362.266368,
+                        364.9447815,
+                        367.636236,
+                        370.3401645,
+                        373.056,
+                        375.7831755,
+                        378.521124,
+                        381.2692785,
+                        384.027072,
+                        386.7939375,
+                        389.569308,
+                        392.3526165,
+                        395.143296,
+                        397.9407795,
+                        400.7445,
+                        403.5538905,
+                        406.368384,
+                        409.1874135,
+                        412.010412,
+                        414.8368125,
+                        417.666048,
+                        420.4975515,
+                        423.330756,
+                        426.1650945,
+                        429,
+                        431.8349055,
+                        434.669244,
+                        437.5024485,
+                        440.333952,
+                        443.1631875,
+                        445.989588,
+                        448.8125865,
+                        451.631616,
+                        454.4461095,
+                        457.2555,
+                        460.0592205,
+                        462.856704,
+                        465.6473835,
+                        468.430692,
+                        471.2060625,
+                        473.972928,
+                        476.7307215,
+                        479.478876,
+                        482.2168245,
+                        484.944,
+                        487.6598355,
+                        490.363764,
+                        493.0552185,
+                        495.733632,
+                        498.3984375,
+                        501.049068,
+                        503.6849565,
+                        506.305536,
+                        508.9102395,
+                        511.4985,
+                        514.0697505,
+                        516.623424,
+                        519.1589535,
+                        521.675772,
+                        524.1733125,
+                        526.651008,
+                        529.1082915,
+                        531.544596,
+                        533.9593545,
+                        536.352,
+                        538.7219655,
+                        541.068684,
+                        543.3915885,
+                        545.690112,
+                        547.9636875,
+                        550.211748,
+                        552.4337265,
+                        554.629056,
+                        556.7971695,
+                        558.9375,
+                        561.0494805,
+                        563.132544,
+                        565.1861235,
+                        567.209652,
+                        569.2025625,
+                        571.164288,
+                        573.0942615,
+                        574.991916,
+                        576.8566845,
+                        578.688,
+                        580.4852955,
+                        582.248004,
+                        583.9755585,
+                        585.667392,
+                        587.3229375,
+                        588.941628,
+                        590.5228965,
+                        592.066176,
+                        593.5708995,
+                        595.0365,
+                        596.4624105,
+                        597.848064,
+                        599.1928935,
+                        600.496332,
+                        601.7578125,
+                        602.976768,
+                        604.1526315,
+                        605.284836,
+                        606.3728145,
+                        607.416,
+                        608.4138255,
+                        609.365724,
+                        610.2711285,
+                        611.129472,
+                        611.9401875,
+                        612.702708,
+                        613.4164665,
+                        614.080896,
+                        614.6954295,
+                        615.2595,
+                        615.7725405,
+                        616.233984,
+                        616.6432635,
+                        616.999812,
+                        617.3030625,
+                        617.552448,
+                        617.7474015,
+                        617.887356,
+                        617.9717445,
+                        618
+                    },
+                    {
+                        626,
+                        625.99469275,
+                        625.978842,
+                        625.95255425,
+                        625.915936,
+                        625.86909375,
+                        625.812134,
+                        625.74516325,
+                        625.668288,
+                        625.58161475,
+                        625.48525,
+                        625.37930025,
+                        625.263872,
+                        625.13907175,
+                        625.005006,
+                        624.86178125,
+                        624.709504,
+                        624.54828075,
+                        624.378218,
+                        624.19942225,
+                        624.012,
+                        623.81605775,
+                        623.611702,
+                        623.39903925,
+                        623.178176,
+                        622.94921875,
+                        622.712274,
+                        622.46744825,
+                        622.214848,
+                        621.95457975,
+                        621.68675,
+                        621.41146525,
+                        621.128832,
+                        620.83895675,
+                        620.541946,
+                        620.23790625,
+                        619.926944,
+                        619.60916575,
+                        619.284678,
+                        618.95358725,
+                        618.616,
+                        618.27202275,
+                        617.921762,
+                        617.56532425,
+                        617.202816,
+                        616.83434375,
+                        616.460014,
+                        616.07993325,
+                        615.694208,
+                        615.30294475,
+                        614.90625,
+                        614.50423025,
+                        614.096992,
+                        613.68464175,
+                        613.267286,
+                        612.84503125,
+                        612.417984,
+                        611.98625075,
+                        611.549938,
+                        611.10915225,
+                        610.664,
+                        610.21458775,
+                        609.761022,
+                        609.30340925,
+                        608.841856,
+                        608.37646875,
+                        607.907354,
+                        607.43461825,
+                        606.958368,
+                        606.47870975,
+                        605.99575,
+                        605.50959525,
+                        605.020352,
+                        604.52812675,
+                        604.033026,
+                        603.53515625,
+                        603.034624,
+                        602.53153575,
+                        602.025998,
+                        601.51811725,
+                        601.008,
+                        600.49575275,
+                        599.981482,
+                        599.46529425,
+                        598.947296,
+                        598.42759375,
+                        597.906294,
+                        597.38350325,
+                        596.859328,
+                        596.33387475,
+                        595.80725,
+                        595.27956025,
+                        594.750912,
+                        594.22141175,
+                        593.691166,
+                        593.16028125,
+                        592.628864,
+                        592.09702075,
+                        591.564858,
+                        591.03248225,
+                        590.5,
+                        589.96751775,
+                        589.435142,
+                        588.90297925,
+                        588.371136,
+                        587.83971875,
+                        587.308834,
+                        586.77858825,
+                        586.249088,
+                        585.72043975,
+                        585.19275,
+                        584.66612525,
+                        584.140672,
+                        583.61649675,
+                        583.093706,
+                        582.57240625,
+                        582.052704,
+                        581.53470575,
+                        581.018518,
+                        580.50424725,
+                        579.992,
+                        579.48188275,
+                        578.974002,
+                        578.46846425,
+                        577.965376,
+                        577.46484375,
+                        576.966974,
+                        576.47187325,
+                        575.979648,
+                        575.49040475,
+                        575.00425,
+                        574.52129025,
+                        574.041632,
+                        573.56538175,
+                        573.092646,
+                        572.62353125,
+                        572.158144,
+                        571.69659075,
+                        571.238978,
+                        570.78541225,
+                        570.336,
+                        569.89084775,
+                        569.450062,
+                        569.01374925,
+                        568.582016,
+                        568.15496875,
+                        567.732714,
+                        567.31535825,
+                        566.903008,
+                        566.49576975,
+                        566.09375,
+                        565.69705525,
+                        565.305792,
+                        564.92006675,
+                        564.539986,
+                        564.16565625,
+                        563.797184,
+                        563.43467575,
+                        563.078238,
+                        562.72797725,
+                        562.384,
+                        562.04641275,
+                        561.715322,
+                        561.39083425,
+                        561.073056,
+                        560.76209375,
+                        560.458054,
+                        560.16104325,
+                        559.871168,
+                        559.58853475,
+                        559.31325,
+                        559.04542025,
+                        558.785152,
+                        558.53255175,
+                        558.287726,
+                        558.05078125,
+                        557.821824,
+                        557.60096075,
+                        557.388298,
+                        557.18394225,
+                        556.988,
+                        556.80057775,
+                        556.621782,
+                        556.45171925,
+                        556.290496,
+                        556.13821875,
+                        555.994994,
+                        555.86092825,
+                        555.736128,
+                        555.62069975,
+                        555.51475,
+                        555.41838525,
+                        555.331712,
+                        555.25483675,
+                        555.187866,
+                        555.13090625,
+                        555.084064,
+                        555.04744575,
+                        555.021158,
+                        555.00530725,
+                        555
+                    },
+                    {
+                        -204,
+                        -203.9854985,
+                        -203.942188,
+                        -203.8703595,
+                        -203.770304,
+                        -203.6423125,
+                        -203.486676,
+                        -203.3036855,
+                        -203.093632,
+                        -202.8568065,
+                        -202.5935,
+                        -202.3040035,
+                        -201.988608,
+                        -201.6476045,
+                        -201.281284,
+                        -200.8899375,
+                        -200.473856,
+                        -200.0333305,
+                        -199.568652,
+                        -199.0801115,
+                        -198.568,
+                        -198.0326085,
+                        -197.474228,
+                        -196.8931495,
+                        -196.289664,
+                        -195.6640625,
+                        -195.016636,
+                        -194.3476755,
+                        -193.657472,
+                        -192.9463165,
+                        -192.2145,
+                        -191.4623135,
+                        -190.690048,
+                        -189.8979945,
+                        -189.086444,
+                        -188.2556875,
+                        -187.406016,
+                        -186.5377205,
+                        -185.651092,
+                        -184.7464215,
+                        -183.824,
+                        -182.8841185,
+                        -181.927068,
+                        -180.9531395,
+                        -179.962624,
+                        -178.9558125,
+                        -177.932996,
+                        -176.8944655,
+                        -175.840512,
+                        -174.7714265,
+                        -173.6875,
+                        -172.5890235,
+                        -171.476288,
+                        -170.3495845,
+                        -169.209204,
+                        -168.0554375,
+                        -166.888576,
+                        -165.7089105,
+                        -164.516732,
+                        -163.3123315,
+                        -162.096,
+                        -160.8680285,
+                        -159.628708,
+                        -158.3783295,
+                        -157.117184,
+                        -155.8455625,
+                        -154.563756,
+                        -153.2720555,
+                        -151.970752,
+                        -150.6601365,
+                        -149.3405,
+                        -148.0121335,
+                        -146.675328,
+                        -145.3303745,
+                        -143.977564,
+                        -142.6171875,
+                        -141.249536,
+                        -139.8749005,
+                        -138.493572,
+                        -137.1058415,
+                        -135.712,
+                        -134.3123385,
+                        -132.907148,
+                        -131.4967195,
+                        -130.081344,
+                        -128.6613125,
+                        -127.236916,
+                        -125.8084455,
+                        -124.376192,
+                        -122.9404465,
+                        -121.5015,
+                        -120.0596435,
+                        -118.615168,
+                        -117.1683645,
+                        -115.719524,
+                        -114.2689375,
+                        -112.816896,
+                        -111.3636905,
+                        -109.909612,
+                        -108.4549515,
+                        -107,
+                        -105.5450485,
+                        -104.090388,
+                        -102.6363095,
+                        -101.183104,
+                        -99.7310625,
+                        -98.280476,
+                        -96.8316355,
+                        -95.384832,
+                        -93.9403565,
+                        -92.4985,
+                        -91.0595535,
+                        -89.623808,
+                        -88.1915545,
+                        -86.763084,
+                        -85.3386875,
+                        -83.918656,
+                        -82.5032805,
+                        -81.092852,
+                        -79.6876615,
+                        -78.288,
+                        -76.8941585,
+                        -75.506428,
+                        -74.1250995,
+                        -72.750464,
+                        -71.3828125,
+                        -70.022436,
+                        -68.6696255,
+                        -67.324672,
+                        -65.9878665,
+                        -64.6595,
+                        -63.3398635,
+                        -62.029248,
+                        -60.7279445,
+                        -59.436244,
+                        -58.1544375,
+                        -56.882816,
+                        -55.6216705,
+                        -54.371292,
+                        -53.1319715,
+                        -51.904,
+                        -50.6876685,
+                        -49.483268,
+                        -48.2910895,
+                        -47.111424,
+                        -45.9445625,
+                        -44.790796,
+                        -43.6504155,
+                        -42.523712,
+                        -41.4109765,
+                        -40.3125,
+                        -39.2285735,
+                        -38.159488,
+                        -37.1055345,
+                        -36.067004,
+                        -35.0441875,
+                        -34.037376,
+                        -33.0468605,
+                        -32.072932,
+                        -31.1158815,
+                        -30.176,
+                        -29.2535785,
+                        -28.348908,
+                        -27.4622795,
+                        -26.593984,
+                        -25.7443125,
+                        -24.913556,
+                        -24.1020055,
+                        -23.309952,
+                        -22.5376865,
+                        -21.7855,
+                        -21.0536835,
+                        -20.342528,
+                        -19.6523245,
+                        -18.983364,
+                        -18.3359375,
+                        -17.710336,
+                        -17.1068505,
+                        -16.525772,
+                        -15.9673915,
+                        -15.432,
+                        -14.9198885,
+                        -14.431348,
+                        -13.9666695,
+                        -13.526144,
+                        -13.1100625,
+                        -12.718716,
+                        -12.3523955,
+                        -12.011392,
+                        -11.6959965,
+                        -11.4065,
+                        -11.1431935,
+                        -10.906368,
+                        -10.6963145,
+                        -10.513324,
+                        -10.3576875,
+                        -10.229696,
+                        -10.1296405,
+                        -10.057812,
+                        -10.0145015,
+                        -10
+                    }
+                }
+            },
+            {
+                ["o"] = {
+                    0.27333333333333,
+                    0
+                },
+                ["i"] = {
+                    0.32,
+                    80.0562302385017
+                },
+                ["p"] = {
+                    {
+                        0,
+                        0.00598420321033,
+                        0.02385675661105,
+                        0.05349757585686,
+                        0.09478657660238,
+                        0.14760367450231,
+                        0.21182878521104,
+                        0.28734182438355,
+                        0.37402270767428,
+                        0.47175135073794,
+                        0.58040766922918,
+                        0.69987157880254,
+                        0.83002299511282,
+                        0.9707418338145,
+                        1.12190801056242,
+                        1.28340144101096,
+                        1.45510204081502,
+                        1.63688972562911,
+                        1.8286444111078,
+                        2.03024601290593,
+                        2.24157444667801,
+                        2.46250962807884,
+                        2.69293147276278,
+                        2.93271989638465,
+                        3.18175481459908,
+                        3.43991614306062,
+                        3.70708379742414,
+                        3.98313769334398,
+                        4.26795774647507,
+                        4.56142387247183,
+                        4.86341598698902,
+                        5.17381400568127,
+                        5.4924978442032,
+                        5.81934741820935,
+                        6.15424264335458,
+                        6.49706343529338,
+                        6.84768970968043,
+                        7.20600138217046,
+                        7.57187836841794,
+                        7.94520058407771,
+                        8.32584794480416,
+                        8.71370036625215,
+                        9.10863776407626,
+                        9.51054005393113,
+                        9.91928715147138,
+                        10.3347589723516,
+                        10.7568354322265,
+                        11.1853964467507,
+                        11.620321931579,
+                        12.0614918023658,
+                        12.5087859747659,
+                        12.9620843644339,
+                        13.4212668870244,
+                        13.8862134581919,
+                        14.3568039935914,
+                        14.8329184088775,
+                        15.3144366197044,
+                        15.8012385417272,
+                        16.2932040906004,
+                        16.7902131819785,
+                        17.2921457315163,
+                        17.7988816548685,
+                        18.3103008676897,
+                        18.8262832856344,
+                        19.3467088243573,
+                        19.8714573995131,
+                        20.4004089267565,
+                        20.933443321742,
+                        21.4704405001242,
+                        22.0112803775579,
+                        22.5558428696978,
+                        23.1040078921985,
+                        23.6556553607144,
+                        24.2106651909004,
+                        24.768917298411,
+                        25.3302915989009,
+                        25.8946680080248,
+                        26.4619264414373,
+                        27.031946814793,
+                        27.6046090437465,
+                        28.1797930439526,
+                        28.7573787310659,
+                        29.3372460207408,
+                        29.9192748286324,
+                        30.5033450703949,
+                        31.0893366616832,
+                        31.6771295181517,
+                        32.2666035554555,
+                        32.8576386892488,
+                        33.4501148351864,
+                        34.0439119089228,
+                        34.638909826113,
+                        35.2349885024113,
+                        35.8320278534725,
+                        36.4299077949511,
+                        37.028508242502,
+                        37.6277091117797,
+                        38.2273903184388,
+                        38.8274317781338,
+                        39.4277134065197,
+                        40.0281151192509,
+                        40.6285168319821,
+                        41.2287984603679,
+                        41.828839920063,
+                        42.4285211267221,
+                        43.0277219959998,
+                        43.6263224435506,
+                        44.2242023850293,
+                        44.8212417360905,
+                        45.4173204123888,
+                        46.0123183295789,
+                        46.6061154033154,
+                        47.198591549253,
+                        47.7896266830463,
+                        48.37910072035,
+                        48.9668935768186,
+                        49.5528851681069,
+                        50.1369554098694,
+                        50.7189842177608,
+                        51.2988515074359,
+                        51.8764371945491,
+                        52.4516211947553,
+                        53.0242834237088,
+                        53.5943037970644,
+                        54.1615622304769,
+                        54.7259386396008,
+                        55.2873129400907,
+                        55.8455650476014,
+                        56.4005748777874,
+                        56.9522223463032,
+                        57.5003873688039,
+                        58.0449498609438,
+                        58.5857897383776,
+                        59.1227869167598,
+                        59.6558213117453,
+                        60.1847728389886,
+                        60.7095214141445,
+                        61.2299469528674,
+                        61.7459293708121,
+                        62.2573485836333,
+                        62.7640845069854,
+                        63.2660170565232,
+                        63.7630261479014,
+                        64.2549916967746,
+                        64.7417936187974,
+                        65.2233118296242,
+                        65.6994262449102,
+                        66.1700167803098,
+                        66.6349633514774,
+                        67.0941458740679,
+                        67.5474442637358,
+                        67.9947384361359,
+                        68.4359083069227,
+                        68.8708337917509,
+                        69.2993948062752,
+                        69.7214712661501,
+                        70.1369430870303,
+                        70.5456901845706,
+                        70.9475924744255,
+                        71.3425298722496,
+                        71.7303822936976,
+                        72.111029654424,
+                        72.4843518700838,
+                        72.8502288563313,
+                        73.2085405288213,
+                        73.5591668032083,
+                        73.9019875951471,
+                        74.2368828202924,
+                        74.5637323942985,
+                        74.8824162328205,
+                        75.1928142515127,
+                        75.4948063660299,
+                        75.7882724920267,
+                        76.0730925451578,
+                        76.3491464410776,
+                        76.6163140954411,
+                        76.8744754239027,
+                        77.1235103421171,
+                        77.363298765739,
+                        77.5937206104229,
+                        77.8146557918237,
+                        78.0259842255958,
+                        78.2275858273939,
+                        78.4193405128726,
+                        78.6011281976867,
+                        78.7728287974908,
+                        78.9343222279393,
+                        79.0854884046872,
+                        79.2262072433889,
+                        79.3563586596992,
+                        79.4758225692726,
+                        79.5844788877638,
+                        79.6822075308275,
+                        79.7688884141182,
+                        79.8444014532907,
+                        79.9086265639994,
+                        79.9614436618993,
+                        80.0027326626449,
+                        80.0323734818907,
+                        80.0502460352914,
+                        80.0562302385017
+                    },
+                    {
+                        618,
+                        617.9941695,
+                        617.976756,
+                        617.9478765,
+                        617.907648,
+                        617.8561875,
+                        617.793612,
+                        617.7200385,
+                        617.635584,
+                        617.5403655,
+                        617.4345,
+                        617.3181045,
+                        617.191296,
+                        617.0541915,
+                        616.906908,
+                        616.7495625,
+                        616.582272,
+                        616.4051535,
+                        616.218324,
+                        616.0219005,
+                        615.816,
+                        615.6007395,
+                        615.376236,
+                        615.1426065,
+                        614.899968,
+                        614.6484375,
+                        614.388132,
+                        614.1191685,
+                        613.841664,
+                        613.5557355,
+                        613.2615,
+                        612.9590745,
+                        612.648576,
+                        612.3301215,
+                        612.003828,
+                        611.6698125,
+                        611.328192,
+                        610.9790835,
+                        610.622604,
+                        610.2588705,
+                        609.888,
+                        609.5101095,
+                        609.125316,
+                        608.7337365,
+                        608.335488,
+                        607.9306875,
+                        607.519452,
+                        607.1018985,
+                        606.678144,
+                        606.2483055,
+                        605.8125,
+                        605.3708445,
+                        604.923456,
+                        604.4704515,
+                        604.011948,
+                        603.5480625,
+                        603.078912,
+                        602.6046135,
+                        602.125284,
+                        601.6410405,
+                        601.152,
+                        600.6582795,
+                        600.159996,
+                        599.6572665,
+                        599.150208,
+                        598.6389375,
+                        598.123572,
+                        597.6042285,
+                        597.081024,
+                        596.5540755,
+                        596.0235,
+                        595.4894145,
+                        594.951936,
+                        594.4111815,
+                        593.867268,
+                        593.3203125,
+                        592.770432,
+                        592.2177435,
+                        591.662364,
+                        591.1044105,
+                        590.544,
+                        589.9812495,
+                        589.416276,
+                        588.8491965,
+                        588.280128,
+                        587.7091875,
+                        587.136492,
+                        586.5621585,
+                        585.986304,
+                        585.4090455,
+                        584.8305,
+                        584.2507845,
+                        583.670016,
+                        583.0883115,
+                        582.505788,
+                        581.9225625,
+                        581.338752,
+                        580.7544735,
+                        580.169844,
+                        579.5849805,
+                        579,
+                        578.4150195,
+                        577.830156,
+                        577.2455265,
+                        576.661248,
+                        576.0774375,
+                        575.494212,
+                        574.9116885,
+                        574.329984,
+                        573.7492155,
+                        573.1695,
+                        572.5909545,
+                        572.013696,
+                        571.4378415,
+                        570.863508,
+                        570.2908125,
+                        569.719872,
+                        569.1508035,
+                        568.583724,
+                        568.0187505,
+                        567.456,
+                        566.8955895,
+                        566.337636,
+                        565.7822565,
+                        565.229568,
+                        564.6796875,
+                        564.132732,
+                        563.5888185,
+                        563.048064,
+                        562.5105855,
+                        561.9765,
+                        561.4459245,
+                        560.918976,
+                        560.3957715,
+                        559.876428,
+                        559.3610625,
+                        558.849792,
+                        558.3427335,
+                        557.840004,
+                        557.3417205,
+                        556.848,
+                        556.3589595,
+                        555.874716,
+                        555.3953865,
+                        554.921088,
+                        554.4519375,
+                        553.988052,
+                        553.5295485,
+                        553.076544,
+                        552.6291555,
+                        552.1875,
+                        551.7516945,
+                        551.321856,
+                        550.8981015,
+                        550.480548,
+                        550.0693125,
+                        549.664512,
+                        549.2662635,
+                        548.874684,
+                        548.4898905,
+                        548.112,
+                        547.7411295,
+                        547.377396,
+                        547.0209165,
+                        546.671808,
+                        546.3301875,
+                        545.996172,
+                        545.6698785,
+                        545.351424,
+                        545.0409255,
+                        544.7385,
+                        544.4442645,
+                        544.158336,
+                        543.8808315,
+                        543.611868,
+                        543.3515625,
+                        543.100032,
+                        542.8573935,
+                        542.623764,
+                        542.3992605,
+                        542.184,
+                        541.9780995,
+                        541.781676,
+                        541.5948465,
+                        541.417728,
+                        541.2504375,
+                        541.093092,
+                        540.9458085,
+                        540.808704,
+                        540.6818955,
+                        540.5655,
+                        540.4596345,
+                        540.364416,
+                        540.2799615,
+                        540.206388,
+                        540.1438125,
+                        540.092352,
+                        540.0521235,
+                        540.023244,
+                        540.0058305,
+                        540
+                    },
+                    {
+                        555,
+                        554.99887875,
+                        554.99553,
+                        554.98997625,
+                        554.98224,
+                        554.97234375,
+                        554.96031,
+                        554.94616125,
+                        554.92992,
+                        554.91160875,
+                        554.89125,
+                        554.86886625,
+                        554.84448,
+                        554.81811375,
+                        554.78979,
+                        554.75953125,
+                        554.72736,
+                        554.69329875,
+                        554.65737,
+                        554.61959625,
+                        554.58,
+                        554.53860375,
+                        554.49543,
+                        554.45050125,
+                        554.40384,
+                        554.35546875,
+                        554.30541,
+                        554.25368625,
+                        554.20032,
+                        554.14533375,
+                        554.08875,
+                        554.03059125,
+                        553.97088,
+                        553.90963875,
+                        553.84689,
+                        553.78265625,
+                        553.71696,
+                        553.64982375,
+                        553.58127,
+                        553.51132125,
+                        553.44,
+                        553.36732875,
+                        553.29333,
+                        553.21802625,
+                        553.14144,
+                        553.06359375,
+                        552.98451,
+                        552.90421125,
+                        552.82272,
+                        552.74005875,
+                        552.65625,
+                        552.57131625,
+                        552.48528,
+                        552.39816375,
+                        552.30999,
+                        552.22078125,
+                        552.13056,
+                        552.03934875,
+                        551.94717,
+                        551.85404625,
+                        551.76,
+                        551.66505375,
+                        551.56923,
+                        551.47255125,
+                        551.37504,
+                        551.27671875,
+                        551.17761,
+                        551.07773625,
+                        550.97712,
+                        550.87578375,
+                        550.77375,
+                        550.67104125,
+                        550.56768,
+                        550.46368875,
+                        550.35909,
+                        550.25390625,
+                        550.14816,
+                        550.04187375,
+                        549.93507,
+                        549.82777125,
+                        549.72,
+                        549.61177875,
+                        549.50313,
+                        549.39407625,
+                        549.28464,
+                        549.17484375,
+                        549.06471,
+                        548.95426125,
+                        548.84352,
+                        548.73250875,
+                        548.62125,
+                        548.50976625,
+                        548.39808,
+                        548.28621375,
+                        548.17419,
+                        548.06203125,
+                        547.94976,
+                        547.83739875,
+                        547.72497,
+                        547.61249625,
+                        547.5,
+                        547.38750375,
+                        547.27503,
+                        547.16260125,
+                        547.05024,
+                        546.93796875,
+                        546.82581,
+                        546.71378625,
+                        546.60192,
+                        546.49023375,
+                        546.37875,
+                        546.26749125,
+                        546.15648,
+                        546.04573875,
+                        545.93529,
+                        545.82515625,
+                        545.71536,
+                        545.60592375,
+                        545.49687,
+                        545.38822125,
+                        545.28,
+                        545.17222875,
+                        545.06493,
+                        544.95812625,
+                        544.85184,
+                        544.74609375,
+                        544.64091,
+                        544.53631125,
+                        544.43232,
+                        544.32895875,
+                        544.22625,
+                        544.12421625,
+                        544.02288,
+                        543.92226375,
+                        543.82239,
+                        543.72328125,
+                        543.62496,
+                        543.52744875,
+                        543.43077,
+                        543.33494625,
+                        543.24,
+                        543.14595375,
+                        543.05283,
+                        542.96065125,
+                        542.86944,
+                        542.77921875,
+                        542.69001,
+                        542.60183625,
+                        542.51472,
+                        542.42868375,
+                        542.34375,
+                        542.25994125,
+                        542.17728,
+                        542.09578875,
+                        542.01549,
+                        541.93640625,
+                        541.85856,
+                        541.78197375,
+                        541.70667,
+                        541.63267125,
+                        541.56,
+                        541.48867875,
+                        541.41873,
+                        541.35017625,
+                        541.28304,
+                        541.21734375,
+                        541.15311,
+                        541.09036125,
+                        541.02912,
+                        540.96940875,
+                        540.91125,
+                        540.85466625,
+                        540.79968,
+                        540.74631375,
+                        540.69459,
+                        540.64453125,
+                        540.59616,
+                        540.54949875,
+                        540.50457,
+                        540.46139625,
+                        540.42,
+                        540.38040375,
+                        540.34263,
+                        540.30670125,
+                        540.27264,
+                        540.24046875,
+                        540.21021,
+                        540.18188625,
+                        540.15552,
+                        540.13113375,
+                        540.10875,
+                        540.08839125,
+                        540.07008,
+                        540.05383875,
+                        540.03969,
+                        540.02765625,
+                        540.01776,
+                        540.01002375,
+                        540.00447,
+                        540.00112125,
+                        540
+                    },
+                    {
+                        -10,
+                        -9.9992525,
+                        -9.99702,
+                        -9.9933175,
+                        -9.98816,
+                        -9.9815625,
+                        -9.97354,
+                        -9.9641075,
+                        -9.95328,
+                        -9.9410725,
+                        -9.9275,
+                        -9.9125775,
+                        -9.89632,
+                        -9.8787425,
+                        -9.85986,
+                        -9.8396875,
+                        -9.81824,
+                        -9.7955325,
+                        -9.77158,
+                        -9.7463975,
+                        -9.72,
+                        -9.6924025,
+                        -9.66362,
+                        -9.6336675,
+                        -9.60256,
+                        -9.5703125,
+                        -9.53694,
+                        -9.5024575,
+                        -9.46688,
+                        -9.4302225,
+                        -9.3925,
+                        -9.3537275,
+                        -9.31392,
+                        -9.2730925,
+                        -9.23126,
+                        -9.1884375,
+                        -9.14464,
+                        -9.0998825,
+                        -9.05418,
+                        -9.0075475,
+                        -8.96,
+                        -8.9115525,
+                        -8.86222,
+                        -8.8120175,
+                        -8.76096,
+                        -8.7090625,
+                        -8.65634,
+                        -8.6028075,
+                        -8.54848,
+                        -8.4933725,
+                        -8.4375,
+                        -8.3808775,
+                        -8.32352,
+                        -8.2654425,
+                        -8.20666,
+                        -8.1471875,
+                        -8.08704,
+                        -8.0262325,
+                        -7.96478,
+                        -7.9026975,
+                        -7.84,
+                        -7.7767025,
+                        -7.71282,
+                        -7.6483675,
+                        -7.58336,
+                        -7.5178125,
+                        -7.45174,
+                        -7.3851575,
+                        -7.31808,
+                        -7.2505225,
+                        -7.1825,
+                        -7.1140275,
+                        -7.04512,
+                        -6.9757925,
+                        -6.90606,
+                        -6.8359375,
+                        -6.76544,
+                        -6.6945825,
+                        -6.62338,
+                        -6.5518475,
+                        -6.48,
+                        -6.4078525,
+                        -6.33542,
+                        -6.2627175,
+                        -6.18976,
+                        -6.1165625,
+                        -6.04314,
+                        -5.9695075,
+                        -5.89568,
+                        -5.8216725,
+                        -5.7475,
+                        -5.6731775,
+                        -5.59872,
+                        -5.5241425,
+                        -5.44946,
+                        -5.3746875,
+                        -5.29984,
+                        -5.2249325,
+                        -5.14998,
+                        -5.0749975,
+                        -5,
+                        -4.9250025,
+                        -4.85002,
+                        -4.7750675,
+                        -4.70016,
+                        -4.6253125,
+                        -4.55054,
+                        -4.4758575,
+                        -4.40128,
+                        -4.3268225,
+                        -4.2525,
+                        -4.1783275,
+                        -4.10432,
+                        -4.0304925,
+                        -3.95686,
+                        -3.8834375,
+                        -3.81024,
+                        -3.7372825,
+                        -3.66458,
+                        -3.5921475,
+                        -3.52,
+                        -3.4481525,
+                        -3.37662,
+                        -3.3054175,
+                        -3.23456,
+                        -3.1640625,
+                        -3.09394,
+                        -3.0242075,
+                        -2.95488,
+                        -2.8859725,
+                        -2.8175,
+                        -2.7494775,
+                        -2.68192,
+                        -2.6148425,
+                        -2.54826,
+                        -2.4821875,
+                        -2.41664,
+                        -2.3516325,
+                        -2.28718,
+                        -2.2232975,
+                        -2.16,
+                        -2.0973025,
+                        -2.03522,
+                        -1.9737675,
+                        -1.91296,
+                        -1.8528125,
+                        -1.79334,
+                        -1.7345575,
+                        -1.67648,
+                        -1.6191225,
+                        -1.5625,
+                        -1.5066275,
+                        -1.45152,
+                        -1.3971925,
+                        -1.34366,
+                        -1.2909375,
+                        -1.23904,
+                        -1.1879825,
+                        -1.13778,
+                        -1.0884475,
+                        -1.04,
+                        -0.9924525,
+                        -0.94582,
+                        -0.9001175,
+                        -0.85536,
+                        -0.8115625,
+                        -0.76874,
+                        -0.7269075,
+                        -0.68608,
+                        -0.6462725,
+                        -0.6075,
+                        -0.5697775,
+                        -0.53312,
+                        -0.4975425,
+                        -0.46306,
+                        -0.4296875,
+                        -0.39744,
+                        -0.3663325,
+                        -0.33638,
+                        -0.3075975,
+                        -0.28,
+                        -0.2536025,
+                        -0.22842,
+                        -0.2044675,
+                        -0.18176,
+                        -0.1603125,
+                        -0.14014,
+                        -0.1212575,
+                        -0.10368,
+                        -0.0874225,
+                        -0.0725,
+                        -0.0589275,
+                        -0.04672,
+                        -0.0358925,
+                        -0.02646,
+                        -0.0184375,
+                        -0.01184,
+                        -0.0066825,
+                        -0.00298,
+                        -0.0007475,
+                        0
+                    }
+                }
+            }
+        }
+    },
+    ["ADBE Scale_27"] = {
+        ["d"] = 3,
+        ["k"] = {
+            {
+                0,
+                217.185048384895,
+                151.561421289354,
+                100
+            },
+            {
+                0.13333333333333,
+                141.014766934713,
+                123.437009676979,
+                100
+            },
+            {
+                0.6,
+                100,
+                100,
+                100
+            }
+        },
+        ["s"] = {
+            {
+                ["o"] = {
+                    {
+                        0.00013333333333,
+                        217.185048384895
+                    },
+                    {
+                        0.00013333333333,
+                        151.561421289354
+                    },
+                    {
+                        0.00013333333333,
+                        100
+                    }
+                },
+                ["i"] = {
+                    {
+                        0.0255464768062,
+                        178.738435410317
+                    },
+                    {
+                        0.06363217961291,
+                        133.574707946036
+                    },
+                    {
+                        0.03066666666667,
+                        100
+                    }
+                }
+            },
+            {
+                ["o"] = {
+                    {
+                        0.19251558490594,
+                        120.808666905635
+                    },
+                    {
+                        0.21142062850793,
+                        110.398090870093
+                    },
+                    {
+                        0.23133333333333,
+                        100
+                    }
+                },
+                ["i"] = {
+                    {
+                        0.29521074096362,
+                        100
+                    },
+                    {
+                        0.31945150295893,
+                        100
+                    },
+                    {
+                        0.36666666666667,
+                        100
+                    }
+                }
+            }
+        }
+    },
+    ["ADBE Rotate X_29"] = {
+        ["d"] = 1,
+        ["k"] = {
+            {
+                0,
+                14
+            },
+            {
+                0.6,
+                0
+            }
+        },
+        ["s"] = {
+            {
+                ["o"] = {
+                    {
+                        0.198,
+                        14
+                    }
+                },
+                ["i"] = {
+                    {
+                        0.27,
+                        0
+                    }
+                }
+            }
+        }
+    },
+    ["ADBE Rotate Y_30"] = {
+        ["d"] = 1,
+        ["k"] = {
+            {
+                0,
+                -30
+            },
+            {
+                0.6,
+                0
+            }
+        },
+        ["s"] = {
+            {
+                ["o"] = {
+                    {
+                        0.198,
+                        -30
+                    }
+                },
+                ["i"] = {
+                    {
+                        0.27,
+                        0
+                    }
+                }
+            }
+        }
+    },
+    ["ADBE Exposure2-0003"] = {
+        ["d"] = 1,
+        ["k"] = {
+            {
+                0.13333333333333,
+                0.5
+            },
+            {
+                0.53333333333333,
+                0
+            }
+        },
+        ["s"] = {
+            {
+                ["o"] = {
+                    {
+                        0.25333333333333,
+                        0.5
+                    }
+                },
+                ["i"] = {
+                    {
+                        0.33333333333333,
+                        0
+                    }
+                }
+            }
+        }
+    },
+}
+
+
+
+
+
+
+
+---------- VAMain.lua ----------
+
+
+local VAMain = {}
+VAMain.__index = VAMain
+function VAMain.new (env)
+    local self = setmetatable({}, VAMain)
+    self.DESIGN_SIZE = 1080
+    self.DESIGN_FOV = math.rad(39.6)
+    self.DESIGN_CAMERA_Z = -(self.DESIGN_SIZE/2) / math.tan(self.DESIGN_FOV/2)
+    self.RENDER_RATIO = 1.5
+    self.DURATION = 18 / 30
+    self.GS_X_INTENSITY = 0.5
+    self.GS_Y_INTENSITY = 0.5
+    self.AE = AE
+    return self
+end
+function VAMain:tr (x)
+    return ((self.RENDER_RATIO - 1) * 0.5 + x) / self.RENDER_RATIO
+end
+
+
+function VAMain:create (env, scene)
+    Helper.initPipeline(scene, "@Pipeline")
+
+    self.bx1 = scene:findEntityBy("bx1"):getComponent("MeshRenderer").material
+    self.bx2 = scene:findEntityBy("bx2"):getComponent("MeshRenderer").material
+    self.bx3 = scene:findEntityBy("bx3"):getComponent("MeshRenderer").material
+    self.bx4 = scene:findEntityBy("bx4"):getComponent("MeshRenderer").material
+    self.by1 = scene:findEntityBy("by1"):getComponent("MeshRenderer").material
+    self.by2 = scene:findEntityBy("by2"):getComponent("MeshRenderer").material
+
+    self.spriteT = scene:findEntityBy("sprite"):getComponent("Transform")
+    self.spriteM = scene:findEntityBy("sprite"):getComponent("MeshRenderer").material
+    self.spriteC = scene:findEntityBy("camera_sprite"):getComponent("Camera")
+    self.spriteCT = scene:findEntityBy("camera_sprite"):getComponent("Transform")
+    self.exposure = scene:findEntityBy("exposure"):getComponent("MeshRenderer").material
+
+    self.ert0 = scene:findEntityBy("camera_bx2"):getComponent("Camera").renderTexture
+    self.ert1 = scene:findEntityBy("camera_bx1"):getComponent("Camera").renderTexture
+    self.rt0 = self.spriteC.renderTexture
+    self.ae = AEAdapter:new()
+    self.ae:addKeyframes("", self.AE)
+end
+
+function VAMain:layout (env, w, h)
+    self.rt0.width = w
+    self.rt0.height = h
+    local ew = w * self.RENDER_RATIO
+    local eh = h * self.RENDER_RATIO
+    self.ert0.width = ew
+    self.ert0.height = eh
+    self.ert1.width = ew
+    self.ert1.height = eh
+
+    local fov = math.atan(math.tan(self.DESIGN_FOV/2) * (h/w)) * 2
+    self.spriteC.fovy = math.deg(fov)
+    self.cameraZ = -(h/2) / math.tan(fov/2)
+    self.spriteM:setVec2("u_size", Amaz.Vector2f(ew, eh))
+
+    local s = math.min(w, h) / self.DESIGN_SIZE
+    w = w / s
+    h = h / s
+    ew = ew / s
+    eh = eh / s
+
+    local _w = 1 / ew
+    local _h = 1 / eh
+    self.bx1:setFloat("u_step_x", _w)
+    self.bx2:setFloat("u_step_x", _w)
+    self.bx3:setFloat("u_step_x", _w)
+    self.bx4:setFloat("u_step_x", _w)
+    self.by1:setFloat("u_step_y", _h)
+    self.by2:setFloat("u_step_y", _h)
+end
+
+function VAMain:update (env, duration, elapsed, progress)
+    elapsed = progress * self.DURATION
+
+    local p = self.ae:get("/ADBE Position_23", elapsed)
+    local x = Utils.mix(-env.w * 0.5, env.w * 0.5, p[1] / self.DESIGN_SIZE)
+    local y = Utils.mix(env.h * 0.5, -env.h * 0.5, p[2] / self.DESIGN_SIZE)
+    local z = Utils.mix(0, self.cameraZ, Utils.step(self.DESIGN_CAMERA_Z, 0, p[3]))
+    local rx = self.ae:get("/ADBE Rotate X_29", elapsed)[1]
+    local ry = -self.ae:get("/ADBE Rotate Y_30", elapsed)[1]
+    local s = self.ae:get("/ADBE Scale_27", elapsed)
+    local sx = s[1] * 0.01
+    local sy = s[2] * 0.01
+
+    local M = self:transform(x, y, z, sx, sy, 1, rx, ry, 0)
+    self.spriteM:setMat4("u_CustomModel", M)
+
+    local exposure = self.ae:get("/ADBE Exposure2-0003", elapsed)[1]
+    self.exposure:setFloat("u_Intensity", exposure)
+
+    local bx = self.ae:get("/ADBE Gaussian Blur 2-0001_12", elapsed)[1] * self.GS_X_INTENSITY
+    self.bx1:setFloat("u_radius", bx)
+    self.bx2:setFloat("u_radius", bx * 0.5)
+    self.bx3:setFloat("u_radius", bx * 0.25)
+    self.bx4:setFloat("u_radius", bx * 0.125)
+    local by = self.ae:get("/ADBE Gaussian Blur 2-0001_17", elapsed)[1] * self.GS_Y_INTENSITY
+    self.by1:setFloat("u_radius", by)
+    self.by2:setFloat("u_radius", by * 0.5)
+end
+
+
+function VAMain:transform (x, y, z, sx, sy, sz, rx, ry, rz)
+    local translate = Amaz.Matrix4x4f()
+    translate:setTranslate(Amaz.Vector3f(x, y, z))
+    local scale = Amaz.Matrix4x4f()
+    scale:setScale(Amaz.Vector3f(sx, sy, sz))
+    local rotateX = Amaz.Matrix4x4f()
+    rotateX:setTR(Amaz.Vector3f(0, 0, 0), Amaz.Quaternionf.eulerToQuaternion(Amaz.Vector3f(math.rad(rx), 0, 0)))
+    local rotateY = Amaz.Matrix4x4f()
+    rotateY:setTR(Amaz.Vector3f(0, 0, 0), Amaz.Quaternionf.eulerToQuaternion(Amaz.Vector3f(0, math.rad(ry), 0)))
+    local rotateZ = Amaz.Matrix4x4f()
+    rotateZ:setTR(Amaz.Vector3f(0, 0, 0), Amaz.Quaternionf.eulerToQuaternion(Amaz.Vector3f(0, 0, math.rad(rz))))
+
+    local M = Amaz.Matrix4x4f()
+    M = M * translate
+    M = M * rotateX
+    M = M * rotateY
+    M = M * rotateZ
+    M = M * scale
+    return M
+end
+
+
+
+
+
+
+
+---------- VAEntry.lua ----------
+
+local exports = exports or {}
+local SeekModeScript = SeekModeScript or {}
+SeekModeScript.__index = SeekModeScript
+
+
+function SeekModeScript.new (construct, ...)
+    local self = setmetatable({}, SeekModeScript)
+    self.main = VAMain.new()
+    return self
+end
+
+function SeekModeScript:onStart (comp)
+    self:_adapt_onStart(comp)
+    self.rootDir = comp.entity.scene.assetMgr.rootDir
+    --
+    self.curTime = 0
+    self.duration = 3
+    self.w = Amaz.BuiltinObject.getInputTextureWidth()
+    self.h = Amaz.BuiltinObject.getInputTextureHeight()
+    self.main:create(self, comp.entity.scene)
+    self.main:layout(self, self.w, self.h)
+    self.main:update(self, 1, 0, 0)
+    ---#ifdef DEV
+--//    self.sampleNode = comp.entity.scene:findEntityBy("@Sample")
+--//    if self.sampleNode then
+--//        self.sampleNode.visible = false
+--//        self.sampleAnim = self.sampleNode:searchEntity("sample"):getComponent("AnimSeqComponent")
+--//    end
+    ---#endif
+    --
+end
+
+function SeekModeScript:seek (time)
+    self:_adapt_seek(time)
+    --
+    local w = Amaz.BuiltinObject.getInputTextureWidth()
+    local h = Amaz.BuiltinObject.getInputTextureHeight()
+    if w ~= self.w or h ~= self.h then
+        self.w = w
+        self.h = h
+        self.main:layout(self, self.w, self.h)
+    end
+    self.main:update(self, self.duration, time, time / self.duration)
+    --
+end
+
+function SeekModeScript:setParams (name, value)
+    if name == "u_size" then
+        -- local bgAspect = value.x / value.y
+        -- local videoAspect = value.z / value.w
+        -- if bgAspect > videoAspect then
+        --     self.scaleCorrect = value.w / value.y
+        -- else
+        --     self.scaleCorrect = value.z / value.x
+        -- end
+        -- self.videoMat:setVec4("u_size", value)
+        -- self.modelMat:setVec4("u_size", value)
+        local FBS = Amaz.Vector2f(value.x, value.y)
+        self.fxaaMat:setVec2("FBS", FBS)
+        self.blendMat:setVec4("u_size", value)
+    elseif name == "u_pos" then
+        -- self.videoMat:setVec2("u_pos", value)
+        -- self.blendMat:setVec2("u_pos", value)
+        self.userPosition:set(value.x, value.y, 0)
+    elseif name == "u_angle" then
+        -- self.videoMat:setFloat("u_angle", value)
+        -- self.blendMat:setFloat("u_angle", value)
+        self.userEulerAngle:set(0, 0, value / math.pi * 180)
+    elseif name == "u_scale" then
+        -- self.videoMat:setFloat("u_scale", value)
+        -- self.blendMat:setFloat("u_scale", value * self.scaleCorrect)
+        self.userScale:set(value, value, 1)
+    elseif name == "u_flipX" then
+        self.videoMat:setFloat("u_flipX", value)
+    elseif name == "u_flipY" then
+        self.videoMat:setFloat("u_flipY", value)
+    elseif name == "_alpha" then
+        self.blendMat:setFloat("_alpha", value)
+    end
+end
+
+function SeekModeScript:setDuration (duration)
+    self.duration = duration
+end
+
+function SeekModeScript:_adapt_onStart (comp)
+    self.curTime = 0
+    self.values = {}
+    self.params = {}
+    self.anims = {}
+    self.animDirty = true
+    self.entity = comp.entity
+    self.scaleCorrect = 1.0
+    self.videoMat = self.entity.scene:findEntityBy("video"):getComponent("MeshRenderer").material
+    self.modelMat = self.entity.scene:findEntityBy("quad"):getComponent("MeshRenderer").material
+    self.fxaaMat = self.entity.scene:findEntityBy("fxaa"):getComponent("MeshRenderer").material
+    self.blendMat = self.entity.scene:findEntityBy("blend"):getComponent("MeshRenderer").material
+    self.transform = self.entity.scene:findEntityBy("quad"):getComponent("Transform")
+    self.userPosition = Amaz.Vector3f(0, 0, 0)
+    self.userEulerAngle = Amaz.Vector3f(0, 0, 0)
+    self.userScale = Amaz.Vector3f(1, 1, 1)
+end
+
+function SeekModeScript:_adapt_seek (time)
+    local inputW = Amaz.BuiltinObject:getInputTextureWidth()
+    local inputH = Amaz.BuiltinObject:getInputTextureHeight()
+    local inputRatio = inputW / inputH
+    local outputW = Amaz.BuiltinObject:getOutputTextureWidth()
+    local outputH = Amaz.BuiltinObject:getOutputTextureHeight()
+    local outputRatio = outputW / outputH
+    local fitScale = Amaz.Vector3f(1, 1, 1)
+    local extraScale = 1
+    if inputRatio < outputRatio then
+        fitScale.x = inputRatio
+        extraScale = inputH / outputH
+    else
+        fitScale.x = outputRatio
+        fitScale.y = outputRatio / inputRatio
+        extraScale = inputW / outputW
+    end
+
+    local uvScale = Amaz.Vector2f(1, 1)
+    local xRatio = inputRatio / outputRatio
+    local yRatio = outputRatio / inputRatio
+    if outputRatio > 1. then
+        if outputRatio > inputRatio then
+            uvScale.x = xRatio
+        else
+            uvScale.y = yRatio
+        end
+    elseif math.abs(outputRatio - 1.) < .1 then
+        if inputRatio < 1. then
+            uvScale.x = xRatio
+        else
+            uvScale.y = yRatio
+        end
+    elseif outputRatio < 1. then
+        if math.abs(inputRatio - 1.) < .1 or outputRatio < inputRatio then
+            uvScale.y = yRatio
+        else
+            uvScale.x = xRatio
+        end
+    end
+
+    self.modelMat:setFloat("u_OutputWidth", outputW)
+    self.modelMat:setFloat("u_OutputHeight", outputH)
+
+    local userMat = Amaz.Matrix4x4f()
+    userMat:setTRS(
+        Amaz.Vector3f(self.userPosition.x * outputRatio, self.userPosition.y, self.userPosition.z),
+        Amaz.Quaternionf.EulerToQuaternion(-self.userEulerAngle / 180 * math.pi),
+        Amaz.Vector3f(1, 1, 1) * self.userScale.x * extraScale
+    )
+    userMat:invert_Full()
+
+    local fitMat = Amaz.Matrix4x4f()
+    fitMat:setTRS(Amaz.Vector3f(0, 0, 0), Amaz.Quaternionf.identity(), Amaz.Vector3f(uvScale.x, uvScale.y, 1))
+    fitMat:invert_Full()
+
+    self.modelMat:setMat4("userMat", userMat)
+    self.modelMat:setMat4("fitMat", fitMat)
+end
+
+
+---#ifdef DEV
+--//function SeekModeScript:onUpdate (comp, dt)
+--//    self.blendMat:enableMacro("AMAZING_EDITOR_DEV", 1)
+--//    self.modelMat:enableMacro("AMAZING_EDITOR_DEV", 1)
+
+--//    if self.dev_seek then
+--//        self:seek(self.dev_seek * self.duration)
+--//    else
+--//        self:seek(self.curTime)
+--//    end
+--//    self.curTime = self.curTime + dt
+--//end
+--//function SeekModeScript:onEvent (comp, event)
+--//    if event.type == Amaz.EventType.TOUCH then
+--//        local pointer = event.args:get(0)
+--//        if pointer.type == Amaz.TouchType.TOUCH_BEGAN then
+--//            self.dev_seek = 0
+--//        elseif pointer.type == Amaz.TouchType.TOUCH_MOVED then
+--//            self.dev_seek = pointer.x
+--//            if self.sampleAnim and self.sampleAnim.animSeq then
+--//                self.sampleNode.visible = pointer.y > 0.5
+--//                local frameCount = self.sampleAnim.animSeq:getFrameCount()
+--//                local frameIndex = math.min(math.floor(self.dev_seek * frameCount), frameCount - 1)
+--//                self.sampleAnim:seek(frameIndex)
+--//            end
+--//        elseif pointer.type == Amaz.TouchType.TOUCH_ENDED or pointer.type == Amaz.TouchType.TOUCH_CANCELLED then
+--//            if pointer.y > 0.9 then
+--//                self.curTime = self.duration * self.dev_seek
+--//                self.dev_seek = nil
+--//                if self.sampleAnim then
+--//                    self.sampleNode.visible = false
+--//                end
+--//            end
+--//        end
+--//    end
+--//end
+---#endif
+
+
+exports.SeekModeScript = SeekModeScript
+return exports

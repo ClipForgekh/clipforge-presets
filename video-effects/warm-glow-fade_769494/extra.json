@@ -1,0 +1,65 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "maxBlur",
+                "effect_key_cn": "max Bl",
+                "type": "float",
+                "default": 32,
+                "min": 10,
+                "max": 50
+            },
+            {
+                "effect_key": "maxWarp",
+                "effect_key_cn": "max Wa",
+                "type": "float",
+                "default": 1.2,
+                "min": 0.5,
+                "max": 2
+            },
+            {
+                "effect_key": "maxExposure",
+                "effect_key_cn": "max Ex",
+                "type": "float",
+                "default": 4.8,
+                "min": 2,
+                "max": 6
+            },
+            {
+                "effect_key": "maxGlow",
+                "effect_key_cn": "max Gl",
+                "type": "float",
+                "default": 2.8,
+                "min": 1,
+                "max": 4
+            },
+            {
+                "effect_key": "maxScale",
+                "effect_key_cn": "max Sc",
+                "type": "float",
+                "default": 1.25,
+                "min": 1.1,
+                "max": 1.5
+            },
+            {
+                "effect_key": "warmColor",
+                "effect_key_cn": "warm C",
+                "type": "color",
+                "default": [
+                    1,
+                    0.8,
+                    0.3
+                ]
+            }
+        ]
+    }
+}

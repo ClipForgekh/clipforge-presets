@@ -1,0 +1,38 @@
+%YAML 1.1
+--- !Material &1
+name: ""
+guid: {a: 667649338402172275, b: 6973929219312625066}
+xshader: {localId: 1, path: xshader/somePass.xshader}
+properties:
+  __class: PropertySheet
+  name: ""
+  guid: {a: 7730348698843923954, b: 3467766852564324497}
+  floatmap:
+    __class: Map
+    noiseIns: 0
+    scaleIns: 1
+    xOffset: 0
+    yOffset: 0
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    inputTexture: {localId: 1, path: effects/GaussianBlur/rt/gaussianBlurVertical.rt}
+    noiseTex: {localId: 1, path: image/噪波图.png}
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+  AE_AreaLightNum: !<str> 0
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+mshaderPath: ""
+instanceCount: 0

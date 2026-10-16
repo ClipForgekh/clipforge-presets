@@ -1,0 +1,32 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurCenter",
+                "effect_key_cn": "模糊中心",
+                "type": "vec2",
+                "default": [
+                    0.5,
+                    0.5
+                ]
+            },
+            {
+                "effect_key": "blurIntensity",
+                "effect_key_cn": "模糊强度",
+                "type": "float",
+                "default": 0.4,
+                "min": 0,
+                "max": 1
+            }
+        ]
+    }
+}

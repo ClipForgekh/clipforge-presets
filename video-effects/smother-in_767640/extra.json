@@ -1,0 +1,33 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "flameEdgeSoftness",
+                "effect_key_cn": "火焰边缘柔软",
+                "type": "float",
+                "default": 0.18,
+                "min": 0.05,
+                "max": 0.35
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 1.2,
+                "min": 0.5,
+                "max": 2
+            },
+            {
+                "effect_key": "flameColor",
+                "effect_key_cn": "火焰颜色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.56,
+                    0.24
+                ]
+            }
+        ]
+    }
+}

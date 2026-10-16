@@ -1,0 +1,31 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "stripCount",
+                "effect_key_cn": "条数",
+                "type": "float",
+                "default": 50,
+                "min": 10,
+                "max": 100
+            },
+            {
+                "effect_key": "stripDelayRange",
+                "effect_key_cn": "条带延迟范围",
+                "type": "float",
+                "default": 0.35,
+                "min": 0,
+                "max": 0.8
+            },
+            {
+                "effect_key": "fallOvershoot",
+                "effect_key_cn": "跌倒超调",
+                "type": "float",
+                "default": 0.25,
+                "min": 0,
+                "max": 0.6
+            }
+        ]
+    }
+}

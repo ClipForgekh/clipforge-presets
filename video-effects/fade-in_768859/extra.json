@@ -1,0 +1,41 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "bandDensity",
+                "effect_key_cn": "bandDensity",
+                "type": "float",
+                "default": 120,
+                "min": 40,
+                "max": 240
+            },
+            {
+                "effect_key": "glitchStrength",
+                "effect_key_cn": "glitchStrength",
+                "type": "float",
+                "default": 0.8,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "noiseTint",
+                "effect_key_cn": "noiseTint",
+                "type": "vec3",
+                "default": [
+                    0.2,
+                    0.8,
+                    1
+                ]
+            }
+        ]
+    }
+}

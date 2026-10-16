@@ -1,0 +1,57 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "maxBlur",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 0.06,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "curtainIntensity",
+                "effect_key_cn": "帘幕强度",
+                "type": "float",
+                "default": 4,
+                "min": 0,
+                "max": 6
+            },
+            {
+                "effect_key": "curtainThickness",
+                "effect_key_cn": "窗帘厚度",
+                "type": "float",
+                "default": 0.22,
+                "min": 0.02,
+                "max": 0.6
+            },
+            {
+                "effect_key": "upwardDrift",
+                "effect_key_cn": "向上漂移",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.5
+            },
+            {
+                "effect_key": "goldColor",
+                "effect_key_cn": "金色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.82,
+                    0.45
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+{
+  "key": "LumiSaturation",
+  "category": "Color Correction",
+  "desc": "饱和度调节效果 - 调整图像色彩的饱和度，通过灰度混合实现。适用于色彩增强、饱和度校正、色彩风格化、单色效果",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果 - 关闭饱和度调节效果，不应用任何饱和度调节，保持图像原始状态"
+    },
+    {
+      "name": "low",
+      "desc": "轻度饱和度调节 - 为图像添加轻微的饱和度调节，创建灰度混合效果"
+    },
+    {
+      "name": "medium",
+      "desc": "中等饱和度调节 - 为图像添加中等的饱和度调节，创建灰度混合效果"
+    },
+    {
+      "name": "high",
+      "desc": "重度饱和度调节 - 为图像添加严重的饱和度调节，创建灰度混合效果"
+    },
+    {
+      "name": "grayscale",
+      "desc": "黑白效果 - 为图像添加黑白效果，将色彩转换为灰度"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "saturationIntensity",
+      "desc": "饱和度强度 - 控制色彩饱和度，0为灰度，正值增强饱和度，负值降低饱和度",
+      "type": "number",
+      "value": 0.5
+    },
+    {
+      "name": "intensity",
+      "desc": "饱和度调节强度 - 控制饱和度调节的整体强度，0为无调节，1为最大调节",
+      "type": "number",
+      "value": 1.0
+    }
+  ]
+}

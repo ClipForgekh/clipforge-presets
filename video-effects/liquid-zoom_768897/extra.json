@@ -1,0 +1,56 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "compression",
+                "effect_key_cn": "compression",
+                "type": "float",
+                "default": 0.25,
+                "min": 0.1,
+                "max": 0.6
+            },
+            {
+                "effect_key": "depthOffset",
+                "effect_key_cn": "depthOffset",
+                "type": "float",
+                "default": 0.05,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "depthRotation",
+                "effect_key_cn": "depthRotation",
+                "type": "float",
+                "default": 0.08,
+                "min": 0,
+                "max": 0.3
+            },
+            {
+                "effect_key": "depthSkew",
+                "effect_key_cn": "depthSkew",
+                "type": "float",
+                "default": 0.06,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "initialOffset",
+                "effect_key_cn": "initialOffset",
+                "type": "vec2",
+                "default": [
+                    0.05,
+                    -0.04
+                ]
+            }
+        ]
+    }
+}

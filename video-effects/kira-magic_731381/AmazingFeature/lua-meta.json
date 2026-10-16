@@ -1,0 +1,639 @@
+[
+    {
+        "ClassName": "AETools",
+        "Super": "",
+        "FilePath": "lua/SeekModeScript.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939 3/k2/\u51fa\u573a/AmazingFeature/lua/SeekModeScript.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_remap01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_cubicBezier",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_cubicBezier01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_getBezier01X",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_mix",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "SetAllFrame",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "GetVal",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "test",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setDuration",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "PaopaoBlur",
+        "Super": "ScriptComponent",
+        "FilePath": "lua/PaopaoBlur.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939 3/k2/\u51fa\u573a/AmazingFeature/lua/PaopaoBlur.lua",
+        "Properties": [
+            {
+                "VarName": "intensity",
+                "VarType": "Double",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_get01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "AETransform",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/ae_transform/AETransform.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939 3/k2/\u51fa\u573a/AmazingFeature/effects/ae_transform/AETransform.lua",
+        "Properties": [
+            {
+                "VarName": "active_cam_fovx",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "compositeSize",
+                "VarType": "Vector2f",
+                "Comment": ""
+            },
+            {
+                "VarName": "is3DLayer",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "anchorPoint",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "orientation",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "position",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "scale",
+                "VarType": "Vector3f",
+                "Comment": ""
+            },
+            {
+                "VarName": "xRotation",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    -360.0,
+                                    360.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Drag",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "yRotation",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    -360.0,
+                                    360.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Drag",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "rotation",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    -360.0,
+                                    360.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Drag",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "opacity",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    100.0
+                                ]
+                            },
+                            {
+                                "AttrType": "Drag",
+                                "RawValue": "",
+                                "Values": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "mirrorEdge",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "paramListener",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setEffectAttr",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_rotateByAEAxis",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "TemperatureTone",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/TemperatureTone/lua/TemperatureTone.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939 3/k2/\u51fa\u573a/AmazingFeature/effects/TemperatureTone/lua/TemperatureTone.lua",
+        "Properties": [
+            {
+                "VarName": "ColorTemperature",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    -1.0,
+                                    1.0
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "ColorTones",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    -1.0,
+                                    1.0
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "vec3Compute",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "TurbulenceDisplacement",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/Displacement/lua/TurbulenceDisplacement.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939 3/k2/\u51fa\u573a/AmazingFeature/effects/Displacement/lua/TurbulenceDisplacement.lua",
+        "Properties": [
+            {
+                "VarName": "size",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "quantity",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "complexity",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "evolution",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "cycle",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "offset_x",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "offset_y",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "type",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "fix_type",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "picture_scale",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "motion_tile_type",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "start",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "LumiLayerBlend",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/lumi_blend/lua/LumiLayerBlend.lua",
+        "FileAbsPath": "/Users/yanhong/Desktop/\u672a\u547d\u540d\u6587\u4ef6\u5939 3/k2/\u51fa\u573a/AmazingFeature/effects/lumi_blend/lua/LumiLayerBlend.lua",
+        "Properties": [
+            {
+                "VarName": "useSourceAlpha",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "sourceOpacity",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "blendMode",
+                "VarType": "String",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Option",
+                                "RawValue": "",
+                                "Values": [
+                                    "Normal",
+                                    "Add",
+                                    "Multiply",
+                                    "Difference",
+                                    "Overlay",
+                                    "Darken",
+                                    "Lighten",
+                                    "SoftLight",
+                                    "HardLight",
+                                    "Hue",
+                                    "Saturation",
+                                    "Color",
+                                    "Screen",
+                                    "ColorBurn",
+                                    "LinearBurn",
+                                    "ColorDodge",
+                                    "LinearDodge",
+                                    "VividLight",
+                                    "LinearLight",
+                                    "PinLight",
+                                    "HardMix",
+                                    "Exclusion",
+                                    "Subtract",
+                                    "Divide",
+                                    "Luminosity",
+                                    "LighterColor",
+                                    "DarkerColor",
+                                    "Dissolve"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "VarName": "SourceTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setVisible",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

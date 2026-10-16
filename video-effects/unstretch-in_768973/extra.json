@@ -1,0 +1,63 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "initialScale",
+                "effect_key_cn": "initialScale",
+                "type": "float",
+                "default": 0.55,
+                "min": 0.3,
+                "max": 0.9
+            },
+            {
+                "effect_key": "overshootScale",
+                "effect_key_cn": "overshootScale",
+                "type": "float",
+                "default": 1.2,
+                "min": 1,
+                "max": 1.5
+            },
+            {
+                "effect_key": "reboundScale",
+                "effect_key_cn": "reboundScale",
+                "type": "float",
+                "default": 0.75,
+                "min": 0.5,
+                "max": 0.95
+            },
+            {
+                "effect_key": "verticalOffset",
+                "effect_key_cn": "verticalOffset",
+                "type": "float",
+                "default": 0.45,
+                "min": 0,
+                "max": 0.8
+            },
+            {
+                "effect_key": "fadeInPortion",
+                "effect_key_cn": "fadeInPortion",
+                "type": "float",
+                "default": 0.25,
+                "min": 0.05,
+                "max": 0.6
+            },
+            {
+                "effect_key": "settleExponent",
+                "effect_key_cn": "settleExponent",
+                "type": "float",
+                "default": 1.35,
+                "min": 0.8,
+                "max": 3
+            }
+        ]
+    }
+}

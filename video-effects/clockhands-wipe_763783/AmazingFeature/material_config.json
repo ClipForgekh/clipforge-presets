@@ -1,0 +1,17 @@
+{
+    "video_name": "1-1-mask",
+    "material_type": "NORMAL_SOLID",
+    "requires_sbs": true,
+    "mask_config": {
+        "mask_type": "radialWipe",
+        "params": {
+            "rotation": -0.25,
+            "feather": 0.05,
+            "center": [
+                0.5,
+                0.5
+            ],
+            "wipe_mode": "Both"
+        }
+    }
+}

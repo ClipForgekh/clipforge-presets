@@ -1,0 +1,86 @@
+%YAML 1.1
+--- !XShader &1
+name: Copy
+guid: {a: 3479572283048363165, b: 9770218215970857101}
+properties:
+  __class: PropertySheet
+  name: ""
+  guid: {a: 0, b: 0}
+  floatmap:
+    __class: Map
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+  intmap:
+    __class: Map
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: ""
+    guid: {a: 9101468573068083974, b: 18128695688981068213}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 2}
+        - {localId: 3}
+    semantics:
+      __class: Map
+      attPosition:
+        __class: VertexAttribType
+        value: POSITION
+      attUV:
+        __class: VertexAttribType
+        value: POSITION
+    clearColor: {r: 0, g: 0, b: 0, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: ""
+      guid: {a: 7441763535749777089, b: 13135001441295748793}
+      depthstencil:
+        __class: DepthStencilState
+        name: ""
+        guid: {a: 8524929051604618355, b: 4027562915586718105}
+        depthTestEnable: false
+        depthTestEnableName: ""
+        depthCompareOp:
+          __class: CompareOp
+          value: LESS
+        depthCompareOpName: ""
+        depthWriteEnable: false
+        stencilTestEnable: false
+        stencilTestEnableName: ""
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+--- !Shader &2
+name: ""
+guid: {a: 16880255933616201636, b: 3281707806704618155}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: xshader/Copy.vert
+--- !Shader &3
+name: ""
+guid: {a: 11404252581440939893, b: 4694759231536063642}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: xshader/Copy.frag

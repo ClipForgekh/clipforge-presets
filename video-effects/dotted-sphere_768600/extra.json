@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "dotMaxSize",
+                "effect_key_cn": "dotMaxSize",
+                "type": "float",
+                "default": 0.22,
+                "min": 0.08,
+                "max": 0.35
+            },
+            {
+                "effect_key": "dotMinSize",
+                "effect_key_cn": "dotMinSize",
+                "type": "float",
+                "default": 0.02,
+                "min": 0.006,
+                "max": 0.06
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "glowStrength",
+                "type": "float",
+                "default": 0.18,
+                "min": 0,
+                "max": 0.5
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "uBrightness",
+                "effect_key_cn": "u 亮度",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "uVortexStrength",
+                "effect_key_cn": "u 涡流强度",
+                "type": "float",
+                "default": 0.8,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "uGlowStrength",
+                "effect_key_cn": "u 发光强度",
+                "type": "float",
+                "default": 0.6,
+                "min": 0,
+                "max": 2
+            }
+        ]
+    }
+}

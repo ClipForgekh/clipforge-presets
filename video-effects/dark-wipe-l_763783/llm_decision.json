@@ -1,0 +1,17 @@
+{
+    "text": "THANKS",
+    "style_pe": "minimalist clean serif font",
+    "mask_config": {
+        "mask_type": "linear",
+        "params": {
+            "rotation": -0.75,
+            "feather": 0.05,
+            "center": [
+                0.5,
+                0.5
+            ],
+            "wipe_mode": "ClockWise"
+        }
+    },
+    "reason": "\u901a\u7528\u573a\u666f\u504f\u597d\uff1alinear\uff0c\u968f\u673a\u65cb\u8f6c: -0.75"
+}

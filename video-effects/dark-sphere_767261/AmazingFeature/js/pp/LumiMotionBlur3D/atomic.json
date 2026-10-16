@@ -1,0 +1,153 @@
+{
+  "key": "LumiMotionBlur3D",
+  "category": "Blur & Sharpen",
+  "desc": "3D transform motion blur driven by current and previous transform states.",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "Disable the smear and keep the source clean"
+    },
+    {
+      "name": "default",
+      "desc": "Balanced 3D motion blur for general use"
+    },
+    {
+      "name": "soft",
+      "desc": "A gentle smear for subtle motion accents"
+    },
+    {
+      "name": "subtleSpin",
+      "desc": "Low-intensity rotational smear for detail shots"
+    },
+    {
+      "name": "cinematic",
+      "desc": "Smoother and fuller cinematic rotational blur"
+    },
+    {
+      "name": "whipPan",
+      "desc": "Fast lateral smear suited for whip-pan transitions"
+    },
+    {
+      "name": "diagonalDrift",
+      "desc": "Perspective-like smear that drifts on a diagonal"
+    },
+    {
+      "name": "zoomBurst",
+      "desc": "Expanding zoom-driven smear with depth push"
+    },
+    {
+      "name": "pushIn",
+      "desc": "Controlled push-in blur with forward camera energy"
+    },
+    {
+      "name": "pullBack",
+      "desc": "Reverse zoom smear for retreating motion"
+    },
+    {
+      "name": "orbit",
+      "desc": "Curved orbital smear with a 3D arc feel"
+    },
+    {
+      "name": "snapTurn",
+      "desc": "Sharp turning smear for aggressive angle changes"
+    },
+    {
+      "name": "strong",
+      "desc": "High-intensity high-sample smear"
+    },
+    {
+      "name": "impact",
+      "desc": "Punchy impact blur for hits and reveals"
+    },
+    {
+      "name": "vortex",
+      "desc": "Progress-driven vortex swirl that can complete clean full turns"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "amount",
+      "desc": "Blend from clean image to the selected preset, ideal for 0-to-full-to-0 animation",
+      "type": "number",
+      "value": 1.0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "progress",
+      "desc": "Advance the preset's internal motion path from start to finish",
+      "type": "number",
+      "value": 0.0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "turns",
+      "desc": "Number of internal rotation turns for cyclic presets such as vortex",
+      "type": "number",
+      "value": 1.0,
+      "min": 0,
+      "max": 8
+    },
+    {
+      "name": "vIntensity",
+      "desc": "Blur intensity",
+      "type": "number",
+      "value": 0.6,
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "vCenter",
+      "desc": "Blur center offset",
+      "type": "number",
+      "value": 0.0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "samples",
+      "desc": "Sample count",
+      "type": "number",
+      "value": 24,
+      "min": 1,
+      "max": 50
+    },
+    {
+      "name": "dither",
+      "desc": "Dither strength",
+      "type": "number",
+      "value": 0.35,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "alpha",
+      "desc": "Overall opacity",
+      "type": "number",
+      "value": 1.0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "mirrorEdge",
+      "desc": "Mirror sampling at edges",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "unifiedScale",
+      "desc": "Lock Y/Z scale to X",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "activeCamFovx",
+      "desc": "Active camera horizontal FOV",
+      "type": "number",
+      "value": 39.6,
+      "min": 0.1,
+      "max": 179.9
+    }
+  ]
+}

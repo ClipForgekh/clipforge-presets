@@ -1,0 +1,347 @@
+[
+    {
+        "ClassName": "EntityLua",
+        "Super": "",
+        "FilePath": "lua/EntityLua.lua",
+        "FileAbsPath": "/Users/yyb/Downloads/55431d1127625a8026f08e27cfd0862e/AmazingFeature/lua/EntityLua.lua",
+        "Properties": [
+            {
+                "VarName": "entity",
+                "VarType": "Entity",
+                "Comment": ""
+            },
+            {
+                "VarName": "camera",
+                "VarType": "Camera",
+                "Comment": ""
+            },
+            {
+                "VarName": "animSeqComponent",
+                "VarType": "AnimSeqComponent",
+                "Comment": ""
+            },
+            {
+                "VarName": "transform",
+                "VarType": "Transform",
+                "Comment": ""
+            },
+            {
+                "VarName": "meshRenderer",
+                "VarType": "MeshRenderer",
+                "Comment": ""
+            },
+            {
+                "VarName": "tableComponent",
+                "VarType": "TableComponent",
+                "Comment": ""
+            },
+            {
+                "VarName": "scriptComponent",
+                "VarType": "ScriptComponent",
+                "Comment": ""
+            },
+            {
+                "VarName": "faceCapture",
+                "VarType": "FaceCapture",
+                "Comment": ""
+            },
+            {
+                "VarName": "material",
+                "VarType": "Material",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "getEntityLuasByName",
+                "Params": [
+                    {
+                        "ParaName": "scene",
+                        "ParaType": "Scene",
+                        "Comment": ""
+                    },
+                    {
+                        "ParaName": "names",
+                        "ParaType": "string[]",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": "",
+                "Return": {
+                    "Types": [
+                        "table<string",
+                        "EntityLua>"
+                    ],
+                    "Comment": ""
+                }
+            },
+            {
+                "FuncName": "getAllEntityLuasInScene",
+                "Params": [
+                    {
+                        "ParaName": "scene",
+                        "ParaType": "Scene",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": "",
+                "Return": {
+                    "Types": [
+                        "table<string",
+                        "EntityLua>"
+                    ],
+                    "Comment": ""
+                }
+            },
+            {
+                "FuncName": "new",
+                "Params": [
+                    {
+                        "ParaName": "entity",
+                        "ParaType": "Entity",
+                        "Comment": ""
+                    }
+                ],
+                "Comment": "",
+                "Return": {
+                    "Types": [
+                        "EntityLua"
+                    ],
+                    "Comment": ""
+                }
+            },
+            {
+                "FuncName": "getTableComponentContent",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "getLuaObj",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setWorldOrientationByEuler",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setLocalOrientationByEuler",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "getSeqPlayTime",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "playSeqOnTimeByTimes",
+                "Params": [
+                    {
+                        "ParaName": "times",
+                        "ParaType": "Double",
+                        "Comment": "The number of times the sequence frame is played"
+                    }
+                ],
+                "Comment": ""
+            },
+            {
+                "FuncName": "enableMacro",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "AETools",
+        "Super": "",
+        "FilePath": "lua/SeekModeScript.lua",
+        "FileAbsPath": "/Users/yyb/Downloads/55431d1127625a8026f08e27cfd0862e/AmazingFeature/lua/SeekModeScript.lua",
+        "Properties": [],
+        "Methods": [],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "SeekModeScript",
+        "Super": "ScriptComponent",
+        "FilePath": "lua/SeekModeScript.lua",
+        "FileAbsPath": "/Users/yyb/Downloads/55431d1127625a8026f08e27cfd0862e/AmazingFeature/lua/SeekModeScript.lua",
+        "Properties": [
+            {
+                "VarName": "playTime",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "byFrame",
+                "VarType": "Bool",
+                "Comment": ""
+            },
+            {
+                "VarName": "autoPlay",
+                "VarType": "Bool",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_remap01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_cubicBezier",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_cubicBezier01",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_getBezier01X",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_mix",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "SetAllFrame",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "GetVal",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "test",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setDuration",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    },
+    {
+        "ClassName": "CCLens",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/CCLens/lua/CCLens.lua",
+        "FileAbsPath": "/Users/yyb/Downloads/55431d1127625a8026f08e27cfd0862e/AmazingFeature/effects/CCLens/lua/CCLens.lua",
+        "Properties": [
+            {
+                "VarName": "radius",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "convergence",
+                "VarType": "Double",
+                "Comment": ""
+            },
+            {
+                "VarName": "center",
+                "VarType": "vector2f",
+                "Comment": ""
+            },
+            {
+                "VarName": "InputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            },
+            {
+                "VarName": "OutputTex",
+                "VarType": "Texture",
+                "Comment": ""
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "seekToTime",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

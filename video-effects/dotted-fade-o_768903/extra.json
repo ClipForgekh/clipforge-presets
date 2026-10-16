@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "dotDensity",
+                "effect_key_cn": "dotDensity",
+                "type": "float",
+                "default": 140,
+                "min": 60,
+                "max": 260
+            },
+            {
+                "effect_key": "separationStrength",
+                "effect_key_cn": "separationStrength",
+                "type": "float",
+                "default": 1,
+                "min": 0.2,
+                "max": 2
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "glowStrength",
+                "type": "float",
+                "default": 2.2,
+                "min": 0,
+                "max": 4
+            },
+            {
+                "effect_key": "scatterStrength",
+                "effect_key_cn": "scatterStrength",
+                "type": "float",
+                "default": 1.25,
+                "min": 0.2,
+                "max": 2.5
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "uiScale",
+                "effect_key_cn": "uiScale",
+                "type": "float",
+                "default": 1,
+                "min": 0.65,
+                "max": 1.3
+            },
+            {
+                "effect_key": "bgDim",
+                "effect_key_cn": "bgDim",
+                "type": "float",
+                "default": 0.42,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "hudOpacity",
+                "effect_key_cn": "hudOpacity",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 1
+            }
+        ]
+    }
+}

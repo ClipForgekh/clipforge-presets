@@ -1,0 +1,31 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "glitchAmount",
+                "effect_key_cn": "glitchAmount",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "radialBlurMax",
+                "effect_key_cn": "radialBlurMax",
+                "type": "float",
+                "default": 0.035,
+                "min": 0,
+                "max": 0.12
+            },
+            {
+                "effect_key": "decodeContrast",
+                "effect_key_cn": "decodeContrast",
+                "type": "float",
+                "default": 1.15,
+                "min": 0.5,
+                "max": 2
+            }
+        ]
+    }
+}

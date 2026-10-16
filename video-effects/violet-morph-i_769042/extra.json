@@ -1,0 +1,23 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "burstStrength",
+                "effect_key_cn": "burstStrength",
+                "type": "float",
+                "default": 1.1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "ribbonTwist",
+                "effect_key_cn": "ribbonTwist",
+                "type": "float",
+                "default": 5,
+                "min": 0,
+                "max": 10
+            }
+        ]
+    }
+}

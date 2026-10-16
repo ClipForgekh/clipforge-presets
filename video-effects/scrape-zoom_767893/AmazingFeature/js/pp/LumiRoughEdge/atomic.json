@@ -1,0 +1,141 @@
+{
+  "key": "LumiRoughEdge",
+  "category": "Stylize",
+  "desc": "粗糙不规则边缘效果，通过边缘模糊遮罩和噪声位移让画面边缘产生破损、毛边和侵蚀感。",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果，保留原图，方便与其他粗糙边缘风格做对比。"
+    },
+    {
+      "name": "default",
+      "desc": "基础粗糙边缘，但已经带有更明确的硬边裁切，适合直接看到风格化轮廓。"
+    },
+    {
+      "name": "strong",
+      "desc": "更厚、更硬的侵蚀边缘，缺口更明显，整体更接近强烈海报化裁切。"
+    },
+    {
+      "name": "tornPaper",
+      "desc": "纸张撕裂感更强，边缘非常干硬，裂口方向性更明显。"
+    },
+    {
+      "name": "inkBleed",
+      "desc": "边缘带更大面积侵染和扩散，像浓墨或颜料在轮廓外翻涌。"
+    },
+    {
+      "name": "burntFilm",
+      "desc": "极端烧灼破边，裁切非常硬，缺口和侵蚀范围都更激进。"
+    },
+    {
+      "name": "organicWobble",
+      "desc": "更夸张的有机边界起伏，像膜状组织在边缘持续蠕动和收缩。"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "edgeSize",
+      "desc": "边缘厚度",
+      "type": "number",
+      "value": 70,
+      "min": 0,
+      "max": 128
+    },
+    {
+      "name": "edgeSmooth",
+      "desc": "边缘平滑过渡",
+      "type": "number",
+      "value": 0.4,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "edgeOffset",
+      "desc": "边缘偏移中心",
+      "type": "number",
+      "value": 0.5,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "noiseIntensity",
+      "desc": "噪声对边缘的影响强度",
+      "type": "number",
+      "value": 5.9,
+      "min": 0,
+      "max": 12
+    },
+    {
+      "name": "noiseSizeX",
+      "desc": "噪声横向缩放",
+      "type": "number",
+      "value": 0.2,
+      "min": 0.02,
+      "max": 2
+    },
+    {
+      "name": "noiseSizeY",
+      "desc": "噪声纵向缩放",
+      "type": "number",
+      "value": 0.2,
+      "min": 0.02,
+      "max": 2
+    },
+    {
+      "name": "noiseRotate",
+      "desc": "噪声旋转角度",
+      "type": "number",
+      "value": 0,
+      "min": -180,
+      "max": 180
+    },
+    {
+      "name": "complexity",
+      "desc": "噪声层级复杂度",
+      "type": "number",
+      "value": 5,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "name": "evolution",
+      "desc": "噪声演化速度",
+      "type": "number",
+      "value": 33.8,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "cycle",
+      "desc": "演化循环周期",
+      "type": "number",
+      "value": 100,
+      "min": 2,
+      "max": 200
+    },
+    {
+      "name": "offsetX",
+      "desc": "噪声横向偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "offsetY",
+      "desc": "噪声纵向偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "pictureScale",
+      "desc": "原图缩放",
+      "type": "number",
+      "value": 1,
+      "min": 0.5,
+      "max": 1.5
+    }
+  ]
+}

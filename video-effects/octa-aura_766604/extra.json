@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurMax",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 0.035,
+                "min": 0.005,
+                "max": 0.08
+            },
+            {
+                "effect_key": "scanWidth",
+                "effect_key_cn": "扫描宽度",
+                "type": "float",
+                "default": 0.12,
+                "min": 0.03,
+                "max": 0.3
+            },
+            {
+                "effect_key": "wedgeSoftness",
+                "effect_key_cn": "楔形柔软度",
+                "type": "float",
+                "default": 0.22,
+                "min": 0.05,
+                "max": 0.5
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 1.1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "centerBloom",
+                "effect_key_cn": "中心布卢姆",
+                "type": "float",
+                "default": 1.25,
+                "min": 0,
+                "max": 2.5
+            }
+        ]
+    }
+}

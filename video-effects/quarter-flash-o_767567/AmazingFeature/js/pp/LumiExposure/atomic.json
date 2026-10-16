@@ -1,0 +1,31 @@
+{
+  "key": "LumiExposure",
+  "category": "Color Correction",
+  "desc": "曝光调节效果 - 通过2的幂次方模拟相机光圈级数变化，实现真实的曝光增减。适用于照片后期处理、HDR合成、曝光校正、明暗调节",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无强度 - 关闭曝光调节效果，不应用任何曝光变化"
+    },
+    {
+      "name": "low",
+      "desc": "低强度 - 基本的曝光调节效果"
+    },
+    {
+      "name": "medium",
+      "desc": "中强度 - 中等强度的曝光调节效果"
+    },
+    {
+      "name": "high",
+      "desc": "高强度 - 高强度的曝光调节效果"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "曝光档位 - 以EV值为单位调节曝光，每增加1.0相当于增加一档光圈，使用2^intensity计算",
+      "type": "number",
+      "value": 1.0
+    }
+  ]
+}

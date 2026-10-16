@@ -1,0 +1,67 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "neonColor1",
+                "effect_key_cn": "霓虹灯颜色1",
+                "type": "color",
+                "default": [
+                    0.1,
+                    0.3,
+                    1
+                ]
+            },
+            {
+                "effect_key": "neonColor2",
+                "effect_key_cn": "霓虹灯颜色2",
+                "type": "color",
+                "default": [
+                    0.7,
+                    0.2,
+                    0.9
+                ]
+            },
+            {
+                "effect_key": "particleGroups",
+                "effect_key_cn": "粒子群",
+                "type": "float",
+                "default": 8,
+                "min": 4,
+                "max": 16
+            },
+            {
+                "effect_key": "glowIntensity",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 2.5,
+                "min": 0.5,
+                "max": 5
+            },
+            {
+                "effect_key": "spiralRotation",
+                "effect_key_cn": "螺旋旋转",
+                "type": "float",
+                "default": 3,
+                "min": 1,
+                "max": 6
+            },
+            {
+                "effect_key": "glitchStrength",
+                "effect_key_cn": "故障强度",
+                "type": "float",
+                "default": 0.05,
+                "min": 0.01,
+                "max": 0.2
+            }
+        ]
+    }
+}

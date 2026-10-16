@@ -1,0 +1,1007 @@
+%YAML 1.1
+--- !AnimSeq &1
+name: heart_light_seq
+guid: {a: 5134884723939556071, b: 7020189495625080220}
+assettype:
+  __class: SeqAssetType
+  value: atlas
+assetfilename: ""
+fps: 30
+lazyload: true
+cache: false
+atlases:
+  - {localId: 2}
+  - {localId: 3}
+  - {localId: 4}
+  - {localId: 5}
+  - {localId: 6}
+  - {localId: 7}
+  - {localId: 8}
+  - {localId: 9}
+  - {localId: 10}
+  - {localId: 11}
+  - {localId: 12}
+  - {localId: 13}
+  - {localId: 14}
+  - {localId: 15}
+  - {localId: 16}
+  - {localId: 17}
+  - {localId: 18}
+  - {localId: 19}
+  - {localId: 20}
+  - {localId: 21}
+  - {localId: 22}
+  - {localId: 23}
+  - {localId: 24}
+  - {localId: 25}
+  - {localId: 26}
+  - {localId: 27}
+  - {localId: 28}
+  - {localId: 29}
+  - {localId: 30}
+  - {localId: 31}
+  - {localId: 32}
+  - {localId: 33}
+  - {localId: 34}
+  - {localId: 35}
+  - {localId: 36}
+  - {localId: 37}
+  - {localId: 38}
+  - {localId: 39}
+  - {localId: 40}
+  - {localId: 41}
+  - {localId: 42}
+  - {localId: 43}
+  - {localId: 44}
+  - {localId: 45}
+  - {localId: 46}
+  - {localId: 47}
+  - {localId: 48}
+  - {localId: 49}
+  - {localId: 50}
+  - {localId: 51}
+  - {localId: 52}
+  - {localId: 53}
+  - {localId: 54}
+  - {localId: 55}
+  - {localId: 56}
+  - {localId: 57}
+  - {localId: 58}
+  - {localId: 59}
+  - {localId: 60}
+  - {localId: 61}
+  - {localId: 62}
+  - {localId: 63}
+  - {localId: 64}
+  - {localId: 65}
+  - {localId: 66}
+  - {localId: 67}
+memoryLimit: 0
+preload: false
+indexAction:
+  __class: Map
+preloadCount: 0
+--- !ImageAtlas &2
+name: heart_light00000_atlas
+guid: {a: 16017772984697161457, b: 9377081565584232361}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 2471636232158786548, b: 17956997227576292234}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00000.png
+--- !ImageAtlas &3
+name: heart_light00001_atlas
+guid: {a: 6579455754373690798, b: 16055827250496977837}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 18393453131485496874, b: 16093828485522231995}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00001.png
+--- !ImageAtlas &4
+name: heart_light00002_atlas
+guid: {a: 18394355340344662402, b: 1889687633690259840}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 12773636916135579093, b: 8043439917133136802}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00002.png
+--- !ImageAtlas &5
+name: heart_light00003_atlas
+guid: {a: 8163712821271648004, b: 6667254920787699621}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 3044633866400508145, b: 8662903937797748619}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00003.png
+--- !ImageAtlas &6
+name: heart_light00004_atlas
+guid: {a: 4776884567148397344, b: 12981919226870095798}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 9314531547221819407, b: 12143954995188047803}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00004.png
+--- !ImageAtlas &7
+name: heart_light00005_atlas
+guid: {a: 16522141451072335218, b: 2046632864393625490}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 1245675715638462371, b: 5085909233326063270}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00005.png
+--- !ImageAtlas &8
+name: heart_light00006_atlas
+guid: {a: 9749117738311782396, b: 3978969953182601600}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 4054247671510819493, b: 8293364313408640691}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00006.png
+--- !ImageAtlas &9
+name: heart_light00007_atlas
+guid: {a: 4559984758065358554, b: 3950120147402205347}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 7731128629659563463, b: 7413729737512502433}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00007.png
+--- !ImageAtlas &10
+name: heart_light00008_atlas
+guid: {a: 8596906467234671571, b: 2639728378579888786}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 9962900710999532340, b: 14628670246185307836}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00008.png
+--- !ImageAtlas &11
+name: heart_light00009_atlas
+guid: {a: 4774915435131342215, b: 7174264950829122219}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 10036827342910595349, b: 17830854852201894570}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00009.png
+--- !ImageAtlas &12
+name: heart_light00010_atlas
+guid: {a: 3693429503150604089, b: 8793987101221527696}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 1822327794976815461, b: 13732200970593327789}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00010.png
+--- !ImageAtlas &13
+name: heart_light00011_atlas
+guid: {a: 13782094108709439115, b: 17078533752468537244}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 10756762632780095430, b: 11255576258430213040}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00011.png
+--- !ImageAtlas &14
+name: heart_light00012_atlas
+guid: {a: 15222791091628794633, b: 12155043058146751639}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 4417660108837869548, b: 16439020528577292958}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00012.png
+--- !ImageAtlas &15
+name: heart_light00013_atlas
+guid: {a: 14143096898623426829, b: 4015743947092937618}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 11117762325685868642, b: 295330809518713496}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00013.png
+--- !ImageAtlas &16
+name: heart_light00014_atlas
+guid: {a: 4560521431629782312, b: 7346326417375267207}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 3550505617113610745, b: 10992767645579339193}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00014.png
+--- !ImageAtlas &17
+name: heart_light00015_atlas
+guid: {a: 13783135072919336853, b: 5347109074453786523}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 17458329255232524662, b: 6142483024535680444}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00015.png
+--- !ImageAtlas &18
+name: heart_light00016_atlas
+guid: {a: 3478239004589414786, b: 8546103625427774374}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 1605662681923089366, b: 11615248322335027108}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00016.png
+--- !ImageAtlas &19
+name: heart_light00017_atlas
+guid: {a: 5930479056719621770, b: 3829303150647087245}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 6362269824983372819, b: 17528231894422570646}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00017.png
+--- !ImageAtlas &20
+name: heart_light00018_atlas
+guid: {a: 4485791699069826318, b: 994184380091434903}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 10686581471950787765, b: 9931097728494841783}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00018.png
+--- !ImageAtlas &21
+name: heart_light00019_atlas
+guid: {a: 1389719647831277241, b: 8615323045851640730}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 3622051240135058098, b: 5649558281187184549}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00019.png
+--- !ImageAtlas &22
+name: heart_light00020_atlas
+guid: {a: 2612777688194742740, b: 2800247657569988030}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 6359412292254110938, b: 17306028118158825401}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00020.png
+--- !ImageAtlas &23
+name: heart_light00021_atlas
+guid: {a: 17674830353839613617, b: 5488775385123675552}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 1603603629892329452, b: 11938849998475062691}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00021.png
+--- !ImageAtlas &24
+name: heart_light00022_atlas
+guid: {a: 9387660824046864770, b: 14257355369598039472}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 5208104775200268023, b: 2814409288101255045}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00022.png
+--- !ImageAtlas &25
+name: heart_light00023_atlas
+guid: {a: 13349946982289552997, b: 1076577805275873979}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 5280202734483427124, b: 15050859672120763548}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00023.png
+--- !ImageAtlas &26
+name: heart_light00024_atlas
+guid: {a: 12558900466414249104, b: 5750805600814612370}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 9532823336348437106, b: 6525367122049964442}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00024.png
+--- !ImageAtlas &27
+name: heart_light00025_atlas
+guid: {a: 2253064674076505992, b: 14244328283138245265}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 1823242394200662287, b: 10581876887928037508}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00025.png
+--- !ImageAtlas &28
+name: heart_light00026_atlas
+guid: {a: 12415163542166860451, b: 17842786427926302887}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 11331073214726050766, b: 8547384250040306096}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00026.png
+--- !ImageAtlas &29
+name: heart_light00027_atlas
+guid: {a: 6503881888047271120, b: 4696397069723517607}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 12844590803340716035, b: 8457958707014159793}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00027.png
+--- !ImageAtlas &30
+name: heart_light00028_atlas
+guid: {a: 5711444705214863903, b: 11912082068779721610}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 5639312313055893525, b: 7116124512942071198}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00028.png
+--- !ImageAtlas &31
+name: heart_light00029_atlas
+guid: {a: 11259605450156065293, b: 6039804862821626024}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 15512168187154087119, b: 5796171189537913501}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00029.png
+--- !ImageAtlas &32
+name: heart_light00030_atlas
+guid: {a: 1027177732958795151, b: 3509915853832513968}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 13276876335244546276, b: 11757018612076099477}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00030.png
+--- !ImageAtlas &33
+name: heart_light00031_atlas
+guid: {a: 18032988297796581076, b: 5055932041786047889}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 12916813205655310308, b: 4013710469419715467}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00031.png
+--- !ImageAtlas &34
+name: heart_light00032_atlas
+guid: {a: 17241879733403372433, b: 9234219574697796739}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 8234043552468645098, b: 18372550679291562644}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00032.png
+--- !ImageAtlas &35
+name: heart_light00033_atlas
+guid: {a: 12559717225726460190, b: 13833099791191505086}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 11334973455864046254, b: 13155594206907085222}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00033.png
+--- !ImageAtlas &36
+name: heart_light00034_atlas
+guid: {a: 11837116707648054803, b: 12035146144324258433}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 15366630981949969397, b: 4321179559083815597}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00034.png
+--- !ImageAtlas &37
+name: heart_light00035_atlas
+guid: {a: 4414222616986895252, b: 18322536374474319521}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 3336001040868124905, b: 7129074739962415748}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00035.png
+--- !ImageAtlas &38
+name: heart_light00036_atlas
+guid: {a: 13856562747597222738, b: 16610832067350251659}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 307950142550539290, b: 16455466017452906630}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00036.png
+--- !ImageAtlas &39
+name: heart_light00037_atlas
+guid: {a: 4560343639194284554, b: 3785780291288578962}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 12558365770728082180, b: 6159310919079789474}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00037.png
+--- !ImageAtlas &40
+name: heart_light00038_atlas
+guid: {a: 6431270506522561438, b: 5540097268311859083}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 1172608296820074254, b: 5719610322153517241}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00038.png
+--- !ImageAtlas &41
+name: heart_light00039_atlas
+guid: {a: 4558982553059152437, b: 17383052590836407202}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 6719553266199470255, b: 17474682253834713509}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00039.png
+--- !ImageAtlas &42
+name: heart_light00040_atlas
+guid: {a: 12414721184253284776, b: 15929280680542527905}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 8452170601594065325, b: 6445213420507296910}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00040.png
+--- !ImageAtlas &43
+name: heart_light00041_atlas
+guid: {a: 15729250220909705467, b: 17136629827299576455}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 12055696617015585751, b: 12639334333670893209}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00041.png
+--- !ImageAtlas &44
+name: heart_light00042_atlas
+guid: {a: 4634175590776744160, b: 3628761457383871413}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 7226228287485209719, b: 18218314257701281721}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00042.png
+--- !ImageAtlas &45
+name: heart_light00043_atlas
+guid: {a: 1820010137808489898, b: 9529952245636180135}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 10181099970477871555, b: 2647156721320231811}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00043.png
+--- !ImageAtlas &46
+name: heart_light00044_atlas
+guid: {a: 13640743879052008986, b: 9150280761451168162}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 13352219818975827536, b: 6410379671408969615}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00044.png
+--- !ImageAtlas &47
+name: heart_light00045_atlas
+guid: {a: 16088062368777182007, b: 15508387964054737045}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 14432481697677476359, b: 17792749360982503061}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00045.png
+--- !ImageAtlas &48
+name: heart_light00046_atlas
+guid: {a: 9675526285782878638, b: 13833223208532381853}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 10182180260046985050, b: 7983673765462976173}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00046.png
+--- !ImageAtlas &49
+name: heart_light00047_atlas
+guid: {a: 13855421180425161398, b: 16271582950679809182}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 7800923178169430955, b: 3928666697609419136}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00047.png
+--- !ImageAtlas &50
+name: heart_light00048_atlas
+guid: {a: 12991273690244618646, b: 8997895119797144996}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 10181125546629221107, b: 14520731957709301399}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00048.png
+--- !ImageAtlas &51
+name: heart_light00049_atlas
+guid: {a: 11333433208555913124, b: 10589965080687059853}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 16667266561637555008, b: 9475532632933812131}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00049.png
+--- !ImageAtlas &52
+name: heart_light00050_atlas
+guid: {a: 15010483432764711702, b: 4454461777418310323}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 7225066942554281530, b: 17673417630818857123}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00050.png
+--- !ImageAtlas &53
+name: heart_light00051_atlas
+guid: {a: 8016438508845864250, b: 11186797346147773583}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 9313801555942423711, b: 18368041710993172379}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00051.png
+--- !ImageAtlas &54
+name: heart_light00052_atlas
+guid: {a: 17458045009310131348, b: 10034951764061462919}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 8163076273956864932, b: 17927075080312684475}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00052.png
+--- !ImageAtlas &55
+name: heart_light00053_atlas
+guid: {a: 3477387508425434971, b: 13780304271934180022}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 3119767892361077846, b: 11739431454745168566}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00053.png
+--- !ImageAtlas &56
+name: heart_light00054_atlas
+guid: {a: 8883884960084864600, b: 18368609609903889024}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 16666836808330802315, b: 7541745411204864189}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00054.png
+--- !ImageAtlas &57
+name: heart_light00055_atlas
+guid: {a: 14865234495903387507, b: 6143636117655813310}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 22028595840845208, b: 2482642632959497663}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00055.png
+--- !ImageAtlas &58
+name: heart_light00056_atlas
+guid: {a: 10179886005554433938, b: 13331671704359235981}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 16089391400524106777, b: 15820953163332345775}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00056.png
+--- !ImageAtlas &59
+name: heart_light00057_atlas
+guid: {a: 7081995951014781145, b: 17961569811312866980}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 17530887926899147535, b: 11295805739501421501}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00057.png
+--- !ImageAtlas &60
+name: heart_light00058_atlas
+guid: {a: 5495161204705002584, b: 12503013167214715569}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 1604529362973010625, b: 17863852300195746713}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00058.png
+--- !ImageAtlas &61
+name: heart_light00059_atlas
+guid: {a: 17530113012842298683, b: 6733756317856101273}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 17532454408847664626, b: 18352299357972472223}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00059.png
+--- !ImageAtlas &62
+name: heart_light00060_atlas
+guid: {a: 3332918616096571712, b: 9653263390443483540}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 9819169196820764290, b: 8056247810232203692}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00060.png
+--- !ImageAtlas &63
+name: heart_light00061_atlas
+guid: {a: 1531991536231161982, b: 2230579913659165364}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 5208877804095254848, b: 18195532187214285954}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00061.png
+--- !ImageAtlas &64
+name: heart_light00062_atlas
+guid: {a: 11837633407087101636, b: 12202609593437877686}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 886168997830374200, b: 14113631561138361256}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00062.png
+--- !ImageAtlas &65
+name: heart_light00063_atlas
+guid: {a: 15584265027362884741, b: 15882145743231383204}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 17603135459401575412, b: 9929124816104571837}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00063.png
+--- !ImageAtlas &66
+name: heart_light00064_atlas
+guid: {a: 4055744595703325670, b: 4435699038182519172}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 8161502920038370194, b: 10050778674262278277}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00064.png
+--- !ImageAtlas &67
+name: heart_light00065_atlas
+guid: {a: 18106609842744539548, b: 11787745372553917840}
+frames:
+  - __class: ImageFrame
+    name: ""
+    guid: {a: 883994197095526965, b: 8341878346181114284}
+    rotate:
+      __class: RotateType
+      value: ROTATE_0
+    trimed: false
+    outerRect: {x: 1, y: 1, z: 0, w: 0}
+    innerRect: {x: 1, y: 1, z: 0, w: 0}
+uri: seq/heart_light/heart_light00065.png

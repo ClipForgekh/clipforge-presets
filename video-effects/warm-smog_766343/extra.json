@@ -1,0 +1,63 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "waveAmp",
+                "effect_key_cn": "波放大器",
+                "type": "float",
+                "default": 0.06,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "waveFreq",
+                "effect_key_cn": "波频率",
+                "type": "float",
+                "default": 18,
+                "min": 1,
+                "max": 40
+            },
+            {
+                "effect_key": "depthSpread",
+                "effect_key_cn": "深度传播",
+                "type": "float",
+                "default": 0.08,
+                "min": 0,
+                "max": 0.3
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "模糊强度",
+                "type": "float",
+                "default": 0.02,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "goldIntensity",
+                "effect_key_cn": "黄金强度",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "radialBlur",
+                "effect_key_cn": "径向模糊",
+                "type": "float",
+                "default": 0.015,
+                "min": 0,
+                "max": 0.08
+            }
+        ]
+    }
+}

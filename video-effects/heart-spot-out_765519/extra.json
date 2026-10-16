@@ -1,0 +1,57 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "heartSize",
+                "effect_key_cn": "心脏大小",
+                "type": "float",
+                "default": 0.09,
+                "min": 0.03,
+                "max": 0.2
+            },
+            {
+                "effect_key": "pixelStep",
+                "effect_key_cn": "像素步长",
+                "type": "float",
+                "default": 0.08,
+                "min": 0.03,
+                "max": 0.2
+            },
+            {
+                "effect_key": "heartGlow",
+                "effect_key_cn": "心发光",
+                "type": "float",
+                "default": 0.35,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "zoomStrength",
+                "effect_key_cn": "变焦强度",
+                "type": "float",
+                "default": 0.05,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "heartColor",
+                "effect_key_cn": "心形颜色",
+                "type": "color",
+                "default": [
+                    0.45,
+                    0.5,
+                    1
+                ]
+            }
+        ]
+    }
+}

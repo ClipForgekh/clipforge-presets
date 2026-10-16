@@ -1,0 +1,14 @@
+{
+    "effect": {
+        "Link": [
+            {
+                "path": "AmazingFeature/",
+                "type": "AmazingFeature",
+                "zorder": 8011
+            }
+        ]
+    },
+    "setVideoAnimTRSInternal": false,
+    "name": "2021_11_22_10_38_10_3b9438904b3d11ec9482acde48001122",
+    "version": "8.6.0"
+}

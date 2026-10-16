@@ -1,0 +1,57 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "模糊强度",
+                "type": "float",
+                "default": 0.09,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "sliceJitter",
+                "effect_key_cn": "切片抖动",
+                "type": "float",
+                "default": 0.018,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "leakIntensity",
+                "effect_key_cn": "泄漏强度",
+                "type": "float",
+                "default": 0.55,
+                "min": 0,
+                "max": 1.2
+            },
+            {
+                "effect_key": "grainIntensity",
+                "effect_key_cn": "颗粒强度",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.4
+            },
+            {
+                "effect_key": "leakColor",
+                "effect_key_cn": "泄漏颜色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.72,
+                    0.35
+                ]
+            }
+        ]
+    }
+}

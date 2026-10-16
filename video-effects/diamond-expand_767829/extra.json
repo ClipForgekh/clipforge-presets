@@ -1,0 +1,57 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "diamondStartSize",
+                "effect_key_cn": "diamon",
+                "type": "float",
+                "default": 0.08,
+                "min": 0.02,
+                "max": 0.3
+            },
+            {
+                "effect_key": "edgeSoftness",
+                "effect_key_cn": "edge S",
+                "type": "float",
+                "default": 0.02,
+                "min": 0.001,
+                "max": 0.1
+            },
+            {
+                "effect_key": "glowWidth",
+                "effect_key_cn": "glow W",
+                "type": "float",
+                "default": 0.05,
+                "min": 0.005,
+                "max": 0.2
+            },
+            {
+                "effect_key": "glowIntensity",
+                "effect_key_cn": "glow I",
+                "type": "float",
+                "default": 0.35,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "glowEdgeColor",
+                "effect_key_cn": "glow E",
+                "type": "color",
+                "default": [
+                    1,
+                    0.6,
+                    0.8
+                ]
+            }
+        ]
+    }
+}

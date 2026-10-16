@@ -1,0 +1,77 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blockCount",
+                "effect_key_cn": "块数",
+                "type": "float",
+                "default": 7,
+                "min": 3,
+                "max": 10
+            },
+            {
+                "effect_key": "sweepWidth",
+                "effect_key_cn": "扫描宽度",
+                "type": "float",
+                "default": 0.15,
+                "min": 0.05,
+                "max": 0.3
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "模糊强度",
+                "type": "float",
+                "default": 0.02,
+                "min": 0.005,
+                "max": 0.05
+            },
+            {
+                "effect_key": "rgbOffset",
+                "effect_key_cn": "RGB 偏移",
+                "type": "float",
+                "default": 0.005,
+                "min": 0.001,
+                "max": 0.02
+            },
+            {
+                "effect_key": "neonColor1",
+                "effect_key_cn": "霓虹灯颜色1",
+                "type": "color",
+                "default": [
+                    1,
+                    0.2,
+                    0.8,
+                    1
+                ]
+            },
+            {
+                "effect_key": "neonColor2",
+                "effect_key_cn": "霓虹灯颜色2",
+                "type": "color",
+                "default": [
+                    0.2,
+                    0.8,
+                    1,
+                    1
+                ]
+            },
+            {
+                "effect_key": "delayPerBlock",
+                "effect_key_cn": "每块延迟",
+                "type": "float",
+                "default": 0.1,
+                "min": 0.05,
+                "max": 0.2
+            }
+        ]
+    }
+}

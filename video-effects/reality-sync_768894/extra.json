@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "bandCount",
+                "effect_key_cn": "bandCount",
+                "type": "float",
+                "default": 24,
+                "min": 8,
+                "max": 64
+            },
+            {
+                "effect_key": "glitchAmount",
+                "effect_key_cn": "glitchAmount",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "rgbSplitStrength",
+                "effect_key_cn": "rgbSplitStrength",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            }
+        ]
+    }
+}

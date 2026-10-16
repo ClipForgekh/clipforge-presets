@@ -1,0 +1,29 @@
+%YAML 1.1
+--- !Material &1
+name: bg
+guid: {a: 14216307592861780354, b: 7333639504089880969}
+xshader: {localId: 1, path: xshader/Fxaa.xshader}
+properties:
+  __class: PropertySheet
+  name: template0_propertySheet
+  guid: {a: 6359405124407029389, b: 9802646496152613768}
+  floatmap:
+    __class: Map
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+    FBS: {x: 720, y: 1280}
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    inputImageTexture: {localId: 1, path: rt/bgTex.rt}
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+mshaderPath: ""

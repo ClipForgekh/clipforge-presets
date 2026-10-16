@@ -1,0 +1,75 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurMax",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 0.03,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "particleDensity",
+                "effect_key_cn": "颗粒密度",
+                "type": "float",
+                "default": 0.45,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "floatAmount",
+                "effect_key_cn": "浮动金额",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "sweepStrength",
+                "effect_key_cn": "扫掠强度",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "goldColor",
+                "effect_key_cn": "金色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.82,
+                    0.45
+                ]
+            },
+            {
+                "effect_key": "crystalColor",
+                "effect_key_cn": "水晶颜色",
+                "type": "color",
+                "default": [
+                    0.75,
+                    0.9,
+                    1
+                ]
+            }
+        ]
+    }
+}

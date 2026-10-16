@@ -1,0 +1,1297 @@
+local data = {}
+
+local ae_compDurations = {0, 2}
+data.ae_compDurations = ae_compDurations
+
+local ae_effectType = 'videoAnimation'
+data.ae_effectType = ae_effectType
+
+local ae_transitionInputIndex = {
+    {'LumiOpticsCompensation_55-effect0', 'InputTex', 0},
+    {'LumiOpticsCompensation_41-effect0', 'InputTex', 0},
+    {'LumiOpticsCompensation_81-effect0', 'InputTex', 0},
+    {'LumiOpticsCompensation_52-effect0', 'InputTex', 0},
+    {'LumiLayer_53-trs-blend', 'InputTex', 0},
+    {'LumiOpticsCompensation_54-effect0', 'InputTex', 0},
+}
+data.ae_transitionInputIndex = ae_transitionInputIndex
+
+local ae_durations = {
+    ['LumiOpticsCompensation_55-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiOpticsCompensation_41-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_41-trs'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiOpticsCompensation_81-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiBCC_Prism_81-effect1'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiTemperatureTone_81-effect2'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_81-trs-blend'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['baseTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiOpticsCompensation_52-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_52-trs-blend'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['baseTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_53-trs-blend'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['baseTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiOpticsCompensation_54-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_54-trs-blend'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['baseTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_55-trs-blend'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['baseTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiAnimSeqLoadAndCrop_105-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['seqTex_1_1'] = {{0, 2}, },
+        },
+    },
+    ['LumiBezierDeformation_58-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiDisplacementMap_58-effect1'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['horizontalImage'] = {{0, 2}, },
+        },
+    },
+    ['LumiTurbulenceDisplacement_58-effect2'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiBCC_Prism_58-effect3'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_58-blend'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['baseTex'] = {{0, 2}, },
+        },
+    },
+}
+data.ae_durations = ae_durations
+
+local ae_attribute = {
+    ['LumiOpticsCompensation_55-effect0'] = {
+        ['fov'] = 0,
+        ['inverseLensDistortion'] = true,
+        ['fovOrientation'] = 2,
+        ['center'] = Amaz.Vector2f(0.5, 0.5),
+        ['antiAliasing'] = true,
+        ['fillBorders'] = false,
+    },
+    ['LumiOpticsCompensation_41-effect0'] = {
+        ['fov'] = 0,
+        ['inverseLensDistortion'] = true,
+        ['fovOrientation'] = 2,
+        ['center'] = Amaz.Vector2f(0.5, 0.5),
+        ['antiAliasing'] = true,
+        ['fillBorders'] = true,
+    },
+    ['LumiLayer_41-trs'] = {
+        ['hasBlend'] = false,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Precomp',
+        ['anchorPoint'] = Amaz.Vector3f(252, 448, 0),
+        ['position'] = Amaz.Vector3f(252, 448, 0),
+        ['scale'] = Amaz.Vector3f(100, 100, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 100,
+        ['active_cam_fovx'] = 39.6,
+        ['compositeSize'] = Amaz.Vector2f(504, 896),
+        ['layerSize'] = Amaz.Vector2f(504, 896),
+        ['mirrorEdge'] = false,
+    },
+    ['LumiOpticsCompensation_81-effect0'] = {
+        ['fov'] = 0,
+        ['inverseLensDistortion'] = true,
+        ['fovOrientation'] = 2,
+        ['center'] = Amaz.Vector2f(0.5, 0.5),
+        ['antiAliasing'] = true,
+        ['fillBorders'] = false,
+    },
+    ['LumiBCC_Prism_81-effect1'] = {
+        ['globalTransform'] = 400,
+        ['smoothness'] = 1,
+        ['center'] = Amaz.Vector2f(0.5, 0.5),
+        ['weight'] = 1,
+        ['scaleStart'] = 102,
+        ['scaleEnd'] = 98,
+        ['angleStart'] = 0,
+        ['angleEnd'] = 0,
+        ['falloff'] = -1,
+        ['offsetStart'] = Amaz.Vector2f(0.5, 0.5),
+        ['offsetEnd'] = Amaz.Vector2f(0.5, 0.5),
+        ['colorStart'] = Amaz.Color(1, 0, 0, 1),
+        ['colorMid'] = Amaz.Color(0, 1, 0.21176478266716, 1),
+        ['colorEnd'] = Amaz.Color(0, 0.51764678955078, 1, 1),
+    },
+    ['LumiTemperatureTone_81-effect2'] = {
+        ['temperatureIntensity'] = -1,
+        ['toneIntensity'] = 1,
+    },
+    ['LumiLayer_81-trs-blend'] = {
+        ['hasBlend'] = true,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Precomp',
+        ['anchorPoint'] = Amaz.Vector3f(252, 448, 0),
+        ['position'] = Amaz.Vector3f(252, 448, 0),
+        ['scale'] = Amaz.Vector3f(82, 82, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 0,
+        ['active_cam_fovx'] = 39.6,
+        ['compositeSize'] = Amaz.Vector2f(504, 896),
+        ['layerSize'] = Amaz.Vector2f(504, 896),
+        ['mirrorEdge'] = false,
+        ['blendMode'] = 11,
+    },
+    ['LumiOpticsCompensation_52-effect0'] = {
+        ['fov'] = 0,
+        ['inverseLensDistortion'] = true,
+        ['fovOrientation'] = 2,
+        ['center'] = Amaz.Vector2f(0.5, 0.5),
+        ['antiAliasing'] = true,
+        ['fillBorders'] = false,
+    },
+    ['LumiLayer_52-trs-blend'] = {
+        ['hasBlend'] = true,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Precomp',
+        ['anchorPoint'] = Amaz.Vector3f(252, 448, 0),
+        ['position'] = Amaz.Vector3f(252, 448, 0),
+        ['scale'] = Amaz.Vector3f(78, 78, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 0,
+        ['active_cam_fovx'] = 39.6,
+        ['compositeSize'] = Amaz.Vector2f(504, 896),
+        ['layerSize'] = Amaz.Vector2f(504, 896),
+        ['mirrorEdge'] = false,
+        ['blendMode'] = 0,
+    },
+    ['LumiLayer_53-trs-blend'] = {
+        ['hasBlend'] = true,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Precomp',
+        ['anchorPoint'] = Amaz.Vector3f(252, 448, 0),
+        ['position'] = Amaz.Vector3f(252, 448, 0),
+        ['scale'] = Amaz.Vector3f(49, 49, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 0,
+        ['active_cam_fovx'] = 39.6,
+        ['compositeSize'] = Amaz.Vector2f(504, 896),
+        ['layerSize'] = Amaz.Vector2f(504, 896),
+        ['mirrorEdge'] = false,
+        ['blendMode'] = 0,
+    },
+    ['LumiOpticsCompensation_54-effect0'] = {
+        ['fov'] = 0,
+        ['inverseLensDistortion'] = true,
+        ['fovOrientation'] = 2,
+        ['center'] = Amaz.Vector2f(0.5, 0.5),
+        ['antiAliasing'] = true,
+        ['fillBorders'] = false,
+    },
+    ['LumiLayer_54-trs-blend'] = {
+        ['hasBlend'] = true,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Precomp',
+        ['anchorPoint'] = Amaz.Vector3f(252, 448, 0),
+        ['position'] = Amaz.Vector3f(252, 448, 0),
+        ['scale'] = Amaz.Vector3f(32, 32, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 0,
+        ['active_cam_fovx'] = 39.6,
+        ['compositeSize'] = Amaz.Vector2f(504, 896),
+        ['layerSize'] = Amaz.Vector2f(504, 896),
+        ['mirrorEdge'] = false,
+        ['blendMode'] = 0,
+    },
+    ['LumiLayer_55-trs-blend'] = {
+        ['hasBlend'] = true,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Precomp',
+        ['anchorPoint'] = Amaz.Vector3f(252, 448, 0),
+        ['position'] = Amaz.Vector3f(252, 448, 0),
+        ['scale'] = Amaz.Vector3f(16, 16, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 0,
+        ['active_cam_fovx'] = 39.6,
+        ['compositeSize'] = Amaz.Vector2f(504, 896),
+        ['layerSize'] = Amaz.Vector2f(504, 896),
+        ['mirrorEdge'] = false,
+        ['blendMode'] = 0,
+    },
+    ['LumiAnimSeqLoadAndCrop_105-effect0'] = {
+        ['specify_1_1'] = true,
+        ['animSeqType_1_1'] = 1,
+        ['cropType_1_1'] = 1,
+        ['edgeType_1_1'] = 0,
+        ['enableVideoAlphaBlend_1_1'] = false,
+        ['pivot_1_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_1_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_1_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_1_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_1_1'] = 0,
+        ['scale_1_1'] = 1,
+        ['opacity_1_1'] = 1,
+        ['speed_1_1'] = 1,
+        ['playMode_1_1'] = 1,
+        ['specify_9_16'] = false,
+        ['animSeqType_9_16'] = 2,
+        ['cropType_9_16'] = 1,
+        ['edgeType_9_16'] = 0,
+        ['enableVideoAlphaBlend_9_16'] = false,
+        ['pivot_9_16'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_9_16'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_9_16'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_9_16'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_9_16'] = 0,
+        ['scale_9_16'] = 1,
+        ['opacity_9_16'] = 1,
+        ['speed_9_16'] = 1,
+        ['playMode_9_16'] = 1,
+        ['specify_16_9'] = false,
+        ['animSeqType_16_9'] = 2,
+        ['cropType_16_9'] = 1,
+        ['edgeType_16_9'] = 0,
+        ['enableVideoAlphaBlend_16_9'] = false,
+        ['pivot_16_9'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_16_9'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_16_9'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_16_9'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_16_9'] = 0,
+        ['scale_16_9'] = 1,
+        ['opacity_16_9'] = 1,
+        ['speed_16_9'] = 1,
+        ['playMode_16_9'] = 1,
+        ['specify_5.8'] = false,
+        ['animSeqType_5.8'] = 2,
+        ['cropType_5.8'] = 1,
+        ['edgeType_5.8'] = 0,
+        ['enableVideoAlphaBlend_5.8'] = false,
+        ['pivot_5.8'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_5.8'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_5.8'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_5.8'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_5.8'] = 0,
+        ['scale_5.8'] = 1,
+        ['opacity_5.8'] = 1,
+        ['speed_5.8'] = 1,
+        ['playMode_5.8'] = 1,
+        ['specify_2_1'] = false,
+        ['animSeqType_2_1'] = 2,
+        ['cropType_2_1'] = 1,
+        ['edgeType_2_1'] = 0,
+        ['enableVideoAlphaBlend_2_1'] = false,
+        ['pivot_2_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_2_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_2_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_2_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_2_1'] = 0,
+        ['scale_2_1'] = 1,
+        ['opacity_2_1'] = 1,
+        ['speed_2_1'] = 1,
+        ['playMode_2_1'] = 1,
+        ['specify_3_4'] = false,
+        ['animSeqType_3_4'] = 2,
+        ['cropType_3_4'] = 1,
+        ['edgeType_3_4'] = 0,
+        ['enableVideoAlphaBlend_3_4'] = false,
+        ['pivot_3_4'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_3_4'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_3_4'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_3_4'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_3_4'] = 0,
+        ['scale_3_4'] = 1,
+        ['opacity_3_4'] = 1,
+        ['speed_3_4'] = 1,
+        ['playMode_3_4'] = 1,
+        ['specify_4_3'] = false,
+        ['animSeqType_4_3'] = 2,
+        ['cropType_4_3'] = 1,
+        ['edgeType_4_3'] = 0,
+        ['enableVideoAlphaBlend_4_3'] = false,
+        ['pivot_4_3'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_4_3'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_4_3'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_4_3'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_4_3'] = 0,
+        ['scale_4_3'] = 1,
+        ['opacity_4_3'] = 1,
+        ['speed_4_3'] = 1,
+        ['playMode_4_3'] = 1,
+        ['specify_1.85_1'] = false,
+        ['animSeqType_1.85_1'] = 2,
+        ['cropType_1.85_1'] = 1,
+        ['edgeType_1.85_1'] = 0,
+        ['enableVideoAlphaBlend_1.85_1'] = false,
+        ['pivot_1.85_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_1.85_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_1.85_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_1.85_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_1.85_1'] = 0,
+        ['scale_1.85_1'] = 1,
+        ['opacity_1.85_1'] = 1,
+        ['speed_1.85_1'] = 1,
+        ['playMode_1.85_1'] = 1,
+        ['specify_2.35_1'] = false,
+        ['animSeqType_2.35_1'] = 2,
+        ['cropType_2.35_1'] = 1,
+        ['edgeType_2.35_1'] = 0,
+        ['enableVideoAlphaBlend_2.35_1'] = false,
+        ['pivot_2.35_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_pivot_2.35_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['position_2.35_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_position_2.35_1'] = Amaz.Vector2f(0.5, 0.5),
+        ['rotation_2.35_1'] = 0,
+        ['scale_2.35_1'] = 1,
+        ['opacity_2.35_1'] = 1,
+        ['speed_2.35_1'] = 1,
+        ['playMode_2.35_1'] = 1,
+        ['globalRotation'] = 0,
+        ['globalScale'] = 1,
+        ['globalOpacity'] = 1,
+        ['globalSpeed'] = 1,
+        ['lite_mode'] = true,
+    },
+    ['LumiBezierDeformation_58-effect0'] = {
+        ['BottomLeftTangent'] = Amaz.Vector2f(0.33299987792969, 0),
+        ['BottomRightTangent'] = Amaz.Vector2f(0.66699996948242, 0),
+        ['BottomRightVertex'] = Amaz.Vector2f(1, 0),
+        ['LeftBottomTangent'] = Amaz.Vector2f(0, 0.33300003051758),
+        ['LeftBottomVertex'] = Amaz.Vector2f(0, 0),
+        ['LeftTopTangent'] = Amaz.Vector2f(0, 0.66700012207031),
+        ['RightBottomTangent'] = Amaz.Vector2f(1, 0.33300003051758),
+        ['RightTopTangent'] = Amaz.Vector2f(1, 0.66700012207031),
+        ['RightTopVertex'] = Amaz.Vector2f(1, 1),
+        ['TopLeftTangent'] = Amaz.Vector2f(0.33299987792969, 1),
+        ['TopLeftVertex'] = Amaz.Vector2f(0, 1),
+        ['TopRightTangent'] = Amaz.Vector2f(0.66699996948242, 1),
+    },
+    ['LumiDisplacementMap_58-effect1'] = {
+        ['horizontalType'] = 2,
+        ['horizontalIntensity'] = 0,
+        ['verticalType'] = 0,
+        ['verticalIntensity'] = 0,
+        ['edgeType'] = 1,
+    },
+    ['LumiTurbulenceDisplacement_58-effect2'] = {
+        ['size'] = 0,
+        ['quantity'] = 0.5,
+        ['complexity'] = 6.36,
+        ['evolution'] = 1080,
+        ['cycle'] = 100,
+        ['offset_x'] = 0,
+        ['offset_y'] = 0,
+        ['type'] = 0,
+        ['fix_type'] = 0,
+        ['picture_scale'] = 1,
+        ['motion_tile_type'] = 0,
+        ['qualityType'] = 3,
+    },
+    ['LumiBCC_Prism_58-effect3'] = {
+        ['globalTransform'] = 0,
+        ['smoothness'] = 1,
+        ['center'] = Amaz.Vector2f(0.5, 0.5),
+        ['weight'] = 1,
+        ['scaleStart'] = 102,
+        ['scaleEnd'] = 98,
+        ['angleStart'] = 0,
+        ['angleEnd'] = 0,
+        ['falloff'] = 0,
+        ['offsetStart'] = Amaz.Vector2f(0.5, 0.5),
+        ['offsetEnd'] = Amaz.Vector2f(0.5, 0.5),
+        ['colorStart'] = Amaz.Color(1, 0, 0, 1),
+        ['colorMid'] = Amaz.Color(0, 1, 0, 1),
+        ['colorEnd'] = Amaz.Color(0, 0.51764678955078, 1, 1),
+    },
+    ['LumiLayer_58-blend'] = {
+        ['hasBlend'] = true,
+        ['hasMatte'] = false,
+        ['hasTransform'] = false,
+        ['layerType'] = 'Adjustment',
+        ['blendMode'] = 0,
+    },
+}
+data.ae_attribute = ae_attribute
+
+local ae_keyframes = {
+    ['LumiOpticsCompensation_55-effect0#fov#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.033333, 1.966667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiOpticsCompensation_41-effect0#fov#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0, 1.966667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiLayer_41-trs#opacity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.2, 1.233333, }, 
+		{{1, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiOpticsCompensation_81-effect0#fov#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0, 1.966667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiLayer_81-trs-blend#opacity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.033333, 1.066667, }, 
+		{{0, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.066667, 1.833333, }, 
+		{{100, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.833333, 1.866667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiOpticsCompensation_52-effect0#fov#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0, 1.966667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiLayer_52-trs-blend#scale#vector'] =
+{
+	{
+		{0.166666667,0.166666667,0.166666667, 0.166666667,0.166666667,0.166666667, 0.833333333,0.833333333,0.833333333, 0.833333333,0.833333333,0.833333333, }, 
+		{1.733333, 1.766667, }, 
+		{{66, 66, 100, }, {78, 78, 100, }, }, 
+		{6414, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiLayer_52-trs-blend#opacity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.3, 0.333333, }, 
+		{{0, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.333333, 1.833333, }, 
+		{{100, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.833333, 1.866667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiLayer_53-trs-blend#opacity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.2, 0.233333, }, 
+		{{0, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.233333, 1.733333, }, 
+		{{100, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.733333, 1.766667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiOpticsCompensation_54-effect0#fov#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0, 1.966667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiLayer_54-trs-blend#opacity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.1, 0.133333, }, 
+		{{2, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.133333, 1.666667, }, 
+		{{100, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.666667, 1.7, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiLayer_55-trs-blend#opacity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.033333, 0.066667, }, 
+		{{0, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.066667, 1.5, }, 
+		{{100, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.5, 1.533333, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiAnimSeqLoadAndCrop_105-effect0#seqTime#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0, 2, }, 
+		{{0, }, {2, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#BottomLeftTangent#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{0.43220622955754, 0.09598214285714, }, {0.33299987793056, 0, }, {0.41567183676167, 0.07998511940241, }, {0.34953427072642, 0.01599702345473, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#BottomRightTangent#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{0.59557142711905, 0.08035714285714, }, {0.66699996948214, 0, }, {0.60747618429328, 0.06696428571429, }, {0.65509521230791, 0.01339285714286, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#BottomRightVertex#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{1.06349206349206, -0.21428571428571, }, {1, 0, }, {1.05291005259468, -0.17857142857143, }, {1.01058201089738, -0.03571428571429, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#LeftBottomTangent#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{0.17460317460317, 0.40442858423549, }, {0, 0.33300003051786, }, {0.14550264487191, 0.39252382516905, }, {0.02910052973127, 0.3449047895843, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#LeftBottomVertex#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{-0.04365079365079, -0.20535714285714, }, {0, 0, }, {-0.03637566121798, -0.17113095309053, }, {-0.00727513243282, -0.03422618976661, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#LeftTopTangent#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{0.1984126984127, 0.59333940914732, }, {0, 0.66700012207031, }, {0.16534391660539, 0.60561619486161, }, {0.03306878180731, 0.65472333635603, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#RightBottomTangent#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{0.88888888888889, 0.39550001280692, }, {1, 0.33300003051786, }, {0.90740740677667, 0.38508334862378, }, {0.98148148211222, 0.343416694701, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#RightTopTangent#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{0.89285714285714, 0.61119655200446, }, {1, 0.66700012207031, }, {0.91071428571429, 0.62049714688777, }, {0.98214285714286, 0.65769952718701, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#RightTopVertex#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{1.01190476190476, 1.11830357142857, }, {1, 1, }, {1.00992063492063, 1.09858631023339, }, {1.00198412698413, 1.01971726119518, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#TopLeftTangent#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{0.38061892797024, 0.82589285714286, }, {0.33299987793056, 1, }, {0.37268242003373, 0.85491071428571, }, {0.34093638586706, 0.97098214285714, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#TopLeftVertex#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{-0.03571428571429, 1.10491071428571, }, {0, 1, }, {-0.0297619047619, 1.08742559488331, }, {-0.00595238095238, 1.01748511940241, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBezierDeformation_58-effect0#TopRightTangent#vector'] =
+{
+	{
+		{0.166667, 0.166667, 0.32, 1, }, 
+		{0.333333, 1.166667, }, 
+		{{0.63128571283333, 0.828125, }, {0.66699996948214, 1, }, {0.63723808905519, 0.85677083262375, }, {0.66104759326029, 0.97135416737625, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiDisplacementMap_58-effect1#horizontalIntensity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.832586027, }, 
+		{0, 0.033333, }, 
+		{{0.02044924, }, {0.0234788, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.165926003, 0.833333333, 0.833457461, }, 
+		{0.033333, 0.066667, }, 
+		{{0.0234788, }, {0.02653552, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.166790979, 0.833333333, 0.834407991, }, 
+		{0.066667, 0.1, }, 
+		{{0.02653552, }, {0.02958769, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.167755364, 0.833333333, 0.835470156, }, 
+		{0.1, 0.133333, }, 
+		{{0.02958769, }, {0.03260051, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.168859724, 0.833333333, 0.83668971, }, 
+		{0.133333, 0.166667, }, 
+		{{0.03260051, }, {0.03553606, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.1701639, 0.833333333, 0.838133995, }, 
+		{0.166667, 0.2, }, 
+		{{0.03553606, }, {0.03835339, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.17176079, 0.833333333, 0.835730634, }, 
+		{0.2, 0.233333, }, 
+		{{0.03835339, }, {0.04100841, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.169134974, 0.833333333, 0.831115454, }, 
+		{0.233333, 0.266667, }, 
+		{{0.04100841, }, {0.04358706, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.164506285, 0.833333333, 0.834977256, }, 
+		{0.266667, 0.3, }, 
+		{{0.04358706, }, {0.04623433, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.168343671, 0.833333333, 0.83869741, }, 
+		{0.3, 0.333333, }, 
+		{{0.04623433, }, {0.04882938, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.172399777, 0.833333333, 0.842613216, }, 
+		{0.333333, 0.366667, }, 
+		{{0.04882938, }, {0.05125739, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.177109442, 0.833333333, 0.84732401, }, 
+		{0.366667, 0.4, }, 
+		{{0.05125739, }, {0.05341502, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.183480123, 0.833333333, 0.853877745, }, 
+		{0.4, 0.433333, }, 
+		{{0.05341502, }, {0.05521041, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.19393317, 0.833333333, 0.864844455, }, 
+		{0.433333, 0.466667, }, 
+		{{0.05521041, }, {0.05656318, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.217338506, 0.833333333, 0.889693725, }, 
+		{0.466667, 0.5, }, 
+		{{0.05656318, }, {0.05740442, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.340792997, 0.833333333, 1.021521577, }, 
+		{0.5, 0.533333, }, 
+		{{0.05740442, }, {0.05767671, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.017104251, 0.833333333, 0.675387148, }, 
+		{0.533333, 0.566667, }, 
+		{{0.05767671, }, {0.0573341, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.112115074, 0.833333333, 0.776850422, }, 
+		{0.566667, 0.6, }, 
+		{{0.0573341, }, {0.05634212, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.1330017, 0.833333333, 0.79909199, }, 
+		{0.6, 0.633333, }, 
+		{{0.05634212, }, {0.05467779, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.14239745, 0.833333333, 0.809062948, }, 
+		{0.633333, 0.666667, }, 
+		{{0.05467779, }, {0.05232959, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.14787055, 0.833333333, 0.814851782, }, 
+		{0.666667, 0.7, }, 
+		{{0.05232959, }, {0.04929748, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.151539907, 0.833333333, 0.818722245, }, 
+		{0.7, 0.733333, }, 
+		{{0.04929748, }, {0.04559292, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.154235222, 0.833333333, 0.821560321, }, 
+		{0.733333, 0.766667, }, 
+		{{0.04559292, }, {0.04123883, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.156351011, 0.833333333, 0.823787097, }, 
+		{0.766667, 0.8, }, 
+		{{0.04123883, }, {0.03626961, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.1581016, 0.833333333, 0.825631313, }, 
+		{0.8, 0.833333, }, 
+		{{0.03626961, }, {0.03073114, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.159616273, 0.833333333, 0.827231065, }, 
+		{0.833333, 0.866667, }, 
+		{{0.03073114, }, {0.02468079, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.160980761, 0.833333333, 0.828678171, }, 
+		{0.866667, 0.9, }, 
+		{{0.02468079, }, {0.01818738, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.162257792, 0.833333333, 0.830040185, }, 
+		{0.9, 0.933333, }, 
+		{{0.01818738, }, {0.01133124, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.163498709, 0.833333333, 0.831372898, }, 
+		{0.933333, 0.966667, }, 
+		{{0.01133124, }, {0.00420415, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.164751291, 0.833333333, 0.832728853, }, 
+		{0.966667, 1, }, 
+		{{0.00420415, }, {-0.00309059, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.16606654, 0.833333333, 0.834164844, }, 
+		{1, 1.033333, }, 
+		{{-0.00309059, }, {-0.01043826, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.167506558, 0.833333333, 0.835750787, }, 
+		{1.033333, 1.066667, }, 
+		{{-0.01043826, }, {-0.0177126, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.169156344, 0.833333333, 0.837583128, }, 
+		{1.066667, 1.1, }, 
+		{{-0.0177126, }, {-0.02477592, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.171144837, 0.833333333, 0.839808906, }, 
+		{1.1, 1.133333, }, 
+		{{-0.02477592, }, {-0.03147903, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.173687833, 0.833333333, 0.842674915, }, 
+		{1.133333, 1.166667, }, 
+		{{-0.03147903, }, {-0.03766127, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.177187639, 0.833333333, 0.846641936, }, 
+		{1.166667, 1.2, }, 
+		{{-0.03766127, }, {-0.04315048, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.182504646, 0.833333333, 0.842240699, }, 
+		{1.2, 1.233333, }, 
+		{{-0.04315048, }, {-0.04776304, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.176640074, 0.833333333, 0.825284616, }, 
+		{1.233333, 1.266667, }, 
+		{{-0.04776304, }, {-0.05188258, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.159326862, 0.833333333, 0.827855055, }, 
+		{1.266667, 1.3, }, 
+		{{-0.05188258, }, {-0.0564, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.161526312, 0.833333333, 0.830161478, }, 
+		{1.3, 1.333333, }, 
+		{{-0.0564, }, {-0.06121439, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.163611112, 0.833333333, 0.832027207, }, 
+		{1.333333, 1.366667, }, 
+		{{-0.06121439, }, {-0.06621203, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.165380696, 0.833333333, 0.833625167, }, 
+		{1.366667, 1.4, }, 
+		{{-0.06621203, }, {-0.071288, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.166959526, 0.833333333, 0.835064408, }, 
+		{1.4, 1.433333, }, 
+		{{-0.071288, }, {-0.07634619, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.168434464, 0.833333333, 2.518862973, }, 
+		{1.433333, 1.466667, }, 
+		{{-0.07634619, }, {-0.08129931, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.078999005, 0.833333333, 0.911355979, }, 
+		{1.466667, 1.5, }, 
+		{{-0.08129931, }, {0.01393113, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 1.390968991, 0.833333333, 1.328605004, }, 
+		{1.5, 1.533333, }, 
+		{{0.01393113, }, {0.02, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.066475363, 0.833333333, 0.916666667, }, 
+		{1.533333, 1.566667, }, 
+		{{0.02, }, {-0.01, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, -0.0025, 0.833333333, -0.000416667, }, 
+		{1.566667, 1.6, }, 
+		{{-0.01, }, {-0.01, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.083333333, 0.833333333, 0.916666667, }, 
+		{1.6, 1.633333, }, 
+		{{-0.01, }, {-0.005, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.000416667, 0.833333333, 0, }, 
+		{1.633333, 1.666667, }, 
+		{{-0.005, }, {-0.005, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0, 0.833333333, -0.000333333, }, 
+		{1.666667, 1.7, }, 
+		{{-0.005, }, {-0.005, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.083333333, 0.833333333, 3.210535504, }, 
+		{1.7, 1.733333, }, 
+		{{-0.005, }, {-0.001, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.080305939, 0.833333333, 0.916666667, }, 
+		{1.733333, 1.766667, }, 
+		{{-0.001, }, {-0.1111057, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, -0.009175475, 0.833333333, -0.002546071, }, 
+		{1.766667, 1.8, }, 
+		{{-0.1111057, }, {-0.1111057, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.125, 0.833333333, 0.795220214, }, 
+		{1.8, 1.9, }, 
+		{{-0.1111057, }, {-0.05, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.106950539, 0.833333333, 0.893162393, }, 
+		{1.9, 1.933333, }, 
+		{{-0.05, }, {-0.011, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.166666667, 0.378787879, 0.833333333, 0.833333333, }, 
+		{1.933333, 1.966667, }, 
+		{{-0.011, }, {0, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiTurbulenceDisplacement_58-effect2#size#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.66666667, 1, }, 
+		{0.833333, 1.166667, }, 
+		{{0.02, }, {0, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiTurbulenceDisplacement_58-effect2#evolution#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.32, 1, }, 
+		{0, 1.166667, }, 
+		{{0, }, {1080, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiBCC_Prism_58-effect3#globalTransform#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{1.533333, 1.966667, }, 
+		{{400, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+}
+data.ae_keyframes = ae_keyframes
+
+local ae_reverseKeyframes = true
+data.ae_reverseKeyframes = ae_reverseKeyframes
+
+local ae_sliderInfos = {
+}
+data.ae_sliderInfos = ae_sliderInfos
+
+local ae_fadeinInfos = {
+    time = 0,
+    infos = {
+    }
+}
+data.ae_fadeinInfos = ae_fadeinInfos
+
+local ae_fadeoutInfos = {
+    time = 0,
+    infos = {
+    }
+}
+data.ae_fadeoutInfos = ae_fadeoutInfos
+
+local ae_animationInfos = {
+    animationMode = 0,
+    loopStart = 0,
+    speedInfo = {1, 0, 1, },
+}
+data.ae_animationInfos = ae_animationInfos
+
+return data

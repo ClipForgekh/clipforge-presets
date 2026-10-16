@@ -1,0 +1,11 @@
+{
+    "pe": "[出场视频动画] 起始：画面中心闪耀。过程：无数条七彩流光粉带从底部极速升起，在空中炸开成巨大的庆祝花环，伴随密集的火星。结尾：花环中心瞬间扩大产生黑洞，将全屏内容极速吞噬。节奏：垂直升空爆发。，1080x1080分辨率",
+    "asset_path": "/Users/bytedance/Desktop/AI-project/AIGLE/scripts/out/logs/20260427_191350_2af45938-4d9b-494b-98eb-378d53ad5226_export/assets/video_701.mp4",
+    "classification": {
+        "category": "VideoAnimation",
+        "sub_category": "out/mp4",
+        "style": "出场",
+        "explicit": "true"
+    },
+    "timestamp": "2026-04-27T11:16:11"
+}

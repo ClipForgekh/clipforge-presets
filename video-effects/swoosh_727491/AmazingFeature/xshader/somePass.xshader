@@ -1,0 +1,99 @@
+%YAML 1.1
+--- !XShader &1
+name: somePass
+guid: {a: 16378082203104165387, b: 14759751264261977483}
+properties:
+  __class: PropertySheet
+  name: ""
+  guid: {a: 3332885790220582182, b: 1474163837558169014}
+  floatmap:
+    __class: Map
+    noiseIns: 0
+    scaleIns: 0
+    xOffset: 0
+    yOffset: 0
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+  intmap:
+    __class: Map
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: ""
+    guid: {a: 7298601207142240483, b: 6529319618012734354}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 2}
+        - {localId: 3}
+    angleBinaryPrograms:
+      __class: Map
+    semantics:
+      __class: Map
+      position:
+        __class: VertexAttribType
+        value: POSITION
+      texcoord0:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: ""
+      guid: {a: 12776038312070370593, b: 10114977734942612622}
+      depthstencil:
+        __class: DepthStencilState
+        name: ""
+        guid: {a: 14574744652547741595, b: 12022789904481754762}
+        depthTestEnable: false
+        depthTestEnableName: ""
+        depthCompareOp:
+          __class: CompareOp
+          value: LESS
+        depthCompareOpName: ""
+        depthWriteEnable: false
+        stencilTestEnable: false
+        stencilTestEnableName: ""
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    enableFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+    lightMode:
+      __class: LightMode
+      value: NONE
+    clearMoment:
+      __class: PassClearMoment
+      value: CLEAR_BEFORE_RENDERING
+--- !Shader &2
+name: ""
+guid: {a: 12989527929632114794, b: 118300602801898419}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: xshader/somePass.vert
+--- !Shader &3
+name: ""
+guid: {a: 6791506041895064633, b: 12184880422564593587}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: xshader/somePass.frag

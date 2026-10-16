@@ -1,0 +1,23 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "maxRotation",
+                "effect_key_cn": "maxRotation",
+                "type": "float",
+                "default": 6.2831853,
+                "min": 3.1415926,
+                "max": 12.5663706
+            },
+            {
+                "effect_key": "swirlIntensity",
+                "effect_key_cn": "swirlIntensity",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 3
+            }
+        ]
+    }
+}

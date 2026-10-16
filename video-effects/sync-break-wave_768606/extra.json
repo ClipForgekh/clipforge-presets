@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "lockPoint",
+                "effect_key_cn": "lockPoint",
+                "type": "float",
+                "default": 0.18,
+                "min": 0.05,
+                "max": 0.6
+            },
+            {
+                "effect_key": "jitterAmount",
+                "effect_key_cn": "jitterAmount",
+                "type": "float",
+                "default": 0.03,
+                "min": 0,
+                "max": 0.12
+            },
+            {
+                "effect_key": "rgbSplit",
+                "effect_key_cn": "rgbSplit",
+                "type": "float",
+                "default": 0.002,
+                "min": 0,
+                "max": 0.01
+            },
+            {
+                "effect_key": "noiseAmount",
+                "effect_key_cn": "noiseAmount",
+                "type": "float",
+                "default": 0.06,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "tearWidth",
+                "effect_key_cn": "tearWidth",
+                "type": "float",
+                "default": 0.018,
+                "min": 0.004,
+                "max": 0.08
+            }
+        ]
+    }
+}

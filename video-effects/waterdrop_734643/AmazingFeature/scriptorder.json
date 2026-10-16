@@ -1,0 +1,7 @@
+{
+    "lua/SeekModeScript.lua": "10",
+    "effects/GaussianBlur/lua": "1",
+    "effects/GaussianBlur/lua/ScriptCompGaussianBlur.lua": "2",
+    "effects/lumi_direction_blur/lua/LumiDirectionBlur.lua": "3",
+    "effects/Deep_Glow/Lua/GlowScript.lua": "4"
+}

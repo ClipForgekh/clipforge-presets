@@ -1,0 +1,6 @@
+{
+    "lua/SeekModeScript.lua": "4",
+    "effects/GaussianBlur/lua/GaussianBlurLayerScript.lua": "1",
+    "effects/retouch_adjust/LumiScript.lua": "2",
+    "effects/Glow/lua/AdjustGlow.lua": "3"
+}

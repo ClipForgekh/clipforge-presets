@@ -1,0 +1,47 @@
+{
+  "key": "LumiChromaticAberration",
+  "category": "Color Correction",
+  "desc": "色差效果 - 模拟镜头色差现象，分离RGB通道并产生边缘彩色条纹，径向偏移强度随距离增加。适用于镜头模拟、复古效果、艺术滤镜、故障美学",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无强度 - 关闭色差效果，不应用任何通道分离"
+    },
+    {
+      "name": "low",
+      "desc": "低强度 - 基本的色差效果，通道分离不明显，主要用于基础的视觉效果"
+    },
+    {
+      "name": "medium",
+      "desc": "中强度 - 中等强度的色差效果，通道分离明显，适用于中等视觉效果"
+    },
+    {
+      "name": "high",
+      "desc": "高强度 - 高强度的色差效果，通道分离强烈，适用于强烈的视觉效果"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "offsetX",
+      "desc": "水平偏移量 - 控制RGB通道在水平方向的分离程度，正值向右偏移",
+      "type": "number",
+      "value": 0.5,
+      "min": -1.0,
+      "max": 1.0
+    },
+    {
+      "name": "offsetY",
+      "desc": "垂直偏移量 - 控制RGB通道在垂直方向的分离程度，正值向上偏移",
+      "type": "number",
+      "value": 0.5,
+      "min": -1.0,
+      "max": 1.0
+    },
+    {
+      "name": "intensity",
+      "desc": "色差强度 - 控制色差效果的整体强度，影响通道分离的明显程度",
+      "type": "number",
+      "value": 0.5
+    }
+  ]
+}

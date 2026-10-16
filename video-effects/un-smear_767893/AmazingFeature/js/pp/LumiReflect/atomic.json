@@ -1,0 +1,170 @@
+{
+  "key": "LumiReflect",
+  "category": "Distortion & Reflection",
+  "desc": "平面反射效果，通过地平线位置、倾斜、模糊和混合模式构造地面镜像、玻璃倒影或柔和阴影式反射。",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "关闭反射，仅保留原图"
+    },
+    {
+      "name": "default",
+      "desc": "标准平面反射，适合作为调参起点"
+    },
+    {
+      "name": "soft_mirror",
+      "desc": "较柔和的镜面倒影，适合轻微玻璃或台面反射"
+    },
+    {
+      "name": "glass_floor",
+      "desc": "更明显的地面镜像，带有更强的模糊和衰减"
+    },
+    {
+      "name": "cold_reflect",
+      "desc": "偏冷色的反射层，适合金属或冷光环境"
+    },
+    {
+      "name": "tilted_shadow",
+      "desc": "倾斜且更暗的反射，接近投影/阴影式倒影"
+    },
+    {
+      "name": "reflection_only",
+      "desc": "仅输出反射层，方便单独观察镜像形态"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "floorPositionX",
+      "desc": "地平线 X 位置，控制反射轴左右偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "floorPositionY",
+      "desc": "地平线 Y 位置，越低越像落在底部平面上的倒影",
+      "type": "number",
+      "value": 0.5,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "reflectionAngle",
+      "desc": "反射倾斜角度",
+      "type": "number",
+      "value": 0,
+      "min": -45,
+      "max": 45
+    },
+    {
+      "name": "reflectionDistance",
+      "desc": "反射拉伸距离",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "reflectionFalloff",
+      "desc": "反射衰减强度，越高越容易向远端淡出",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "skew",
+      "desc": "反射的透视倾斜程度",
+      "type": "number",
+      "value": 7,
+      "min": -40,
+      "max": 40
+    },
+    {
+      "name": "tintR",
+      "desc": "反射染色 R 通道",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "tintG",
+      "desc": "反射染色 G 通道",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "tintB",
+      "desc": "反射染色 B 通道",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "opacity",
+      "desc": "反射整体透明度",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "blurType",
+      "desc": "模糊模式",
+      "type": "enum",
+      "value": "Directional",
+      "options": [
+        "Directional",
+        "Falloff"
+      ]
+    },
+    {
+      "name": "blurAmount",
+      "desc": "模糊强度",
+      "type": "number",
+      "value": 20,
+      "min": 0,
+      "max": 80
+    },
+    {
+      "name": "blurOffset",
+      "desc": "模糊偏移，增加反射与原图之间的拖尾感",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "blurFalloff",
+      "desc": "模糊衰减强度",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "blendStyle",
+      "desc": "反射与原图的混合方式",
+      "type": "enum",
+      "value": "Composite",
+      "options": [
+        "Composite",
+        "Behind Original",
+        "Reflection Only"
+      ]
+    },
+    {
+      "name": "quality",
+      "desc": "内部渲染质量，越高越清晰但开销更大",
+      "type": "number",
+      "value": 1,
+      "min": 0.25,
+      "max": 1
+    }
+  ]
+}

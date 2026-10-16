@@ -1,0 +1,87 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "uBaseBrightness",
+                "effect_key_cn": "u Base",
+                "type": "float",
+                "default": 0.8,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "uQuadrantPhase",
+                "effect_key_cn": "u Quad",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 6.2831853
+            },
+            {
+                "effect_key": "uSpinStrength",
+                "effect_key_cn": "u Spin",
+                "type": "float",
+                "default": 0.03,
+                "min": 0,
+                "max": 0.12
+            },
+            {
+                "effect_key": "uWeaveStrength",
+                "effect_key_cn": "u Weav",
+                "type": "float",
+                "default": 0.015,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "uWingStrength",
+                "effect_key_cn": "u Wing",
+                "type": "float",
+                "default": 0.012,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "uPullStrength",
+                "effect_key_cn": "u Pull",
+                "type": "float",
+                "default": 0.018,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "uMotionBlurMax",
+                "effect_key_cn": "u Moti",
+                "type": "float",
+                "default": 0.13,
+                "min": 0,
+                "max": 0.3
+            },
+            {
+                "effect_key": "uBokehMax",
+                "effect_key_cn": "u Boke",
+                "type": "float",
+                "default": 0.1,
+                "min": 0,
+                "max": 0.3
+            },
+            {
+                "effect_key": "uDeepLayerMask",
+                "effect_key_cn": "u Deep",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            }
+        ]
+    }
+}

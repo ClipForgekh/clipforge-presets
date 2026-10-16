@@ -1,0 +1,67 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "maxBlurPx",
+                "effect_key_cn": "最大模糊 P",
+                "type": "float",
+                "default": 25,
+                "min": 0,
+                "max": 40
+            },
+            {
+                "effect_key": "maxExposure",
+                "effect_key_cn": "最大曝光量",
+                "type": "float",
+                "default": 2.5,
+                "min": 1,
+                "max": 3
+            },
+            {
+                "effect_key": "maxSaturation",
+                "effect_key_cn": "最大饱和度",
+                "type": "float",
+                "default": 1.8,
+                "min": 1,
+                "max": 2.5
+            },
+            {
+                "effect_key": "maxGlowIntensity",
+                "effect_key_cn": "最大发光强度",
+                "type": "float",
+                "default": 3,
+                "min": 0,
+                "max": 4
+            },
+            {
+                "effect_key": "warmTemperatureColor",
+                "effect_key_cn": "暖色系",
+                "type": "color",
+                "default": [
+                    1,
+                    0.82,
+                    0.58
+                ]
+            },
+            {
+                "effect_key": "warmGlowColor",
+                "effect_key_cn": "温暖的发光颜",
+                "type": "color",
+                "default": [
+                    1,
+                    0.78,
+                    0.45
+                ]
+            }
+        ]
+    }
+}

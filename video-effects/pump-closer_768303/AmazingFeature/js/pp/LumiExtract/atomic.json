@@ -1,0 +1,77 @@
+{
+  "key": "LumiExtract",
+  "category": "Color Correction",
+  "desc": "亮度提取效果 - 基于亮度范围提取图像区域，支持软边缘过渡和反转。适用于遮罩生成、亮度分离、合成准备、选区创建",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无强度 - 关闭亮度提取效果，不应用任何提取"
+    },
+    {
+      "name": "highContrast",
+      "desc": "高对比度提取 - 提取出高对比度的区域，创建出对比强烈的效果"
+    },
+    {
+      "name": "softExtraction",
+      "desc": "软提取 - 过渡自然的提取效果，避免硬边缘"
+    },
+    {
+      "name": "invertedExtraction",
+      "desc": "反转提取 - 提取出非目标区域，创建出反转的效果"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "强度 - 控制亮度提取的程度，0.0为原图（无效果），1.0为完整提取效果",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "blackField",
+      "desc": "黑场阈值 - 设定提取的最低亮度值，低于此值的区域变为黑色",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 255
+    },
+    {
+      "name": "blackSoft",
+      "desc": "黑场柔化 - 控制黑场边缘的柔化程度，创建平滑过渡",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 255
+    },
+    {
+      "name": "whiteField",
+      "desc": "白场阈值 - 设定提取的最高亮度值，高于此值的区域变为白色",
+      "type": "number",
+      "value": 255,
+      "min": 0,
+      "max": 255
+    },
+    {
+      "name": "whiteSoft",
+      "desc": "白场柔化 - 控制白场边缘的柔化程度，创建平滑过渡",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 255
+    },
+    {
+      "name": "reverse",
+      "desc": "反转输出 - 控制是否反转提取结果，true为反转黑白",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "parameters",
+      "desc": "Packed extraction parameters forwarded into the shader for effect-specific setup.",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

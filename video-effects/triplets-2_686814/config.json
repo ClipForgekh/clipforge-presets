@@ -1,0 +1,16 @@
+{
+	"effect" : 
+	{
+		"Link" : 
+		[
+			{
+				"path" : "AmazingFeature/",
+				"type" : "AmazingFeature",
+				"zorder" : 8011
+			}
+		]
+	},
+    "setVideoAnimTRSInternal": false,
+	"name" : "Editor_Sticker_Config_TAG_9xdlEbZdubobpbycDblS7bB3buc",
+	"version" : "7.4.0"
+}

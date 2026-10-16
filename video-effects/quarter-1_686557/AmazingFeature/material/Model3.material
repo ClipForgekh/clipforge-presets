@@ -1,0 +1,30 @@
+%YAML 1.1
+--- !Material &1
+name: model
+guid: {a: 16738865831861847722, b: 8995838785001918067}
+xshader: {localId: 1, path: xshader/Model.xshader}
+properties:
+  __class: PropertySheet
+  name: template0_propertySheet
+  guid: {a: 12989757104152128549, b: 14132781561153868956}
+  floatmap:
+    __class: Map
+  vec4map:
+    __class: Map
+    u_scaleOffset: {x: 0.5, y: 0.5, z: 0, w: 0}
+    u_size: {x: 720, y: 1280, z: 360, w: 640}
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    u_videoTex: {localId: 1, path: rt/modelTex.rt}
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+mshaderPath: ""

@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "tileScale",
+                "effect_key_cn": "tileScale",
+                "type": "float",
+                "default": 3,
+                "min": 1,
+                "max": 6
+            },
+            {
+                "effect_key": "exposureFalloff",
+                "effect_key_cn": "exposureFalloff",
+                "type": "float",
+                "default": 3,
+                "min": 0.5,
+                "max": 6
+            },
+            {
+                "effect_key": "collapseSoftness",
+                "effect_key_cn": "collapseSoftness",
+                "type": "float",
+                "default": 0.08,
+                "min": 0.02,
+                "max": 0.2
+            }
+        ]
+    }
+}

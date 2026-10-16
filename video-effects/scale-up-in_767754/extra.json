@@ -1,0 +1,41 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "startScale",
+                "effect_key_cn": "开始规模",
+                "type": "float",
+                "default": 0.2,
+                "min": 0.05,
+                "max": 0.8
+            },
+            {
+                "effect_key": "bounceStrength",
+                "effect_key_cn": "弹跳强度",
+                "type": "float",
+                "default": 0.18,
+                "min": 0,
+                "max": 0.5
+            },
+            {
+                "effect_key": "energyColor",
+                "effect_key_cn": "能量色",
+                "type": "color",
+                "default": [
+                    0.35,
+                    0.85,
+                    1
+                ]
+            }
+        ]
+    }
+}

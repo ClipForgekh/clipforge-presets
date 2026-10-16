@@ -1,0 +1,57 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "goldColor",
+                "effect_key_cn": "金色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.88,
+                    0.35
+                ]
+            },
+            {
+                "effect_key": "particleSize",
+                "effect_key_cn": "粒径",
+                "type": "float",
+                "default": 0.003,
+                "min": 0.001,
+                "max": 0.01
+            },
+            {
+                "effect_key": "bleedStrength",
+                "effect_key_cn": "出血强度",
+                "type": "float",
+                "default": 0.2,
+                "min": 0,
+                "max": 0.5
+            },
+            {
+                "effect_key": "outlineThreshold",
+                "effect_key_cn": "轮廓阈值",
+                "type": "float",
+                "default": 0.2,
+                "min": 0.1,
+                "max": 0.5
+            },
+            {
+                "effect_key": "particleFlowSpeed",
+                "effect_key_cn": "粒子流速",
+                "type": "float",
+                "default": 2,
+                "min": 0.5,
+                "max": 5
+            }
+        ]
+    }
+}

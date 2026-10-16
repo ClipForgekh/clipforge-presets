@@ -1,0 +1,69 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "maxDisplace",
+                "effect_key_cn": "maxDisplace",
+                "type": "float",
+                "default": 40,
+                "min": 0,
+                "max": 100
+            },
+            {
+                "effect_key": "turbulenceSize",
+                "effect_key_cn": "turbulenceSize",
+                "type": "float",
+                "default": 120,
+                "min": 20,
+                "max": 300
+            },
+            {
+                "effect_key": "noiseMax",
+                "effect_key_cn": "noiseMax",
+                "type": "float",
+                "default": 0.35,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "highlightsColor",
+                "effect_key_cn": "highlightsColor",
+                "type": "color",
+                "default": [
+                    1,
+                    0.15,
+                    0.12
+                ]
+            },
+            {
+                "effect_key": "midtonesColor",
+                "effect_key_cn": "midtonesColor",
+                "type": "color",
+                "default": [
+                    0.45,
+                    0.02,
+                    0.06
+                ]
+            },
+            {
+                "effect_key": "shadowsColor",
+                "effect_key_cn": "shadowsColor",
+                "type": "color",
+                "default": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ]
+    }
+}

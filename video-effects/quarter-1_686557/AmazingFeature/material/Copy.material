@@ -1,0 +1,28 @@
+%YAML 1.1
+--- !Material &1
+name: ""
+guid: {a: 17600364279451096544, b: 14857495599679164826}
+xshader: {localId: 1, path: xshader/Copy.xshader}
+properties:
+  __class: PropertySheet
+  name: ""
+  guid: {a: 989789, b: 798567}
+  floatmap:
+    __class: Map
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    inputImageTexture: {localId: 1, path: rt/outputTex.rt}
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+mshaderPath: ""

@@ -1,0 +1,126 @@
+{
+  "key": "LumiMotionBlur2D",
+  "category": "Blur & Sharpen",
+  "desc": "2D运动模糊效果 - 基于2D变换创建运动模糊，支持旋转、缩放、位移的模糊。适用于运动效果、动态模糊、速度感表现、变换模糊",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果 - 关闭2D运动模糊效果，不应用任何模糊处理，保持图像原始状态"
+    },
+    {
+      "name": "softSpin",
+      "desc": "轻柔旋转拖影 - 柔和的旋转尾迹，适合顺滑转场、轻度旋入和优雅加速"
+    },
+    {
+      "name": "strongSpin",
+      "desc": "强烈旋转拖影 - 明显的旋转甩尾，适合强调爆发、扭转和高速转场"
+    },
+    {
+      "name": "pushZoom",
+      "desc": "推进变焦拖影 - 从中心向前推近的缩放拖影，适合冲击感推进和镜头压近"
+    },
+    {
+      "name": "pullZoom",
+      "desc": "抽离变焦拖影 - 向后抽离的缩放拖影，适合拉远、抽离和回撤节奏"
+    },
+    {
+      "name": "sideSweep",
+      "desc": "横向扫动拖影 - 带有横向偏移的拖影，适合侧扫、甩动和方向感切换"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "强度 - 控制运动模糊效果的强度，0为完全保持原图，1为纯运动模糊效果",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "rotationDeg",
+      "desc": "旋转角度 - 控制模糊轨迹的旋转幅度（度）",
+      "type": "number",
+      "value": 0,
+      "min": -360,
+      "max": 360
+    },
+    {
+      "name": "pivotPoint",
+      "desc": "旋转/缩放中心 - 控制模糊变换围绕哪个归一化位置发生",
+      "type": "array",
+      "value": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "motionCenter",
+      "desc": "运动中心 - 控制采样轨迹围绕哪个归一化位置展开",
+      "type": "array",
+      "value": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "lockScale",
+      "desc": "锁定缩放轴 - 开启后使用相同的 X/Y 缩放模糊",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "zoomX",
+      "desc": "横向缩放模糊 - 控制 X 方向的缩放拖影",
+      "type": "number",
+      "value": 1,
+      "min": -10,
+      "max": 10
+    },
+    {
+      "name": "zoomY",
+      "desc": "纵向缩放模糊 - 控制 Y 方向的缩放拖影",
+      "type": "number",
+      "value": 1,
+      "min": -10,
+      "max": 10
+    },
+    {
+      "name": "blurAmount",
+      "desc": "拖影幅度 - 控制历史轨迹拉伸得多远",
+      "type": "number",
+      "value": 0.5,
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "trailBias",
+      "desc": "拖影偏置 - 控制拖影更偏向前沿还是尾迹",
+      "type": "number",
+      "value": -0.25,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "quality",
+      "desc": "质量 - 控制采样密度与抖动强度的整体档位",
+      "type": "enum",
+      "value": "medium",
+      "options": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "name": "edgeMode",
+      "desc": "边缘处理 - 控制画面边缘是直接截断还是镜像延展",
+      "type": "enum",
+      "value": "clamp",
+      "options": [
+        "clamp",
+        "mirror"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "heartCount",
+                "effect_key_cn": "心数",
+                "type": "float",
+                "default": 12,
+                "min": 3,
+                "max": 30
+            },
+            {
+                "effect_key": "maxPixelSize",
+                "effect_key_cn": "最大像素尺寸",
+                "type": "float",
+                "default": 0.08,
+                "min": 0.01,
+                "max": 0.2
+            },
+            {
+                "effect_key": "heartEdgeBlur",
+                "effect_key_cn": "心形边缘模糊",
+                "type": "float",
+                "default": 0.02,
+                "min": 0.001,
+                "max": 0.1
+            }
+        ]
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "maxBlurStep",
+                "effect_key_cn": "最大模糊步长",
+                "type": "float",
+                "default": 0.2,
+                "min": 0.05,
+                "max": 0.5
+            },
+            {
+                "effect_key": "maxStretch",
+                "effect_key_cn": "最大拉伸",
+                "type": "float",
+                "default": 3.5,
+                "min": 1.5,
+                "max": 5
+            },
+            {
+                "effect_key": "maxGlow",
+                "effect_key_cn": "最大辉光",
+                "type": "float",
+                "default": 2.5,
+                "min": 1,
+                "max": 4
+            },
+            {
+                "effect_key": "metalColor",
+                "effect_key_cn": "金属色",
+                "type": "color",
+                "default": [
+                    0.4,
+                    0.6,
+                    1,
+                    1
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,81 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "neonColor",
+                "effect_key_cn": "neon C",
+                "type": "color",
+                "default": [
+                    1,
+                    0.25,
+                    0.95
+                ]
+            },
+            {
+                "effect_key": "blurRadius",
+                "effect_key_cn": "blur R",
+                "type": "float",
+                "default": 0.028,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "glowIntensity",
+                "effect_key_cn": "glow I",
+                "type": "float",
+                "default": 3.5,
+                "min": 0,
+                "max": 6
+            },
+            {
+                "effect_key": "glowPeak",
+                "effect_key_cn": "glow P",
+                "type": "float",
+                "default": 4,
+                "min": 0,
+                "max": 8
+            },
+            {
+                "effect_key": "brightnessStart",
+                "effect_key_cn": "bright",
+                "type": "float",
+                "default": 2.2,
+                "min": 0.5,
+                "max": 3
+            },
+            {
+                "effect_key": "contrastStart",
+                "effect_key_cn": "contra",
+                "type": "float",
+                "default": 0.5,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "neonWidth",
+                "effect_key_cn": "neon W",
+                "type": "float",
+                "default": 0.035,
+                "min": 0.005,
+                "max": 0.12
+            },
+            {
+                "effect_key": "dispersion",
+                "effect_key_cn": "disper",
+                "type": "float",
+                "default": 0.006,
+                "min": 0,
+                "max": 0.03
+            }
+        ]
+    }
+}

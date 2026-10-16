@@ -1,0 +1,31 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "motionBlur",
+                "effect_key_cn": "motion",
+                "type": "float",
+                "default": 0.6,
+                "min": 0,
+                "max": 1.5
+            },
+            {
+                "effect_key": "pathCurvature",
+                "effect_key_cn": "path C",
+                "type": "float",
+                "default": 0.35,
+                "min": 0,
+                "max": 1
+            }
+        ]
+    }
+}

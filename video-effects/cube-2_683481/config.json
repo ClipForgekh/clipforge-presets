@@ -1,0 +1,14 @@
+{
+    "effect": {
+        "Link": [
+            {
+                "type": "AmazingFeature",
+                "zorder": 10000,
+                "path": "amazingfeature/"
+            }
+        ]
+    },
+    "setVideoAnimTRSInternal": false,
+    "name": "cube2",
+    "version": "7.4.0"
+}

@@ -1,0 +1,215 @@
+{
+  "key": "LumiHalftone",
+  "category": "Stylize",
+  "desc": "半调网点效果 - 模拟印刷半调技术，将图像转换为网点图案，支持多种颜色模式。适用于印刷效果、复古风格、艺术化处理、网点图案",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无半调 - 关闭半调效果，不应用任何半调处理"
+    },
+    {
+      "name": "newspaper",
+      "desc": "经典报纸风格 - 应用经典的报纸半调效果，模拟旧版印刷效果"
+    },
+    {
+      "name": "color_halftone",
+      "desc": "彩色半调 - 应用彩色的半调效果，保留图像的颜色信息"
+    },
+    {
+      "name": "rough_print",
+      "desc": "粗糙印刷 - 应用粗糙的印刷半调效果，模拟旧版印刷效果"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "强度 - 控制半调效果的强度，0为完全保持原图，1为纯半调效果",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "colorMode",
+      "desc": "颜色模式 - 选择半调处理模式：0=黑白，1=彩色，2=自定义",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "blackDots",
+      "desc": "黑点控制 - 控制是否显示黑色网点，影响暗部的网点表现",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "dotFreq",
+      "desc": "网点频率 - 控制网点的密度，值越大网点越密集",
+      "type": "number",
+      "value": 60,
+      "min": 0,
+      "max": 2000
+    },
+    {
+      "name": "rotationAngle",
+      "desc": "网点旋转角度 - 设定网点图案的旋转角度",
+      "type": "angle",
+      "value": -30
+    },
+    {
+      "name": "dotsRelativeWidth",
+      "desc": "网点相对宽度 - 控制网点的相对大小比例",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 100
+    },
+    {
+      "name": "dotsSharpen",
+      "desc": "网点锐化 - 控制网点边缘的锐化程度",
+      "type": "number",
+      "value": 1
+    },
+    {
+      "name": "dotsLighten",
+      "desc": "网点亮化 - 调整网点的整体亮度",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "redOffsetX",
+      "desc": "红色通道X偏移 - 控制红色网点在X方向的偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "redOffsetY",
+      "desc": "红色通道Y偏移 - 控制红色网点在Y方向的偏移",
+      "type": "number",
+      "value": 0.25,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "greenOffsetX",
+      "desc": "绿色通道X偏移 - 控制绿色网点在X方向的偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "greenOffsetY",
+      "desc": "绿色通道Y偏移 - 控制绿色网点在Y方向的偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "blueOffsetX",
+      "desc": "蓝色通道X偏移 - 控制蓝色网点在X方向的偏移",
+      "type": "number",
+      "value": 0,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "blueOffsetY",
+      "desc": "蓝色通道Y偏移 - 控制蓝色网点在Y方向的偏移",
+      "type": "number",
+      "value": -0.25,
+      "min": -1,
+      "max": 1
+    },
+    {
+      "name": "color1",
+      "desc": "主色调 - 设定半调效果的主要颜色",
+      "type": "color",
+      "value": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "color2",
+      "desc": "次色调 - 设定半调效果的次要颜色",
+      "type": "color",
+      "value": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "dotsShift",
+      "desc": "网点整体偏移 - 控制所有网点的整体位置偏移",
+      "type": "array",
+      "value": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "alternateShift",
+      "desc": "交替偏移 - 控制交替行网点的额外偏移",
+      "type": "array",
+      "value": [
+        0,
+        0
+      ]
+    },
+    {
+      "name": "redoffsetx",
+      "desc": "Horizontal screen offset applied to the red halftone channel.",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "redoffsety",
+      "desc": "Vertical screen offset applied to the red halftone channel.",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "greenoffsetx",
+      "desc": "Horizontal screen offset applied to the green halftone channel.",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "greenoffsety",
+      "desc": "Vertical screen offset applied to the green halftone channel.",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "blueoffsetx",
+      "desc": "Horizontal screen offset applied to the blue halftone channel.",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "blueoffsety",
+      "desc": "Vertical screen offset applied to the blue halftone channel.",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

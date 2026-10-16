@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "maxBlur",
+                "effect_key_cn": "max Bl",
+                "type": "float",
+                "default": 0.035,
+                "min": 0,
+                "max": 0.12
+            },
+            {
+                "effect_key": "neonStrength",
+                "effect_key_cn": "neon S",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "overBright",
+                "effect_key_cn": "over B",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "entranceOffset",
+                "effect_key_cn": "entran",
+                "type": "float",
+                "default": 1,
+                "min": 0.5,
+                "max": 1.8
+            }
+        ]
+    }
+}

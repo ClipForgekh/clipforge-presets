@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "startScale",
+                "effect_key_cn": "startScale",
+                "type": "float",
+                "default": 0.06,
+                "min": 0.01,
+                "max": 0.3
+            },
+            {
+                "effect_key": "distortionStrength",
+                "effect_key_cn": "distortionStrength",
+                "type": "float",
+                "default": 0.08,
+                "min": 0,
+                "max": 0.3
+            },
+            {
+                "effect_key": "trailStrength",
+                "effect_key_cn": "trailStrength",
+                "type": "float",
+                "default": 0.9,
+                "min": 0,
+                "max": 1.5
+            },
+            {
+                "effect_key": "radialBlurStrength",
+                "effect_key_cn": "radialBlurStrength",
+                "type": "float",
+                "default": 0.85,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "glowStrength",
+                "type": "float",
+                "default": 0.35,
+                "min": 0,
+                "max": 1
+            }
+        ]
+    }
+}

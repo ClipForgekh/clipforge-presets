@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "twistStrength",
+                "effect_key_cn": "twist ",
+                "type": "float",
+                "default": 1.25,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "zoomDepth",
+                "effect_key_cn": "zoom D",
+                "type": "float",
+                "default": 0.22,
+                "min": 0,
+                "max": 0.6
+            },
+            {
+                "effect_key": "motionBlurStrength",
+                "effect_key_cn": "motion",
+                "type": "float",
+                "default": 0.24,
+                "min": 0,
+                "max": 0.5
+            },
+            {
+                "effect_key": "chromaAmount",
+                "effect_key_cn": "chroma",
+                "type": "float",
+                "default": 0.1,
+                "min": 0,
+                "max": 0.2
+            }
+        ]
+    }
+}

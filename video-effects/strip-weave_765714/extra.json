@@ -1,0 +1,91 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "sliceCount",
+                "effect_key_cn": "片数",
+                "type": "float",
+                "default": 12,
+                "min": 2,
+                "max": 24
+            },
+            {
+                "effect_key": "stagger",
+                "effect_key_cn": "错开",
+                "type": "float",
+                "default": 0.06,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "stretchAmount",
+                "effect_key_cn": "拉伸量",
+                "type": "float",
+                "default": 2.4,
+                "min": 1,
+                "max": 4
+            },
+            {
+                "effect_key": "blurAmount",
+                "effect_key_cn": "模糊量",
+                "type": "float",
+                "default": 0.02,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "glowIntensity",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 0.8,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "glitchAmount",
+                "effect_key_cn": "故障量",
+                "type": "float",
+                "default": 0.018,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "startAlpha",
+                "effect_key_cn": "启动阿尔法",
+                "type": "float",
+                "default": 0.3,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "colorNeonA",
+                "effect_key_cn": "颜色 霓虹灯",
+                "type": "color",
+                "default": [
+                    1,
+                    0.15,
+                    0.85
+                ]
+            },
+            {
+                "effect_key": "colorNeonB",
+                "effect_key_cn": "颜色 霓虹灯",
+                "type": "color",
+                "default": [
+                    0.55,
+                    0.25,
+                    1
+                ]
+            }
+        ]
+    }
+}

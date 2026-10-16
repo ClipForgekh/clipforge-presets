@@ -1,0 +1,27 @@
+{
+    "setting": {
+        "effect_adjust_params": [
+            {
+                "effect_key": "effects_adjust_range",
+                "default": 0.5,
+                "min": 0.0,
+                "max": 1.0
+            },
+            {
+                "effect_key": "effects_adjust_distortion",
+                "default": 0.5,
+                "min": 0.0,
+                "max": 1.0
+            },
+            {
+                "effect_key": "effects_adjust_intensity",
+                "default": 0.2312,
+                "min": 0.0,
+                "max": 1.0
+            }
+        ],
+        "animation_duration": 1.0
+    },
+
+    "External_Producer": true
+}

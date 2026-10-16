@@ -1,0 +1,65 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "goldColor",
+                "effect_key_cn": "金色",
+                "type": "color",
+                "default": [
+                    0.96,
+                    0.8,
+                    0.45
+                ]
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "模糊强度",
+                "type": "float",
+                "default": 15,
+                "min": 0,
+                "max": 30
+            },
+            {
+                "effect_key": "ringWidth",
+                "effect_key_cn": "环宽",
+                "type": "float",
+                "default": 0.02,
+                "min": 0.005,
+                "max": 0.06
+            },
+            {
+                "effect_key": "rayIntensity",
+                "effect_key_cn": "射线强度",
+                "type": "float",
+                "default": 0.55,
+                "min": 0,
+                "max": 1.5
+            },
+            {
+                "effect_key": "ringGlow",
+                "effect_key_cn": "环发光",
+                "type": "float",
+                "default": 1.1,
+                "min": 0,
+                "max": 2.5
+            },
+            {
+                "effect_key": "ringStartRadius",
+                "effect_key_cn": "环起始半径",
+                "type": "float",
+                "default": 0.085,
+                "min": 0.02,
+                "max": 0.2
+            }
+        ]
+    }
+}

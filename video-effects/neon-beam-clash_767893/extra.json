@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurPeak",
+                "effect_key_cn": "blur P",
+                "type": "float",
+                "default": 0.03,
+                "min": 0.005,
+                "max": 0.08
+            },
+            {
+                "effect_key": "neonStrength",
+                "effect_key_cn": "neon S",
+                "type": "float",
+                "default": 1.8,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "gapSize",
+                "effect_key_cn": "gap Si",
+                "type": "float",
+                "default": 0.0012,
+                "min": 0,
+                "max": 0.01
+            }
+        ]
+    }
+}

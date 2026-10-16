@@ -1,0 +1,57 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "pieceCount",
+                "effect_key_cn": "piece ",
+                "type": "float",
+                "default": 42,
+                "min": 16,
+                "max": 96
+            },
+            {
+                "effect_key": "windStrength",
+                "effect_key_cn": "wind S",
+                "type": "float",
+                "default": 0.22,
+                "min": 0,
+                "max": 0.6
+            },
+            {
+                "effect_key": "riseStrength",
+                "effect_key_cn": "rise S",
+                "type": "float",
+                "default": 1.15,
+                "min": 0.2,
+                "max": 2
+            },
+            {
+                "effect_key": "trailLength",
+                "effect_key_cn": "trail ",
+                "type": "float",
+                "default": 0.03,
+                "min": 0.005,
+                "max": 0.08
+            },
+            {
+                "effect_key": "trailColor",
+                "effect_key_cn": "trail ",
+                "type": "color",
+                "default": [
+                    1,
+                    0.78,
+                    0.9
+                ]
+            }
+        ]
+    }
+}

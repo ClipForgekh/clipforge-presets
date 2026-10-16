@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "maxBlurStrength",
+                "effect_key_cn": "最大模糊强度",
+                "type": "float",
+                "default": 20,
+                "min": 1,
+                "max": 30
+            },
+            {
+                "effect_key": "exposureStrength",
+                "effect_key_cn": "曝光强度",
+                "type": "float",
+                "default": 3,
+                "min": 1.5,
+                "max": 5
+            },
+            {
+                "effect_key": "saturationStrength",
+                "effect_key_cn": "饱和强度",
+                "type": "float",
+                "default": 2,
+                "min": 1,
+                "max": 3
+            }
+        ]
+    }
+}

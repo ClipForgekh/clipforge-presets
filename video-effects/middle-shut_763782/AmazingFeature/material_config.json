@@ -1,0 +1,17 @@
+{
+    "video_name": "1-1-mask",
+    "material_type": "NORMAL_SOLID",
+    "requires_sbs": true,
+    "mask_config": {
+        "mask_type": "calculateBlitColor",
+        "params": {
+            "rotation": 1.0,
+            "feather": 0.05,
+            "center": [
+                0.5,
+                0.5
+            ],
+            "wipe_mode": "Both"
+        }
+    }
+}

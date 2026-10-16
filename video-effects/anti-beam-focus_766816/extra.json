@@ -1,0 +1,83 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "layerCount",
+                "effect_key_cn": "层数",
+                "type": "float",
+                "default": 12,
+                "min": 4,
+                "max": 24
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "模糊强度",
+                "type": "float",
+                "default": 14,
+                "min": 0,
+                "max": 24
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 1.4,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "pulseSoftness",
+                "effect_key_cn": "脉搏柔和度",
+                "type": "float",
+                "default": 0.22,
+                "min": 0.05,
+                "max": 0.6
+            },
+            {
+                "effect_key": "bounceStrength",
+                "effect_key_cn": "弹跳强度",
+                "type": "float",
+                "default": 0.05,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "glitchStrength",
+                "effect_key_cn": "故障强度",
+                "type": "float",
+                "default": 0.45,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "neonColorA",
+                "effect_key_cn": "霓虹色A",
+                "type": "color",
+                "default": [
+                    0.75,
+                    0.15,
+                    1
+                ]
+            },
+            {
+                "effect_key": "neonColorB",
+                "effect_key_cn": "霓虹色B",
+                "type": "color",
+                "default": [
+                    1,
+                    0.45,
+                    0.1
+                ]
+            }
+        ]
+    }
+}

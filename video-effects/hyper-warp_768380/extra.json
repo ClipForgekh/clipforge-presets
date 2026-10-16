@@ -1,0 +1,45 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "tDiffuseB",
+                "effect_key_cn": "tDiffuseB",
+                "type": "texture",
+                "default": null
+            },
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "warpStrength",
+                "effect_key_cn": "warpStrength",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "flareIntensity",
+                "effect_key_cn": "flareIntensity",
+                "type": "float",
+                "default": 0.8,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "streakFrequency",
+                "effect_key_cn": "streakFrequency",
+                "type": "float",
+                "default": 14,
+                "min": 4,
+                "max": 32
+            }
+        ]
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "deviceTier",
+                "effect_key_cn": "deviceTier",
+                "type": "int",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "frameTimeMs",
+                "effect_key_cn": "frameTimeMs",
+                "type": "float",
+                "default": 16,
+                "min": 0,
+                "max": 100
+            },
+            {
+                "effect_key": "jitterAmount",
+                "effect_key_cn": "jitterAmount",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "scatterAmount",
+                "effect_key_cn": "scatterAmount",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            }
+        ]
+    }
+}

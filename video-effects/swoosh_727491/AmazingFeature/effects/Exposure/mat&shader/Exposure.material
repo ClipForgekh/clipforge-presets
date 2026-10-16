@@ -1,0 +1,39 @@
+%YAML 1.1
+--- !Material &1
+name: Exposure
+guid: {a: 17457210300529282004, b: 17737805834564072581}
+xshader: {localId: 1, path: effects/Exposure/mat&shader/Exposure.xshader}
+properties:
+  __class: PropertySheet
+  name: Exposure
+  guid: {a: 13134197660689528617, b: 6287354087954909586}
+  floatmap:
+    __class: Map
+    u_Alpha: 1
+    u_GrayscaleCorrect: 1
+    u_Intensity: 0
+    u_Offset: 0
+    use_linear_light: 0
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    u_InputTex: {localId: 1, path: effects/GaussianBlur/rt/gaussianBlurHorizontal.rt}
+  intmap:
+    __class: Map
+renderQueue: 1
+enabledMacros:
+  __class: Map
+  AE_AreaLightNum: !<str> 0
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+  AE_USE_DIR_SOFTSHADOW_PCF_OLD: tmp_value
+mshaderPath: ""
+instanceCount: 0

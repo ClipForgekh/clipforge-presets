@@ -1,0 +1,185 @@
+%YAML 1.1
+--- !XShader &1
+name: !<str> bg
+guid: {a: 2471703414798776915, b: 7431489421818750860}
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: !<str> ""
+    guid: {a: 166033495194237830, b: 3206876737079754412}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 12}
+        - {localId: 13}
+    angleBinaryPrograms:
+      __class: Map
+    semantics:
+      __class: Map
+      a_position:
+        __class: VertexAttribType
+        value: POSITION
+      a_texcoord0:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0, g: 0, b: 0, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: !<str> ""
+      guid: {a: 12485896790082381506, b: 13713187663610861461}
+      rasterization:
+        __class: RasterizationState
+        name: !<str> ""
+        guid: {a: 4489648743131797723, b: 1509474478639642534}
+        depthClampEnable: false
+        depthClampEnableName: !<str> ""
+        rasterizerDiscardEnable: false
+        rasterizerDiscardEnableName: !<str> ""
+        polygonMode:
+          __class: PolygonMode
+          value: FILL
+        polygonModeName: !<str> ""
+        cullMode:
+          __class: CullFace
+          value: BACK
+        cullModeName: !<str> ""
+        frontFace:
+          __class: FrontFace
+          value: COUNTER_CLOCKWISE
+        frontFaceName: !<str> ""
+        depthBiasEnable: false
+        depthBiasEnableName: !<str> ""
+        depthBiasConstantFactor: 0
+        depthBiasConstantFactorName: !<str> ""
+        depthBiasClamp: 1
+        depthBiasClampName: !<str> ""
+        depthBiasSlopeFactor: 1
+        depthBiasSlopeFactorName: !<str> ""
+        lineWidth: 1
+        lineWidthName: !<str> ""
+      depthstencil:
+        __class: DepthStencilState
+        name: !<str> ""
+        guid: {a: 14577561157349656639, b: 8049844065537452180}
+        depthTestEnable: false
+        depthTestEnableName: !<str> ""
+        depthCompareOp:
+          __class: CompareOp
+          value: LESS
+        depthCompareOpName: !<str> ""
+        depthWriteEnable: false
+        stencilTestEnable: false
+        stencilTestEnableName: !<str> ""
+      colorBlend:
+        __class: ColorBlendState
+        name: !<str> ""
+        guid: {a: 13061612774741628357, b: 18337449657476604569}
+        blendConstants: {x: 0, y: 0, z: 0, w: 0}
+        blendEnableName: !<str> ""
+        blendFactorName: !<str> ""
+        blendOpName: !<str> ""
+        attachments:
+          - __class: ColorBlendAttachmentState
+            name: !<str> ""
+            guid: {a: 9460306406491478745, b: 15977177919269569194}
+            blendEnable: true
+            srcColorBlendFactor:
+              __class: BlendFactor
+              value: ONE
+            dstColorBlendFactor:
+              __class: BlendFactor
+              value: ONE_MINUS_SRC_ALPHA
+            srcAlphaBlendFactor:
+              __class: BlendFactor
+              value: ONE
+            dstAlphaBlendFactor:
+              __class: BlendFactor
+              value: ONE_MINUS_SRC_ALPHA
+            colorWriteMask: 15
+            ColorBlendOp:
+              __class: BlendOp
+              value: ADD
+            AlphaBlendOp:
+              __class: BlendOp
+              value: ADD
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    enableFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+    keywordProgram: {localId: 11}
+    lightMode:
+      __class: LightMode
+      value: NONE
+    clearMoment:
+      __class: PassClearMoment
+      value: CLEAR_BEFORE_RENDERING
+    instanceCount: 0
+    useGrabTexture: false
+    useGrabTextureMipmap: false
+    grabTextureName: !<str> ""
+    auslSourcePath: !<str> effects/videoAnimationBase/xshader/bg.ausl
+--- !KeywordProgramProfile &11
+name: !<str> ""
+guid: {a: 12991121337793616330, b: 13781693003331455916}
+keywordSets:
+  -
+    - !<str> ""
+targetApis:
+  -
+    - !<str> glsl20
+    - !<str> glsl30
+    - !<str> glsl31
+    - !<str> glsl32
+  -
+    - !<str> metal
+stagets:
+  - __class: ShaderType
+    value: FRAGMENT
+  - __class: ShaderType
+    value: VERTEX
+shaderSnippets:
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 17604078597003322024, b: 2511953811567820704}
+    source: !<str> ""
+    location: !<str> effects/videoAnimationBase/xshader/shaderLib/shaderGLES/7632abc5bf712db2276098e2d0212e79.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 8593560851901809114, b: 12473234333215442853}
+    source: !<str> ""
+    location: !<str> effects/videoAnimationBase/xshader/shaderLib/shaderGLES/7632abc5bf712db2276098e2d0212e79.vert
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 7730784868364942484, b: 14885399310192974479}
+    source: !<str> ""
+    location: !<str> effects/videoAnimationBase/xshader/shaderLib/shaderMetal/7632abc5bf712db2276098e2d0212e79.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 2327608842548877917, b: 8068367578109890480}
+    source: !<str> ""
+    location: !<str> effects/videoAnimationBase/xshader/shaderLib/shaderMetal/7632abc5bf712db2276098e2d0212e79.vert
+--- !Shader &12
+name: !<str> ""
+guid: {a: 12846574312972238533, b: 6438162130665639054}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: !<str> effects/videoAnimationBase/xshader/shaderLib/shaderGLES/7632abc5bf712db2276098e2d0212e79.frag
+--- !Shader &13
+name: !<str> ""
+guid: {a: 1172392441912858047, b: 3076840063205295531}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: !<str> effects/videoAnimationBase/xshader/shaderLib/shaderGLES/7632abc5bf712db2276098e2d0212e79.vert

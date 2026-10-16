@@ -1,0 +1,53 @@
+[
+    {
+        "ClassName": "videoAnimationBaseScript",
+        "Super": "ScriptComponent",
+        "FilePath": "effects/videoAnimationBase/lua/videoAnimationBaseScript.lua",
+        "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/effects/videoAnimationBase/lua/videoAnimationBaseScript.lua",
+        "Properties": [],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "_adapt_seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "seek",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setParams",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "setDuration",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

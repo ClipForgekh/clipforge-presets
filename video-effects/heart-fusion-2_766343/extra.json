@@ -1,0 +1,41 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "flyStrength",
+                "effect_key_cn": "飞行强度",
+                "type": "float",
+                "default": 1,
+                "min": 0.5,
+                "max": 2
+            },
+            {
+                "effect_key": "glowIntensity",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 0.9,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "goldColor",
+                "effect_key_cn": "金色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.78,
+                    0.38
+                ]
+            }
+        ]
+    }
+}

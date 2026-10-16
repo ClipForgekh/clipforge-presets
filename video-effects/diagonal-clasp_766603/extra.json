@@ -1,0 +1,67 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "scanLineWidth",
+                "effect_key_cn": "扫描线宽",
+                "type": "float",
+                "default": 0.02,
+                "min": 0.005,
+                "max": 0.05
+            },
+            {
+                "effect_key": "blueColor",
+                "effect_key_cn": "蓝色",
+                "type": "color",
+                "default": [
+                    0,
+                    0.8,
+                    1
+                ]
+            },
+            {
+                "effect_key": "redColor",
+                "effect_key_cn": "红色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.2,
+                    0.8
+                ]
+            },
+            {
+                "effect_key": "glitchStrength",
+                "effect_key_cn": "故障强度",
+                "type": "float",
+                "default": 0.05,
+                "min": 0.01,
+                "max": 0.2
+            },
+            {
+                "effect_key": "flySpeed",
+                "effect_key_cn": "飞行速度",
+                "type": "float",
+                "default": 2,
+                "min": 0.5,
+                "max": 5
+            },
+            {
+                "effect_key": "glowIntensity",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 2,
+                "min": 0.5,
+                "max": 5
+            }
+        ]
+    }
+}

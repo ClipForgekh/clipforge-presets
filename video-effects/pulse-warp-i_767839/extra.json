@@ -1,0 +1,31 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "waveAmplitude",
+                "effect_key_cn": "wave A",
+                "type": "float",
+                "default": 0.04,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "waveFrequency",
+                "effect_key_cn": "wave F",
+                "type": "float",
+                "default": 4,
+                "min": 1,
+                "max": 10
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "glow S",
+                "type": "float",
+                "default": 0.25,
+                "min": 0,
+                "max": 1
+            }
+        ]
+    }
+}

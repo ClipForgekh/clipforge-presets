@@ -1,0 +1,85 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurMax",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 12,
+                "min": 0,
+                "max": 20
+            },
+            {
+                "effect_key": "particleIntensity",
+                "effect_key_cn": "粒子强度",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "glowIntensity",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 3,
+                "min": 0,
+                "max": 5
+            },
+            {
+                "effect_key": "trailWidth",
+                "effect_key_cn": "步道宽度",
+                "type": "float",
+                "default": 0.12,
+                "min": 0.02,
+                "max": 0.35
+            },
+            {
+                "effect_key": "particleScale",
+                "effect_key_cn": "颗粒尺度",
+                "type": "float",
+                "default": 180,
+                "min": 60,
+                "max": 360
+            },
+            {
+                "effect_key": "wipeSoftness",
+                "effect_key_cn": "擦拭柔软度",
+                "type": "float",
+                "default": 0.08,
+                "min": 0.01,
+                "max": 0.25
+            },
+            {
+                "effect_key": "goldColor",
+                "effect_key_cn": "金色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.78,
+                    0.28,
+                    1
+                ]
+            },
+            {
+                "effect_key": "highlightColor",
+                "effect_key_cn": "突出显示颜色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.95,
+                    0.55,
+                    1
+                ]
+            }
+        ]
+    }
+}

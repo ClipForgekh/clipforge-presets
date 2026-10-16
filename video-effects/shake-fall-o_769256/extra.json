@@ -1,0 +1,23 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "shakeAmplitude",
+                "effect_key_cn": "shakeAmplitude",
+                "type": "float",
+                "default": 0.1,
+                "min": 0.05,
+                "max": 0.2
+            },
+            {
+                "effect_key": "shakeFrequency",
+                "effect_key_cn": "shakeFrequency",
+                "type": "float",
+                "default": 32,
+                "min": 8,
+                "max": 96
+            }
+        ]
+    }
+}

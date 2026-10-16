@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "weaveStrength",
+                "effect_key_cn": "编织强度",
+                "type": "float",
+                "default": 0.75,
+                "min": 0,
+                "max": 1.5
+            },
+            {
+                "effect_key": "stripWidth",
+                "effect_key_cn": "条带宽度",
+                "type": "float",
+                "default": 0.18,
+                "min": 0.08,
+                "max": 0.35
+            },
+            {
+                "effect_key": "slideAmount",
+                "effect_key_cn": "滑动量",
+                "type": "float",
+                "default": 0.22,
+                "min": 0,
+                "max": 0.6
+            }
+        ]
+    }
+}

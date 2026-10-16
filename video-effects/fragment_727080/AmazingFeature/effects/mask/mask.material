@@ -1,0 +1,38 @@
+%YAML 1.1
+--- !Material &1
+name: eye
+guid: {a: 4848906118897680008, b: 15374989460185699468}
+xshader: {localId: 1, path: effects/mask/mask.xshader}
+properties:
+  __class: PropertySheet
+  name: enity_propertySheet
+  guid: {a: 17961401303473169287, b: 7205354181699409804}
+  floatmap:
+    __class: Map
+    u_Convergence: 100
+    u_Intensity: 1
+    u_Size: 500
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+    u_Center: {x: 0.5, y: 0.5}
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    inputTex: {localId: 1, path: share://input.texture}
+    maskTex: {localId: 1, path: images/left_mask.png}
+  intmap:
+    __class: Map
+renderQueue: 1
+enabledMacros:
+  __class: Map
+  AE_AreaLightNum: !<str> 0
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+mshaderPath: ""
+instanceCount: 0

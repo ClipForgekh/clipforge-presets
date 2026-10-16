@@ -1,0 +1,101 @@
+// 获取AMG引擎API
+const effect_api = "undefined" != typeof effect ? effect : "undefined" != typeof tt ? tt : "undefined" != typeof lynx ? lynx : {};
+const Amaz = effect_api.getAmaz ? effect_api.getAmaz() : null;
+
+const THREE = require('./three-amg-wrapper.js').THREE;
+const getCurrentScene = require('./three-amg-wrapper.js').getCurrentScene;
+const ShaderMaterial = require('./wrapper/ShaderMaterial').ShaderMaterial;
+const VideoTexture = require('./wrapper/Texture').VideoTexture;
+
+class ShaderPass {
+    constructor(parameters = {}) {
+
+        this.progress = 0.0;
+        this.prevTexture = null;
+        this.nextTexture = null;
+        // super();
+        console.log('getCurrentScene():');
+        this.scene = getCurrentScene();
+        console.log('getCurrentScene():', this.scene);
+
+        // 创建postProcessPrefab
+        this.postProcessPrefab = this.scene._amgScene.assetMgr.SyncLoad('prefabs/postProcess.prefab');
+        this._amgEntity = new Amaz.Entity();
+        this._amgEntity.name = parameters.name;
+        this._amgEntity.scene = this.scene._amgScene;
+        this._transform = this._amgEntity.addComponent("Transform");
+
+        console.log('this._amgEntity.name', this._amgEntity.name);
+
+        console.log("postProcessPrefab", this.postProcessPrefab.name);
+
+        this.postProcessPrefab.instantiateToEntity(this.scene._amgScene, this._amgEntity);
+
+        this.passWarpEntity = this._amgEntity.searchEntity("PassWarp");
+        this.cameraWarpEntity = this._amgEntity.searchEntity("CameraWarp");
+
+
+        // 创建材质（完全复用 ShaderMaterial 的 shader 构建逻辑）
+        this.material = new ShaderMaterial(parameters);
+        this._amgMaterialObject = this.material._amgObject;
+        this._amgEntity.searchEntity("PassWarp").getComponent("MeshRenderer").sharedMaterial = this._amgMaterialObject;
+      }
+
+      seekToTime(time) {
+        if (!this.material || !this.material.uniforms) return;
+
+        for (const [key, uniform] of Object.entries(this.material.uniforms)) {
+          if (!uniform) continue;
+          const value = Object.prototype.hasOwnProperty.call(uniform, 'value') ? uniform.value : uniform;
+          if (!(value instanceof VideoTexture)) continue;
+
+          const renderer = value._amgSprite2DRenderer;
+          if (!renderer || renderer.materials.size() !== 1) continue;
+
+          const texture = renderer.materials.get(0).getTex('_MainTex');
+          value.setImage(texture);
+
+          if (typeof this.material._syncUniformToAMG === 'function') {
+            this.material._syncUniformToAMG(key, uniform);
+          }
+
+          if (value._amgVideoAnimSeq) {
+            value._amgVideoAnimSeq.seekToTime(time / 1000.0);
+          }
+        }
+      }
+      
+      /**
+       * 支持使用 this.uniforms 访问uniforms
+       */
+      get uniforms() {
+        return this.material ? this.material.uniforms : undefined;
+      }
+
+      render(renderer, writeBuffer, readBuffer, delta, maskActive)
+      {
+        return;
+      }
+
+      dispose() {
+        if (this.material && typeof this.material.dispose === 'function') {
+          this.material.dispose();
+        }
+        this.postProcessPrefab = null;
+        this.material = null;
+        this._amgMaterialObject = null;
+        if (this.prevTexture) {
+          this.prevTexture.dispose();
+        }
+        if (this.nextTexture) {
+          this.nextTexture.dispose();
+        }
+        this.prevTexture = null;
+        this.nextTexture = null;  
+        this.scene = null;
+        this.passWarpEntity = null;
+        this.cameraWarpEntity = null;
+      }
+}
+
+exports.ShaderPass = ShaderPass;

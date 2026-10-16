@@ -1,0 +1,48 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "gridCount",
+                "effect_key_cn": "网格数",
+                "type": "vec2",
+                "default": [
+                    10,
+                    6
+                ]
+            },
+            {
+                "effect_key": "maxDelay",
+                "effect_key_cn": "最大延迟",
+                "type": "float",
+                "default": 0.55,
+                "min": 0,
+                "max": 0.9
+            },
+            {
+                "effect_key": "spread",
+                "effect_key_cn": "传播",
+                "type": "float",
+                "default": 1.35,
+                "min": 0.2,
+                "max": 2.5
+            },
+            {
+                "effect_key": "pivotPerspective",
+                "effect_key_cn": "透视视角",
+                "type": "float",
+                "default": 1.2,
+                "min": 0.2,
+                "max": 3
+            }
+        ]
+    }
+}

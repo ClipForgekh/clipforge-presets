@@ -1,0 +1,34 @@
+%YAML 1.1
+--- !Material &1
+name: video
+guid: {a: 6867749983325333996, b: 4107627214846933633}
+xshader: {localId: 1, path: xshader/Video.xshader}
+properties:
+  __class: PropertySheet
+  name: template0_propertySheet
+  guid: {a: 2615356116042973492, b: 615821588655657634}
+  floatmap:
+    __class: Map
+    u_angle: 0
+    u_flipX: 0
+    u_flipY: 0
+    u_scale: 1
+  vec4map:
+    __class: Map
+    u_size: {x: 720, y: 1280, z: 360, w: 640}
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+    u_pos: {x: 0, y: 0}
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    u_videoTex: {localId: 1, path: share://input.texture}
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+mshaderPath: ""

@@ -1,0 +1,328 @@
+local data = {}
+
+local ae_compDurations = {0, 1.96666666666667}
+data.ae_compDurations = ae_compDurations
+
+local ae_effectType = 'videoAnimation'
+data.ae_effectType = ae_effectType
+
+local ae_transitionInputIndex = {
+}
+data.ae_transitionInputIndex = ae_transitionInputIndex
+
+local ae_durations = {
+    ['LumiLayer_1257-trs'] = {
+        ['nodeDuration'] = {{0, 3}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 3}, },
+        },
+    },
+    ['LumiMotionBlur2D_1622-effect0'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 3}, },
+        },
+    },
+    ['LumiGaussianBlur_1622-effect1'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiExposure_1622-effect2'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiCCLens_1622-effect3'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_1622-blend'] = {
+        ['nodeDuration'] = {{0, 3}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['baseTex'] = {{0, 3}, },
+        },
+    },
+}
+data.ae_durations = ae_durations
+
+local ae_attribute = {
+    ['LumiLayer_1257-trs'] = {
+        ['hasBlend'] = false,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Precomp',
+        ['anchorPoint'] = Amaz.Vector3f(960, 540, 0),
+        ['position'] = Amaz.Vector3f(960, 540, 0),
+        ['scale'] = Amaz.Vector3f(100, 100, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 100,
+        ['active_cam_fovx'] = 39.6,
+        ['compositeSize'] = Amaz.Vector2f(1920, 1080),
+        ['layerSize'] = Amaz.Vector2f(1920, 1080),
+        ['mirrorEdge'] = false,
+    },
+    ['LumiMotionBlur2D_1622-effect0'] = {
+        ['rotate'] = 0,
+        ['ae_pre_rotate'] = 0,
+        ['anchor'] = Amaz.Vector2f(0.5, 0.5),
+        ['ae_pre_anchor'] = Amaz.Vector2f(0.5, 0.5),
+        ['position'] = Amaz.Vector2f(0.50173147758114, 0.51510651386654),
+        ['ae_pre_position'] = Amaz.Vector2f(0.50173147758114, 0.51510651386654),
+        ['unifiedScale'] = true,
+        ['scale_x'] = 1,
+        ['ae_pre_scale_x'] = 1,
+        ['scale_y'] = 1,
+        ['ae_pre_scale_y'] = 1,
+        ['vIntensity'] = 0.5,
+        ['vCenter'] = -0.25,
+        ['minSamples'] = 0.12,
+        ['maxSamples'] = 0.24,
+        ['mirrorEdge'] = true,
+        ['dither'] = 1,
+        ['AEDesignSize'] = Amaz.Vector2f(1920, 1080),
+    },
+    ['LumiGaussianBlur_1622-effect1'] = {
+        ['blurIntensity'] = 3.30840276670524,
+        ['quality'] = 1,
+        ['spaceDither'] = 1,
+        ['horizontalStrength'] = 1,
+        ['verticalStrength'] = 1,
+        ['blurDirection'] = 0,
+        ['borderType'] = 0,
+        ['blurAlpha'] = true,
+        ['inverseGammaCorrection'] = true,
+        ['AEDesignSize'] = Amaz.Vector2f(1920, 1080),
+    },
+    ['LumiExposure_1622-effect2'] = {
+        ['channelType'] = 0,
+        ['exposure'] = 1.56,
+        ['offset'] = 0,
+        ['grayscaleCorrection'] = 1,
+        ['redExposure'] = 0,
+        ['redOffset'] = 0,
+        ['redGrayscaleCorrection'] = 1,
+        ['greenExposure'] = 0,
+        ['greenOffset'] = 0,
+        ['greenGrayscaleCorrection'] = 1,
+        ['blueExposure'] = 0,
+        ['blueOffset'] = 0,
+        ['blueGrayscaleCorrection'] = 1,
+        ['noUseLinearLight'] = false,
+        ['AEDesignSize'] = Amaz.Vector2f(1920, 1080),
+    },
+    ['LumiCCLens_1622-effect3'] = {
+        ['convergence'] = 0,
+        ['radius'] = 171,
+        ['center'] = Amaz.Vector2f(0.5, 0.5),
+        ['AEDesignSize'] = Amaz.Vector2f(1920, 1080),
+    },
+    ['LumiLayer_1622-blend'] = {
+        ['hasBlend'] = true,
+        ['hasMatte'] = false,
+        ['hasTransform'] = false,
+        ['layerType'] = 'Adjustment',
+        ['blendMode'] = 0,
+    },
+}
+data.ae_attribute = ae_attribute
+
+local ae_keyframes = {
+    ['LumiLayer_1257-trs#opacity#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0, 0.3, }, 
+		{{0, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.3, 2.7, }, 
+		{{100, }, {100, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{2.7, 2.966667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiMotionBlur2D_1622-effect0#ae_pre_position#vector'] =
+{
+	{
+		{0.333333, 0.327434, 0.666667, 0.663163, }, 
+		{0.10000033333333, 0.18147833333333, }, 
+		{{0.5, 0.5, }, {0.5, 0.33333331346481, }, {0.5, 0.5, }, {0.5, 0.33333331346481, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.323281, 0.666667, 0.758393, }, 
+		{0.18147833333333, 0.30371133333333, }, 
+		{{0.5, 0.33333331346481, }, {0.46942239999792, 0.58811682462685, }, {0.5, 0.33333331346481, }, {0.46942239999792, 0.58811682462685, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.442119, 0.666667, 0.805574, }, 
+		{0.30371133333333, 0.42591133333333, }, 
+		{{0.46942239999792, 0.58811682462685, }, {0.52038502693177, 0.4783484339713, }, {0.46942239999792, 0.58811682462685, }, {0.52038502693177, 0.4783484339713, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.511628, 0.666667, 0.771167, }, 
+		{0.42591133333333, 0.54814433333333, }, 
+		{{0.52038502693177, 0.4783484339713, }, {0.5, 0.51851850748056, }, {0.52038502693177, 0.4783484339713, }, {0.5, 0.51851850748056, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.419317, 0.666667, 0.726715, }, 
+		{0.54814433333333, 0.67037733333333, }, 
+		{{0.5, 0.51851850748056, }, {0.49716871976875, 0.48942601680741, }, {0.5, 0.51851850748056, }, {0.49716871976875, 0.48942601680741, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.335832, 0.666667, 0.814439, }, 
+		{0.67037733333333, 0.75185533333333, }, 
+		{{0.49716871976875, 0.48942601680741, }, {0.5, 0.5046296417713, }, {0.49716871976875, 0.48942601680741, }, {0.5, 0.5046296417713, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.641906, 0.666667, 1, }, 
+		{0.75185533333333, 0.83333333333333, }, 
+		{{0.5, 0.5046296417713, }, {0.5, 0.5, }, {0.5, 0.5046296417713, }, {0.5, 0.5, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiMotionBlur2D_1622-effect0#position#vector'] =
+{
+	{
+		{0.333333, 0.327434, 0.666667, 0.663163, }, 
+		{0.066667, 0.148145, }, 
+		{{0.5, 0.5, }, {0.5, 0.33333331346481, }, {0.5, 0.5, }, {0.5, 0.33333331346481, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.323281, 0.666667, 0.758393, }, 
+		{0.148145, 0.270378, }, 
+		{{0.5, 0.33333331346481, }, {0.46942239999792, 0.58811682462685, }, {0.5, 0.33333331346481, }, {0.46942239999792, 0.58811682462685, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.442119, 0.666667, 0.805574, }, 
+		{0.270378, 0.392578, }, 
+		{{0.46942239999792, 0.58811682462685, }, {0.52038502693177, 0.4783484339713, }, {0.46942239999792, 0.58811682462685, }, {0.52038502693177, 0.4783484339713, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.511628, 0.666667, 0.771167, }, 
+		{0.392578, 0.514811, }, 
+		{{0.52038502693177, 0.4783484339713, }, {0.5, 0.51851850748056, }, {0.52038502693177, 0.4783484339713, }, {0.5, 0.51851850748056, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.419317, 0.666667, 0.726715, }, 
+		{0.514811, 0.637044, }, 
+		{{0.5, 0.51851850748056, }, {0.49716871976875, 0.48942601680741, }, {0.5, 0.51851850748056, }, {0.49716871976875, 0.48942601680741, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.335832, 0.666667, 0.814439, }, 
+		{0.637044, 0.718522, }, 
+		{{0.49716871976875, 0.48942601680741, }, {0.5, 0.5046296417713, }, {0.49716871976875, 0.48942601680741, }, {0.5, 0.5046296417713, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+	{
+		{0.333333, 0.641906, 0.666667, 1, }, 
+		{0.718522, 0.8, }, 
+		{{0.5, 0.5046296417713, }, {0.5, 0.5, }, {0.5, 0.5046296417713, }, {0.5, 0.5, }, }, 
+		{6415, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiGaussianBlur_1622-effect1#blurIntensity#number'] =
+{
+	{
+		{0.33333333, 0, 0, 1.000000008, }, 
+		{0.066667, 0.633333, }, 
+		{{150, }, {0, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiExposure_1622-effect2#exposure#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.1, 0.933333, }, 
+		{{3, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+    ['LumiCCLens_1622-effect3#convergence#number'] =
+{
+	{
+		{0.166666667, 0.166666667, 0.833333333, 0.833333333, }, 
+		{0.166667, 0.466667, }, 
+		{{80, }, {0, }, }, 
+		{6417, }, 
+		{1, }, 
+	}, 
+},
+}
+data.ae_keyframes = ae_keyframes
+
+local ae_reverseKeyframes = false
+data.ae_reverseKeyframes = ae_reverseKeyframes
+
+local ae_sliderInfos = {
+}
+data.ae_sliderInfos = ae_sliderInfos
+
+local ae_fadeinInfos = {
+    time = 0,
+    infos = {
+    }
+}
+data.ae_fadeinInfos = ae_fadeinInfos
+
+local ae_fadeoutInfos = {
+    time = 0,
+    infos = {
+    }
+}
+data.ae_fadeoutInfos = ae_fadeoutInfos
+
+local ae_animationInfos = {
+    animationMode = 0,
+    loopStart = 0,
+    speedInfo = {1, 0, 1, },
+}
+data.ae_animationInfos = ae_animationInfos
+
+return data

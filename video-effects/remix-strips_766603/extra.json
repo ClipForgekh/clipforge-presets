@@ -1,0 +1,75 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "bandCount",
+                "effect_key_cn": "带数",
+                "type": "int",
+                "default": 9,
+                "min": 3,
+                "max": 15
+            },
+            {
+                "effect_key": "neonColor1",
+                "effect_key_cn": "霓虹灯颜色1",
+                "type": "color",
+                "default": [
+                    1,
+                    0.2,
+                    0.8
+                ]
+            },
+            {
+                "effect_key": "neonColor2",
+                "effect_key_cn": "霓虹灯颜色2",
+                "type": "color",
+                "default": [
+                    0.6,
+                    0.2,
+                    1
+                ]
+            },
+            {
+                "effect_key": "blurMax",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 20,
+                "min": 5,
+                "max": 50
+            },
+            {
+                "effect_key": "bandThickness",
+                "effect_key_cn": "带厚度",
+                "type": "float",
+                "default": 0.05,
+                "min": 0.01,
+                "max": 0.2
+            },
+            {
+                "effect_key": "delayStep",
+                "effect_key_cn": "延迟步骤",
+                "type": "float",
+                "default": 0.1,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "glitchIntensity",
+                "effect_key_cn": "毛刺强度",
+                "type": "float",
+                "default": 0.02,
+                "min": 0,
+                "max": 0.1
+            }
+        ]
+    }
+}

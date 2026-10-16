@@ -1,0 +1,87 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "particleDensity",
+                "effect_key_cn": "partic",
+                "type": "float",
+                "default": 35,
+                "min": 10,
+                "max": 80
+            },
+            {
+                "effect_key": "blurRadius",
+                "effect_key_cn": "blur R",
+                "type": "float",
+                "default": 0.02,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "glow S",
+                "type": "float",
+                "default": 4,
+                "min": 0,
+                "max": 6
+            },
+            {
+                "effect_key": "grainAmount",
+                "effect_key_cn": "grain ",
+                "type": "float",
+                "default": 0.22,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "leakIntensity",
+                "effect_key_cn": "leak I",
+                "type": "float",
+                "default": 0.22,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "scalePeak",
+                "effect_key_cn": "scale ",
+                "type": "float",
+                "default": 1.3,
+                "min": 1,
+                "max": 2
+            },
+            {
+                "effect_key": "brightnessBoost",
+                "effect_key_cn": "bright",
+                "type": "float",
+                "default": 2.6,
+                "min": 1,
+                "max": 4
+            },
+            {
+                "effect_key": "saturationBoost",
+                "effect_key_cn": "satura",
+                "type": "float",
+                "default": 2.1,
+                "min": 1,
+                "max": 3
+            },
+            {
+                "effect_key": "depthParallax",
+                "effect_key_cn": "depth ",
+                "type": "float",
+                "default": 0.08,
+                "min": 0,
+                "max": 0.2
+            }
+        ]
+    }
+}

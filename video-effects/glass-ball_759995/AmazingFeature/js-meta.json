@@ -1,0 +1,110 @@
+[
+  {
+    "ClassName": "BoxGeometry",
+    "Super": "BufferGeometry",
+    "FilePath": "js/ThreeJS/wrapper/BoxGeometry.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/BoxGeometry.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "CapsuleGeometry",
+    "Super": "BufferGeometry",
+    "FilePath": "js/ThreeJS/wrapper/CapsuleGeometry.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/CapsuleGeometry.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "CylinderGeometry",
+    "Super": "BufferGeometry",
+    "FilePath": "js/ThreeJS/wrapper/CylinderGeometry.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/CylinderGeometry.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "ExtrudeGeometry",
+    "Super": "BufferGeometry",
+    "FilePath": "js/ThreeJS/wrapper/ExtrudeGeometry.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/ExtrudeGeometry.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "Group",
+    "Super": "Object3D",
+    "FilePath": "js/ThreeJS/wrapper/Group.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/Group.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "MeshBasicMaterial",
+    "Super": "Material",
+    "FilePath": "js/ThreeJS/wrapper/MeshBasicMaterial.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/MeshBasicMaterial.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "PerspectiveCamera",
+    "Super": "Object3D",
+    "FilePath": "js/ThreeJS/wrapper/PerspectiveCamera.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/PerspectiveCamera.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "PlaneGeometry",
+    "Super": "BufferGeometry",
+    "FilePath": "js/ThreeJS/wrapper/PlaneGeometry.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/PlaneGeometry.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "ShaderMaterial",
+    "Super": "Material",
+    "FilePath": "js/ThreeJS/wrapper/ShaderMaterial.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/ShaderMaterial.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "ShapeGeometry",
+    "Super": "BufferGeometry",
+    "FilePath": "js/ThreeJS/wrapper/ShapeGeometry.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/ShapeGeometry.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "SphereGeometry",
+    "Super": "BufferGeometry",
+    "FilePath": "js/ThreeJS/wrapper/SphereGeometry.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/ThreeJS/wrapper/SphereGeometry.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  },
+  {
+    "ClassName": "CustomShaderPass",
+    "Super": "ShaderPass",
+    "FilePath": "js/pp/LumiCustom/CustomShaderPass.js",
+    "FileAbsPath": "/Users/bytedance/Downloads/7750d9da4226b6eeba1d9b04dcd7042c (5)/AmazingFeature/js/pp/LumiCustom/CustomShaderPass.js",
+    "Properties": [],
+    "Comment": "",
+    "ExportFiles": []
+  }
+]

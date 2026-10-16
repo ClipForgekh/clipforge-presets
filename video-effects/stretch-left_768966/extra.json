@@ -1,0 +1,31 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "overshootAmount",
+                "effect_key_cn": "overshootAmount",
+                "type": "float",
+                "default": 0.3,
+                "min": 0,
+                "max": 0.6
+            },
+            {
+                "effect_key": "startOffset",
+                "effect_key_cn": "startOffset",
+                "type": "float",
+                "default": 0.5,
+                "min": 0.2,
+                "max": 1
+            },
+            {
+                "effect_key": "startScale",
+                "effect_key_cn": "startScale",
+                "type": "float",
+                "default": 0.5,
+                "min": 0.3,
+                "max": 1
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+%YAML 1.1
+--- !Material &1
+name: !<str> ""
+guid: {a: 2110946482490926678, b: 4701112944228992910}
+xshader: {localId: 1, path: effects/videoAnimationBase/xshader/Model.xshader}
+properties:
+  __class: PropertySheet
+  name: !<str> ""
+  guid: {a: 11043219540887146640, b: 6957417662285864634}
+  floatmap:
+    __class: Map
+    blurStep: 1
+    inputHeight: 1280
+    inputWidth: 720
+    mirrorRange: 2
+    uniAlpha: 1
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+    blurDirection: {x: 1, y: -2}
+    center: {x: 0.5, y: 0.5}
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+    u_inputTexture: {localId: 1, path: effects/videoAnimationBase/rt/modelTex.rt}
+  intmap:
+    __class: Map
+renderQueue: -1
+enabledMacros:
+  __class: Map
+  AE_AreaLightNum: !<str> 0
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+mshaderPath: !<str> ""

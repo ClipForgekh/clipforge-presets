@@ -1,0 +1,39 @@
+#version 300 es
+
+#pragma exclude_renderers hlsl50 vulkan
+
+#pragma precision highp float
+
+#pragma global
+#pragma end
+
+#pragma input attributes
+in vec3 a_position;
+in vec2 a_texcoord0;
+#pragma end
+
+#pragma varying varyings
+highp vec2 v_uv;
+#pragma end
+
+#pragma output targets
+out vec4 o_fragColor;
+#pragma end
+
+#pragma vs attributes varyings
+#pragma end
+
+#pragma fs varyings targets
+uniform sampler2D u_bgTex;
+#pragma end
+
+void vertex()
+{
+    gl_Position = vec4(a_position, 1.0);
+    v_uv = a_texcoord0;
+}
+
+void fragment()
+{
+    o_fragColor = texture(u_bgTex, v_uv);
+}

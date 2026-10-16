@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "maxRotation",
+                "effect_key_cn": "最大旋转",
+                "type": "float",
+                "default": -2.094,
+                "min": -3.1416,
+                "max": 0
+            },
+            {
+                "effect_key": "displacementStrength",
+                "effect_key_cn": "位移强度",
+                "type": "float",
+                "default": 1.5,
+                "min": 0.5,
+                "max": 3
+            },
+            {
+                "effect_key": "maxBlurRadius",
+                "effect_key_cn": "最大模糊半径",
+                "type": "float",
+                "default": 8,
+                "min": 2,
+                "max": 15
+            },
+            {
+                "effect_key": "minScale",
+                "effect_key_cn": "最小比例",
+                "type": "float",
+                "default": 0.9,
+                "min": 0.5,
+                "max": 1
+            }
+        ]
+    }
+}

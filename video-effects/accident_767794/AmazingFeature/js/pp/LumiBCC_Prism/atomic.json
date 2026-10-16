@@ -1,0 +1,192 @@
+{
+  "key": "LumiBCC_Prism",
+  "category": "Others",
+  "desc": "棱镜色散效果 - 模拟光学棱镜的色散和折射现象，通过不同缩放和颜色偏移创建彩虹光谱效果。适用于光学模拟、彩虹特效、艺术滤镜、梦幻效果",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无强度 - 关闭棱镜效果，不应用任何颜色变换或变换效果"
+    },
+    {
+      "name": "default",
+      "desc": "默认棱镜 - 仅通过缩放差制造平衡色散，不包含旋转变化，适合大多数预览场景。"
+    },
+    {
+      "name": "subtle",
+      "desc": "微弱色散 - 无旋转的轻微边缘分离和柔和折射，适合作为基础修饰。"
+    },
+    {
+      "name": "low",
+      "desc": "轻度棱镜 - 无角度偏转的清晰彩边和折射，仍然保持自然。"
+    },
+    {
+      "name": "warm",
+      "desc": "暖色棱镜 - 无旋转的琥珀、金色和玫红色散，适合暖调画面。"
+    },
+    {
+      "name": "cool",
+      "desc": "冷色棱镜 - 无旋转的青蓝紫色散，适合科技感或夜景氛围。"
+    },
+    {
+      "name": "medium",
+      "desc": "中度棱镜 - 不依赖旋转，主要通过缩放差与权重增强颜色分离。"
+    },
+    {
+      "name": "split",
+      "desc": "分色偏移 - 强调左右色散分离和角度差，形成更明显的高饱和 RGB 裂像。"
+    },
+    {
+      "name": "rainbow",
+      "desc": "彩虹棱镜 - 加强色散宽度和偏移，获得更丰富的暖黄到青蓝彩色条纹。"
+    },
+    {
+      "name": "dreamy",
+      "desc": "梦幻折射 - 柔和旋转配合粉紫蓝的轻微偏移，营造朦胧漂浮的梦境观感。"
+    },
+    {
+      "name": "tunnel",
+      "desc": "隧道透镜 - 青蓝到紫色的强缩放与旋转变化，形成向内卷动的空间感。"
+    },
+    {
+      "name": "high",
+      "desc": "高强度棱镜 - 红橙蓝的强烈色散与缩放差异，适合风格化或强视觉冲击。"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "效果强度 - 控制棱镜效果的整体强度，影响颜色和变换的明显程度",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "globalTransform",
+      "desc": "全局变换强度 - 控制整体效果的变换程度，影响所有参数的综合表现强度",
+      "type": "number",
+      "value": 100,
+      "min": 0,
+      "max": 400
+    },
+    {
+      "name": "smoothness",
+      "desc": "边缘平滑度 - 控制色散效果边缘的柔化程度，值越大边缘越平滑",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "center",
+      "desc": "效果中心点 - 设定棱镜效果的中心位置，影响色散的空间分布",
+      "type": "array",
+      "value": [
+        0.5,
+        0.5
+      ],
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "weight",
+      "desc": "效果权重 - 控制棱镜效果在最终混合中的权重比例",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "scaleStart",
+      "desc": "起始缩放比例 - 设定色散效果开始时的图像缩放比例",
+      "type": "number",
+      "value": 102,
+      "min": 1,
+      "max": 500
+    },
+    {
+      "name": "scaleEnd",
+      "desc": "结束缩放比例 - 设定色散效果结束时的图像缩放比例",
+      "type": "number",
+      "value": 98,
+      "min": 1,
+      "max": 500
+    },
+    {
+      "name": "angleStart",
+      "desc": "起始旋转角度 - 设定色散效果开始时的旋转角度",
+      "type": "angle",
+      "value": 0,
+      "min": -360,
+      "max": 360
+    },
+    {
+      "name": "angleEnd",
+      "desc": "结束旋转角度 - 设定色散效果结束时的旋转角度",
+      "type": "angle",
+      "value": 0,
+      "min": -360,
+      "max": 360
+    },
+    {
+      "name": "falloff",
+      "desc": "距离衰减系数 - 控制效果强度随距离的衰减方式，负值为反向衰减",
+      "type": "number",
+      "value": 0,
+      "min": -100,
+      "max": 100
+    },
+    {
+      "name": "offsetStart",
+      "desc": "起始位置偏移 - 设定色散效果开始时的位置偏移量",
+      "type": "array",
+      "value": [
+        0.5,
+        0.5
+      ],
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "offsetEnd",
+      "desc": "结束位置偏移 - 设定色散效果结束时的位置偏移量",
+      "type": "array",
+      "value": [
+        0.5,
+        0.5
+      ],
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "colorStart",
+      "desc": "起始光谱颜色 - 设定棱镜色散光谱的起始颜色（通常为红色）",
+      "type": "color",
+      "value": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "colorMid",
+      "desc": "中间光谱颜色 - 设定棱镜色散光谱的中间颜色（通常为绿色）",
+      "type": "color",
+      "value": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "name": "colorEnd",
+      "desc": "结束光谱颜色 - 设定棱镜色散光谱的结束颜色（通常为蓝色）",
+      "type": "color",
+      "value": [
+        0,
+        0,
+        1
+      ]
+    }
+  ]
+}

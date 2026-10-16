@@ -1,0 +1,195 @@
+local data = {}
+
+local ae_compDurations = {0, 1.96666666666667}
+data.ae_compDurations = ae_compDurations
+
+local ae_effectType = 'videoAnimation'
+data.ae_effectType = ae_effectType
+
+local ae_transitionInputIndex = {
+}
+data.ae_transitionInputIndex = ae_transitionInputIndex
+
+local ae_durations = {
+    ['LumiLayer_27-trs'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+        },
+    },
+    ['LumiLayer_43-trs-blend'] = {
+        ['nodeDuration'] = {{0, 2}, },
+        ['texDuration'] = {
+            ['InputTex'] = {{0, 2}, },
+            ['baseTex'] = {{0, 2}, },
+        },
+    },
+}
+data.ae_durations = ae_durations
+
+local ae_attribute = {
+    ['LumiLayer_27-trs'] = {
+        ['hasBlend'] = false,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Precomp',
+        ['anchorPoint'] = Amaz.Vector3f(540, 540, 0),
+        ['position'] = Amaz.Vector3f(540, 540, 0),
+        ['scale'] = Amaz.Vector3f(100, 100, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 100,
+        ['active_cam_fovx'] = 39.5977527100237,
+        ['compositeSize'] = Amaz.Vector2f(1080, 1080),
+        ['layerSize'] = Amaz.Vector2f(1080, 1080),
+        ['mirrorEdge'] = false,
+    },
+    ['LumiLayer_43-trs-blend'] = {
+        ['hasBlend'] = true,
+        ['hasMatte'] = false,
+        ['hasTransform'] = true,
+        ['layerType'] = 'Solid',
+        ['anchorPoint'] = Amaz.Vector3f(540, 540, 0),
+        ['position'] = Amaz.Vector3f(540, 540, 0),
+        ['scale'] = Amaz.Vector3f(100, 100, 100),
+        ['orientation'] = Amaz.Vector3f(0, 0, 0),
+        ['xRotation'] = 0,
+        ['yRotation'] = 0,
+        ['rotation'] = 0,
+        ['opacity'] = 0,
+        ['active_cam_fovx'] = 39.5977527100237,
+        ['compositeSize'] = Amaz.Vector2f(1080, 1080),
+        ['layerSize'] = Amaz.Vector2f(1080, 1080),
+        ['mirrorEdge'] = false,
+        ['blendMode'] = 0,
+    },
+}
+data.ae_attribute = ae_attribute
+
+local ae_keyframes = {
+    ['LumiLayer_27-trs#position#vector'] =
+{
+	{
+		{0.89, 0, 0.64, 1, }, 
+		{0, 0.761914, }, 
+		{{540, 540, 3000, }, {540, 540, 0, }, {540, 540, 2500, }, {540, 540, 500, }, }, 
+		{6413, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiLayer_27-trs#xRotation#number'] =
+{
+	{
+		{0.89, 0, 0.64, 1, }, 
+		{0, 0.761914, }, 
+		{{-90, }, {10, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.33333333, 0, 0.66666667, 1, }, 
+		{0.761914, 0.952376, }, 
+		{{10, }, {-5, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.33333333, 0, 0.66666667, 1, }, 
+		{0.952376, 1.142871, }, 
+		{{-5, }, {5, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.33333333, 0, 0.66666667, 1, }, 
+		{1.142871, 1.333333, }, 
+		{{5, }, {0, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiLayer_27-trs#yRotation#number'] =
+{
+	{
+		{0.89, 0, 0.64, 1, }, 
+		{0, 0.761914, }, 
+		{{39, }, {-5, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.33333333, 0, 0.66666667, 1, }, 
+		{0.761914, 0.952376, }, 
+		{{-5, }, {3, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.33333333, 0, 0.66666667, 1, }, 
+		{0.952376, 1.142871, }, 
+		{{3, }, {-3, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+	{
+		{0.33333333, 0, 0.66666667, 1, }, 
+		{1.142871, 1.333333, }, 
+		{{-3, }, {0, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiLayer_27-trs#rotation#number'] =
+{
+	{
+		{0.89, 0, 0.64, 1, }, 
+		{0, 0.761914, }, 
+		{{33, }, {0, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+    ['LumiLayer_43-trs-blend#opacity#number'] =
+{
+	{
+		{0.33333333, 0, 0.66666667, 1, }, 
+		{0, 0.466667, }, 
+		{{100, }, {0, }, }, 
+		{6417, }, 
+		{0, }, 
+	}, 
+},
+}
+data.ae_keyframes = ae_keyframes
+
+local ae_reverseKeyframes = false
+data.ae_reverseKeyframes = ae_reverseKeyframes
+
+local ae_sliderInfos = {
+}
+data.ae_sliderInfos = ae_sliderInfos
+
+local ae_fadeinInfos = {
+    time = 0,
+    infos = {
+    }
+}
+data.ae_fadeinInfos = ae_fadeinInfos
+
+local ae_fadeoutInfos = {
+    time = 0,
+    infos = {
+    }
+}
+data.ae_fadeoutInfos = ae_fadeoutInfos
+
+local ae_animationInfos = {
+    animationMode = 0,
+    loopStart = 0,
+    speedInfo = {1, 0, 1, },
+}
+data.ae_animationInfos = ae_animationInfos
+
+return data

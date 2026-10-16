@@ -1,0 +1,57 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurMax",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 0.04,
+                "min": 0,
+                "max": 0.12
+            },
+            {
+                "effect_key": "chromaAmount",
+                "effect_key_cn": "色度量",
+                "type": "float",
+                "default": 0.03,
+                "min": 0,
+                "max": 0.12
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "wipeSoftness",
+                "effect_key_cn": "擦拭柔软度",
+                "type": "float",
+                "default": 0.08,
+                "min": 0.001,
+                "max": 0.3
+            },
+            {
+                "effect_key": "glowColor",
+                "effect_key_cn": "发光颜色",
+                "type": "color",
+                "default": [
+                    0.35,
+                    0.65,
+                    1
+                ]
+            }
+        ]
+    }
+}

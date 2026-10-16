@@ -1,0 +1,48 @@
+#version 300 es
+
+#pragma exclude_renderers hlsl50 vulkan
+
+#pragma precision highp float
+
+#pragma global
+#pragma end
+
+#pragma input attributes
+in vec3 a_position;
+in vec2 a_texcoord0;
+#pragma end
+
+#pragma varying varyings
+highp vec2 v_uv;
+#pragma end
+
+#pragma output targets
+out vec4 o_fragColor;
+#pragma end
+
+#pragma vs attributes varyings
+uniform float u_flipX;
+uniform float u_flipY;
+#pragma end
+
+#pragma fs varyings targets
+uniform sampler2D u_videoTex;
+#pragma end
+
+void vertex()
+{
+    gl_Position = vec4(a_position, 1.0);
+    v_uv = a_texcoord0 * 2. - 1.;
+    if (u_flipX > 0.5) {
+        v_uv.x = -v_uv.x;
+    }
+    if (u_flipY > 0.5) {
+        v_uv.y = -v_uv.y;
+    }
+    v_uv = v_uv * .5 + .5;
+}
+
+void fragment()
+{
+    o_fragColor = texture(u_videoTex, v_uv);
+}

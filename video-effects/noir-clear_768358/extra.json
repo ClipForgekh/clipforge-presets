@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "lumiThreshold",
+                "effect_key_cn": "亮度阈值",
+                "type": "float",
+                "default": 0.72,
+                "min": 0.3,
+                "max": 0.95
+            },
+            {
+                "effect_key": "shakeStrength",
+                "effect_key_cn": "摇动强度",
+                "type": "float",
+                "default": 0.012,
+                "min": 0,
+                "max": 0.05
+            },
+            {
+                "effect_key": "chromaAmount",
+                "effect_key_cn": "色度量",
+                "type": "float",
+                "default": 0.006,
+                "min": 0,
+                "max": 0.03
+            },
+            {
+                "effect_key": "zoomStrength",
+                "effect_key_cn": "变焦强度",
+                "type": "float",
+                "default": 0.06,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "thresholdSoftness",
+                "effect_key_cn": "阈值柔软度",
+                "type": "float",
+                "default": 0.08,
+                "min": 0.01,
+                "max": 0.3
+            }
+        ]
+    }
+}

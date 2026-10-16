@@ -1,0 +1,183 @@
+#version 300 es
+
+#pragma exclude_renderers hlsl50 vulkan
+
+#pragma precision highp float
+
+#pragma global
+#pragma end
+
+#pragma input attributes
+in vec2 a_position;
+in vec2 a_texcoord0;
+#pragma end
+
+#pragma varying varyings
+highp vec2 v_uv;
+#pragma end
+
+#pragma output targets
+out vec4 o_fragColor;
+#pragma end
+
+#pragma vs attributes varyings
+#pragma end
+
+#pragma fs varyings targets
+uniform sampler2D u_inputTexture;
+uniform sampler2D u_inputTexture2;
+uniform vec4 u_ScreenParams;
+uniform vec2 u_wh;
+uniform float u_time;
+uniform float u_rotation;
+uniform vec2 u_scale_r;
+uniform float u_feather;
+uniform vec2 u_center;
+uniform int u_maskType;
+uniform int u_wipeMode;
+uniform vec2 u_wipeCenter;
+#define WM_CLOCKWISE 0
+#define WM_COUNTERCLOCKWISE 1
+#define WM_BOTH 2
+#define MT_LINEAR 0
+#define MT_CIRCLE 1
+#define MT_CALCULATEBLIT 2
+#define MT_RADIALWIPE 3
+
+#define PI 3.14159265
+
+mat2 rotate2d(const in float r) {
+    float c = cos(r);
+    float s = sin(r);
+    return mat2(c, - s, s, c);
+}
+
+vec2 rotate(vec2 uv, float r) {
+    mat2 rotMat = rotate2d(r);
+    return (uv - 0.5) * rotMat + 0.5;
+}
+
+vec2 rotate(in vec2 v, in float r, in vec2 c) {
+    return rotate2d(r) * (v - c) + c;
+}
+
+vec4 radialWipe(vec2 uv, vec2 center, float rotation, float progress, float feather) {
+    vec2 muv = rotate(uv, radians(-90.0 + u_rotation), center) - center;
+    float a = atan(-muv.y, muv.x);
+    float b = atan(muv.y, muv.x);
+    float c = min(a, b);
+    float pa = progress * PI * 2.0 - PI;
+    float x;
+    if (u_wipeMode == WM_CLOCKWISE) {
+        x = a;
+    }
+    else if (u_wipeMode == WM_COUNTERCLOCKWISE) {
+        x = b;
+    }
+    else if (u_wipeMode == WM_BOTH) {
+        pa = progress * PI - PI;
+        x = c;
+    }
+    
+    float alpha = smoothstep(pa - feather, pa, x);
+    return vec4(0.0,0.0,0.0,alpha);
+}
+
+vec4 linear(vec2 uv, float progress, float rotation, float feather) {
+    progress = progress * (1.0 + feather);
+    vec2 p = rotate(uv, radians(rotation));
+    float alpha  =  ( mix(0.0, 1.0, smoothstep(progress - feather, progress + feather, p.y)));
+    return vec4(0.0,0.0,0.0,alpha);
+}
+
+
+vec4 circle(vec2 uv, vec2 center, float radius, float feather, float reverse)
+{
+    float d = distance(uv, center);
+    float f = min(d, feather);
+    float a = smoothstep(radius + f, radius - f, d);
+    a = mix(a, 1.0 - a, reverse);
+    vec4 col = vec4(0.0,0.0,0.0,1.0-a);
+    return col;
+}
+
+vec4 polar(vec2 uv, vec2 center, float progress, float feather, float reverse)
+{
+    vec2 p = uv - center;
+    float angle = atan(p.y, p.x);
+    float radius = length(p);
+    angle = mod(angle + 3.14159, 6.28318) / 6.28318;
+    float f = feather;
+    float a = smoothstep(progress - f, progress + f, angle);
+    a = mix(a, 1.0 - a, reverse);
+    vec4 col = vec4(0.0, 0.0, 0.0, a);
+    return col;
+}
+
+vec4 calculateBlitColor(vec2 baseuv, float offsety, float feather, float rotation)
+{
+    offsety = -offsety/2.0;
+    vec2 rotatedUV = rotate(baseuv, rotation);
+    vec2 newuv = rotatedUV + vec2(0.0, offsety);
+    vec2 newuv2 = rotatedUV - vec2(0.0, offsety);
+
+    float useUpper = smoothstep(0.5 - feather, 0.5 + feather, newuv.y);
+    float useLower = 1.0 - smoothstep(0.5 - feather, 0.5 + feather, newuv2.y);
+    vec4 col = vec4(0.0, 0.0, 0.0, 1.0);
+    col *= useUpper + useLower;
+    return clamp(col, vec4(0.0), vec4(1.0));
+}
+
+#pragma end
+
+
+void vertex()
+{
+    gl_Position = sign(vec4(a_position, 0.0, 1.0));
+    v_uv = a_texcoord0;
+}
+
+
+void fragment()
+{
+    vec2 baseuv = vec2(v_uv.x, 1.0 - v_uv.y);
+    vec2 uv = v_uv;
+    
+    // 统一 y 轴适配：将 u_center 从 [0, 1] 映射到 baseuv 所在的 aspect 空间
+    vec2 aspectCenter = u_center;
+    aspectCenter.y = 1.0 - aspectCenter.y; // 翻转 y，使得 1 为顶部，0 为底部
+    aspectCenter -= 0.5;
+    aspectCenter.y /= u_wh.x/u_wh.y;
+    aspectCenter += 0.5;
+
+    // 同样适配 u_wipeCenter
+    vec2 aspectWipeCenter = u_wipeCenter;
+    // u_wipeCenter 在 Lua 中已经做过 1.0 - y 的翻转，这里直接应用宽高比缩放
+    aspectWipeCenter -= 0.5;
+    aspectWipeCenter.y /= u_wh.x/u_wh.y;
+    aspectWipeCenter += 0.5;
+
+    baseuv -= 0.5;
+    baseuv.y /= u_wh.x/u_wh.y;
+    baseuv += 0.5;
+
+    vec4 col = vec4(0.0);
+    if (u_maskType == MT_LINEAR) {
+        col = linear(uv, u_time * 2. - 0.5, u_rotation*360.0, u_feather);
+    } else if (u_maskType == MT_CIRCLE) {
+        col = circle(baseuv, aspectCenter, u_time*1.05, u_feather * max(u_wh.x, u_wh.y)/720.0, 0.0);
+    } else if (u_maskType == MT_CALCULATEBLIT) {
+        col = calculateBlitColor(uv, u_time * 2. - 0.5, u_feather, u_rotation*3.1415926);
+    } else if (u_maskType == MT_RADIALWIPE) {
+        col = radialWipe(baseuv, aspectWipeCenter, u_rotation*360.0, u_time * 2. - 0.5, u_feather);
+    } else {
+        col = vec4(0.0);
+    }
+    vec4 mask = texture(u_inputTexture2, baseuv);
+    vec4 finalcol = col * ( 1.0 - smoothstep(0.5, 0.9, mask.r));
+
+    o_fragColor = finalcol;
+    // o_fragColor = vec4(1.0);
+
+
+}

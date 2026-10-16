@@ -1,0 +1,202 @@
+%YAML 1.1
+--- !XShader &1
+name: !<str> blit/xshader
+guid: {a: 11261191460285431605, b: 12899042511866694814}
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: !<str> ""
+    guid: {a: 5570846540588284593, b: 2319809978134253498}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 91}
+        - {localId: 92}
+      metal:
+        - {localId: 93}
+        - {localId: 94}
+    angleBinaryPrograms:
+      __class: Map
+    semantics:
+      __class: Map
+      a_position:
+        __class: VertexAttribType
+        value: POSITION
+      a_texcoord0:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: COLOR_DEPTH
+    renderState:
+      __class: RenderState
+      name: !<str> ""
+      guid: {a: 3337161399796176000, b: 11716011998071999115}
+      rasterization:
+        __class: RasterizationState
+        name: !<str> ""
+        guid: {a: 19178550501074720, b: 3755418436761962376}
+        depthClampEnable: false
+        depthClampEnableName: !<str> ""
+        rasterizerDiscardEnable: false
+        rasterizerDiscardEnableName: !<str> ""
+        polygonMode:
+          __class: PolygonMode
+          value: FILL
+        polygonModeName: !<str> ""
+        cullMode:
+          __class: CullFace
+          value: NONE
+        cullModeName: !<str> ""
+        frontFace:
+          __class: FrontFace
+          value: COUNTER_CLOCKWISE
+        frontFaceName: !<str> ""
+        depthBiasEnable: false
+        depthBiasEnableName: !<str> ""
+        depthBiasConstantFactor: 0
+        depthBiasConstantFactorName: !<str> ""
+        depthBiasClamp: 1
+        depthBiasClampName: !<str> ""
+        depthBiasSlopeFactor: 1
+        depthBiasSlopeFactorName: !<str> ""
+        lineWidth: 1
+        lineWidthName: !<str> ""
+      depthstencil:
+        __class: DepthStencilState
+        name: !<str> ""
+        guid: {a: 7802963739332425775, b: 5010067684846898617}
+        depthTestEnable: true
+        depthTestEnableName: !<str> ""
+        depthCompareOp:
+          __class: CompareOp
+          value: LESS
+        depthCompareOpName: !<str> ""
+        depthWriteEnable: true
+        stencilTestEnable: false
+        stencilTestEnableName: !<str> ""
+      colorBlend:
+        __class: ColorBlendState
+        name: !<str> ""
+        guid: {a: 3551631502804938301, b: 5947502376518084498}
+        blendConstants: {x: 0, y: 0, z: 0, w: 0}
+        blendEnableName: !<str> ""
+        blendFactorName: !<str> ""
+        blendOpName: !<str> ""
+        attachments:
+          - __class: ColorBlendAttachmentState
+            name: !<str> ""
+            guid: {a: 594659906339938862, b: 3830018415238386104}
+            blendEnable: true
+            srcColorBlendFactor:
+              __class: BlendFactor
+              value: SRC_ALPHA
+            dstColorBlendFactor:
+              __class: BlendFactor
+              value: ONE_MINUS_SRC_ALPHA
+            srcAlphaBlendFactor:
+              __class: BlendFactor
+              value: ONE
+            dstAlphaBlendFactor:
+              __class: BlendFactor
+              value: ZERO
+            colorWriteMask: 15
+            ColorBlendOp:
+              __class: BlendOp
+              value: ADD
+            AlphaBlendOp:
+              __class: BlendOp
+              value: ADD
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    enableFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+    keywordProgram: {localId: 102}
+    lightMode:
+      __class: LightMode
+      value: NONE
+    clearMoment:
+      __class: PassClearMoment
+      value: CLEAR_BEFORE_RENDERING
+    instanceCount: 0
+    useGrabTexture: false
+    useGrabTextureMipmap: false
+    grabTextureName: !<str> ""
+    auslSourcePath: !<str> effects/Lumi3DShape/xshader/3Dshape.ausl
+--- !Shader &91
+name: !<str> ""
+guid: {a: 11189751639388381305, b: 14125016989750845853}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: !<str> effects/Lumi3DShape/xshader/shaderLib/shaderGLES/696a636980391c744a6b195bdb817627.frag
+--- !Shader &92
+name: !<str> ""
+guid: {a: 6435394584497522887, b: 12168460242744204966}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: !<str> effects/Lumi3DShape/xshader/shaderLib/shaderGLES/696a636980391c744a6b195bdb817627.vert
+--- !Shader &93
+name: !<str> ""
+guid: {a: 10683002578540302612, b: 16275325642574863510}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: !<str> effects/Lumi3DShape/xshader/shaderLib/shaderMetal/696a636980391c744a6b195bdb817627.frag
+--- !Shader &94
+name: !<str> ""
+guid: {a: 15727840593661941303, b: 9202534255594749065}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: !<str> effects/Lumi3DShape/xshader/shaderLib/shaderMetal/696a636980391c744a6b195bdb817627.vert
+--- !KeywordProgramProfile &102
+name: !<str> ""
+guid: {a: 4630227918104763871, b: 491003139771413382}
+keywordSets:
+  -
+    - !<str> ""
+targetApis:
+  -
+    - !<str> glsl20
+    - !<str> glsl30
+    - !<str> glsl31
+    - !<str> glsl32
+  -
+    - !<str> metal
+stagets:
+  - __class: ShaderType
+    value: FRAGMENT
+  - __class: ShaderType
+    value: VERTEX
+shaderSnippets:
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 14289899091097286684, b: 7978433203789749421}
+    source: !<str> ""
+    location: !<str> effects/Lumi3DShape/xshader/shaderLib/shaderGLES/696a636980391c744a6b195bdb817627.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 16523173161254949339, b: 4031619661963607692}
+    source: !<str> ""
+    location: !<str> effects/Lumi3DShape/xshader/shaderLib/shaderGLES/696a636980391c744a6b195bdb817627.vert
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 595878992855175983, b: 6143155759712699522}
+    source: !<str> ""
+    location: !<str> effects/Lumi3DShape/xshader/shaderLib/shaderMetal/696a636980391c744a6b195bdb817627.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 4271776405086442424, b: 9016025525752801673}
+    source: !<str> ""
+    location: !<str> effects/Lumi3DShape/xshader/shaderLib/shaderMetal/696a636980391c744a6b195bdb817627.vert

@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "warpStrength",
+                "effect_key_cn": "经纱强度",
+                "type": "float",
+                "default": 1,
+                "min": 0.2,
+                "max": 2
+            },
+            {
+                "effect_key": "waveFrequency",
+                "effect_key_cn": "波频率",
+                "type": "float",
+                "default": 18,
+                "min": 4,
+                "max": 40
+            },
+            {
+                "effect_key": "edgeRoughness",
+                "effect_key_cn": "边缘粗糙度",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.4
+            },
+            {
+                "effect_key": "toneContrast",
+                "effect_key_cn": "色调对比",
+                "type": "float",
+                "default": 1.35,
+                "min": 0.8,
+                "max": 2
+            }
+        ]
+    }
+}

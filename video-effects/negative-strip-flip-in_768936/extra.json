@@ -1,0 +1,47 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "stripCount",
+                "effect_key_cn": "stripCount",
+                "type": "float",
+                "default": 5,
+                "min": 3,
+                "max": 10
+            },
+            {
+                "effect_key": "flipDuration",
+                "effect_key_cn": "flipDuration",
+                "type": "float",
+                "default": 0.38,
+                "min": 0.15,
+                "max": 0.8
+            },
+            {
+                "effect_key": "seamWidth",
+                "effect_key_cn": "seamWidth",
+                "type": "float",
+                "default": 0.006,
+                "min": 0.001,
+                "max": 0.02
+            },
+            {
+                "effect_key": "flashStrength",
+                "effect_key_cn": "flashStrength",
+                "type": "float",
+                "default": 0.55,
+                "min": 0,
+                "max": 1.5
+            }
+        ]
+    }
+}

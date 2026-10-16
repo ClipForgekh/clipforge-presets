@@ -1,0 +1,123 @@
+%YAML 1.1
+--- !XShader &1
+name: !<str> crop/xshader
+guid: {a: 8524005195345663397, b: 8484034102120604344}
+renderQueue: 2000
+passes:
+  - __class: Pass
+    name: !<str> ""
+    guid: {a: 7444126124659000054, b: 9204838491211613626}
+    shaders:
+      __class: Map
+      gles2:
+        - {localId: 15}
+        - {localId: 16}
+    angleBinaryPrograms:
+      __class: Map
+    semantics:
+      __class: Map
+      a_position:
+        __class: VertexAttribType
+        value: POSITION
+      a_texcoord0:
+        __class: VertexAttribType
+        value: TEXCOORD0
+    clearColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    clearDepth: 1
+    clearType:
+      __class: CameraClearType
+      value: DONT
+    renderState:
+      __class: RenderState
+      name: !<str> ""
+      guid: {a: 9458995634057829765, b: 17063157322645147032}
+      depthstencil:
+        __class: DepthStencilState
+        name: !<str> ""
+        guid: {a: 166539600522679395, b: 18010162261762964389}
+        depthTestEnable: false
+        depthTestEnableName: !<str> ""
+        depthCompareOp:
+          __class: CompareOp
+          value: LESS
+        depthCompareOpName: !<str> ""
+        depthWriteEnable: false
+        stencilTestEnable: false
+        stencilTestEnableName: !<str> ""
+    useFBOTexture: false
+    useCameraRT: false
+    useFBOFetch: false
+    enableFBOFetch: false
+    isFullScreenShading: false
+    macrosMap:
+      __class: Map
+    preprocess: false
+    passType:
+      __class: PassType
+      value: NORMAL
+    keywordProgram: {localId: 14}
+    lightMode:
+      __class: LightMode
+      value: NONE
+    clearMoment:
+      __class: PassClearMoment
+      value: CLEAR_BEFORE_RENDERING
+    instanceCount: 0
+    useGrabTexture: false
+    useGrabTextureMipmap: false
+    grabTextureName: !<str> ""
+    auslSourcePath: !<str> effects/LumiAnimSeqLoadAndCrop/xshader/crop.ausl
+--- !KeywordProgramProfile &14
+name: !<str> ""
+guid: {a: 9746091815663496153, b: 2592060351066924986}
+keywordSets:
+  -
+    - !<str> ""
+targetApis:
+  -
+    - !<str> glsl20
+    - !<str> glsl30
+    - !<str> glsl31
+    - !<str> glsl32
+  -
+    - !<str> metal
+stagets:
+  - __class: ShaderType
+    value: FRAGMENT
+  - __class: ShaderType
+    value: VERTEX
+shaderSnippets:
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 9098603707880093587, b: 8570109076528520068}
+    source: !<str> ""
+    location: !<str> effects/LumiAnimSeqLoadAndCrop/xshader/shaderLib/shaderGLES/eade43c2f1bac03288c074b3071433fe.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 9675848789804428809, b: 6718051702449999029}
+    source: !<str> ""
+    location: !<str> effects/LumiAnimSeqLoadAndCrop/xshader/shaderLib/shaderGLES/eade43c2f1bac03288c074b3071433fe.vert
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 8594841405352013765, b: 18228327837200638091}
+    source: !<str> ""
+    location: !<str> effects/LumiAnimSeqLoadAndCrop/xshader/shaderLib/shaderMetal/eade43c2f1bac03288c074b3071433fe.frag
+  - __class: ShaderSnippet
+    name: !<str> ""
+    guid: {a: 7224815655163979742, b: 16807550250551041958}
+    source: !<str> ""
+    location: !<str> effects/LumiAnimSeqLoadAndCrop/xshader/shaderLib/shaderMetal/eade43c2f1bac03288c074b3071433fe.vert
+--- !Shader &15
+name: !<str> ""
+guid: {a: 2829976962652752068, b: 769281064497978008}
+type:
+  __class: ShaderType
+  value: FRAGMENT
+sourcePath: !<str> effects/LumiAnimSeqLoadAndCrop/xshader/shaderLib/shaderGLES/eade43c2f1bac03288c074b3071433fe.frag
+--- !Shader &16
+name: !<str> ""
+guid: {a: 11838093073955031578, b: 10081183213175549570}
+type:
+  __class: ShaderType
+  value: VERTEX
+sourcePath: !<str> effects/LumiAnimSeqLoadAndCrop/xshader/shaderLib/shaderGLES/eade43c2f1bac03288c074b3071433fe.vert

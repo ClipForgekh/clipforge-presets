@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurMax",
+                "effect_key_cn": "blurMax",
+                "type": "float",
+                "default": 0.03,
+                "min": 0.005,
+                "max": 0.08
+            },
+            {
+                "effect_key": "whiteWash",
+                "effect_key_cn": "whiteWash",
+                "type": "float",
+                "default": 0.92,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "haloStrength",
+                "effect_key_cn": "haloStrength",
+                "type": "float",
+                "default": 0.6,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "glowStrength",
+                "type": "float",
+                "default": 0.18,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "edgeSensitivity",
+                "effect_key_cn": "edgeSensitivity",
+                "type": "float",
+                "default": 1.2,
+                "min": 0.2,
+                "max": 3
+            }
+        ]
+    }
+}

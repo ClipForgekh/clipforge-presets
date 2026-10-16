@@ -1,0 +1,15 @@
+{
+	"effect" : 
+	{
+		"Link" : 
+		[
+			{
+				"path" : "motionBlur/",
+				"type" : "AmazingFeature",
+				"zorder" : 10000.0
+			}
+		]
+	},
+	"name" : "6ae16f89e5f5donggan6e1b06d98",
+	"version" : "6.6.0"
+}

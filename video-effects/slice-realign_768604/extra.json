@@ -1,0 +1,63 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "bands",
+                "effect_key_cn": "bands",
+                "type": "float",
+                "default": 18,
+                "min": 6,
+                "max": 48
+            },
+            {
+                "effect_key": "displacementStrength",
+                "effect_key_cn": "displacementStrength",
+                "type": "float",
+                "default": 0.08,
+                "min": 0.01,
+                "max": 0.2
+            },
+            {
+                "effect_key": "magneticPull",
+                "effect_key_cn": "magneticPull",
+                "type": "float",
+                "default": 0.22,
+                "min": 0,
+                "max": 0.5
+            },
+            {
+                "effect_key": "overshootAmount",
+                "effect_key_cn": "overshootAmount",
+                "type": "float",
+                "default": 0.006,
+                "min": 0,
+                "max": 0.02
+            },
+            {
+                "effect_key": "ghostAmount",
+                "effect_key_cn": "ghostAmount",
+                "type": "float",
+                "default": 0.003,
+                "min": 0,
+                "max": 0.01
+            },
+            {
+                "effect_key": "tapeAmount",
+                "effect_key_cn": "tapeAmount",
+                "type": "float",
+                "default": 0.012,
+                "min": 0,
+                "max": 0.04
+            }
+        ]
+    }
+}

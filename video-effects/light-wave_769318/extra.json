@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "beamWidth",
+                "effect_key_cn": "beamWidth",
+                "type": "float",
+                "default": 0.07,
+                "min": 0.01,
+                "max": 0.25
+            },
+            {
+                "effect_key": "waveAmount",
+                "effect_key_cn": "waveAmount",
+                "type": "float",
+                "default": 0.035,
+                "min": 0,
+                "max": 0.15
+            },
+            {
+                "effect_key": "rainbowStrength",
+                "effect_key_cn": "rainbowStrength",
+                "type": "float",
+                "default": 0.22,
+                "min": 0,
+                "max": 0.8
+            },
+            {
+                "effect_key": "particleStrength",
+                "effect_key_cn": "particleStrength",
+                "type": "float",
+                "default": 0.18,
+                "min": 0,
+                "max": 0.6
+            },
+            {
+                "effect_key": "darkness",
+                "effect_key_cn": "darkness",
+                "type": "float",
+                "default": 0.85,
+                "min": 0,
+                "max": 1
+            }
+        ]
+    }
+}

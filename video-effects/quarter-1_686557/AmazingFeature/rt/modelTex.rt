@@ -1,0 +1,46 @@
+%YAML 1.1
+--- !ScreenRenderTexture &1
+name: RTFilterOut
+guid: {a: 17388376786671287467, b: 17972560766749106615}
+width: 720
+height: 1520
+depth: 1
+internalFormat:
+  __class: InternalFormat
+  value: RGBA8
+dataType:
+  __class: DataType
+  value: U8norm
+builtinType:
+  __class: BuiltInTextureType
+  value: NORAML
+filterMin:
+  __class: FilterMode
+  value: LINEAR
+filterMag:
+  __class: FilterMode
+  value: LINEAR
+filterMipmap:
+  __class: FilterMipmapMode
+  value: NONE
+wrapModeS:
+  __class: WrapMode
+  value: CLAMP
+wrapModeT:
+  __class: WrapMode
+  value: CLAMP
+wrapModeR:
+  __class: WrapMode
+  value: CLAMP
+attachment:
+  __class: RenderTextureAttachment
+  value: NONE
+massMode:
+  __class: MSAAMode
+  value: NONE
+shared: false
+colorFormat:
+  __class: PixelFormat
+  value: RGBA8Unorm
+pecentX: 1
+pecentY: 1

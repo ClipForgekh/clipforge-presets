@@ -1,0 +1,23 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "edgeSharpness",
+                "effect_key_cn": "edgeSharpness",
+                "type": "float",
+                "default": 1.4,
+                "min": 0.5,
+                "max": 3
+            },
+            {
+                "effect_key": "fragmentSpread",
+                "effect_key_cn": "fragmentSpread",
+                "type": "float",
+                "default": 0.45,
+                "min": 0.1,
+                "max": 1
+            }
+        ]
+    }
+}

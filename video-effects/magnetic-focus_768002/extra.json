@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "pullIntensity",
+                "effect_key_cn": "拉力强度",
+                "type": "float",
+                "default": 0.18,
+                "min": 0.05,
+                "max": 0.4
+            },
+            {
+                "effect_key": "radialBlurAmount",
+                "effect_key_cn": "径向模糊量",
+                "type": "float",
+                "default": 0.2,
+                "min": 0,
+                "max": 0.6
+            },
+            {
+                "effect_key": "trailLength",
+                "effect_key_cn": "路径长度",
+                "type": "float",
+                "default": 0.035,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "trailStrength",
+                "effect_key_cn": "越野强度",
+                "type": "float",
+                "default": 0.6,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "overshootAmount",
+                "effect_key_cn": "超调量",
+                "type": "float",
+                "default": 0.03,
+                "min": 0,
+                "max": 0.06
+            }
+        ]
+    }
+}

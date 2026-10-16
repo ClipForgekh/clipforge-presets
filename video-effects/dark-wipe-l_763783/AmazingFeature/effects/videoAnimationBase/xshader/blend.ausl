@@ -1,0 +1,48 @@
+#version 300 es
+
+#pragma exclude_renderers hlsl50 vulkan
+
+#pragma precision highp float
+
+#pragma global
+#pragma end
+
+#pragma input attributes
+in vec3 a_position;
+in vec2 a_texcoord0;
+#pragma end
+
+#pragma varying varyings
+highp vec2 uv1; // bgUV
+highp vec2 uv0; // modelUV
+#pragma end
+
+#pragma output targets
+out vec4 o_fragColor;
+#pragma end
+
+#pragma vs attributes varyings
+#pragma end
+
+#pragma fs varyings targets
+uniform sampler2D baseTex;  // bgTex
+uniform sampler2D _MainTex; // modelTex
+uniform float _alpha;
+#pragma end
+
+void vertex()
+{
+    vec2 pos = a_position.xy;
+    gl_Position = vec4(pos.xy, a_position.z, 1.0);
+    vec2 uv = vec2(pos.x * 0.5 + 0.5, pos.y * 0.5 + 0.5);
+    uv1 = uv;
+    uv0 = a_texcoord0;
+}
+
+void fragment()
+{
+    vec4 bgCol = texture(baseTex, uv1);
+    vec4 modelCol = texture(_MainTex, uv0);
+    vec3 col = bgCol.rgb * (1.0 - modelCol.a * _alpha) + modelCol.rgb * _alpha;
+    o_fragColor = vec4(col.rgb, max(bgCol.a, modelCol.a));
+}

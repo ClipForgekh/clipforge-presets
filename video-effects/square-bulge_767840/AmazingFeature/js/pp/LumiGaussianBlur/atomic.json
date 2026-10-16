@@ -1,0 +1,132 @@
+{
+  "key": "LumiGaussianBlur",
+  "category": "Blur & Sharpen",
+  "desc": "高斯模糊（多 Pass）- 可控的水平/垂直高斯模糊，支持强度、质量、边界处理、抖动与 Alpha 模糊设置。适用于柔化、景深辅助、过渡遮罩、轻度磨皮与氛围处理。",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果 - 强度为0，关闭模糊"
+    },
+    {
+      "name": "soft",
+      "desc": "轻柔 - 低强度模糊，细微柔化"
+    },
+    {
+      "name": "medium",
+      "desc": "中等 - 通用模糊强度，明显但不糊"
+    },
+    {
+      "name": "strong",
+      "desc": "强烈 - 大幅模糊，适合背景虚化/过渡"
+    },
+    {
+      "name": "horizontal_streak",
+      "desc": "水平拉丝 - 仅水平模糊，常用于光晕/速度感"
+    },
+    {
+      "name": "vertical_streak",
+      "desc": "垂直拉丝 - 仅垂直模糊，常用于雨丝/光束感"
+    },
+    {
+      "name": "mirror_edges",
+      "desc": "镜像边界 - 使用 Mirror 边界减少边缘黑边"
+    },
+    {
+      "name": "fast_preview",
+      "desc": "快速预览 - 牺牲质量换性能（更粗糙）"
+    },
+    {
+      "name": "low",
+      "desc": "Light-touch preset with a subtle version of the effect."
+    },
+    {
+      "name": "high",
+      "desc": "Stronger preset that pushes the effect more aggressively."
+    },
+    {
+      "name": "horizontal",
+      "desc": "Biases the effect toward horizontal motion, blur, or splitting."
+    },
+    {
+      "name": "vertical",
+      "desc": "Biases the effect toward vertical motion or blur."
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "intensity",
+      "desc": "强度 - 模糊半径/范围（越大越糊）",
+      "type": "number",
+      "value": 20,
+      "min": 0,
+      "max": 300
+    },
+    {
+      "name": "quality",
+      "desc": "质量 - 影响采样数量与模糊平滑度（更高更慢）",
+      "type": "number",
+      "value": 0.5,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "horizontalStrength",
+      "desc": "水平权重 - 0 关闭水平模糊，1 为全强度",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "verticalStrength",
+      "desc": "垂直权重 - 0 关闭垂直模糊，1 为全强度",
+      "type": "number",
+      "value": 1,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "blurDirection",
+      "desc": "模糊方向 - Horizontal/Vertical/Horizontal and Vertical",
+      "type": "select",
+      "value": "Horizontal and Vertical",
+      "options": [
+        "Horizontal and Vertical",
+        "Horizontal",
+        "Vertical"
+      ]
+    },
+    {
+      "name": "borderType",
+      "desc": "边界处理 - Normal/Replicate/Black/Mirror",
+      "type": "select",
+      "value": "Normal",
+      "options": [
+        "Normal",
+        "Replicate",
+        "Black",
+        "Mirror"
+      ]
+    },
+    {
+      "name": "spaceDither",
+      "desc": "空间抖动 - 轻微抖动可减少条带/采样痕迹",
+      "type": "number",
+      "value": 0,
+      "min": 0,
+      "max": 1
+    },
+    {
+      "name": "blurAlpha",
+      "desc": "模糊 Alpha - 开启后对 Alpha 通道也进行模糊",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "inverseGammaCorrection",
+      "desc": "反伽马校正 - 提升模糊的视觉一致性（通常建议开启）",
+      "type": "boolean",
+      "value": true
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "flareWidth",
+                "effect_key_cn": "flareWidth",
+                "type": "float",
+                "default": 0.18,
+                "min": 0.05,
+                "max": 0.35
+            },
+            {
+                "effect_key": "revealFeather",
+                "effect_key_cn": "revealFeather",
+                "type": "float",
+                "default": 0.25,
+                "min": 0.05,
+                "max": 0.4
+            },
+            {
+                "effect_key": "flareIntensity",
+                "effect_key_cn": "flareIntensity",
+                "type": "float",
+                "default": 1.2,
+                "min": 0.2,
+                "max": 3
+            },
+            {
+                "effect_key": "coreIntensity",
+                "effect_key_cn": "coreIntensity",
+                "type": "float",
+                "default": 2,
+                "min": 0.5,
+                "max": 4
+            },
+            {
+                "effect_key": "secondaryStrength",
+                "effect_key_cn": "secondaryStrength",
+                "type": "float",
+                "default": 0.6,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "flareColor",
+                "effect_key_cn": "flareColor",
+                "type": "color",
+                "default": [
+                    1,
+                    0.95,
+                    0.85
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurMax",
+                "effect_key_cn": "最大模糊",
+                "type": "float",
+                "default": 0.02,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "particleStrength",
+                "effect_key_cn": "粒子强度",
+                "type": "float",
+                "default": 1,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "sweepWidth",
+                "effect_key_cn": "扫描宽度",
+                "type": "float",
+                "default": 0.35,
+                "min": 0.1,
+                "max": 0.8
+            }
+        ]
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "rippleCount",
+                "effect_key_cn": "rippleCount",
+                "type": "float",
+                "default": 10,
+                "min": 3,
+                "max": 20
+            },
+            {
+                "effect_key": "distortStrength",
+                "effect_key_cn": "distortStrength",
+                "type": "float",
+                "default": 0.02,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "aberration",
+                "effect_key_cn": "aberration",
+                "type": "float",
+                "default": 0.003,
+                "min": 0,
+                "max": 0.02
+            },
+            {
+                "effect_key": "lineSoftness",
+                "effect_key_cn": "lineSoftness",
+                "type": "float",
+                "default": 0.015,
+                "min": 0.001,
+                "max": 0.08
+            },
+            {
+                "effect_key": "mergePoint",
+                "effect_key_cn": "mergePoint",
+                "type": "float",
+                "default": 0.62,
+                "min": 0.3,
+                "max": 0.9
+            }
+        ]
+    }
+}

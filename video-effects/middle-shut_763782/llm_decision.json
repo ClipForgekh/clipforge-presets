@@ -1,0 +1,17 @@
+{
+    "text": "TELL STORIES",
+    "style_pe": "minimalist clean serif font",
+    "mask_config": {
+        "mask_type": "calculateBlitColor",
+        "params": {
+            "rotation": 1.0,
+            "feather": 0.05,
+            "center": [
+                0.5,
+                0.5
+            ],
+            "wipe_mode": "Both"
+        }
+    },
+    "reason": "\u901a\u7528\u573a\u666f\u504f\u597d\uff1acalculateBlitColor"
+}

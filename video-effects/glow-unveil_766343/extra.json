@@ -1,0 +1,49 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "发光强度",
+                "type": "float",
+                "default": 1.2,
+                "min": 0,
+                "max": 3
+            },
+            {
+                "effect_key": "trailWidth",
+                "effect_key_cn": "步道宽度",
+                "type": "float",
+                "default": 1,
+                "min": 0.5,
+                "max": 2
+            },
+            {
+                "effect_key": "sparkDensity",
+                "effect_key_cn": "火花密度",
+                "type": "float",
+                "default": 1,
+                "min": 0.2,
+                "max": 2
+            },
+            {
+                "effect_key": "glowColor",
+                "effect_key_cn": "发光颜色",
+                "type": "color",
+                "default": [
+                    1,
+                    0.82,
+                    0.35
+                ]
+            }
+        ]
+    }
+}

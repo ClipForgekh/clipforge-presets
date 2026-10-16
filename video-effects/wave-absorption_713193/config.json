@@ -1,0 +1,15 @@
+{
+	"effect" : 
+	{
+		"Link" : 
+		[
+			{
+				"path" : "AmazingFeature/",
+				"type" : "AmazingFeature",
+				"zorder" : 8011.0
+			}
+		]
+	},
+	"name" : "2022_0945sadfsdfvxcvgfd4a3213132122",
+	"version" : "7.0.0"
+}

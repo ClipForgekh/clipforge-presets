@@ -1,0 +1,39 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "startScale",
+                "effect_key_cn": "开始规模",
+                "type": "float",
+                "default": 0.82,
+                "min": 0.5,
+                "max": 1
+            },
+            {
+                "effect_key": "minOpacity",
+                "effect_key_cn": "最小不透明度",
+                "type": "float",
+                "default": 0.15,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurStrength",
+                "effect_key_cn": "模糊强度",
+                "type": "float",
+                "default": 0.015,
+                "min": 0,
+                "max": 0.05
+            }
+        ]
+    }
+}

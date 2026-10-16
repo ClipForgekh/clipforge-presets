@@ -1,0 +1,65 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "progress",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "startZoom",
+                "effect_key_cn": "startZoom",
+                "type": "float",
+                "default": 0.5,
+                "min": 0.3,
+                "max": 1
+            },
+            {
+                "effect_key": "peakZoom",
+                "effect_key_cn": "peakZoom",
+                "type": "float",
+                "default": 1.35,
+                "min": 1,
+                "max": 2
+            },
+            {
+                "effect_key": "motionBlur",
+                "effect_key_cn": "motionBlur",
+                "type": "float",
+                "default": 0.02,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "shakeAmount",
+                "effect_key_cn": "shakeAmount",
+                "type": "float",
+                "default": 0.01,
+                "min": 0,
+                "max": 0.05
+            },
+            {
+                "effect_key": "fadeStart",
+                "effect_key_cn": "fadeStart",
+                "type": "float",
+                "default": 0.55,
+                "min": 0.3,
+                "max": 0.9
+            },
+            {
+                "effect_key": "backgroundColor",
+                "effect_key_cn": "backgroundColor",
+                "type": "color",
+                "default": [
+                    0.03,
+                    0.03,
+                    0.04
+                ]
+            }
+        ]
+    }
+}

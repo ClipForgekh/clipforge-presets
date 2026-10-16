@@ -1,0 +1,81 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurRadius",
+                "effect_key_cn": "blur R",
+                "type": "float",
+                "default": 0.02,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "glowIntensity",
+                "effect_key_cn": "glow I",
+                "type": "float",
+                "default": 2.5,
+                "min": 0,
+                "max": 4
+            },
+            {
+                "effect_key": "scaleBoost",
+                "effect_key_cn": "scale ",
+                "type": "float",
+                "default": 0.1,
+                "min": 0,
+                "max": 0.3
+            },
+            {
+                "effect_key": "brightnessBoost",
+                "effect_key_cn": "bright",
+                "type": "float",
+                "default": 2.2,
+                "min": 1,
+                "max": 3
+            },
+            {
+                "effect_key": "saturationBoost",
+                "effect_key_cn": "satura",
+                "type": "float",
+                "default": 1.8,
+                "min": 1,
+                "max": 3
+            },
+            {
+                "effect_key": "ringDelay",
+                "effect_key_cn": "ring D",
+                "type": "float",
+                "default": 0.0667,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "particleSpread",
+                "effect_key_cn": "partic",
+                "type": "float",
+                "default": 0.06,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "goldColor",
+                "effect_key_cn": "gold C",
+                "type": "color",
+                "default": [
+                    1,
+                    0.82,
+                    0.45
+                ]
+            }
+        ]
+    }
+}

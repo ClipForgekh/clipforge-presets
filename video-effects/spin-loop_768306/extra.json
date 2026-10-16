@@ -1,0 +1,55 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "hullPulseAmount",
+                "effect_key_cn": "hull P",
+                "type": "float",
+                "default": 0.66,
+                "min": 0,
+                "max": 1.2
+            },
+            {
+                "effect_key": "swayAmount",
+                "effect_key_cn": "sway A",
+                "type": "float",
+                "default": 0.28,
+                "min": 0,
+                "max": 0.8
+            },
+            {
+                "effect_key": "keelBreath",
+                "effect_key_cn": "keel B",
+                "type": "float",
+                "default": 0.07,
+                "min": 0,
+                "max": 0.2
+            },
+            {
+                "effect_key": "edgeBoost",
+                "effect_key_cn": "edge B",
+                "type": "float",
+                "default": 0.12,
+                "min": 0,
+                "max": 0.3
+            },
+            {
+                "effect_key": "gradientAmount",
+                "effect_key_cn": "gradie",
+                "type": "float",
+                "default": 0.1,
+                "min": 0,
+                "max": 0.4
+            }
+        ]
+    }
+}

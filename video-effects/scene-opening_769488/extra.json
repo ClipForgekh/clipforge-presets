@@ -1,0 +1,15 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "slitWidth",
+                "effect_key_cn": "slitWidth",
+                "type": "float",
+                "default": 0.02,
+                "min": 0.005,
+                "max": 0.2
+            }
+        ]
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "sparkleColor",
+                "effect_key_cn": "sparkleColor",
+                "type": "color",
+                "default": [
+                    1,
+                    0.86,
+                    0.98
+                ]
+            },
+            {
+                "effect_key": "sparkleDensity",
+                "effect_key_cn": "sparkleDensity",
+                "type": "float",
+                "default": 8,
+                "min": 3,
+                "max": 16
+            },
+            {
+                "effect_key": "glowStrength",
+                "effect_key_cn": "glowStrength",
+                "type": "float",
+                "default": 1.2,
+                "min": 0.2,
+                "max": 2.5
+            }
+        ]
+    }
+}

@@ -1,0 +1,34 @@
+%YAML 1.1
+--- !Material &1
+name: white
+guid: {a: 10539118943315432900, b: 10027425218941646249}
+xshader: {localId: 1, path: effects/white/white.xshader}
+properties:
+  __class: PropertySheet
+  name: enity_propertySheet
+  guid: {a: 738855850602022897, b: 834640273856531847}
+  floatmap:
+    __class: Map
+    y_offset: 0.5
+  vec4map:
+    __class: Map
+  vec3map:
+    __class: Map
+  vec2map:
+    __class: Map
+    u_Center: {x: 0.5, y: 0.5}
+  mat4map:
+    __class: Map
+  texmap:
+    __class: Map
+  intmap:
+    __class: Map
+renderQueue: 1
+enabledMacros:
+  __class: Map
+  AE_AreaLightNum: !<str> 0
+  AE_DirLightNum: !<str> 0
+  AE_PointLightNum: !<str> 0
+  AE_SpotLightNum: !<str> 0
+mshaderPath: ""
+instanceCount: 0

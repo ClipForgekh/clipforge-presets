@@ -1,0 +1,91 @@
+{
+  "key": "LumiOpticsCompensation",
+  "category": "Distort",
+  "desc": "镜头光学畸变/补偿 - 通过桶形/枕形畸变模型模拟广角/鱼眼镜头，并可做反向补偿。支持视场角、中心点、方向、抗锯齿与边界填充设置。适用于镜头风格化、VR/运动相机畸变、广角拉伸与回正",
+  "preset": [
+    {
+      "name": "none",
+      "desc": "无效果 - 视场角为0，不进行畸变或补偿"
+    },
+    {
+      "name": "low",
+      "desc": "轻度畸变 - 小视场角畸变，适合轻微广角感"
+    },
+    {
+      "name": "medium",
+      "desc": "中等畸变 - 中等视场角畸变，视觉更明显"
+    },
+    {
+      "name": "high",
+      "desc": "强烈畸变 - 大视场角畸变，接近运动相机/鱼眼感"
+    },
+    {
+      "name": "fisheye",
+      "desc": "鱼眼风格 - 对角线方向强畸变，适合运动相机/夸张镜头"
+    },
+    {
+      "name": "compensate_low",
+      "desc": "轻度补偿 - 反向畸变用于回正轻微广角/桶形"
+    },
+    {
+      "name": "compensate_medium",
+      "desc": "中度补偿 - 反向畸变用于回正更强的广角/桶形"
+    },
+    {
+      "name": "compensate_high",
+      "desc": "强补偿 - 反向畸变用于回正极强畸变（更依赖边界填充）"
+    },
+    {
+      "name": "portrait_vertical",
+      "desc": "竖屏广角 - Vertical 方向畸变，更适合竖屏构图"
+    }
+  ],
+  "subProperties": [
+    {
+      "name": "fov",
+      "desc": "视场角 - 控制畸变强度，0为无畸变，越大越强",
+      "type": "number",
+      "value": 0.0,
+      "min": 0.0,
+      "max": 180.0
+    },
+    {
+      "name": "fovOrientation",
+      "desc": "视场角方向 - Horizontal/Vertical/Diagonal",
+      "type": "select",
+      "value": "Horizontal",
+      "options": [
+        "Horizontal",
+        "Vertical",
+        "Diagonal"
+      ]
+    },
+    {
+      "name": "center",
+      "desc": "畸变中心点 - 归一化坐标(0~1)，[x,y]",
+      "type": "array",
+      "value": [
+        0.5,
+        0.5
+      ]
+    },
+    {
+      "name": "inverseLensDistortion",
+      "desc": "反向畸变 - true为反向补偿(枕形)，false为桶形畸变",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "antiAliasing",
+      "desc": "抗锯齿 - 开启后会增加一次后处理以改善边缘锯齿",
+      "type": "boolean",
+      "value": true
+    },
+    {
+      "name": "fillBorders",
+      "desc": "边界填充 - 开启后对畸变导致的边界空洞做填充处理",
+      "type": "boolean",
+      "value": false
+    }
+  ]
+}

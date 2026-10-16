@@ -1,0 +1,49 @@
+{
+    "setting": {
+        "animation_duration": 1.2,
+        "lumiai_material_properties": [
+            {
+                "effect_key": "progress",
+                "effect_key_cn": "效果进度",
+                "type": "float",
+                "default": 0,
+                "min": 0,
+                "max": 1
+            },
+            {
+                "effect_key": "blurRadius",
+                "effect_key_cn": "blur R",
+                "type": "float",
+                "default": 0.023,
+                "min": 0,
+                "max": 0.08
+            },
+            {
+                "effect_key": "stripDelay",
+                "effect_key_cn": "strip ",
+                "type": "float",
+                "default": 0.08,
+                "min": 0.02,
+                "max": 0.2
+            },
+            {
+                "effect_key": "neonStrength",
+                "effect_key_cn": "neon S",
+                "type": "float",
+                "default": 0.9,
+                "min": 0,
+                "max": 2
+            },
+            {
+                "effect_key": "neonColor",
+                "effect_key_cn": "neon C",
+                "type": "color",
+                "default": [
+                    0.78,
+                    0.55,
+                    1
+                ]
+            }
+        ]
+    }
+}

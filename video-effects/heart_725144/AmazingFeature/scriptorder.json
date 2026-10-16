@@ -1,0 +1,7 @@
+{
+    "lua/SeekModeScript.lua": "5",
+    "effects/CC_Raial_Blur/lua/RadialBlurLayerScript.lua": "1",
+    "effects/retouch_adjust/LumiScript.lua": "2",
+    "lua/PaopaoBlur.lua": "4",
+    "effects/Displacement/Displacement.lua": "3"
+}

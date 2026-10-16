@@ -1,0 +1,17 @@
+{
+    "text": "MOMENTS",
+    "style_pe": "futuristic italic font, sharp typography",
+    "mask_config": {
+        "mask_type": "radialWipe",
+        "params": {
+            "rotation": -0.25,
+            "feather": 0.05,
+            "center": [
+                0.5,
+                0.5
+            ],
+            "wipe_mode": "Both"
+        }
+    },
+    "reason": "\u8bc6\u522b\u5230\u5f84\u5411\u64e6\u9664\u610f\u56fe\uff0c\u968f\u673a\u5206\u914d\u4e2d\u5fc3\u70b9: [0.5, 0.5] \u548c\u6a21\u5f0f: Both"
+}
