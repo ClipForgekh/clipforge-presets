@@ -3,134 +3,637 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ClipForge Presets Hub - Interactive Catalog</title>
+  <title>ClipForge Studio - Interactive Presets & Filter Hub</title>
   <style>
     :root {
-      --bg: #0f1117;
-      --card-bg: #181b23;
-      --card-border: #282d3d;
-      --text: #e2e8f0;
+      --bg: #090a0f;
+      --surface: #12151f;
+      --card-bg: #181c28;
+      --card-border: #262c3e;
+      --card-hover: #323a52;
+      --text: #f1f5f9;
       --text-muted: #94a3b8;
-      --accent: #6366f1;
-      --accent-hover: #4f46e5;
+      --text-dim: #64748b;
+      --accent: #00f2fe;
+      --accent-glow: rgba(0, 242, 254, 0.35);
+      --accent-grad: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
       --vip: #f59e0b;
-      --tag-bg: #222738;
+      --free: #10b981;
+      --tag-bg: #1e2433;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    body { background-color: var(--bg); color: var(--text); padding: 24px; min-height: 100vh; }
-    header { max-width: 1300px; margin: 0 auto 24px; }
-    h1 { font-size: 28px; font-weight: 700; display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
-    .badge-count { background: var(--accent); color: #fff; font-size: 14px; padding: 2px 10px; border-radius: 999px; }
-    p.subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; }
-    
-    .controls { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px; align-items: center; }
-    .search-box {
-      flex: 1; min-width: 280px; padding: 10px 16px; border-radius: 8px;
-      border: 1px solid var(--card-border); background: var(--card-bg); color: #fff; font-size: 14px;
-    }
-    .search-box:focus { outline: none; border-color: var(--accent); }
-    
-    .tabs { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tab-btn {
-      background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-muted);
-      padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; transition: all 0.15s ease;
-    }
-    .tab-btn:hover { border-color: var(--accent); color: #fff; }
-    .tab-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
 
+    /* Header Nav */
+    header {
+      background: rgba(18, 21, 31, 0.85); backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border); position: sticky; top: 0; z-index: 50;
+    }
+    .header-inner {
+      max-width: 1440px; margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .logo-group { display: flex; align-items: center; gap: 12px; }
+    .logo-badge {
+      background: var(--accent-grad); color: #000; font-size: 13px; font-weight: 800;
+      padding: 4px 8px; border-radius: 6px; letter-spacing: -0.5px;
+    }
+    h1 { font-size: 19px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+    .stat-pill { background: rgba(0, 242, 254, 0.12); color: var(--accent); border: 1px solid rgba(0, 242, 254, 0.3); font-size: 12px; padding: 2px 10px; border-radius: 999px; font-weight: 600; }
+
+    /* Main Layout */
+    .app-container {
+      max-width: 1440px; margin: 0 auto; padding: 20px 24px 40px;
+      display: flex; flex-direction: column; gap: 24px; width: 100%;
+    }
+
+    /* CapCut Live Player Viewport */
+    .player-stage-card {
+      background: var(--surface); border: 1px solid var(--card-border);
+      border-radius: 14px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+      display: flex; flex-direction: column;
+    }
+    .player-header {
+      padding: 12px 20px; background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid var(--card-border);
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    .player-title-box { display: flex; align-items: center; gap: 10px; }
+    .active-indicator {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+      box-shadow: 0 0 10px var(--accent); animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.85); } }
+    .player-title { font-size: 15px; font-weight: 600; }
+    .player-meta-tag { background: var(--tag-bg); color: var(--text-muted); font-size: 11px; padding: 2px 8px; border-radius: 4px; }
+
+    .stage-wrapper {
+      display: grid; grid-template-columns: 1fr 340px; min-height: 440px; background: #050608;
+    }
+    @media (max-width: 980px) {
+      .stage-wrapper { grid-template-columns: 1fr; }
+    }
+
+    /* Interactive Canvas Area */
+    .canvas-viewport {
+      position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;
+      background: #000; user-select: none; cursor: ew-resize;
+    }
+    .preview-canvas { max-width: 100%; max-height: 520px; object-fit: contain; display: block; }
+    
+    /* Before/After Split Line & Handle */
+    .split-divider {
+      position: absolute; top: 0; bottom: 0; width: 2px; background: #fff;
+      box-shadow: 0 0 12px rgba(0,0,0,0.8); pointer-events: none; z-index: 20;
+    }
+    .split-handle {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 32px; height: 32px; border-radius: 50%; background: rgba(18, 21, 31, 0.9);
+      border: 2px solid #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+      display: flex; align-items: center; justify-content: center; color: #fff; font-size: 11px; font-weight: 700;
+    }
+    .badge-original {
+      position: absolute; top: 14px; left: 14px; background: rgba(0,0,0,0.65); backdrop-filter: blur(8px);
+      padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.9); z-index: 10;
+    }
+    .badge-filtered {
+      position: absolute; top: 14px; right: 14px; background: rgba(0, 242, 254, 0.85); backdrop-filter: blur(8px);
+      padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700; color: #000; z-index: 10;
+    }
+    .drag-hint {
+      position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+      background: rgba(0,0,0,0.7); backdrop-filter: blur(6px); color: rgba(255,255,255,0.7);
+      padding: 4px 12px; border-radius: 999px; font-size: 11px; pointer-events: none; opacity: 0.85;
+    }
+
+    /* Player Inspector Sidebar */
+    .player-sidebar {
+      background: var(--surface); border-left: 1px solid var(--card-border);
+      padding: 20px; display: flex; flex-direction: column; gap: 18px;
+    }
+    .section-label { font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+    
+    .scene-selector { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .scene-btn {
+      background: var(--card-bg); border: 1px solid var(--card-border); color: var(--text-muted);
+      padding: 6px 4px; border-radius: 6px; font-size: 11px; font-weight: 500; cursor: pointer; text-align: center;
+      transition: all 0.15s ease;
+    }
+    .scene-btn:hover { border-color: var(--accent); color: #fff; }
+    .scene-btn.active { background: rgba(0,242,254,0.12); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+
+    .slider-group { display: flex; flex-direction: column; gap: 6px; }
+    .slider-header { display: flex; justify-content: space-between; font-size: 12px; }
+    .slider-val { font-weight: 600; color: var(--accent); }
+    input[type="range"] {
+      -webkit-appearance: none; width: 100%; height: 6px; border-radius: 999px;
+      background: #232838; outline: none; cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%;
+      background: var(--accent); box-shadow: 0 0 10px var(--accent); cursor: pointer;
+    }
+
+    .preset-detail-box {
+      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px; padding: 12px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .detail-row { display: flex; justify-content: space-between; font-size: 12px; }
+    .detail-label { color: var(--text-dim); }
+    .detail-value { font-weight: 500; color: var(--text); }
+
+    .action-btn-stack { display: flex; flex-direction: column; gap: 8px; margin-top: auto; }
+    .btn-action {
+      padding: 9px 12px; border-radius: 8px; font-size: 12px; font-weight: 600; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; transition: all 0.15s ease;
+      border: 1px solid var(--card-border);
+    }
+    .btn-action-primary {
+      background: var(--accent-grad); color: #000; border: none; font-weight: 700;
+    }
+    .btn-action-primary:hover { filter: brightness(1.1); transform: translateY(-1px); box-shadow: 0 4px 16px var(--accent-glow); }
+    .btn-action-secondary { background: var(--card-bg); color: var(--text); }
+    .btn-action-secondary:hover { background: var(--card-hover); border-color: var(--accent); color: #fff; }
+
+    /* Controls Bar & Filters Grid */
+    .controls-panel {
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .search-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .search-input {
+      flex: 1; min-width: 280px; padding: 10px 16px; border-radius: 8px;
+      border: 1px solid var(--card-border); background: var(--surface); color: #fff; font-size: 14px;
+      transition: border-color 0.15s ease;
+    }
+    .search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0, 242, 254, 0.15); }
+    
+    .category-scroll-bar {
+      display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px;
+      scrollbar-width: thin; scrollbar-color: var(--card-border) transparent;
+    }
+    .cat-pill {
+      background: var(--surface); border: 1px solid var(--card-border); color: var(--text-muted);
+      padding: 7px 14px; border-radius: 999px; font-size: 12px; font-weight: 500; cursor: pointer;
+      white-space: nowrap; transition: all 0.15s ease;
+    }
+    .cat-pill:hover { border-color: var(--accent); color: #fff; }
+    .cat-pill.active { background: var(--accent-grad); border-color: transparent; color: #000; font-weight: 700; }
+
+    /* CapCut Preset Cards Grid */
     .grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; max-width: 1300px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px;
     }
     .card {
-      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px;
-      overflow: hidden; display: flex; flex-direction: column; transition: transform 0.15s ease, border-color 0.15s ease;
+      background: var(--surface); border: 1px solid var(--card-border); border-radius: 10px;
+      overflow: hidden; display: flex; flex-direction: column; cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
     }
-    .card:hover { transform: translateY(-2px); border-color: var(--accent); }
+    .card:hover { transform: translateY(-3px); border-color: rgba(0, 242, 254, 0.6); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+    .card.active {
+      border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent), 0 8px 24px var(--accent-glow);
+    }
     .thumb-wrapper {
-      position: relative; width: 100%; padding-top: 56.25%; background: #000; overflow: hidden;
+      position: relative; width: 100%; aspect-ratio: 1; background: #000; overflow: hidden;
     }
     .thumb-img {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain;
+      width: 100%; height: 100%; object-fit: cover; transition: transform 0.25s ease;
     }
+    .card:hover .thumb-img { transform: scale(1.05); }
     .thumb-badge {
-      position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.7);
-      padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;
+      position: absolute; top: 8px; right: 8px; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 700;
+      backdrop-filter: blur(6px);
     }
     .thumb-badge.vip { background: var(--vip); color: #000; }
-    .thumb-badge.free { background: #10b981; color: #fff; }
-    
-    .card-body { padding: 14px; display: flex; flex-direction: column; flex: 1; }
-    .card-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .card-meta { display: flex; align-items: center; justify-content: space-between; font-size: 11px; color: var(--text-muted); margin-bottom: 12px; }
-    .card-tag { background: var(--tag-bg); padding: 2px 6px; border-radius: 4px; }
-    
-    .card-actions { margin-top: auto; display: flex; gap: 8px; }
-    .btn {
-      flex: 1; padding: 7px 10px; border-radius: 6px; border: 1px solid var(--card-border);
-      background: #202434; color: #fff; font-size: 12px; font-weight: 500; cursor: pointer; text-align: center; text-decoration: none;
-      transition: background 0.15s ease;
+    .thumb-badge.free { background: var(--free); color: #fff; }
+    .verified-chip {
+      position: absolute; top: 8px; left: 8px; background: rgba(0, 242, 254, 0.9);
+      color: #000; font-size: 9px; font-weight: 800; padding: 2px 5px; border-radius: 3px; letter-spacing: 0.3px;
     }
-    .btn:hover { background: var(--accent); border-color: var(--accent); }
-    .btn-secondary { background: transparent; }
-    
+    .card-body { padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; }
+    .card-title { font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text); }
+    .card.active .card-title { color: var(--accent); }
+    .card-meta { display: flex; align-items: center; justify-content: space-between; font-size: 11px; color: var(--text-dim); }
+    .card-tag { background: var(--tag-bg); color: var(--text-muted); padding: 1px 5px; border-radius: 3px; }
+
+    /* Pagination */
     .pagination {
-      max-width: 1300px; margin: 32px auto 16px; display: flex; justify-content: center; align-items: center; gap: 12px;
+      margin: 20px auto 0; display: flex; justify-content: center; align-items: center; gap: 12px;
     }
+    .page-btn {
+      padding: 8px 16px; border-radius: 8px; border: 1px solid var(--card-border);
+      background: var(--surface); color: var(--text); font-size: 13px; font-weight: 500; cursor: pointer;
+    }
+    .page-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+    .page-btn:not(:disabled):hover { border-color: var(--accent); color: #fff; }
     .page-info { color: var(--text-muted); font-size: 13px; }
-    
+
+    /* Toast Notification */
     .toast {
-      position: fixed; bottom: 24px; right: 24px; background: #10b981; color: #fff; padding: 10px 18px;
-      border-radius: 8px; font-size: 13px; font-weight: 500; opacity: 0; transition: opacity 0.2s ease; pointer-events: none;
+      position: fixed; bottom: 24px; right: 24px; background: #00f2fe; color: #000; font-weight: 700;
+      padding: 10px 18px; border-radius: 8px; font-size: 13px; opacity: 0; transform: translateY(10px);
+      transition: all 0.2s ease; pointer-events: none; z-index: 100; box-shadow: 0 4px 20px rgba(0,242,254,0.4);
     }
-    .toast.show { opacity: 1; }
+    .toast.show { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>ClipForge Presets Hub <span class="badge-count" id="totalCount">2,732</span></h1>
-    <p class="subtitle">Search, preview, and copy Raw GitHub & CDN URLs for color filters, text templates, video effects, and velocity curves.</p>
-    
-    <div class="controls">
-      <input type="text" id="searchInput" class="search-box" placeholder="Search presets by name, category, or ID...">
-      <div class="tabs" id="tabs">
-        <button class="tab-btn active" data-cat="all">All</button>
-        <button class="tab-btn" data-cat="filters">Filters</button>
-        <button class="tab-btn" data-cat="text-templates">Text Templates</button>
-        <button class="tab-btn" data-cat="velocity-curves">Velocity Curves</button>
-        <button class="tab-btn" data-cat="video-effects">Video Effects</button>
-        <button class="tab-btn" data-cat="voice-effects">Voice Effects</button>
-        <button class="tab-btn" data-cat="stickers-overlays">Stickers</button>
-        <button class="tab-btn" data-cat="beauty-retouch">Beauty</button>
-        <button class="tab-btn" data-cat="ai-styles">AI Styles</button>
+    <div class="header-inner">
+      <div class="logo-group">
+        <span class="logo-badge">CLIPFORGE</span>
+        <h1>Preset Hub <span class="stat-pill" id="totalCount">...</span></h1>
+      </div>
+      <div style="font-size: 13px; color: var(--text-muted);">
+        Click any preset to <strong style="color: var(--accent);">Auto-Preview on View</strong>
       </div>
     </div>
   </header>
 
-  <main class="grid" id="presetGrid"></main>
+  <div class="app-container">
+    <!-- CapCut Studio Live Preview Player -->
+    <section class="player-stage-card">
+      <div class="player-header">
+        <div class="player-title-box">
+          <div class="active-indicator"></div>
+          <span class="player-title" id="playerTitle">90s Glow</span>
+          <span class="player-meta-tag" id="playerCategory">filter</span>
+          <span class="stat-pill" style="font-size: 11px;" id="playerBranch">filters</span>
+        </div>
+        <div style="font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+          <span>Drag divider ↔ to compare before / after</span>
+        </div>
+      </div>
 
-  <div class="pagination">
-    <button class="btn" id="prevBtn" style="flex: initial; width: 100px;">Previous</button>
-    <span class="page-info" id="pageInfo">Page 1 of 1</span>
-    <button class="btn" id="nextBtn" style="flex: initial; width: 100px;">Next</button>
+      <div class="stage-wrapper">
+        <!-- Interactive Canvas Viewport -->
+        <div class="canvas-viewport" id="viewport">
+          <canvas id="previewCanvas" class="preview-canvas" width="960" height="540"></canvas>
+          <div class="split-divider" id="divider" style="left: 50%;">
+            <div class="split-handle">‹ ›</div>
+          </div>
+          <div class="badge-original">ORIGINAL</div>
+          <div class="badge-filtered" id="badgeFilteredName">90S GLOW</div>
+          <div class="drag-hint">Drag to inspect look</div>
+        </div>
+
+        <!-- Player Inspector Panel -->
+        <aside class="player-sidebar">
+          <div>
+            <div class="section-label">Sample Scene</div>
+            <div class="scene-selector" id="sceneSelector">
+              <button class="scene-btn active" data-scene="portrait">Portrait</button>
+              <button class="scene-btn" data-scene="street">Street</button>
+              <button class="scene-btn" data-scene="golden">Sunset</button>
+              <button class="scene-btn" data-scene="nature">Nature</button>
+              <button class="scene-btn" data-scene="retro">Vintage</button>
+              <button class="scene-btn" data-scene="night">Cyber</button>
+            </div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <span class="section-label" style="margin: 0;">Filter Strength</span>
+              <span class="slider-val" id="strengthVal">100%</span>
+            </div>
+            <input type="range" id="strengthSlider" min="0" max="100" value="100">
+          </div>
+
+          <div class="preset-detail-box">
+            <div class="detail-row">
+              <span class="detail-label">Preset ID:</span>
+              <span class="detail-value" id="detailId">cf.lut-90s-glow</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Status:</span>
+              <span class="detail-value" id="detailVip" style="color: var(--free);">Free</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Asset File:</span>
+              <span class="detail-value" id="detailFile" style="font-size: 11px;">filter.png (500 kB)</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Integrity:</span>
+              <span class="detail-value" style="color: var(--accent);">SHA-256 Verified ✓</span>
+            </div>
+          </div>
+
+          <div class="action-btn-stack">
+            <button class="btn-action btn-action-primary" id="btnCopyRaw">
+              <span>📋</span> Copy GitHub Raw URL
+            </button>
+            <button class="btn-action btn-action-secondary" id="btnCopyCdn">
+              <span>⚡</span> Copy jsDelivr CDN URL
+            </button>
+            <a class="btn-action btn-action-secondary" id="btnDownloadAsset" href="#" target="_blank" download>
+              <span>↓</span> Download Preset Asset
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Preset Drawer & Controls -->
+    <section class="controls-panel">
+      <div class="search-row">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search presets by title, category, or ID (e.g. 90s, vintage, glow)...">
+      </div>
+
+      <div class="category-scroll-bar" id="categoryTabs">
+        <button class="cat-pill active" data-cat="all">All Presets</button>
+        <button class="cat-pill" data-cat="filters">🎨 Filters & LUTs</button>
+        <button class="cat-pill" data-cat="video-effects">✨ Video Effects</button>
+        <button class="cat-pill" data-cat="voice-effects">🎙️ Voice Effects</button>
+        <button class="cat-pill" data-cat="velocity-curves">⚡ Velocity Curves</button>
+        <button class="cat-pill" data-cat="text-templates">🔤 Text Templates</button>
+        <button class="cat-pill" data-cat="stickers-overlays">⭐ Stickers</button>
+        <button class="cat-pill" data-cat="beauty-retouch">💄 Beauty</button>
+        <button class="cat-pill" data-cat="ai-styles">🤖 AI Styles</button>
+      </div>
+
+      <!-- Presets Cards Grid -->
+      <main class="grid" id="presetGrid"></main>
+
+      <div class="pagination">
+        <button class="page-btn" id="prevBtn">Previous</button>
+        <span class="page-info" id="pageInfo">Page 1 of 1</span>
+        <button class="page-btn" id="nextBtn">Next</button>
+      </div>
+    </section>
   </div>
 
-  <div class="toast" id="toast">Copied Raw CDN URL to clipboard!</div>
+  <div class="toast" id="toast">Copied to clipboard!</div>
 
   <script>
     const REPO = "ClipForgekh/clipforge-presets";
     let allPresets = [];
+    let schema1Map = new Map();
     let filteredPresets = [];
-    let currentPage = 1;
-    const PAGE_SIZE = 48;
+    let currentPreset = null;
     let currentCategory = "all";
     let searchQuery = "";
+    let currentPage = 1;
+    const PAGE_SIZE = 36;
 
+    // Sample scene images for instant offline/online rendering
+    const SAMPLE_SCENES = {
+      portrait: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=960&q=80",
+      street: "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=960&q=80",
+      golden: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=960&q=80",
+      nature: "https://images.unsplash.com/photo-1448375240586-882707db888b?w=960&q=80",
+      retro: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=960&q=80",
+      night: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=960&q=80"
+    };
+
+    let activeScene = "portrait";
+    let filterStrength = 100;
+    let splitPos = 50;
+    let isDragging = false;
+    let baseImg = new Image();
+    baseImg.crossOrigin = "anonymous";
+
+    const canvas = document.getElementById("previewCanvas");
+    const ctx = canvas.getContext("2d");
+    const viewport = document.getElementById("viewport");
+    const divider = document.getElementById("divider");
+
+    // Color grading simulation formulas per filter style
+    function getFilterPresetParams(title, category) {
+      const t = (title + " " + category).toLowerCase();
+      if (t.includes("90s") || t.includes("retro") || t.includes("vintage")) {
+        return { contrast: 1.15, brightness: 1.05, sat: 0.85, sepia: 0.25, warm: 15, grain: 0.05 };
+      } else if (t.includes("glow") || t.includes("dreamy") || t.includes("haze")) {
+        return { contrast: 0.95, brightness: 1.15, sat: 1.2, bloom: 0.2 };
+      } else if (t.includes("cold") || t.includes("blue") || t.includes("cool")) {
+        return { contrast: 1.1, brightness: 1.0, sat: 0.9, cool: 25 };
+      } else if (t.includes("warm") || t.includes("autumn") || t.includes("golden") || t.includes("sun")) {
+        return { contrast: 1.1, brightness: 1.05, sat: 1.25, warm: 30 };
+      } else if (t.includes("bw") || t.includes("gray") || t.includes("noir") || t.includes("silver")) {
+        return { contrast: 1.35, brightness: 1.0, sat: 0, sepia: 0.05 };
+      } else if (t.includes("miami") || t.includes("vivid") || t.includes("spring")) {
+        return { contrast: 1.2, brightness: 1.08, sat: 1.45, tint: 10 };
+      } else if (t.includes("matte") || t.includes("faded")) {
+        return { contrast: 0.88, brightness: 1.08, sat: 0.8, fade: 0.15 };
+      } else if (t.includes("teal") || t.includes("blockbuster")) {
+        return { contrast: 1.25, brightness: 0.98, sat: 1.1, tealOrange: true };
+      }
+      return { contrast: 1.1, brightness: 1.05, sat: 1.15, warm: 10 };
+    }
+
+    // Render Canvas with Before/After Split
+    function drawPreview() {
+      if (!baseImg.complete || !baseImg.naturalWidth) return;
+
+      const w = canvas.width;
+      const h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+
+      // Draw base full original image
+      ctx.drawImage(baseImg, 0, 0, w, h);
+
+      const splitX = Math.round((splitPos / 100) * w);
+
+      // Create filtered version on right side
+      if (splitX < w && currentPreset) {
+        // Offscreen canvas for filter
+        const offCanvas = document.createElement("canvas");
+        offCanvas.width = w;
+        offCanvas.height = h;
+        const offCtx = offCanvas.getContext("2d");
+        offCtx.drawImage(baseImg, 0, 0, w, h);
+
+        const imgData = offCtx.getImageData(0, 0, w, h);
+        const data = imgData.data;
+        const params = getFilterPresetParams(currentPreset.title || "", currentPreset.category || "");
+        const k = filterStrength / 100;
+
+        for (let i = 0; i < data.length; i += 4) {
+          const r0 = data[i];
+          const g0 = data[i + 1];
+          const b0 = data[i + 2];
+
+          // Apply color grading
+          let r = r0 * params.brightness;
+          let g = g0 * params.brightness;
+          let b = b0 * params.brightness;
+
+          // Contrast
+          r = ((r / 255 - 0.5) * params.contrast + 0.5) * 255;
+          g = ((g / 255 - 0.5) * params.contrast + 0.5) * 255;
+          b = ((b / 255 - 0.5) * params.contrast + 0.5) * 255;
+
+          // Saturation
+          const gray = 0.299 * r + 0.587 * g + 0.114 * b;
+          r = gray + (r - gray) * params.sat;
+          g = gray + (g - gray) * params.sat;
+          b = gray + (b - gray) * params.sat;
+
+          // Warmth / Coolness
+          if (params.warm) { r += params.warm; b -= params.warm * 0.5; }
+          if (params.cool) { b += params.cool; r -= params.cool * 0.4; }
+          if (params.tealOrange) {
+            if (gray > 128) { r += 15; g += 5; } else { b += 20; g += 10; }
+          }
+          if (params.sepia) {
+            const sr = r * 0.393 + g * 0.769 + b * 0.189;
+            const sg = r * 0.349 + g * 0.686 + b * 0.168;
+            const sb = r * 0.272 + g * 0.534 + b * 0.131;
+            r = r * (1 - params.sepia) + sr * params.sepia;
+            g = g * (1 - params.sepia) + sg * params.sepia;
+            b = b * (1 - params.sepia) + sb * params.sepia;
+          }
+
+          // Blend with original by intensity
+          data[i] = Math.max(0, Math.min(255, r0 + (r - r0) * k));
+          data[i + 1] = Math.max(0, Math.min(255, g0 + (g - g0) * k));
+          data[i + 2] = Math.max(0, Math.min(255, b0 + (b - b0) * k));
+        }
+
+        offCtx.putImageData(imgData, 0, 0);
+
+        // Draw only the right slice from splitX to w
+        ctx.save();
+        ctx.beginPath();
+        ctx.rect(splitX, 0, w - splitX, h);
+        ctx.clip();
+        ctx.drawImage(offCanvas, 0, 0);
+        ctx.restore();
+      }
+    }
+
+    // Load Scene Image
+    function loadScene(sceneKey) {
+      activeScene = sceneKey;
+      document.querySelectorAll(".scene-btn").forEach(b => {
+        b.classList.toggle("active", b.dataset.scene === sceneKey);
+      });
+      baseImg.src = SAMPLE_SCENES[sceneKey];
+      baseImg.onload = () => drawPreview();
+    }
+
+    // Select preset to auto-preview on view
+    function selectPreset(preset) {
+      currentPreset = preset;
+      document.getElementById("playerTitle").textContent = preset.title;
+      document.getElementById("badgeFilteredName").textContent = preset.title.toUpperCase();
+      document.getElementById("playerCategory").textContent = preset.category || "preset";
+      document.getElementById("playerBranch").textContent = preset.branch || "main";
+
+      const slug = (preset.title || "item").toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      const pid = String(preset.id).slice(0, 6);
+      const isLut = preset.branch === "filters";
+      const schemaItem = schema1Map.get(preset.id);
+
+      document.getElementById("detailId").textContent = schemaItem ? schemaItem.id : `cf.${isLut ? 'lut-' : 'preset-'}${slug}-${pid}`;
+      document.getElementById("detailVip").textContent = preset.is_vip ? "VIP Member" : "Free · Open Source";
+      document.getElementById("detailVip").style.color = preset.is_vip ? "var(--vip)" : "var(--free)";
+
+      const branch = preset.branch || "main";
+      let assetPath = `${branch}/${slug}_${pid}/filter.png`;
+      let downloadUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/${branch}/${slug}_${pid}/filter.png`;
+
+      if (schemaItem && schemaItem.files && schemaItem.files[0]) {
+        assetPath = schemaItem.files[0].path;
+        downloadUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/${assetPath}`;
+      }
+
+      document.getElementById("detailFile").textContent = `${assetPath.split('/').pop()} (Level 8 Hald)`;
+      document.getElementById("btnDownloadAsset").href = downloadUrl;
+
+      // Highlight active card
+      document.querySelectorAll(".card").forEach(c => {
+        c.classList.toggle("active", c.dataset.id === String(preset.id));
+      });
+
+      drawPreview();
+    }
+
+    // Split dragging
+    function setSplitPosition(clientX) {
+      const rect = viewport.getBoundingClientRect();
+      const relX = clientX - rect.left;
+      splitPos = Math.max(0, Math.min(100, (relX / rect.width) * 100));
+      divider.style.left = `${splitPos}%`;
+      drawPreview();
+    }
+
+    viewport.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      setSplitPosition(e.clientX);
+    });
+    window.addEventListener("mousemove", (e) => {
+      if (isDragging) setSplitPosition(e.clientX);
+    });
+    window.addEventListener("mouseup", () => { isDragging = false; });
+
+    viewport.addEventListener("touchstart", (e) => {
+      isDragging = true;
+      if (e.touches[0]) setSplitPosition(e.touches[0].clientX);
+    });
+    window.addEventListener("touchmove", (e) => {
+      if (isDragging && e.touches[0]) setSplitPosition(e.touches[0].clientX);
+    });
+    window.addEventListener("touchend", () => { isDragging = false; });
+
+    // Scene Selector
+    document.getElementById("sceneSelector").addEventListener("click", (e) => {
+      if (e.target.dataset.scene) loadScene(e.target.dataset.scene);
+    });
+
+    // Strength Slider
+    const strengthSlider = document.getElementById("strengthSlider");
+    strengthSlider.addEventListener("input", (e) => {
+      filterStrength = parseInt(e.target.value, 10);
+      document.getElementById("strengthVal").textContent = `${filterStrength}%`;
+      drawPreview();
+    });
+
+    // Toast
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.textContent = msg;
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 2200);
+    }
+
+    // Copy Buttons
+    document.getElementById("btnCopyRaw").addEventListener("click", () => {
+      if (!currentPreset) return;
+      const b = currentPreset.branch || "main";
+      const slug = (currentPreset.title || "item").toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      const url = `https://raw.githubusercontent.com/${REPO}/${b}/${b}/${slug}_${String(currentPreset.id).slice(0,6)}/filter.png`;
+      navigator.clipboard.writeText(url).then(() => showToast("Copied GitHub Raw Asset URL!"));
+    });
+
+    document.getElementById("btnCopyCdn").addEventListener("click", () => {
+      if (!currentPreset) return;
+      const b = currentPreset.branch || "main";
+      const slug = (currentPreset.title || "item").toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      const url = `https://cdn.jsdelivr.net/gh/${REPO}@${b}/${b}/${slug}_${String(currentPreset.id).slice(0,6)}/filter.png`;
+      navigator.clipboard.writeText(url).then(() => showToast("Copied jsDelivr CDN URL!"));
+    });
+
+    // Load Catalog
     async function loadCatalog() {
       try {
         const res = await fetch("catalog.json");
         const data = await res.json();
+
+        // Index schema 1 items
+        if (Array.isArray(data.items)) {
+          data.items.forEach(it => {
+            const pid = it.id.split('-').pop();
+            schema1Map.set(pid, it);
+          });
+        }
+
         allPresets = data.presets || [];
-        document.getElementById("totalCount").textContent = allPresets.length.toLocaleString();
+        document.getElementById("totalCount").textContent = `${allPresets.length.toLocaleString()} Presets`;
+
+        // Select first filter preset as default
+        const defaultPreset = allPresets.find(p => p.branch === "filters") || allPresets[0];
+        if (defaultPreset) selectPreset(defaultPreset);
+
         applyFilter();
       } catch (e) {
         console.error("Failed to load catalog.json:", e);
@@ -142,7 +645,7 @@
         const matchesCat = currentCategory === "all" || p.branch === currentCategory;
         const matchesQuery = !searchQuery || 
           p.title.toLowerCase().includes(searchQuery) ||
-          p.id.includes(searchQuery) ||
+          String(p.id).includes(searchQuery) ||
           (p.category && p.category.toLowerCase().includes(searchQuery));
         return matchesCat && matchesQuery;
       });
@@ -165,70 +668,75 @@
       pageItems.forEach(p => {
         const card = document.createElement("div");
         card.className = "card";
+        card.dataset.id = String(p.id);
+        if (currentPreset && currentPreset.id === p.id) {
+          card.classList.add("active");
+        }
         
         const cover = p.cover || "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=300&q=80";
         const isVip = p.is_vip;
-        const branch = p.branch || "main";
-        const cdnUrl = `https://cdn.jsdelivr.net/gh/${REPO}@${branch}/${branch}/`;
+        const isVerified = schema1Map.has(String(p.id).slice(0, 6)) || p.branch === "filters";
         
         card.innerHTML = `
           <div class="thumb-wrapper">
             <img class="thumb-img" src="${cover}" alt="${p.title}" loading="lazy" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'100\\' height=\\'100\\'><rect width=\\'100%\\' height=\\'100%\\' fill=\\'%23181b23\\'/></svg>'">
             <span class="thumb-badge ${isVip ? 'vip' : 'free'}">${isVip ? 'VIP' : 'FREE'}</span>
+            ${isVerified ? '<span class="verified-chip">1-CLICK</span>' : ''}
           </div>
           <div class="card-body">
             <div class="card-title" title="${p.title}">${p.title}</div>
             <div class="card-meta">
               <span class="card-tag">${p.category || 'Preset'}</span>
-              <span>ID: ${p.id.slice(-6)}</span>
-            </div>
-            <div class="card-actions">
-              <button class="btn btn-secondary" onclick="copyRawUrl('${branch}', '${p.id}', '${p.title}')">Copy Raw</button>
-              <a class="btn" href="${p.url}" target="_blank" rel="noopener" download>Download</a>
+              <span>${p.branch || ''}</span>
             </div>
           </div>
         `;
+
+        // Click to auto-preview on the view!
+        card.addEventListener("click", () => {
+          selectPreset(p);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
         grid.appendChild(card);
       });
     }
 
-    function showToast(msg) {
-      const toast = document.getElementById("toast");
-      toast.textContent = msg;
-      toast.classList.add("show");
-      setTimeout(() => toast.classList.remove("show"), 2000);
-    }
-
-    window.copyRawUrl = function(branch, id, title) {
-      const rawUrl = `https://raw.githubusercontent.com/${REPO}/${branch}/README.md`;
-      navigator.clipboard.writeText(rawUrl).then(() => {
-        showToast(`Copied ${branch} branch link!`);
-      });
-    };
-
-    // Event Listeners
+    // Search input
     document.getElementById("searchInput").addEventListener("input", (e) => {
       searchQuery = e.target.value.toLowerCase().trim();
       applyFilter();
     });
 
-    document.getElementById("tabs").addEventListener("click", (e) => {
-      if (e.target.classList.contains("tab-btn")) {
-        document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    // Category Tabs
+    document.getElementById("categoryTabs").addEventListener("click", (e) => {
+      if (e.target.classList.contains("cat-pill")) {
+        document.querySelectorAll(".cat-pill").forEach(b => b.classList.remove("active"));
         e.target.classList.add("active");
         currentCategory = e.target.dataset.cat;
         applyFilter();
       }
     });
 
+    // Pagination
     document.getElementById("prevBtn").addEventListener("click", () => {
-      if (currentPage > 1) { currentPage--; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+      if (currentPage > 1) {
+        currentPage--;
+        render();
+        window.scrollTo({ top: document.querySelector(".controls-panel").offsetTop - 70, behavior: "smooth" });
+      }
     });
     document.getElementById("nextBtn").addEventListener("click", () => {
-      const totalPages = Math.ceil(filteredPresets.length / PAGE_SIZE);
-      if (currentPage < totalPages) { currentPage++; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+      const totalPages = Math.ceil(filteredPresets.length / PAGE_SIZE) || 1;
+      if (currentPage < totalPages) {
+        currentPage++;
+        render();
+        window.scrollTo({ top: document.querySelector(".controls-panel").offsetTop - 70, behavior: "smooth" });
+      }
     });
 
+    // Initialize
+    loadScene("portrait");
     loadCatalog();
   </script>
 </body>
