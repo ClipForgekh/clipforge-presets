@@ -1,0 +1,5 @@
+{
+  "algorithm": "img2img_ai_portrait_async_jy_moyou",
+  "strength": 0,
+  "prompt": "xzs style, 1boy, pf hairstyle, xzsh black clothes, (xzsk black trousers:0.9), ookk pose, looking at viewer, frontal body, otdr background, fgjp color tone,{lora:xzs_nan_user_style}"
+}
