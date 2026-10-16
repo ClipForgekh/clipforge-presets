@@ -1,0 +1,7 @@
+# Git ignore for ClipForge Presets Hub
+*.zip
+*.tmp
+*.log
+.DS_Store
+node_modules/
+dist/
