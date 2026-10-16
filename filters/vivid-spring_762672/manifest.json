@@ -1,0 +1,18 @@
+{
+  "id": "7626720307138743573",
+  "title": "Vivid Spring",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/0db253cbe86b47d28ef2526ec24329d4?lk3s=43402efa&x-expires=1823646487&x-signature=fetKgNmRg4xwEWM2L8QogrSnoqc%3D",
+  "md5": "7fb94694f1010290f4a76e70f0f62d80",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/3ebd33f706e14cd9b97ea43501a611a4~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=5A6VNT%2FEK6US3dchWg%2B3h6FjbOA%3D",
+  "params": [
+    {
+      "min": 0,
+      "max": 1,
+      "effect_key": "effects_adjust_filter",
+      "default": 1
+    }
+  ]
+}

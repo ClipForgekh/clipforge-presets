@@ -1,0 +1,18 @@
+{
+  "id": "7580274234279218485",
+  "title": "Autumn Sun",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/57f3c83eb62b424da6550944f013a453?lk3s=43402efa&x-expires=1823646487&x-signature=NKF7MhNgMfJ4J9bYJY7eXmQ8ZgA%3D",
+  "md5": "20d8cbb8046fa1170171fdf8c84bd730",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/24608a6dd43941a08326ec70cf956a8f~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=7m4EHwwFNvKluOcGcDjTo%2Findw0%3D",
+  "params": [
+    {
+      "default": 1,
+      "effect_key": "effects_adjust_filter",
+      "max": 1,
+      "min": 0
+    }
+  ]
+}

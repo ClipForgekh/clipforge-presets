@@ -1,0 +1,25 @@
+{
+    "name":  [
+                 "90s",
+                 "90s"
+             ],
+    "fundamental":  "2.0.0",
+    "effect_adjust_params":  [
+                                 {
+                                     "ui_name":  [
+                                                     "Intensity",
+                                                     "Intensity"
+                                                 ],
+                                     "default":  1,
+                                     "min":  0,
+                                     "max":  1,
+                                     "effect_key":  "effects_adjust_filter"
+                                 }
+                             ],
+    "AEExporterTool":  "1.0.0",
+    "category":  [
+                     "Color Correction",
+                     "Color Correction"
+                 ],
+    "match_name":  "90s"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "7516797638327553297",
+  "title": "Retro Future",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/0824d61c7f9543b6b98c3c4b643a756a?lk3s=43402efa&x-expires=1823646487&x-signature=hUZbV4WLL9PtiIdYsEhbyTcP4X8%3D",
+  "md5": "7508b91094767af4e15a18ea2bc14c25",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/4a183243b8f647b1b1738296ca6763cf~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=Iup1CIb%2FI4KG5a1GSV2IfYTdDiE%3D",
+  "params": [
+    {
+      "default": 0.8,
+      "effect_key": "effects_adjust_filter",
+      "max": 1,
+      "min": 0
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "ae_tool": "AmazingEditor",
+  "bALG_BACH_CONFIG": true,
+  "effect": {
+    "Link": [
+      {
+        "path": "AmazingFeature/",
+        "type": "AmazingFeature",
+        "zorder": 8029
+      }
+    ]
+  },
+  "name": "iphone5cruntimesafe0719b01",
+  "version": "13.6.0",
+  "display_name": "iPhone5c_冷灰雾感_稳定重制版"
+}

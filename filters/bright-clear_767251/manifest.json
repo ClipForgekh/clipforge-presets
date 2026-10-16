@@ -1,0 +1,18 @@
+{
+  "id": "7672515013558619413",
+  "title": "Bright Clear",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/5f21951dbff642e88b56170aa8e3f2b7?lk3s=43402efa&x-expires=1823646487&x-signature=XIh9NFCBUo2WGVo6%2BsSFhJEtOmU%3D",
+  "md5": "b71f3ec4e7f9b8b01d9c1bcac29fc507",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b31c80ab58b64a28a81878b73f9e481b~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=FERtGtB3nskpb%2FVnKEwNaYXBqHI%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "7667107391908941063",
+  "title": "Vintage Glow",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/bd849ee0c2b94ee798a39c9795227c57?lk3s=43402efa&x-expires=1823646487&x-signature=vRjxrLFHiggJRUXjzEBnI4%2B2gcs%3D",
+  "md5": "46dc68ab7b369237ea047de0ab273c3e",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/e1875b43264548cfa1003066e7c5692c~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=befin9W9p2lLQ%2BIkKIND%2BjcSrMs%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

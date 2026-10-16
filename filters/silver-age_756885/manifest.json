@@ -1,0 +1,18 @@
+{
+  "id": "7568851338499591477",
+  "title": "Silver Age",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/79737b56188f4c159d7564c1e78ef0c2?lk3s=43402efa&x-expires=1823646487&x-signature=o42m0hfu2i2ziKRRJvjyxcJr0LE%3D",
+  "md5": "f442d413bd2da15b39a40bcde93438cf",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/1beec3ab0cf643e7914dbbc47dd31ffa~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=56kWZg8F06EQFU2mRoJY4AfOEgQ%3D",
+  "params": [
+    {
+      "min": 0,
+      "max": 1,
+      "effect_key": "effects_adjust_filter",
+      "default": 1
+    }
+  ]
+}

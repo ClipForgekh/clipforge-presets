@@ -1,0 +1,30 @@
+{
+
+    "bALG_BACH_CONFIG": true,
+    "effect": {
+        "Link": [
+            {
+                "defaultEnable": true,
+                "path": "AmazingFeature/",
+                "type": "AmazingFeature",
+                "zorder": 2000
+            },
+            {
+                "defaultEnable": true,
+                "path": "skin/",
+                "type": "AmazingFeature",
+                "zorder": 1999
+            }
+        ],
+        "model_names": {
+            "faceDetect": [
+                "tt_face"
+            ],
+            "skinseg": [
+                "tt_skin_seg"
+            ]
+        }
+    },
+    "name": "cd0a3368471411eea9b67c10c9c055a5",
+    "version": "13.3.0"
+}

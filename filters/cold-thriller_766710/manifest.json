@@ -1,0 +1,18 @@
+{
+  "id": "7667105150338665736",
+  "title": "Cold Thriller",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p19-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/5621467bab6341da9da7fa28a6cb5a15?lk3s=43402efa&x-expires=1823646487&x-signature=6RQcYJ4nakX8V0FWq09GqhQPhPc%3D",
+  "md5": "a28380db37ebe65b64e940becbe26779",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/265cd9ea6a614b7c9777d9d152c0473f~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=ODK5VXnQQ3tue0ApYnb6XZ2HdGk%3D",
+  "params": [
+    {
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "effect_key": "effects_adjust_filter"
+    }
+  ]
+}

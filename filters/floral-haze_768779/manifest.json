@@ -1,0 +1,18 @@
+{
+  "id": "7687790602095791380",
+  "title": "Floral Haze",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/f691d4cf09214faa8e46cdc597efc00f?lk3s=43402efa&x-expires=1823646487&x-signature=1tAby975UXwwTTfG7ZcMqMsMRpk%3D",
+  "md5": "4c49bf04167e7b78cb955338f68017eb",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/f169aa41ea474f068e9736fcc760f2e1~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=z4LSsZrqXyHLI6msjyAAbT1ZbIE%3D",
+  "params": [
+    {
+      "effect_key": "intensity",
+      "default": 0.72,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

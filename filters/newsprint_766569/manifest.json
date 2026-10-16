@@ -1,0 +1,18 @@
+{
+  "id": "7665692093829877013",
+  "title": "Newsprint",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/4fa5464407a849e9bd872625c0c4684c?lk3s=43402efa&x-expires=1823646487&x-signature=hmy9JfFju0YJSE5xEXSk3RMwKIg%3D",
+  "md5": "60a82e1c0b7745862563a1bbee37004c",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/3aa37b0a55254e48bf0161220f0f1916~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=qgOVlmw%2Fbamk12M9SWEKR4tIV0o%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

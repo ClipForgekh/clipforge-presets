@@ -1,0 +1,25 @@
+{
+    "ImageBusinessSlider":  {
+                                "LV":  {
+                                           "filter":  {
+                                                          "materialValue":  {
+                                                                                "effects_adjust_filter":  {
+                                                                                                              "uniAlpha":  {
+                                                                                                                               "entityName":  "SeekModeScript",
+                                                                                                                               "minValue":  0,
+                                                                                                                               "maxValue":  1
+                                                                                                                           }
+                                                                                                          },
+                                                                                "Internal_Filter":  {
+                                                                                                        "uniAlpha":  {
+                                                                                                                         "entityName":  "SeekModeScript",
+                                                                                                                         "minValue":  0,
+                                                                                                                         "maxValue":  1
+                                                                                                                     }
+                                                                                                    }
+                                                                            },
+                                                          "sliderIntensity":  100
+                                                      }
+                                       }
+                            }
+}

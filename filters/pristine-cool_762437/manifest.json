@@ -1,0 +1,18 @@
+{
+  "id": "7624375315808242960",
+  "title": "Pristine Cool",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/738e5d160fbc46009a6643533487ef63?lk3s=43402efa&x-expires=1823646487&x-signature=KEU8jrpBYkd4Fm0JxDHA4dFg1W8%3D",
+  "md5": "8a4780e2cabdf3396328501417361b59",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/7909b2654c5b45a4804cda8e1e1fd9fb~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=kUv8MAdYpIifBTwkb3DylhhWFA4%3D",
+  "params": [
+    {
+      "min": 0,
+      "max": 1,
+      "effect_key": "effects_adjust_filter",
+      "default": 1
+    }
+  ]
+}

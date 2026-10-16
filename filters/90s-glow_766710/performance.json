@@ -1,0 +1,41 @@
+{
+    "default_fps":  766,
+    "params":  {
+                   "effects_adjust_filter":  {
+                                                 "type":  "slider",
+                                                 "default":  1,
+                                                 "values":  [
+                                                                0,
+                                                                0.25,
+                                                                0.5,
+                                                                0.75,
+                                                                1
+                                                            ],
+                                                 "fps":  [
+                                                             750,
+                                                             758,
+                                                             766,
+                                                             774,
+                                                             782
+                                                         ]
+                                             },
+                   "Internal_Filter":  {
+                                           "type":  "slider",
+                                           "default":  1,
+                                           "values":  [
+                                                          0,
+                                                          0.25,
+                                                          0.5,
+                                                          0.75,
+                                                          1
+                                                      ],
+                                           "fps":  [
+                                                       750,
+                                                       758,
+                                                       766,
+                                                       774,
+                                                       782
+                                                   ]
+                                       }
+               }
+}

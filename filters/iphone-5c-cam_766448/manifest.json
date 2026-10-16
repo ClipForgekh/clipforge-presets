@@ -1,0 +1,18 @@
+{
+  "id": "7664482109234384146",
+  "title": "iPhone 5c Cam",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/a72ed119805e41df85ec319fd8b01efa?lk3s=43402efa&x-expires=1823646487&x-signature=DEWATlNT3XMcgNt92ywC9zJLakQ%3D",
+  "md5": "f461d6b3bb6b220d28f574d5abe1f9ac",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/7e1014fd995b4d44a4aad7100e55be46~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=PkP6Wx%2FQEI5623OV48KzKd0SonA%3D",
+  "params": [
+    {
+      "max": 1,
+      "effect_key": "intensity",
+      "default": 0.62,
+      "min": 0
+    }
+  ]
+}

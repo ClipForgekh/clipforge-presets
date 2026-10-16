@@ -1,0 +1,64 @@
+[
+    {
+        "ClassName": "TempScriptLua",
+        "Super": "ScriptComponent",
+        "FilePath": "lua/TempScriptLua.lua",
+        "FileAbsPath": "/Users/bytedance/Downloads/\u9192\u56fe-\u4e00\u952e\u51fa\u7247/results/\u6d77\u8fb91212_3/test/\u5e26\u4eba\u50cf\u5206\u5272/AmazingFeature/lua/TempScriptLua.lua",
+        "Properties": [
+            {
+                "VarName": "FilterIntensity",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Slider",
+                                "RawValue": "",
+                                "Values": []
+                            },
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    1.0
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onEvent",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

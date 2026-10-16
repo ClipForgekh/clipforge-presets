@@ -1,0 +1,18 @@
+{
+  "id": "7571870874312248631",
+  "title": "Old Fireplace",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/14fb550e7b4e43e88812c0961220f676?lk3s=43402efa&x-expires=1823646487&x-signature=yNJxOPd9zMqUuL8tIgarFXaHy1c%3D",
+  "md5": "fd41decdfa74f00a8aa97343812bfc47",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/cd7ecd8cff7941a9b523e072ffecb134~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=Ol%2BBGWP016mWe2WIg%2F4wuoehrLo%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

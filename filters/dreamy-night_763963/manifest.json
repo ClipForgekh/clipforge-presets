@@ -1,0 +1,18 @@
+{
+  "id": "7639636091271793941",
+  "title": "Dreamy Night",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/fe6d3ff79b0b47d0a71b0fde5ae84490?lk3s=43402efa&x-expires=1823646487&x-signature=0qMBtSotyayhFrj5Gfp%2Bwr3pa1E%3D",
+  "md5": "6e806317f90c75faef4c4bb37a2ae207",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/6be82435f8034fdd82e96fa1865e0102~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=sv1ybEEtgkenKuUuOd8BlbVIWNw%3D",
+  "params": [
+    {
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "effect_key": "effects_adjust_filter"
+    }
+  ]
+}

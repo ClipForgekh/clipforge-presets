@@ -1,0 +1,18 @@
+{
+  "id": "7628906540296178964",
+  "title": "Vintage Bronze",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/33f3215e1156442989f667d27ea27d9f?lk3s=43402efa&x-expires=1823646487&x-signature=IL4Xn676zTlhrHqm5rGlxaVX5c4%3D",
+  "md5": "67960b76720282252cd393b98cb8a42a",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/b1dbdcd1ae3a4bfb99e328f037368956~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=TR4YGxC1QQ7ibvZChCo5ngQp0P8%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

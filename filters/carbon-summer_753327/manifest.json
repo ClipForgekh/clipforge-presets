@@ -1,0 +1,18 @@
+{
+  "id": "7533275773608742205",
+  "title": "Carbon Summer",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/9ef2413db4104df4a1833e6388db1aa6?lk3s=43402efa&x-expires=1823646487&x-signature=Tyl2V9cw%2FOf7XPoLex04Sb%2BEVDk%3D",
+  "md5": "8080d97d199244940442daeae26f1d92",
+  "is_vip": false,
+  "cover": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/9e8add038bdd4d94a5ab0180ceaeaede~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=DL8dZhprRv3xM3I2kAyi%2FE3Tp84%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

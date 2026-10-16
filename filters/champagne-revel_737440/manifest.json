@@ -1,0 +1,18 @@
+{
+  "id": "7374404639032087056",
+  "title": "Champagne Revel",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/fcc2f170ee564ff8bba535ed5fc04b4b?lk3s=43402efa&x-expires=1823646487&x-signature=tdiyWpGUEkvaWMm%2B1fUcHLODGhY%3D",
+  "md5": "bf70901848aa258c18fbf3fc2abdb4e6",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/54574c85eff646d0a473dc39677440f5~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=4OhLDLCivu8vL2WoPXqBpyUOwCU%3D",
+  "params": [
+    {
+      "default": 1,
+      "effect_key": "effects_adjust_filter",
+      "max": 1,
+      "min": 0
+    }
+  ]
+}

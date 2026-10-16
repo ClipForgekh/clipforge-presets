@@ -1,0 +1,64 @@
+{
+  "ae_tool": "AmazingEditor",
+  "bALG_BACH_CONFIG": true,
+  "effect": {
+    "Link": [
+      {
+        "path": "AmazingFeature_fengying/",
+        "rtShare": true,
+        "type": "AmazingFeature",
+        "zorder": 8011
+      },
+      {
+        "path": "AmazingFeature_mopi/",
+        "type": "AmazingFeature",
+        "zorder": 8012
+      },
+      {
+        "path": "AmazingFeature_beijingzengse/",
+        "type": "AmazingFeature",
+        "zorder": 8013
+      }
+    ],
+    "exclusiveScene": [
+      {
+        "priority": 9999,
+        "sceneKey": "FaceMakeup*",
+        "tagName": []
+      },
+      {
+        "priority": 9999,
+        "sceneKey": "Filter*",
+        "tagName": []
+      },
+      {
+        "priority": 9999,
+        "sceneKey": "FaceDeformation*",
+        "tagName": []
+      },
+      {
+        "priority": 9999,
+        "sceneKey": "FaceBeauty*",
+        "tagName": []
+      }
+    ],
+    "model_names": {
+      "script": [
+        "tt_fsnew_base_jianying",
+        "tt_freid",
+        "cc_yunfeng",
+        "cc_yunfeng_js"
+      ],
+      "alg_model": [
+        "tt_face",
+        "tt_face_extra",
+        "tt_freid",
+        "tt_fsnew_base_jianying",
+        "tt_skin_seg"
+      ]
+    }
+  },
+  "name": "CC_WARM_CREAM_V4_20260731",
+  "version": "19.9.0",
+  "display_name": "暖奶油"
+}

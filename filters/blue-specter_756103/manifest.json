@@ -1,0 +1,18 @@
+{
+  "id": "7561037552883404093",
+  "title": "Blue Specter",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/4320ce2c3fb44c6490becccb0d8b482a?lk3s=43402efa&x-expires=1823646487&x-signature=G6RJhXodXW%2Bpv9ZunmZKH1OBxtU%3D",
+  "md5": "49a83987790284658cb92a17343ecd56",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/f4eb5afe6d5643e3bafed59c6ed2ddb8~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=WQRNwXMVw5obXrbaDlnUj5NHq%2Bs%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

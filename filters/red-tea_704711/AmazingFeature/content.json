@@ -1,0 +1,32 @@
+{
+    "content": {}, 
+    "requirement": {
+        "faceDetect240": false, 
+        "ageDetect": false, 
+        "faceDetect280": false, 
+        "headSeg": false, 
+        "faceSeg": false, 
+        "2handDetectKeyPoint": false, 
+        "expressionDetect": false, 
+        "handDetectLeftRight": false, 
+        "2handDetect": false, 
+        "faceDetect": false, 
+        "3dFaceMeshPerspective": false, 
+        "handDetectKeyPoint": false, 
+        "handSegment": false, 
+        "FaceAttributes": false, 
+        "foot": false, 
+        "hairColor": false, 
+        "matting": false, 
+        "mouthSeg": false, 
+        "animoji": false, 
+        "handDetect": false, 
+        "genderDetect": false, 
+        "skeletonDetect": false, 
+        "catFaceDetect": false, 
+        "handDetectKeyPoint3D": false, 
+        "faceDetectDu": false
+    }, 
+    "tag": "2021_07_27_20_16_50_85a74df3eed411eb8e34acde48001122", 
+    "version": "1.0"
+}

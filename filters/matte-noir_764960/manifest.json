@@ -1,0 +1,18 @@
+{
+  "id": "7649605957529423124",
+  "title": "Matte Noir",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p19-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/5c8ac73b52924239a0ebcd21c777e59b?lk3s=43402efa&x-expires=1823646487&x-signature=QhFMAd9qRd7cqlsNdJn3sBpObYs%3D",
+  "md5": "fe19549ad817daeca814e51421b27bd0",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/51cb2cbb6feb48b6a0e097953720eeb0~tplv-fhsjxsyzit-resize:89:89.jpeg?x-expires=1823646487&x-signature=FoIgvSfIp%2FC53mEVzOCvvl5VXgw%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

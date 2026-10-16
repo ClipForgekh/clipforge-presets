@@ -1,0 +1,18 @@
+{
+  "id": "7672685711203536149",
+  "title": "Creamy Warm",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/125a4c21401d4a4b9df2a3a6cd4a51de?lk3s=43402efa&x-expires=1823646487&x-signature=uewSxLN196QPfhVXdJQlrbVqs%2F4%3D",
+  "md5": "ab21d1910028ec1ffc6a49d9e778646d",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/06e38dc7d4a341db932640a5d4df82fa~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=8VXYeI51%2BDK5iH7LlNb7medce5g%3D",
+  "params": [
+    {
+      "max": 1,
+      "min": 0,
+      "default": 1,
+      "effect_key": "effects_adjust_filter"
+    }
+  ]
+}

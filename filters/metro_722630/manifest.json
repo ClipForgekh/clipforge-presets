@@ -1,0 +1,18 @@
+{
+  "id": "7226300464646590978",
+  "title": "Metro",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/0d5247fe14364d8f971bd393a8f9bd01?lk3s=43402efa&x-expires=1823646487&x-signature=l7Ap9jDlv%2Bh8LgwTzL2sI8PzRu0%3D",
+  "md5": "0bd8e1cbb5a2ec5032796f737ef762c0",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/a485afcbc3fa4aa0802d537e9fbb7160~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=2Oa6xUMPciLa%2BnxdVgcqbzhTsWc%3D",
+  "params": [
+    {
+      "default": 1,
+      "effect_key": "effects_adjust_intensity",
+      "max": 1,
+      "min": 0
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+    "ae_tool": "AmazingEditor",
+    "bALG_BACH_CONFIG": true,
+    "effect": {
+        "Link": [
+            {
+                "path": "AmazingFeature_fengying/",
+                "rtShare": true,
+                "type": "AmazingFeature",
+                "zorder": 7000
+            },
+            {
+                "path": "AmazingFeature_quzhou/",
+                "rtShare": true,
+                "type": "AmazingFeature",
+                "zorder": 7010
+            },
+            {
+                "path": "AmazingFeature_HDSmooth/",
+                "type": "AmazingFeature",
+                "zorder": 8001
+            },
+            {
+                "path": "AmazingFeature_FillLight/",
+                "type": "AmazingFeature",
+                "zorder": 8002
+            },
+            {
+                "path": "AmazingFeature_HLightFilter/",
+                "type": "AmazingFeature",
+                "zorder": 8003
+            }
+        ],
+        "exclusiveScene": [
+            {
+                "priority": 9999,
+                "sceneKey": "FaceMakeup*",
+                "tagName": []
+            },
+            {
+                "priority": 9999,
+                "sceneKey": "Filter*",
+                "tagName": []
+            },
+            {
+                "priority": 9999,
+                "sceneKey": "FaceDeformation*",
+                "tagName": []
+            },
+            {
+                "priority": 9999,
+                "sceneKey": "FaceBeauty*",
+                "tagName": []
+            }
+        ],
+        "model_names": {
+            "faceDetect": [
+                "tt_face"
+            ],
+            "skinseg": [
+                "tt_skin_seg"
+            ],
+            "script": ["tt_fsnew_base_jianying", "tt_freid", "cc_yunfeng", "cc_yunfeng_js"],
+            "bytenn" : 
+			[
+				"tt_fsnew_base_jianying",
+				"tt_freid",
+				"wrinkle_removal",
+				"cc_auto_beauty_siso_script"
+			]
+        }
+    },
+    "name": "45986fe8457b11ee88067c10c9c055a5_duanguangji",
+    "version": "13.3.0"
+}

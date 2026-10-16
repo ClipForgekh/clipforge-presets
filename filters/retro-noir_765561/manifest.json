@@ -1,0 +1,18 @@
+{
+  "id": "7655611532709088520",
+  "title": "Retro Noir",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/51e9d6d87da64d64b0e2d0fe7698078e?lk3s=43402efa&x-expires=1823646487&x-signature=6ITzlb4Ahp7p6w3hveN%2F11Od%2FRk%3D",
+  "md5": "e1b99fb20afbef1ef9748c4cb1180fd9",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/6a47df1b178e44239738a6a056e16740~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=wKjiNgRsrhGiZT7a6J9xlhPHfKw%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

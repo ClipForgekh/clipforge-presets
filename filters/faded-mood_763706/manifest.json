@@ -1,0 +1,18 @@
+{
+  "id": "7637064472032546049",
+  "title": "Faded Mood",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/db168ad1eed846418f87e8b7ce9a81c7?lk3s=43402efa&x-expires=1823646487&x-signature=I05nl1qHMjGHvsXtljWn1CPrdwk%3D",
+  "md5": "c1fff90d4a400a142e8ca60de8bbcd15",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/9a56dd2ee80f442e9d2b18e9d9271fb8~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=JSter1DtkLzPcD6fujew%2FmEkGd0%3D",
+  "params": [
+    {
+      "min": 0,
+      "default": 1,
+      "effect_key": "effects_adjust_filter",
+      "max": 1
+    }
+  ]
+}

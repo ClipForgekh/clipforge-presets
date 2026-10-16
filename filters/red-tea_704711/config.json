@@ -1,0 +1,13 @@
+{
+    "version": "7.1.0", 
+    "effect": {
+        "Link": [
+            {
+                "zorder": 8011, 
+                "path": "AmazingFeature/", 
+                "type": "AmazingFeature"
+            }
+        ]
+    }, 
+    "name": "2021_07_27_20_16_50_859cac75eed411ebaac4acde48001122"
+}

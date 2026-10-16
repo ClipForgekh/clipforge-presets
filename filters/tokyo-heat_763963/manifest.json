@@ -1,0 +1,18 @@
+{
+  "id": "7639634596501458197",
+  "title": "Tokyo Heat",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/fa0b8e7365fc4e8b9b448241f8a6234d?lk3s=43402efa&x-expires=1823646487&x-signature=HWg4N%2BW4K7OWfMdKuPrSMKkHVc8%3D",
+  "md5": "bd658fa680f8cf4c4f990daae8856661",
+  "is_vip": false,
+  "cover": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/cd05bc9cb5224f059ee629439be2d852~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=K8h4cQkSjtRx97wilOeM28l%2BhOg%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

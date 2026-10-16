@@ -1,0 +1,18 @@
+{
+  "id": "7524338818363821373",
+  "title": "Leisure Trip",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/2c9bbe17c7594dbd837f4c704c780255?lk3s=43402efa&x-expires=1823646487&x-signature=W3B22sbqP8TwOj9zlwGTDB4yAbY%3D",
+  "md5": "dc5b14c69c97779b4bbe910081d7fbf4",
+  "is_vip": false,
+  "cover": "https://p16-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/418e99e503aa43acb86695ef77716abd~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=48TsHf0ejcD9RQwMiaaCJe5axtw%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

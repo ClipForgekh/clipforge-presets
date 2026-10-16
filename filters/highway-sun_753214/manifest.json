@@ -1,0 +1,18 @@
+{
+  "id": "7532146445542001981",
+  "title": "Highway Sun",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/70a749f656954c128e3009e9356e3067?lk3s=43402efa&x-expires=1823646487&x-signature=rKJFHQXOGlP1pVw2kj%2FsYe3zPtk%3D",
+  "md5": "7731e87994cbf3a2fd781d84c31bc8b7",
+  "is_vip": false,
+  "cover": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/6fc9dd8206c24e8e8e8dac8193439063~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=GySubHjd1cHeYFF2lpoxXiRv2Xk%3D",
+  "params": [
+    {
+      "default": 1,
+      "effect_key": "effects_adjust_filter",
+      "max": 1,
+      "min": 0
+    }
+  ]
+}

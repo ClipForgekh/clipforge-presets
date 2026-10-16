@@ -1,0 +1,13 @@
+{
+    "version": "1.0",
+    "mode": 2,
+    "name": "default_name",
+    "model_names": {},
+    "nodes": [],
+    "links": [],
+    "subgraph": [
+        "algorithmConfig_fengying.json",
+        "algorithmConfig_mopi.json",
+        "algorithmConfig_beijingzengse.json"
+    ]
+}

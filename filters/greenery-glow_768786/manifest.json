@@ -1,0 +1,18 @@
+{
+  "id": "7687861275581451541",
+  "title": "Greenery Glow",
+  "category": "filter",
+  "branch": "filters",
+  "url": "https://p16-heycan-file-sign.capcutcdn-us.com/tos-useast8-i-7k2arxhkn8-tx2/12a5359f5223493fa6558d568eb378d0?lk3s=43402efa&x-expires=1823646487&x-signature=jHx5p0NIiVOYvxVH3bdV90MaG%2Fs%3D",
+  "md5": "1b0f2c582f8995b257ae97282707521f",
+  "is_vip": false,
+  "cover": "https://p19-heycan-image-sign.capcutcdn-us.com/tos-useast8-i-fhsjxsyzit-tx2/d05084fd3063402685106fea928264c1~tplv-fhsjxsyzit-resize:89:89.png?x-expires=1823646487&x-signature=5N2FjZrqPhm1VGPq6OVEgGULCeI%3D",
+  "params": [
+    {
+      "effect_key": "effects_adjust_filter",
+      "default": 1,
+      "min": 0,
+      "max": 1
+    }
+  ]
+}

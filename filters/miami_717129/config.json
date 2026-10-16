@@ -1,0 +1,15 @@
+{
+    "effect": {
+        "Link": [
+            {
+                "defaultEnable": false,
+                "path": "Filter_5101/",
+                "rtShare": true,
+                "type": "Filter",
+                "zorder": 1999
+            }
+        ]
+    },
+    "name": "4.1.0MACB3A5780AE43145E79fFF1098009C1CD00042ACB419691FDGbdaed8e95bf4c545471ae32cbf5055fd",
+    "version": "5.5.0"
+}

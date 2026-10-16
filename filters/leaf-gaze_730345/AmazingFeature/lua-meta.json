@@ -1,0 +1,64 @@
+[
+    {
+        "ClassName": "TempScriptLua",
+        "Super": "ScriptComponent",
+        "FilePath": "lua/TempScriptLua.lua",
+        "FileAbsPath": "/Users/apple/Documents/\u4e1a\u52a1\u9700\u6c42/\u9192\u56fe/2022.1-2/\u76ae\u80a4\u5206\u5272\u6ee4\u955c\u5305/lua/TempScriptLua.lua",
+        "Properties": [
+            {
+                "VarName": "FilterIntensity",
+                "VarType": "Double",
+                "Comment": "",
+                "AnnoItems": [
+                    {
+                        "ItemType": "UI",
+                        "Attributes": [
+                            {
+                                "AttrType": "Slider",
+                                "RawValue": "",
+                                "Values": []
+                            },
+                            {
+                                "AttrType": "Range",
+                                "RawValue": "",
+                                "Values": [
+                                    0.0,
+                                    1.0
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "Methods": [
+            {
+                "FuncName": "new",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "constructor",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onStart",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onUpdate",
+                "Params": [],
+                "Comment": ""
+            },
+            {
+                "FuncName": "onEvent",
+                "Params": [],
+                "Comment": ""
+            }
+        ],
+        "Comment": "",
+        "ExportFiles": []
+    }
+]

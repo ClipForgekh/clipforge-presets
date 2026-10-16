@@ -1,0 +1,13 @@
+{
+    "effect": {
+        "Link": [
+            {
+                "path": "AmazingFeature/",
+                "type": "AmazingFeature",
+                "zorder": 2998
+            }
+        ]
+    },
+    "name": "CreateByScript__2022_04_01_18_03_36_ff2a87c0b1a211ec8156acde48001122",
+    "version": "7.1.0"
+}
