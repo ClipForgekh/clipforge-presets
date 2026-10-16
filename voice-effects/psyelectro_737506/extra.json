@@ -1,0 +1,22 @@
+{
+    "setting": {
+        "audio_effect_parameters_change": [
+            {
+                "parameterIndex": 0,
+                "portIndex":0,
+                "sliderName":"strength",
+                "minValue":0.0,
+                "defaultValue":1.0,
+                "maxValue":1.0
+            },
+            {
+                "parameterIndex": 1,
+                "portIndex":0,
+                "sliderName":"noise",
+                "minValue":0.0,
+                "defaultValue":0.743,
+                "maxValue":1.0
+            }
+        ]
+    }
+}

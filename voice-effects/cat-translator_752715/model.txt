@@ -1,0 +1,16 @@
+2 13
+DataV2 ld_scaled 1 1 1 1 4 0 0
+DataV2 f0_scaled 1 1 1 1 4 0 0
+InnerProduct dense_8 64 1 0 4 0 4 0 4 0 ld_scaled dense_8
+LayerNorm layer_normalization_6 3 1 1 4 0 4 0 4 0 dense_8 layer_normalization_6
+OnnxOp1 leaky_re_lu LeakyRelu layer_normalization_6 leaky_re_lu 4 0
+InnerProduct dense_9 64 1 0 4 0 4 0 4 0 f0_scaled dense_9
+LayerNorm layer_normalization_7 3 1 1 4 0 4 0 4 0 dense_9 layer_normalization_7
+OnnxOp1 leaky_re_lu_1 LeakyRelu layer_normalization_7 leaky_re_lu_1 4 0
+Concat concatenate 2 leaky_re_lu leaky_re_lu_1 concatenate 4 0
+GRU gru_2 64 1 1 tanh sigmoid 4 0 4 0 4 0 4 0 concatenate gru_2
+Concat concatenate_1 3 leaky_re_lu leaky_re_lu_1 gru_2 concatenate_1 4 0
+InnerProduct dense_10 64 1 0 4 0 4 0 4 0 concatenate_1 dense_10
+LayerNorm layer_normalization_8 3 1 1 4 0 4 0 4 0 dense_10 layer_normalization_8
+OnnxOp1 leaky_re_lu_2 LeakyRelu layer_normalization_8 leaky_re_lu_2 4 0
+InnerProduct dense_11 96 1 0 4 0 4 0 4 0 leaky_re_lu_2 dense_11

@@ -1,0 +1,14 @@
+{
+    "setting": {
+        "audio_effect_parameters_change": [
+            {
+                "parameterIndex": 0,
+                "portIndex":0,
+                "sliderName":"Pitch",
+                "minValue":0.0,
+                "defaultValue":0.5,
+                "maxValue":1.0
+            }
+        ]
+    }
+}

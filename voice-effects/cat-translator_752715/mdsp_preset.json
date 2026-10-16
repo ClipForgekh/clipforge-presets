@@ -1,0 +1,226 @@
+{
+  "connections": [
+    {
+      "downstream_node_id": "compressor",
+      "downstream_port_index": 0,
+      "port_type": "audio",
+      "upstream_node_id": "gain",
+      "upstream_port_index": 0
+    },
+    {
+      "downstream_node_id": "gain",
+      "downstream_port_index": 0,
+      "port_type": "audio",
+      "upstream_node_id": "reverb",
+      "upstream_port_index": 0
+    },
+    {
+      "downstream_node_id": "limiter",
+      "downstream_port_index": 0,
+      "port_type": "audio",
+      "upstream_node_id": "compressor",
+      "upstream_port_index": 0
+    },
+    {
+      "downstream_node_id": "reverb",
+      "downstream_port_index": 0,
+      "port_type": "audio",
+      "upstream_node_id": "ddsp",
+      "upstream_port_index": 0
+    }
+  ],
+  "node_id": "unknown",
+  "node_type": "graph_container_node",
+  "nodes": [
+    {
+      "node_id": "compressor",
+      "node_type": "processor_node",
+      "ports": {
+        "input_audio_channels": [
+          2
+        ],
+        "output_audio_channels": [
+          2
+        ]
+      },
+      "processor_name": "Compressor",
+      "processor_state": {
+        "parameters": {
+          "Attack": 0.2500000298023224,
+          "Auto Makeup Gain": true,
+          "Bypass": false,
+          "Knee dB": 7.0,
+          "Lookahead": 0.0,
+          "Output Gain dB": 0.0,
+          "Ratio": 2.5999999046325684,
+          "Release": 100.0,
+          "Threshold dB": -18.0
+        },
+        "version": "12.2.2"
+      },
+      "version": "12.2.2"
+    },
+    {
+      "node_id": "ddsp",
+      "node_type": "processor_node",
+      "ports": {
+        "input_audio_channels": [
+          2
+        ],
+        "output_audio_channels": [
+          2
+        ]
+      },
+      "processor_name": "DDSPEffect",
+      "processor_state": {
+        "ddsp_effect_settings": {
+          "ddsp_decoder": {
+            "build_settings": {
+              "model_file_uris": {
+                "layers": "file://model.txt",
+                "weights": "file://model.bin"
+              }
+            },
+            "implementation": "espresso"
+          },
+          "ddsp_effect_config": {
+            "amp_detector_envelope_time_constant_ms": 100.0,
+            "harmonic_synth_inputs_smoothing_time_constant_ms": 30.0,
+            "model_input_amp_compensation_db": -11.036638259887695,
+            "model_noise_mags_bias": -5.0,
+            "model_num_harmonics": 30,
+            "model_num_noise_mags": 65,
+            "model_training_frame_size": 64,
+            "model_training_frames_per_second": 250.0,
+            "pitch_detector_frame_size": 2048,
+            "pitch_detector_hop_size": 512,
+            "pitch_detector_smoothing_time_constant_ms": 10.0,
+            "synths_output_gains_smoothing_time_constant_ms": 1.0
+          },
+          "resampled_internal_sample_rate": 16000.0,
+          "use_resampled_ddsp_effect": true
+        },
+        "parameters": {
+          "Drive": 1.0,
+          "Dry Gain dB": 0.0,
+          "Harmonic Mix Level": 1.0,
+          "Noise Mix Level": 1.0,
+          "Transpose": 12,
+          "Wet Gain dB": 0.0,
+          "Wet Mix": 1.0
+        },
+        "version": "12.2.2"
+      },
+      "version": "12.2.2"
+    },
+    {
+      "node_id": "gain",
+      "node_type": "processor_node",
+      "ports": {
+        "input_audio_channels": [
+          2
+        ],
+        "output_audio_channels": [
+          2
+        ]
+      },
+      "processor_name": "Gain",
+      "processor_state": {
+        "parameters": {
+          "Gain dB": 0.0
+        },
+        "version": "12.2.2"
+      },
+      "version": "12.2.2"
+    },
+    {
+      "node_id": "limiter",
+      "node_type": "processor_node",
+      "ports": {
+        "input_audio_channels": [
+          2
+        ],
+        "output_audio_channels": [
+          2
+        ]
+      },
+      "processor_name": "Limiter",
+      "processor_state": {
+        "parameters": {
+          "Audition Unity Gain": false,
+          "Bypass": false,
+          "Ceiling dB": -4.0,
+          "Input Gain dB": 0.0,
+          "Lookahead": 0.0,
+          "Release": 500.0
+        },
+        "version": "12.2.2"
+      },
+      "version": "12.2.2"
+    },
+    {
+      "node_id": "reverb",
+      "node_type": "processor_node",
+      "ports": {
+        "input_audio_channels": [
+          2
+        ],
+        "output_audio_channels": [
+          2
+        ]
+      },
+      "processor_name": "Reverb",
+      "processor_state": {
+        "parameters": {
+          "Bypass": false,
+          "Damp": 0.5,
+          "Decay Time": 3.0,
+          "Mod Depth": 0.0,
+          "Mod Rate": 0.009999999776482582,
+          "Wet Gain": 0.0,
+          "Wet HP Bypass": false,
+          "Wet HP Freq": 175.00001525878906,
+          "Wet HP Res": 0.320000022649765,
+          "Wet LP Bypass": true,
+          "Wet LP Freq": 20000.0,
+          "Wet LP Res": 1.0000001192092896,
+          "Wet Mix": 0.10000000149011612,
+          "Wet Stereo Width": 1.0
+        },
+        "version": "12.2.2"
+      },
+      "version": "12.2.2"
+    }
+  ],
+  "ports": [
+    {
+      "internal_node_id": "ddsp",
+      "internal_node_port_index": 0,
+      "port_direction": "input",
+      "port_index": 0,
+      "port_type": "audio"
+    },
+    {
+      "internal_node_id": "gain",
+      "internal_node_port_index": 0,
+      "port_direction": "input",
+      "port_index": 0,
+      "port_type": "parameter_change"
+    },
+    {
+      "internal_node_id": "ddsp",
+      "internal_node_port_index": 0,
+      "port_direction": "input",
+      "port_index": 1,
+      "port_type": "parameter_change"
+    },
+    {
+      "internal_node_id": "limiter",
+      "internal_node_port_index": 0,
+      "port_direction": "output",
+      "port_index": 0,
+      "port_type": "audio"
+    }
+  ],
+  "version": "12.2.2"
+}
