@@ -1,0 +1,11 @@
+{
+    "date": "2025-04-07 15:28:32 +0800",
+    "author": "root",
+    "source": "b/xuweichao/18.8.0/set_string_without_trimend",
+    "branch": "release/18.8.0",
+    "commit": {
+        "id": "60d194a608368b95bc9e59872a1242a5900aba5c",
+        "message": "Merge remote-tracking branch 'origin/release/18.8.0' into b/xuweichao/18.8.0/set_string_without_trimend"
+    },
+    "buildingTime": "2025-04-07 15:30:48"
+}

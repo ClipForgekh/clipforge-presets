@@ -1,0 +1,11 @@
+{
+    "date": "2025-03-03 23:05:57 +0800",
+    "author": "root",
+    "source": "b/limingzhu.7/18.6.0/uneven_caption_template",
+    "branch": "release/18.5.0",
+    "commit": {
+        "id": "91049cbbff7d17b0b17412409a23c81cf85ee721",
+        "message": "Merge remote-tracking branch 'origin/develop' into b/limingzhu.7/18.6.0/uneven_caption_template"
+    },
+    "buildingTime": "2025-03-03 23:07:36"
+}

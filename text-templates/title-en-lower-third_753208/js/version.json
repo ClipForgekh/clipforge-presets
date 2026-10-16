@@ -1,0 +1,11 @@
+{
+    "date": "2025-06-12 16:02:02 +0800",
+    "author": "fengzicheng",
+    "source": "f/fengzicheng/19.2.0/color_0_bug",
+    "branch": "release/19.2.0",
+    "commit": {
+        "id": "9b80534002ef31f8755c5b87e2ec67f5f1f547a5",
+        "message": "fix: fix black color update bug"
+    },
+    "buildingTime": "2025-06-13 10:41:03"
+}

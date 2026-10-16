@@ -1,0 +1,11 @@
+{
+    "date": "2025-07-25 15:00:33 +0800",
+    "author": "root",
+    "source": "f/luoruchong/19.6.0/support_tex_and_gif",
+    "branch": "release/19.6.0",
+    "commit": {
+        "id": "3be59f05ddceb977611ff226e0b916c6f0bd4eaa",
+        "message": "Merge remote-tracking branch 'origin/develop' into f/luoruchong/19.6.0/support_tex_and_gif"
+    },
+    "buildingTime": "2025-07-25 15:05:54"
+}

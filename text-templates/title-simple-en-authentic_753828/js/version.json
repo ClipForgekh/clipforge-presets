@@ -1,0 +1,11 @@
+{
+    "date": "2025-05-21 03:41:07 +0000",
+    "author": "BitsAdmin",
+    "source": "release/19.1.0",
+    "branch": "release/19.1.0",
+    "commit": {
+        "id": "6c9e1908ccfeed6f8018c4a6af6d9273f1a8727a",
+        "message": "Merge branch 'f/fengzicheng/19.1.0/TTP_dev' into 'release/19.1.0'"
+    },
+    "buildingTime": "2025-05-21 11:44:23"
+}

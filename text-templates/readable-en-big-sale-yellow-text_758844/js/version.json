@@ -1,0 +1,11 @@
+{
+    "date": "2025-11-26 18:22:55 +0800",
+    "author": "fengzicheng",
+    "source": "b/fengzicheng/20.4.0/npm_install",
+    "branch": "release/20.4.0",
+    "commit": {
+        "id": "3ac9cf49b74848736ffd12bb990f423bc9cec219",
+        "message": "fix: fix npm install again..."
+    },
+    "buildingTime": "2025-11-26 19:04:31"
+}

@@ -1,0 +1,119 @@
+{
+  "type": "TextTemplate",
+  "root": {
+    "guid": "0ef77894-8df8-4305-a88f-c9bcece0d3b3",
+    "size": [
+      530.0,
+      70.0
+    ],
+    "duration": 3.0,
+    "preview_time": 3.0,
+    "children": [
+      {
+        "guid": "06afdfb7-76ba-4fab-9f5e-38fb9e8ca1ba",
+        "type": "text",
+        "position": [
+          0.0,
+          0.0
+        ],
+        "rotation": 0.0,
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "order_in_layer": 0,
+        "start_time": 0.0,
+        "duration": 3.0,
+        "font_resource_id": "6808051089825337864",
+        "effect_text_resource_id": "",
+        "limit_size_enable": true,
+        "limit_size": [
+          500.0,
+          40.0
+        ],
+        "char_bgs": [],
+        "text_params": {
+          "version": "1",
+          "text": "I love you.",
+          "fontSize": 20.0,
+          "alignType": 1,
+          "typeSettingKind": 0,
+          "textColor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "background": false,
+          "backgroundColor": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "shadow": false,
+          "shadowColor": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "shadowSmoothing": 0,
+          "shadowOffset": [
+            0.1,
+            -0.1
+          ],
+          "outline": false,
+          "outlineWidth": 0.1,
+          "outlineColor": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "ktvColor": [
+            1.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "ktvOutlineColor": [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ],
+          "ktvShadowColor": [
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boldWidth": 0.0,
+          "italicDegree": 0.0,
+          "lineGap": 0.0,
+          "useEffectDefaultColor": true,
+          "charSpacing": 0.05,
+          "innerPadding": 0.0,
+          "lineMaxWidth": -1,
+          "fontPath": "",
+          "fallbackFontPath": "",
+          "fallbackFontPathList": [],
+          "effectPath": "",
+          "shapePath": ""
+        },
+        "anim_duration_mode": 2,
+        "anim_duration_scale_min": 1.0,
+        "anims": [
+          {
+            "anim_type": "in",
+            "anim_resource_id": "6724920249654710791",
+            "duration": 1.0
+          }
+        ],
+        "children": [],
+        "foldin": false
+      }
+    ]
+  }
+}

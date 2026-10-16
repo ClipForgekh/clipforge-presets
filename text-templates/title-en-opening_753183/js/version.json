@@ -1,0 +1,11 @@
+{
+    "date": "2025-05-07 22:58:41 +0800",
+    "author": "luoruchong",
+    "source": "studio_anim_fix_random_multi_line",
+    "branch": "release/19.0.0",
+    "commit": {
+        "id": "7bd29c90ddff1accafab2b10c6bd599c911cefbd",
+        "message": "bug"
+    },
+    "buildingTime": "2025-05-12 15:21:10"
+}

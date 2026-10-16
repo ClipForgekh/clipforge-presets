@@ -1,0 +1,11 @@
+{
+    "date": "2025-04-21 15:29:19 +0800",
+    "author": "xuweichao",
+    "source": "fix/xuweichao/18.9.0/adapt_emoji_lua",
+    "branch": "release/18.9.0",
+    "commit": {
+        "id": "9e2adc2499eaf2b3187171e40ab92fb8aed5f01f",
+        "message": "fix: update code comments"
+    },
+    "buildingTime": "2025-04-21 17:09:15"
+}

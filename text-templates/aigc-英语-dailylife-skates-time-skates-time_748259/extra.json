@@ -1,0 +1,25 @@
+{
+    "depend_resource_list":[
+        {
+            "resource_id":"7331632775948145153",
+            "source":1,
+            "type":"text"
+        },
+        {
+            "resource_id":"7331667380579470598",
+            "source":1,
+            "type":"flower"
+        },
+        {
+            "resource_id":"7176919423167500802",
+            "source":1,
+            "type":"fonts"
+        },
+        {
+            "resource_id":"7428456013868616965",
+            "source":1,
+            "type":"sticker"
+        }
+    ],
+    "script_template_version":"1.0.0"
+}

@@ -1,0 +1,11 @@
+{
+    "date": "2025-07-03 22:38:23 +0800",
+    "author": "luoruchong",
+    "source": "b/luoruchong/19.4.0/fix_motion",
+    "branch": "release/19.4.0",
+    "commit": {
+        "id": "8610dce47df3ee920191b53f627f23f540e9d960",
+        "message": "fix motion"
+    },
+    "buildingTime": "2025-07-04 14:03:56"
+}

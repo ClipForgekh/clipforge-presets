@@ -1,0 +1,11 @@
+{
+    "date": "2025-11-17 19:52:42 +0800",
+    "author": "root",
+    "source": "b/luoruchong/fix_tools_crash",
+    "branch": "release/20.3.0",
+    "commit": {
+        "id": "ae5983879b6261afbe4e5880086d9fabb1413d85",
+        "message": "Merge remote-tracking branch 'origin/release/20.3.0' into b/luoruchong/fix_tools_crash"
+    },
+    "buildingTime": "2025-11-17 12:19:50"
+}

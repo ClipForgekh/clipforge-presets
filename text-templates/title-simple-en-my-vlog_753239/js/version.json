@@ -1,0 +1,11 @@
+{
+    "date": "2025-06-26 18:25:01 +0800",
+    "author": "fengzicheng",
+    "source": "f/fengzicheng/19.3.0/shape_kf_get",
+    "branch": "release/19.3.0",
+    "commit": {
+        "id": "166c8f7f541929175b01e3395c723f84dfc4bb5f",
+        "message": "fix: fix get shape kf param bug"
+    },
+    "buildingTime": "2025-06-26 21:22:01"
+}

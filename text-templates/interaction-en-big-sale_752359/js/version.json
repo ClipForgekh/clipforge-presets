@@ -1,0 +1,11 @@
+{
+    "date": "2025-06-05 09:09:02 +0000",
+    "author": "BitsAdmin",
+    "source": "release/19.1.0",
+    "branch": "release/19.1.0",
+    "commit": {
+        "id": "f8af90d94514fd38d84f4193d44be81c74606667",
+        "message": "Merge branch 'b/luoruchong/fix_rt_size' into 'release/19.1.0'"
+    },
+    "buildingTime": "2025-06-05 17:48:30"
+}

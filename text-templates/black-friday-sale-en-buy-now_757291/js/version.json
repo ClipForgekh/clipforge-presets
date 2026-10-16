@@ -1,0 +1,11 @@
+{
+    "date": "2025-07-15 09:56:17 +0000",
+    "author": "BitsAdmin",
+    "source": "release/19.5.0",
+    "branch": "release/19.5.0",
+    "commit": {
+        "id": "7f638a251540dc9c903802576b2f0364ba3048f7",
+        "message": "Merge branch 'b/luoruchong/19.5.0/fix_motion' into 'release/19.5.0'"
+    },
+    "buildingTime": "2025-07-15 19:43:12"
+}

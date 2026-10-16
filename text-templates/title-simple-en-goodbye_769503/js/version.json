@@ -1,0 +1,11 @@
+{
+    "date": "2026-07-13 20:42:55 +0800",
+    "author": "root",
+    "source": "b/hotumn/21.8.0/keyframe_support_tex",
+    "branch": "release/21.7.0",
+    "commit": {
+        "id": "db8fc6919c3e50cc3f7a3e608211975a6cecf127",
+        "message": "Merge remote-tracking branch 'origin/release/21.8.0' into b/hotumn/21.8.0/keyframe_support_tex"
+    },
+    "buildingTime": "2026-07-13 12:51:18"
+}

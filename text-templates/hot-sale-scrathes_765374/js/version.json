@@ -1,0 +1,11 @@
+{
+    "date": "2026-06-01 13:45:32 +0800",
+    "author": "xuweichao",
+    "source": "fix/xuweichao/deal_old_captionAnim",
+    "branch": "release/21.5.0",
+    "commit": {
+        "id": "fb3cb3dc79b94b2c948f8f264e65f1629355537b",
+        "message": "fix: Add version restrictions to caption anims"
+    },
+    "buildingTime": "2026-06-01 08:44:59"
+}

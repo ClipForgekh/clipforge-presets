@@ -1,0 +1,11 @@
+{
+    "date": "2025-08-12 18:06:01 +0800",
+    "author": "xuweichao",
+    "source": "fix/xuweichao/19.7.0/fix_updateLetters_timing",
+    "branch": "release/19.7.0",
+    "commit": {
+        "id": "773851dd67f0597dd9053fc69b3627604d4d8061",
+        "message": "fix: remove templateOpt judgment conditions for updateletters"
+    },
+    "buildingTime": "2025-08-14 13:38:52"
+}

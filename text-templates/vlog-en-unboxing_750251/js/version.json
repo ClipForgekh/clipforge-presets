@@ -1,0 +1,11 @@
+{
+    "date": "2025-04-09 15:08:13 +0800",
+    "author": "root",
+    "source": "b/xuweichao/18.8.0/optimize_emoji_performance",
+    "branch": "release/18.8.0",
+    "commit": {
+        "id": "39054a7585f15bfca331ade4d6841e9468560539",
+        "message": "Merge remote-tracking branch 'origin/release/18.8.0' into b/xuweichao/18.8.0/optimize_emoji_performance"
+    },
+    "buildingTime": "2025-04-10 15:50:47"
+}

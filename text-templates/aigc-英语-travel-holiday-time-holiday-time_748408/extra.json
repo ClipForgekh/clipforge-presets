@@ -1,0 +1,35 @@
+{
+    "depend_resource_list":[
+        {
+            "resource_id":"6790246693674684942",
+            "source":1,
+            "type":"text"
+        },
+        {
+            "resource_id":"7112241904216969765",
+            "source":1,
+            "type":"text"
+        },
+        {
+            "resource_id":"7396220923541540104",
+            "source":1,
+            "type":"flower"
+        },
+        {
+            "resource_id":"7203229176613048834",
+            "source":1,
+            "type":"fonts"
+        },
+        {
+            "resource_id":"7428457240924818693",
+            "source":1,
+            "type":"sticker"
+        },
+        {
+            "resource_id":"7428455194691718405",
+            "source":1,
+            "type":"sticker"
+        }
+    ],
+    "script_template_version":"1.0.0"
+}

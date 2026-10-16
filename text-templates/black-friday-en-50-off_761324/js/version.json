@@ -1,0 +1,11 @@
+{
+    "date": "2026-01-26 19:23:23 +0800",
+    "author": "fengzicheng",
+    "source": "f/fengzicheng/20.8.0/studio_anim_reset_twice",
+    "branch": "release/20.8.0",
+    "commit": {
+        "id": "24e54ee3bc696d894b222455c45decfb64f19a77",
+        "message": "fix: fix studio anim again with bridge logic"
+    },
+    "buildingTime": "2026-01-26 13:29:33"
+}
