@@ -1,0 +1,8 @@
+{
+    "setting": {
+        "algorithm": "emotion_portrait@tight_smile",
+        "conf": "{\"target_emotion\": \"tight_smile\"}",
+        "is_local": false,
+        "is_async": false
+    }
+}

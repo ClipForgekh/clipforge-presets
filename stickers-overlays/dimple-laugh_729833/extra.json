@@ -1,0 +1,8 @@
+{
+    "setting": {
+        "algorithm": "emotion_portrait@jiuwo",
+        "conf": "{\"target_emotion\": \"jiuwo\"}",
+        "is_local": false,
+        "is_async": false
+    }
+}

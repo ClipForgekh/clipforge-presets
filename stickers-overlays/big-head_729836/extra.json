@@ -1,0 +1,8 @@
+{
+    "setting": {
+        "algorithm": "big_head",
+        "conf": "",
+        "is_local": false,
+        "is_async": false
+    }
+}

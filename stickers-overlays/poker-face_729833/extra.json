@@ -1,0 +1,8 @@
+{
+    "setting": {
+        "algorithm": "emotion_portrait@cool",
+        "conf": "{\"target_emotion\": \"cool\"}",
+        "is_local": false,
+        "is_async": false
+    }
+}

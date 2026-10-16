@@ -1,0 +1,8 @@
+{
+  "setting": {
+    "algorithm": "img2img_hair_color_jy@green",
+    "conf": "{\"prompt\": \"mint green color hair\",\"posi_prompt\": \"dry hair, knotted hair, hyper-realistic, silky hair, soft light, perfect head shape, perfect head, proportional hair, proportional head, soft light, dslr, film grain, 8k uhd, Illustration, 8k, RAW Photo, Portrait, Best Quality, Photorealistic, Realistic, Masterpiece, Fine Detail, High Quality, Ultra Detailed, Extremely Delicately Beautiful, Beautifully Detailed, Sony Camera A7RV, Sharp Resolution, Huge Files size, soft lighting, high resolution, high detail, super high detail, extremely detailed, fine detail hair, detailed beautiful hair, high detail hair, high detail skin, high detail hair, gorgeous hair\",\"nega_prompt\": \"greasy hair, hair covered, halo, mist, missing hair details, hair lighting spots, hair light spots, hair blemishes, hair overexposion, glare, spotlight, super long hair, very long hair, rim light, nude, nsfw, paintings, sketches, underwear, monochrome, grayscales, grayscale, skin spots, acnes, skin blemishes, age spot, glans, deformity, multiple breasts, EasyNegative, cropped, blurry, JPEG artifacts, signature, 3D, 3D game, 3D game scene, 3D character,  dandruff:2.0\",\"seed\": 12345,\"img_size\": 768,\"post_blur_kernel\": 3,\"strength\": 1,\"scale\": 9,\"ddim_steps\": 20,\"max_size\": 2048,\"blend_ratio\": 1,\"use_sr\": 1,\"extend_ratio\": 0.65,\"top_extend_ratio\": 0.1}",
+    "is_local": false,
+    "is_async": true
+  }
+}

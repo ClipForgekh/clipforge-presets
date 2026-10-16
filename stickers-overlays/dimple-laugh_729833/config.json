@@ -1,0 +1,21 @@
+{
+	"ae_tool" : "AmazingEditor",
+	"bALG_BACH_CONFIG" : true,
+	"effect" : 
+	{
+		"Link" : [
+		],
+		"model_names" : 
+		{
+			"alg_model" : 
+			[
+				"tt_face",
+				"tt_face_extra",
+				"lv_aigc_onlyurl"
+			]
+		}
+	},
+	"em_tool" : "PXARStudio",
+	"name" : "2023_05_09_20_08_16_d4eee0e6ade109e3c51dad6c38016a70_fc",
+	"version" : "10.1.0"
+}

@@ -1,0 +1,46 @@
+{
+    "setting": {
+        "algorithm": "dynamic_light_wave",
+        "conf": "",
+        "is_local": true,
+        "is_async": false,
+        "ability_flag": 2,
+        "adjustable_config": {
+            "data": [
+                {
+                    "key": "lightwave_repeat_duration",
+                    "match_config": [
+                        {
+                            "adjustable_range": {
+                                "max": 2,
+                                "min": 0.1
+                            },
+                            "default_value": 0.5,
+                            "unit": 0.1,
+                            "valid_video_duration": {
+                                "max": -1,
+                                "min": 0
+                            }
+                        }
+                    ],
+                    "title": "time_for_clip"
+                }
+            ],
+            "enable_preview": true
+        },
+        "speed_config": {
+            "mode": 0,
+            "points": [
+                {
+                    "x": 0.70248,
+                    "y": 5
+                },
+                {
+                    "x": 0.29752,
+                    "y": 0.333333
+                }
+            ],
+            "repeat_duration": 484
+        }
+    }
+}

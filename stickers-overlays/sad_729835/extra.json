@@ -1,0 +1,8 @@
+{
+    "setting": {
+        "algorithm": "emotion_portrait@sad",
+        "conf": "{\"target_emotion\": \"sad\"}",
+        "is_local": false,
+        "is_async": false
+    }
+}

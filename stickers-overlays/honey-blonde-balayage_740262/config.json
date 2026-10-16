@@ -1,0 +1,22 @@
+{
+	"ae_tool" : "AmazingEditor",
+	"bALG_BACH_CONFIG" : true,
+	"effect" : 
+	{
+		"Link" : 
+		[],
+		"model_names" : 
+		{
+			"alg_model" : 
+			[
+				"tt_face_extra",
+				"tt_face",
+				"tt_hair",
+				"face_hair_filter"
+			]
+		}
+	},
+	"em_tool" : "PXARStudio",
+	"name" : "F498B417-0596-4A75-91F9-B26A9EE55F20",
+	"version" : "10.1.0"
+}

@@ -1,0 +1,8 @@
+{
+    "setting": {
+        "algorithm": "emotion_portrait@classic_white_teeth",
+        "conf": "{\"target_emotion\": \"classic_white_teeth\"}",
+        "is_local": false,
+        "is_async": false
+    }
+}

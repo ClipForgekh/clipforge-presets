@@ -1,0 +1,150 @@
+{
+    "version": "1.0",
+    "mode": 2,
+    "name": "AlgorithmGraph_9bpck63bYbqbZAcfdUcjcAbNdWcf",
+    "nodes": [
+        {
+            "name": "blit_0",
+            "type": "texture_blit",
+            "config": {
+                "size": {
+                    "width": 3840,
+                    "height": 2160
+                },
+                "keyMaps": {
+                    "intParam": {},
+                    "floatParam": {},
+                    "stringParam": {},
+                    "pathParam": {}
+                }
+            }
+        },
+        {
+            "name": "face_0",
+            "type": "face",
+            "config": {
+                "keyMaps": {
+                    "intParam": {
+                        "face_max_num": 10,
+                        "face_fast_mode": 0,
+                        "face_detect_mode": 262144,
+                        "face_detect_ability": 2304,
+                        "face_force_detect": 1
+                    },
+                    "floatParam": {},
+                    "stringParam": {}
+                }
+            }
+        },
+        {
+            "name": "FaceAlign",
+            "type": "nh_face_align",
+            "config": {
+                "keyMaps": {
+                    "intParam": {
+                        "target_height": 256,
+                        "target_width": 256,
+                        "crop_type": 1,
+                        "smash_mode": 0
+                    },
+                    "floatParam": {
+                        "crop_offset_x": 0,
+                        "crop_margin": 0.4,
+                        "crop_offset_y": 16
+                    },
+                    "stringParam": {}
+                }
+            }
+        },
+        {
+            "name": "nh_script_0",
+            "type": "script",
+            "config": {
+                "keyMaps": {
+                    "intParam": {},
+                    "floatParam": {},
+                    "pathParam": {},
+                    "stringParam": {
+                        "model_name": "lv_aigc_onlyurl"
+                    }
+                }
+            }
+        }
+    ],
+    "links": [
+        {
+            "fromNode": "blit_0",
+            "fromIndex": 0,
+            "toNode": "FaceAlign",
+            "toIndex": 0
+        },
+        {
+            "fromNode": "blit_0",
+            "fromIndex": 0,
+            "toNode": "face_0",
+            "toIndex": 0
+        },
+        {
+            "fromNode": "face_0",
+            "fromIndex": 0,
+            "toNode": "FaceAlign",
+            "toIndex": 2
+        },
+        {
+            "fromNode": "blit_0",
+            "fromIndex": 0,
+            "toNode": "nh_script_0",
+            "toIndex": 0
+        },
+        {
+            "fromNode": "face_0",
+            "fromIndex": 0,
+            "toNode": "nh_script_0",
+            "toIndex": 1
+        },
+        {
+            "fromNode": "FaceAlign",
+            "fromIndex": 0,
+            "toNode": "nh_script_0",
+            "toIndex": 2
+        }
+    ],
+    "extra": {
+        "input": [
+            {
+                "name": "src_data_0",
+                "inputType": "IMAGE_BUFFER",
+                "dataSrc": "video_input"
+            }
+        ],
+        "output": [
+            {
+                "name": "nh_script_0",
+                "algorithmType": "script",
+                "usage": "VECache"
+            }
+        ],
+        "param": [
+            {
+                "name": "url",
+                "node": "nh_script_0",
+                "key": "url",
+                "type": 2
+            },
+            {
+                "name": "bach_request_type",
+                "node": "nh_script_0",
+                "key": "bach_request_type",
+                "type": 0
+            }
+        ]
+    },
+    "VEConfig": {
+        "format": 1,
+        "output": {
+            "PassAllResultToClient": {
+                "handleTime": 2
+            }
+        }
+    }
+}
